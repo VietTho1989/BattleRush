@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{50041CC1-D0D4-E7F3-7A7D-3CAA320B6F0A}</ProjectGuid>
+    <ProjectGuid>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>AdvancedInputFieldEditor</AssemblyName>
@@ -812,7 +812,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AdvancedInputField.csproj">
-      <Project>{022C1C1C-1A60-856D-B945-57C5240351B4}</Project>
+      <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>
       <Name>AdvancedInputField</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3BBCD960-99E3-B486-631C-1E1A3696B18C}</ProjectGuid>
+    <ProjectGuid>{D9B4713F-E9BC-CC06-A4FB-FABEA4A732DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>OSA-Editor</AssemblyName>
@@ -791,7 +791,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="OSA.csproj">
-      <Project>{D97C909B-1DC3-1256-8CA0-75CD2621F493}</Project>
+      <Project>{D2750D3A-43DD-1660-5BAB-50EDA63CDA09}</Project>
       <Name>OSA</Name>
     </ProjectReference>
   </ItemGroup>

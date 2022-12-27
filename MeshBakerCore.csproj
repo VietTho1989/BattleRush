@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D305E0EC-6C28-7EA0-66DD-F00682420F64}</ProjectGuid>
+    <ProjectGuid>{B24F9821-6F60-C4A9-FBB4-B118E6D354F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MeshBakerCore</AssemblyName>

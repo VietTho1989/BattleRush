@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{022C1C1C-1A60-856D-B945-57C5240351B4}</ProjectGuid>
+    <ProjectGuid>{91F3F1BA-6C98-130E-8933-B92D244C1522}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>AdvancedInputField</AssemblyName>

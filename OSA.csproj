@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D97C909B-1DC3-1256-8CA0-75CD2621F493}</ProjectGuid>
+    <ProjectGuid>{D2750D3A-43DD-1660-5BAB-50EDA63CDA09}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>OSA</AssemblyName>

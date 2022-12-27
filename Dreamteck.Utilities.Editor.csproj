@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CBAF1059-1EEA-DB0F-52A5-1E18ACADBB39}</ProjectGuid>
+    <ProjectGuid>{19C32B74-8543-0A7D-1490-09BC3F702055}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Dreamteck.Utilities.Editor</AssemblyName>

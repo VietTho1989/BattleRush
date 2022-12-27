@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8EC54FD6-E53D-275C-BC59-FFD6F7790C03}</ProjectGuid>
+    <ProjectGuid>{14E836F2-7FBE-3FAE-CCFC-241F75738C45}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MeshBakerEditor</AssemblyName>
@@ -817,7 +817,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{D305E0EC-6C28-7EA0-66DD-F00682420F64}</Project>
+      <Project>{B24F9821-6F60-C4A9-FBB4-B118E6D354F4}</Project>
       <Name>MeshBakerCore</Name>
     </ProjectReference>
   </ItemGroup>

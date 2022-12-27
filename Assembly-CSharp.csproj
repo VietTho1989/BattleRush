@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0AB39ACD-2EE6-E15C-4D2B-642E1651D37D}</ProjectGuid>
+    <ProjectGuid>{74149B12-48A5-10EA-A7B0-7FE07434FF88}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -1373,51 +1373,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Dreamteck.Forever.csproj">
-      <Project>{32C200A5-458B-D016-DC97-D40C37369A97}</Project>
+      <Project>{87307993-CF44-7568-377D-775A5ED676F5}</Project>
       <Name>Dreamteck.Forever</Name>
     </ProjectReference>
     <ProjectReference Include="Dreamteck.Forever.Editor.csproj">
-      <Project>{780422D7-0E86-9A6E-763C-E103E17536EC}</Project>
+      <Project>{D45E7455-0C8E-44D6-808C-EF5BCFB4A178}</Project>
       <Name>Dreamteck.Forever.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{8EC54FD6-E53D-275C-BC59-FFD6F7790C03}</Project>
+      <Project>{14E836F2-7FBE-3FAE-CCFC-241F75738C45}</Project>
       <Name>MeshBakerEditor</Name>
     </ProjectReference>
     <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{D305E0EC-6C28-7EA0-66DD-F00682420F64}</Project>
+      <Project>{B24F9821-6F60-C4A9-FBB4-B118E6D354F4}</Project>
       <Name>MeshBakerCore</Name>
     </ProjectReference>
     <ProjectReference Include="AdvancedInputField.csproj">
-      <Project>{022C1C1C-1A60-856D-B945-57C5240351B4}</Project>
+      <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>
       <Name>AdvancedInputField</Name>
     </ProjectReference>
     <ProjectReference Include="Dreamteck.Splines.csproj">
-      <Project>{7B53A2EE-3D4F-808E-2EE4-188E68FD2525}</Project>
+      <Project>{889C9618-7878-DBB6-0FC0-9D284D24FAAE}</Project>
       <Name>Dreamteck.Splines</Name>
     </ProjectReference>
     <ProjectReference Include="OSA.csproj">
-      <Project>{D97C909B-1DC3-1256-8CA0-75CD2621F493}</Project>
+      <Project>{D2750D3A-43DD-1660-5BAB-50EDA63CDA09}</Project>
       <Name>OSA</Name>
     </ProjectReference>
     <ProjectReference Include="Dreamteck.Utilities.csproj">
-      <Project>{D6C48C8B-E752-1130-64E3-09BD73B7E4F2}</Project>
+      <Project>{DB54FC38-CB5C-F76D-A2BA-B216EB89B048}</Project>
       <Name>Dreamteck.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="OSA-Editor.csproj">
-      <Project>{3BBCD960-99E3-B486-631C-1E1A3696B18C}</Project>
+      <Project>{D9B4713F-E9BC-CC06-A4FB-FABEA4A732DE}</Project>
       <Name>OSA-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Dreamteck.Splines.Editor.csproj">
-      <Project>{2BE34487-4883-FA2E-A478-14D3909B8A53}</Project>
+      <Project>{F1A45E47-7BA6-0E3E-0C16-9208526E4420}</Project>
       <Name>Dreamteck.Splines.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Dreamteck.Utilities.Editor.csproj">
-      <Project>{CBAF1059-1EEA-DB0F-52A5-1E18ACADBB39}</Project>
+      <Project>{19C32B74-8543-0A7D-1490-09BC3F702055}</Project>
       <Name>Dreamteck.Utilities.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AdvancedInputFieldEditor.csproj">
-      <Project>{50041CC1-D0D4-E7F3-7A7D-3CAA320B6F0A}</Project>
+      <Project>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</Project>
       <Name>AdvancedInputFieldEditor</Name>
     </ProjectReference>
   </ItemGroup>
