@@ -1,0 +1,2309 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.14f1 (eee1884e7226) revision 15655304'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 16328 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/BattleRush
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62662
+Successfully changed project path to: D:/BattleRush
+D:/BattleRush
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 359.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.14f1 (eee1884e7226)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/BattleRush/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GT 1030 (ID=0x1d01)
+    Vendor:   NVIDIA
+    VRAM:     1982 MB
+    Driver:   31.0.15.1694
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.017225 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 330.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.029 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2030ms)
+		BeginReloadAssembly (165ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1524ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (274ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (1065ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (145ms)
+				SetLoadedEditorAssemblies (4ms)
+				RefreshPlugins (331ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (309ms)
+				ProcessInitializeOnLoadMethodAttributes (272ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.042509 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 398.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.084 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3085ms)
+		BeginReloadAssembly (295ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (20ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (132ms)
+		EndReloadAssembly (2630ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (597ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (124ms)
+			SetupLoadedEditorAssemblies (1718ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (399ms)
+				BeforeProcessingInitializeOnLoad (300ms)
+				ProcessInitializeOnLoadAttributes (789ms)
+				ProcessInitializeOnLoadMethodAttributes (184ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.4 MB). Loaded Objects now: 7160.
+Memory consumption went from 270.4 MB to 269.0 MB.
+Total: 9.967000 ms (FindLiveObjects: 1.139300 ms CreateObjectMapping: 1.131200 ms MarkObjects: 4.724600 ms  DeleteObjects: 2.970800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 452158.508139 seconds.
+  path: Assets/MeshBaker/Examples/CharacterCustomization/Output/BareArmRight(Clone).Asset
+  artifactKey: Guid(7195eaac73e0f514786fabee055e2a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/CharacterCustomization/Output/BareArmRight(Clone).Asset using Guid(7195eaac73e0f514786fabee055e2a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff9e92bff0f7b0a2be27357a95d82994') in 0.192965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/MeshBaker/Examples/CharacterCustomization/Materials/BareTorsoMat__Untitled.mat
+  artifactKey: Guid(fa93fc07e2c60ac43ae42918f4e94d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/CharacterCustomization/Materials/BareTorsoMat__Untitled.mat using Guid(fa93fc07e2c60ac43ae42918f4e94d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15fb79529be9de85480aef305675a692') in 0.361359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/AAA Projectiles Vol 1/Textures/Flare4.png
+  artifactKey: Guid(fe05455264c0eda4dabeb02e41d98557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/AAA Projectiles Vol 1/Textures/Flare4.png using Guid(fe05455264c0eda4dabeb02e41d98557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b81cc1994ebebbefcb4a0b2dee319f3') in 0.050361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/BattleRush/Level/New Preserve Objects Data.asset
+  artifactKey: Guid(9491cc8ba3aaf58489aaec922d6ad4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/New Preserve Objects Data.asset using Guid(9491cc8ba3aaf58489aaec922d6ad4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd8f1effe645751ac05edf7a777cabfb') in 0.018883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/Models/Swing axe/Materials/mantah airforce_m_mantah_airforce_AlbedoTransparency.mat
+  artifactKey: Guid(7f01efca8d1104446a4227d96d2392e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Models/Swing axe/Materials/mantah airforce_m_mantah_airforce_AlbedoTransparency.mat using Guid(7f01efca8d1104446a4227d96d2392e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc07e65ed7ab723643af0c03b1a5da83') in 0.151481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/AAA Projectiles Vol 1/Materials/Flare4cg.mat
+  artifactKey: Guid(8a6e728ea97b2bf4399f7190a57a3735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/AAA Projectiles Vol 1/Materials/Flare4cg.mat using Guid(8a6e728ea97b2bf4399f7190a57a3735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5258884782dd811ad7146422f3a690e') in 0.024377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena_1.prefab
+  artifactKey: Guid(21b07833172bc1f45bcfda27024c125b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena_1.prefab using Guid(21b07833172bc1f45bcfda27024c125b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cde6f0f3f039f656ff914c18b56adc03') in 0.565369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/MeshBaker/Examples/CharacterCustomization/Output/BareTorso(Clone).Asset
+  artifactKey: Guid(de3fa79cdaab70041bffaf59e7e22953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/CharacterCustomization/Output/BareTorso(Clone).Asset using Guid(de3fa79cdaab70041bffaf59e7e22953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd744734874fc09fd8ed958581dd65fbc') in 0.041147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/MeshBaker/Examples/CharacterCustomization/Output/BareArmRightDamaged(Clone).Asset
+  artifactKey: Guid(efffbd3f9a23c3b43a520b31cd37db79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/CharacterCustomization/Output/BareArmRightDamaged(Clone).Asset using Guid(efffbd3f9a23c3b43a520b31cd37db79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8974dc770cd0dc78361ecdaa4d26b568') in 0.028224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Runway/arena.prefab
+  artifactKey: Guid(be63bac6b2254fc41be0f0237aefe476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Runway/arena.prefab using Guid(be63bac6b2254fc41be0f0237aefe476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c9eae660ae419da06814b6ba86470f3') in 0.130265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/Models/Arena/Materials/mat_arena.mat
+  artifactKey: Guid(b6c9106ac43abe94496d98e4a0c4a3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Models/Arena/Materials/mat_arena.mat using Guid(b6c9106ac43abe94496d98e4a0c4a3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5ab20747a4c521ecad9a40adcc20ed') in 0.027354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/CommonLibrary/Common/Record/Task/UI/DataRecordTaskUI.prefab
+  artifactKey: Guid(ef1ddd1d8fb494578a7758114145b3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CommonLibrary/Common/Record/Task/UI/DataRecordTaskUI.prefab using Guid(ef1ddd1d8fb494578a7758114145b3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '558e5a1b59c101c30811f27817861739') in 0.017840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Dzung Assets/Models/Swing axe/mantah airforce_m_mantah_airforce_AlbedoTransparency.jpg
+  artifactKey: Guid(d71719edec69a9842867551d33481a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Models/Swing axe/mantah airforce_m_mantah_airforce_AlbedoTransparency.jpg using Guid(d71719edec69a9842867551d33481a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76fb18df15206ec88b0e2610e404c393') in 0.029362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/Toon Projectiles 2/Materials/Flare3cg.mat
+  artifactKey: Guid(a5058d915be7b8c4b874a6d45c51d72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/Toon Projectiles 2/Materials/Flare3cg.mat using Guid(a5058d915be7b8c4b874a6d45c51d72b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26c52765f29c950eaca2e508909cda27') in 0.045737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/MeshBaker/Examples/CharacterCustomization/Materials/BareTorsoMat.mat
+  artifactKey: Guid(1a0384c48005e4d4688030a9896c62f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/CharacterCustomization/Materials/BareTorsoMat.mat using Guid(1a0384c48005e4d4688030a9896c62f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2737201b2d3d7fcbe001d31fd05b0b10') in 0.029898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/MeshBaker/Examples/CharacterCustomization/Output/BareArmLeft(Clone).Asset
+  artifactKey: Guid(7a698996467e56b4da72301bb98c27c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/CharacterCustomization/Output/BareArmLeft(Clone).Asset using Guid(7a698996467e56b4da72301bb98c27c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fd83271c42981f51af1a6be8003700') in 0.027378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/Toon Projectiles 2/Textures/Flare3.png
+  artifactKey: Guid(078c04d2e791c3c4191403a4cbf7bc22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Hovl Studio/Toon Projectiles 2/Textures/Flare3.png using Guid(078c04d2e791c3c4191403a4cbf7bc22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09eb8939f1245a5ba92085f0d31838b6') in 0.016580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaSegment.prefab
+  artifactKey: Guid(68aac98f284ea0b4fab4545a62a328d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaSegment.prefab using Guid(68aac98f284ea0b4fab4545a62a328d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eb18c4bc74cf4bb8dc203674b4709ce') in 0.129392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/MeshBaker/Examples/Assets/ModelPrefabs/Goober Artwork/FBX/Materials/area-lambert1.mat
+  artifactKey: Guid(4730c4d9f48ccdc48b33b56eca7aa355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/Assets/ModelPrefabs/Goober Artwork/FBX/Materials/area-lambert1.mat using Guid(4730c4d9f48ccdc48b33b56eca7aa355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84c14817a1ba6533192c6591361cbee3') in 0.026598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/BattleRush/Hero/HeroMove/Arena
+  artifactKey: Guid(97ff325431eec0a44b37ed053651d385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Hero/HeroMove/Arena using Guid(97ff325431eec0a44b37ed053651d385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3526b5bf1efdd4e2b840f5bbca7e4e3b') in 0.007667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Dzung Assets/Models/Arena/arena ground.fbx
+  artifactKey: Guid(d74de697f31b427458ca7468c1641f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Models/Arena/arena ground.fbx using Guid(d74de697f31b427458ca7468c1641f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e41d2bb66ac477fdd924dccb5a3e112') in 0.033593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.703797 seconds.
+  path: Assets/BattleRush/Level/GameplayMapLevel.csv
+  artifactKey: Guid(8244280c407d7a54899e30bd00a8f0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/GameplayMapLevel.csv using Guid(8244280c407d7a54899e30bd00a8f0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd537457cbe69fffa428de8c49d0a1024') in 0.023202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 92.538291 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment
+  artifactKey: Guid(edfc4dcf7c22f7c449c8e8aedd3e5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment using Guid(edfc4dcf7c22f7c449c8e8aedd3e5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84cc61e3401d869e3130b920f1200bfb') in 0.002831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.629582 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena.unity
+  artifactKey: Guid(19c2189329f87ea4ca5104f4700c1d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena.unity using Guid(19c2189329f87ea4ca5104f4700c1d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20051ddeebf8884acda26aca3a7bc0a8') in 0.009714 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.625388 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaSegment.prefab
+  artifactKey: Guid(68aac98f284ea0b4fab4545a62a328d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaSegment.prefab using Guid(68aac98f284ea0b4fab4545a62a328d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c9d6e09caf9e7b9ea3ae9b19e2e237b') in 0.134230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.853408 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena.unity
+  artifactKey: Guid(19c2189329f87ea4ca5104f4700c1d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena.unity using Guid(19c2189329f87ea4ca5104f4700c1d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f256e443ec8c46e34a0ecce0b3f42d8') in 0.003506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 709.269836 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab
+  artifactKey: Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab using Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd618ef9a2ff387a1849742f154bc59c9') in 2.186974 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006290 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.826 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1827ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1532ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (485ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (689ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (48ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (393ms)
+				ProcessInitializeOnLoadMethodAttributes (111ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6613 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (1.4 MB). Loaded Objects now: 7269.
+Memory consumption went from 270.1 MB to 268.7 MB.
+Total: 6.105600 ms (FindLiveObjects: 0.623700 ms CreateObjectMapping: 0.686300 ms MarkObjects: 4.210000 ms  DeleteObjects: 0.584600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006954 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.277 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1277ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1042ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (314ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (504ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (30ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (292ms)
+				ProcessInitializeOnLoadMethodAttributes (80ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7285.
+Memory consumption went from 270.1 MB to 268.7 MB.
+Total: 4.346000 ms (FindLiveObjects: 0.502300 ms CreateObjectMapping: 0.425200 ms MarkObjects: 2.850600 ms  DeleteObjects: 0.567000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 168.016584 seconds.
+  path: Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Air/NewBehaviourScript.cs
+  artifactKey: Guid(f9f2304754355f241b681df756873e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Air/NewBehaviourScript.cs using Guid(f9f2304754355f241b681df756873e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4785fd453115c54957d1fcde92173c52') in 0.016215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.635341 seconds.
+  path: Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Air/MoveToClickPoint.cs
+  artifactKey: Guid(f9f2304754355f241b681df756873e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Air/MoveToClickPoint.cs using Guid(f9f2304754355f241b681df756873e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9fd232181ce2dd5965644a0d226537') in 0.005152 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014377 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.326 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1327ms)
+		BeginReloadAssembly (149ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1074ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (518ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (33ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (298ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 2.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7300.
+Memory consumption went from 270.1 MB to 268.7 MB.
+Total: 4.478600 ms (FindLiveObjects: 0.494500 ms CreateObjectMapping: 0.456700 ms MarkObjects: 2.921300 ms  DeleteObjects: 0.605000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 46.815718 seconds.
+  path: Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Air/MoveToClickPoint.cs
+  artifactKey: Guid(f9f2304754355f241b681df756873e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Air/MoveToClickPoint.cs using Guid(f9f2304754355f241b681df756873e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7280176c7406b7c3e8225c90dcb5438') in 0.012148 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006396 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.833 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1834ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1473ms)
+			LoadAssemblies (144ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (461ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (79ms)
+			SetupLoadedEditorAssemblies (697ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (46ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (398ms)
+				ProcessInitializeOnLoadMethodAttributes (114ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7315.
+Memory consumption went from 270.1 MB to 268.7 MB.
+Total: 7.028400 ms (FindLiveObjects: 0.604000 ms CreateObjectMapping: 0.802400 ms MarkObjects: 4.913900 ms  DeleteObjects: 0.706800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006093 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.907 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1908ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1635ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (501ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (112ms)
+			SetupLoadedEditorAssemblies (774ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (51ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (447ms)
+				ProcessInitializeOnLoadMethodAttributes (134ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 6.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7330.
+Memory consumption went from 270.1 MB to 268.7 MB.
+Total: 7.081300 ms (FindLiveObjects: 0.580700 ms CreateObjectMapping: 0.818500 ms MarkObjects: 4.835300 ms  DeleteObjects: 0.845800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006257 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.885 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1886ms)
+		BeginReloadAssembly (153ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1622ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (480ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (746ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (54ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (431ms)
+				ProcessInitializeOnLoadMethodAttributes (120ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (47ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7345.
+Memory consumption went from 270.1 MB to 268.7 MB.
+Total: 6.779000 ms (FindLiveObjects: 0.639700 ms CreateObjectMapping: 0.746000 ms MarkObjects: 4.440700 ms  DeleteObjects: 0.951600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005926 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.720 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1720ms)
+		BeginReloadAssembly (149ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1456ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (470ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (668ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (45ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (119ms)
+				ProcessInitializeOnLoadAttributes (385ms)
+				ProcessInitializeOnLoadMethodAttributes (107ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 2.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7360.
+Memory consumption went from 270.2 MB to 268.8 MB.
+Total: 4.540000 ms (FindLiveObjects: 0.494400 ms CreateObjectMapping: 0.412700 ms MarkObjects: 3.030900 ms  DeleteObjects: 0.600900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006283 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 3.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.076 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2076ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1818ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (447ms)
+			ReleaseScriptCaches (10ms)
+			RebuildScriptCaches (215ms)
+			SetupLoadedEditorAssemblies (859ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (49ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (447ms)
+				ProcessInitializeOnLoadMethodAttributes (205ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 2.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7375.
+Memory consumption went from 270.2 MB to 268.8 MB.
+Total: 4.306200 ms (FindLiveObjects: 0.520600 ms CreateObjectMapping: 0.499300 ms MarkObjects: 2.636300 ms  DeleteObjects: 0.648900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005773 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.294 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1295ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1048ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (322ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (502ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (286ms)
+				ProcessInitializeOnLoadMethodAttributes (80ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 2.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7390.
+Memory consumption went from 270.3 MB to 268.9 MB.
+Total: 4.186600 ms (FindLiveObjects: 0.497700 ms CreateObjectMapping: 0.418800 ms MarkObjects: 2.663400 ms  DeleteObjects: 0.605800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005905 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 3.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.931 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1931ms)
+		BeginReloadAssembly (153ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1662ms)
+			LoadAssemblies (128ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (507ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (116ms)
+			SetupLoadedEditorAssemblies (785ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (53ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (137ms)
+				ProcessInitializeOnLoadAttributes (456ms)
+				ProcessInitializeOnLoadMethodAttributes (122ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7405.
+Memory consumption went from 270.3 MB to 268.9 MB.
+Total: 10.401100 ms (FindLiveObjects: 1.255100 ms CreateObjectMapping: 2.728900 ms MarkObjects: 5.640200 ms  DeleteObjects: 0.775800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006085 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.057 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2058ms)
+		BeginReloadAssembly (156ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1726ms)
+			LoadAssemblies (133ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (521ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (861ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (49ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (131ms)
+				ProcessInitializeOnLoadAttributes (553ms)
+				ProcessInitializeOnLoadMethodAttributes (114ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7420.
+Memory consumption went from 270.3 MB to 268.9 MB.
+Total: 6.369200 ms (FindLiveObjects: 0.602100 ms CreateObjectMapping: 0.869400 ms MarkObjects: 3.462700 ms  DeleteObjects: 1.433800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006093 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.045 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2045ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1795ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (434ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (96ms)
+			SetupLoadedEditorAssemblies (950ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (43ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (543ms)
+				ProcessInitializeOnLoadMethodAttributes (213ms)
+				AfterProcessingInitializeOnLoad (24ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (37ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 4.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7435.
+Memory consumption went from 270.4 MB to 269.0 MB.
+Total: 5.572100 ms (FindLiveObjects: 0.514500 ms CreateObjectMapping: 0.452900 ms MarkObjects: 3.953100 ms  DeleteObjects: 0.650600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005971 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.930 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1931ms)
+		BeginReloadAssembly (173ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1620ms)
+			LoadAssemblies (144ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (495ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (778ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (47ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (130ms)
+				ProcessInitializeOnLoadAttributes (463ms)
+				ProcessInitializeOnLoadMethodAttributes (124ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 4.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7450.
+Memory consumption went from 270.4 MB to 269.0 MB.
+Total: 8.204500 ms (FindLiveObjects: 0.573500 ms CreateObjectMapping: 0.664200 ms MarkObjects: 5.906100 ms  DeleteObjects: 1.058600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006227 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.226 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2227ms)
+		BeginReloadAssembly (284ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (133ms)
+		EndReloadAssembly (1745ms)
+			LoadAssemblies (181ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (626ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (757ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (45ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (117ms)
+				ProcessInitializeOnLoadAttributes (457ms)
+				ProcessInitializeOnLoadMethodAttributes (124ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7465.
+Memory consumption went from 270.4 MB to 269.0 MB.
+Total: 6.342500 ms (FindLiveObjects: 0.520000 ms CreateObjectMapping: 0.605200 ms MarkObjects: 4.451700 ms  DeleteObjects: 0.764600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1553.480069 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/NewArena.unity
+  artifactKey: Guid(19636f7079c890842b7846f248978d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/NewArena.unity using Guid(19636f7079c890842b7846f248978d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a5174637c264862d61d8358f4fe87d8') in 0.017937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.842784 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaNavMesh.prefab
+  artifactKey: Guid(e5749569f631ae048b5c62c23ed3b8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaNavMesh.prefab using Guid(e5749569f631ae048b5c62c23ed3b8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da7f9eceef0a2dcc327c53e0d0b471c') in 0.352143 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005874 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.855 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1856ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1569ms)
+			LoadAssemblies (133ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (516ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (727ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (46ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (414ms)
+				ProcessInitializeOnLoadMethodAttributes (114ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (1ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7518.
+Memory consumption went from 270.6 MB to 269.2 MB.
+Total: 6.667200 ms (FindLiveObjects: 0.654400 ms CreateObjectMapping: 0.937600 ms MarkObjects: 3.448100 ms  DeleteObjects: 1.626200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005948 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.819 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1820ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1554ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (494ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (80ms)
+			SetupLoadedEditorAssemblies (735ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (47ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (425ms)
+				ProcessInitializeOnLoadMethodAttributes (123ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7533.
+Memory consumption went from 270.6 MB to 269.1 MB.
+Total: 5.573600 ms (FindLiveObjects: 0.535700 ms CreateObjectMapping: 0.509100 ms MarkObjects: 3.685800 ms  DeleteObjects: 0.841600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2160.122911 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/NavMeshTest/NewArena.unity
+  artifactKey: Guid(19636f7079c890842b7846f248978d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/NavMeshTest/NewArena.unity using Guid(19636f7079c890842b7846f248978d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4871764dbb54e9c63d036d877368ee8') in 0.015109 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006426 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.326 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1326ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1082ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (335ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (520ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (34ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (297ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 3.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7548.
+Memory consumption went from 270.6 MB to 269.2 MB.
+Total: 4.689600 ms (FindLiveObjects: 0.539400 ms CreateObjectMapping: 0.450300 ms MarkObjects: 3.040900 ms  DeleteObjects: 0.658200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006913 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in D:\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.374 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1375ms)
+		BeginReloadAssembly (163ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1110ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (343ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (536ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (33ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (308ms)
+				ProcessInitializeOnLoadMethodAttributes (83ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 2.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6614 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (1.4 MB). Loaded Objects now: 7563.
+Memory consumption went from 270.7 MB to 269.3 MB.
+Total: 4.609200 ms (FindLiveObjects: 0.545500 ms CreateObjectMapping: 0.778000 ms MarkObjects: 2.642500 ms  DeleteObjects: 0.642400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4684.603136 seconds.
+  path: Assets/MeshBaker/Examples/Assets/ModelPrefabs/fence.fbx
+  artifactKey: Guid(51092fa0cd119644a000efbb4ada8c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/Assets/ModelPrefabs/fence.fbx using Guid(51092fa0cd119644a000efbb4ada8c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d86410fb0bfba4f728bffdab040235') in 0.584467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.620826 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Textures/nova_6x3_spritesheet.png
+  artifactKey: Guid(475f6ff71f9b21a4bb2cb3bda7f812a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Textures/nova_6x3_spritesheet.png using Guid(475f6ff71f9b21a4bb2cb3bda7f812a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de554d49d80fbcbc31fc99730bbd847a') in 0.284474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Misc/Explosions/nova_6x3_spritesheet_ADD.mat
+  artifactKey: Guid(ea696a4cf4fe1924796b308e4791aaf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Misc/Explosions/nova_6x3_spritesheet_ADD.mat using Guid(ea696a4cf4fe1924796b308e4791aaf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5e2523c329b54ea95dd0d0780269e37') in 0.079475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse4.mat
+  artifactKey: Guid(5a6823c7766599549af1fd87503dc15d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse4.mat using Guid(5a6823c7766599549af1fd87503dc15d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9681036b62c4c8eaaa8f062719a9738d') in 0.049422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse5.mat
+  artifactKey: Guid(73934bb9dfef31a4c96c39e5ca35f265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse5.mat using Guid(73934bb9dfef31a4c96c39e5ca35f265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ccf7d281ecfb9e771b79a9ccc711a9f') in 0.056601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse3.mat
+  artifactKey: Guid(4cc14f2d300d0c445b1ff0006e0737c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse3.mat using Guid(4cc14f2d300d0c445b1ff0006e0737c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3683a59f2080bb302d8ca3dc24707f5') in 0.041612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse1.mat
+  artifactKey: Guid(feccc9b89c26805468d1bdcb46344626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse1.mat using Guid(feccc9b89c26805468d1bdcb46344626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c56fcb72434f3e6e4b2aebd80cd9821') in 0.058758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse2.mat
+  artifactKey: Guid(d76898e20fbb4d345b4606f98f5307f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MeshBaker/Examples/SceneBasicAssets/TestDiffuse2.mat using Guid(d76898e20fbb4d345b4606f98f5307f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bfa62a509419303aac7d000011df5aa') in 0.033938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.740002 seconds.
+  path: Assets/BattleRush/Level/Empty/TestSegmentObject.cs
+  artifactKey: Guid(7a7249877d73208449b4d3c5367ab235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/Empty/TestSegmentObject.cs using Guid(7a7249877d73208449b4d3c5367ab235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b546136cf7f2a3b3676903e5c8fa0ed') in 0.006297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 174.736214 seconds.
+  path: Assets/Dreamteck/Forever/Level Generator/LevelGenerator.cs
+  artifactKey: Guid(c623274580f39f948ab0f5c9019cff7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Level Generator/LevelGenerator.cs using Guid(c623274580f39f948ab0f5c9019cff7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d362388fe14a2e7c46e09cf9c11feb') in 0.007158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.831507 seconds.
+  path: Assets/OmniShade/Samples/Basic/Materials/MatCap + Rim.mat
+  artifactKey: Guid(e5a8789b5a9c44e63bdc9db2f019b56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OmniShade/Samples/Basic/Materials/MatCap + Rim.mat using Guid(e5a8789b5a9c44e63bdc9db2f019b56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+ -> (artifact id: '1d5a93c468901cab706c7bc5b7cfb8a9') in 0.124107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/OmniShade/Samples/Basic URP/Materials/MatCap + Rim.mat
+  artifactKey: Guid(7aa5563f890664b5db3dff7f88c6aafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OmniShade/Samples/Basic URP/Materials/MatCap + Rim.mat using Guid(7aa5563f890664b5db3dff7f88c6aafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72357b700496e2b75c07e4a6eb6032b9') in 0.713004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.920900 seconds.
+  path: Assets/Dreamteck/Forever/Examples/Math Highway/Prefabs/Math Gate.prefab
+  artifactKey: Guid(c44a90c2142b65a49b5e4e03c6739318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Prefabs/Math Gate.prefab using Guid(c44a90c2142b65a49b5e4e03c6739318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53ae35e6dd2eb1a141e8b70e28189c12') in 0.117033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dreamteck/Forever/Examples/Math Highway/Math Path.asset
+  artifactKey: Guid(52f7c407f5216974e80eef88fe9c9aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Math Path.asset using Guid(52f7c407f5216974e80eef88fe9c9aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22b45a2b217975327a3b9729034e17f') in 0.032044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.260295 seconds.
+  path: Assets/Dreamteck/Forever/Examples/Math Highway/Scripts/MathCamera.cs
+  artifactKey: Guid(1f4a146ba8402b74fa59688cf8ab06dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Scripts/MathCamera.cs using Guid(1f4a146ba8402b74fa59688cf8ab06dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2446ab3fc9a4bec765052a694fea2663') in 0.007050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.480299 seconds.
+  path: Assets/Dreamteck/Forever/Examples/Math Highway/Scripts/MathGate.cs
+  artifactKey: Guid(383c70cf1fcf96a4f8361b02df33dc28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Scripts/MathGate.cs using Guid(383c70cf1fcf96a4f8361b02df33dc28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0bac3ee00ba78aca8479ee817c80ab') in 0.007604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.417437 seconds.
+  path: Assets/Dreamteck/Utilities/DMath.cs
+  artifactKey: Guid(012b8f43a890d8248b810901033c66a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Utilities/DMath.cs using Guid(012b8f43a890d8248b810901033c66a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c28bb3bf37170bdcdceb85c069eb87') in 0.004800 seconds 

@@ -127,6 +127,7 @@
     <Compile Include="Assets\BattleRush\Object\Obstruction\ObstructionUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\Troop.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Auto Save\ES3AutoSaveMgr.cs" />
+    <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\Troops\Antuk\Air\MoveToClickPoint.cs" />
     <Compile Include="Assets\CommonLibrary\RecyclerKit\RecyclerKit.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedObjectType.cs" />
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\Follow.cs" />
