@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{0AB39ACD-2EE6-E15C-4D2B-642E1651D37D}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Dreamteck/Forever/Examples/Math Highway/Prefabs/SegmentEvent.cs">
+    <Files>
+      <File FileName="Assets/Dreamteck/Forever/Examples/Math Highway/Prefabs/SegmentEvent.cs" Line="29" Column="75" />
+      <File FileName="Assets/Dreamteck/Forever/Level Segment/LevelSegment.cs" Line="19" Column="71" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

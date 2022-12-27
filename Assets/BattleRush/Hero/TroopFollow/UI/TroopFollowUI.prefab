@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1671652999377550865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4400153208490081878}
+  - component: {fileID: 3843287685521183876}
+  - component: {fileID: 7086749545017230242}
+  m_Layer: 0
+  m_Name: TroopFollowUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4400153208490081878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671652999377550865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3843287685521183876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671652999377550865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3673dcb6f1e7b41880e5e274c66a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashInstanceId: 0
+  troopPrefabs:
+  - {fileID: -6124612778043485977, guid: 687fe394a611580419e82e5bed57e4e9, type: 3}
+  - {fileID: -2259846927784572693, guid: 23722b216e662be40bde060d63ce674f, type: 3}
+  - {fileID: -6828114199479586465, guid: 6641824729e78944bac855a090133df0, type: 3}
+  - {fileID: 8459179207316356302, guid: b33f12951ae4d2043827e012bc628224, type: 3}
+  - {fileID: -415954049326185813, guid: c45ed52a65dfc8241ad809b618294611, type: 3}
+  - {fileID: -2675717150595301507, guid: 3284641aa6caff14e97ead994a7e9ce8, type: 3}
+  - {fileID: 4525730996285282951, guid: db297882bb895534ebfa780696b001a6, type: 3}
+  - {fileID: -4208458951760954005, guid: 41b17a8d09225af4bb236d989a515ee1, type: 3}
+  - {fileID: 4044607812772502386, guid: 13f5a161c42b33249a0e895c00f1c938, type: 3}
+  - {fileID: 4746773277415935772, guid: ed81b6f291e2d26459d043b2978f812c, type: 3}
+  - {fileID: -5940811398624403699, guid: c5f45e06bd909324bbb40f6ee7d00bc5, type: 3}
+  - {fileID: 5881699664083021950, guid: e2981c08cd96f7643931ebdef40a707d, type: 3}
+  - {fileID: 8630483007979011774, guid: b2bc95cd47d31e346864da27b7349ba8, type: 3}
+  - {fileID: -7004430850802913466, guid: 7e3e22ab66ee8b64183b782f4d1f9d61, type: 3}
+  - {fileID: 7222343715749269057, guid: a6e146c96141de349be84ad52834c909, type: 3}
+  - {fileID: -1639502888706847849, guid: b0d8600e92ad95a42a804a2c7fba8e77, type: 3}
+  - {fileID: -1794104714839851347, guid: 611ba583e3525764dafafa58a4998866, type: 3}
+  - {fileID: 3646478335766294229, guid: dd9075c88aab3dd468b094768cd69e75, type: 3}
+  - {fileID: -6376868294314078930, guid: 7f86b157fca01dd4393c7a7b520af0f9, type: 3}
+  - {fileID: 5953628106324004324, guid: 8e659e65786245e40bb5385c007c27b5, type: 3}
+  - {fileID: 195888179600544085, guid: a8b2076282d28d74cb8cd38f07a795c3, type: 3}
+  - {fileID: -7144922138286788212, guid: 55defa3d773d8694da8330343bacf02a, type: 3}
+  - {fileID: -6602540191704800844, guid: 2848123235dd962478ff765196826e1f, type: 3}
+  - {fileID: -4707468829253064168, guid: a31aceab5bca51946b0d5572f81c0de7, type: 3}
+  - {fileID: 542586957687347361, guid: d5a87bb6e5099894cb879580f95d09a1, type: 3}
+  follow: {fileID: 7086749545017230242}
+--- !u!114 &7086749545017230242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671652999377550865}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb70d23ba41ad4c4ba3b60b8d5842adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  Lerp: 0
+  LerpTime: 0.02
+  X: 1
+  Y: 1
+  Z: 1
+  XOffset: 0
+  YOffset: 0
+  ZOffset: 0
+  LookAt: 0
+  LerpLookAt: 0
+  LerpLookatAtime: 0

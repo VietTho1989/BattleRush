@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using Dreamteck.Forever;
+using UnityEngine;
+
+public class Segment : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public LevelSegment segment;
+
+    #region type
+    public enum SegmentType
+    {
+        Run,
+        Arena
+    }
+
+    public SegmentType segmentType;
+
+    #endregion
+
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (segment != null)
+            this.name = "Segment " + segment.index + "; " + segment.EvaluatePosition(0) + "; " + segment.EvaluatePosition(100);
+    }
+}

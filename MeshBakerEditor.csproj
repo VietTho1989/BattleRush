@@ -57,41 +57,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MeshBaker\Editor\MB3_MultiMeshBakerEditor.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByEnabledDisabled.cs" />
     <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB3_ShaderTexturePropertyDrawer.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByShader.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB_ReplacePrefabsInSceneEditorWindow.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB_TextureBakerEditorConfigureTextureArrays.cs" />
     <Compile Include="Assets\MeshBaker\Editor\core\MB3_BakeInPlace.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerSettingsEditor.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\core\MB_ReplacePrefabsInScene.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB_PrefabPairPropertyDrawer.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_BatchPrefabBakerEditor.cs" />
     <Compile Include="Assets\MeshBaker\Editor\core\MB3_MeshBakerEditorFunctions.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_MBVersionConcreteEditor.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByAlreadyAdded.cs" />
     <Compile Include="Assets\MeshBaker\Editor\core\MB3_MBVersionEditor.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByLightmapIndex.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByOutOfBoundsUVs.cs" />
     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByRenderType.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB_TextureBakerEditorConfigureMultiMaterials.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB3_BoneWeightCopierEditor.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB3_TextureBakerEditor.cs" />
     <Compile Include="Assets\MeshBaker\Editor\core\MB_EditorUtil.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditorWindow.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_TextureBakerEditorInternal.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB_ReplacePrefabsSettings.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_SearchFilters.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditorInternal.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerSettingsAssetEditor.cs" />
     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByMaterial.cs" />
     <Compile Include="Assets\MeshBaker\Editor\core\MB3_TextureCombinerEditorFunctions.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByStatic.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerGrouperEditor.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByEnabledDisabled.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByShader.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB_ReplacePrefabsInSceneEditorWindow.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerSettingsEditor.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\core\MB_ReplacePrefabsInScene.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB_PrefabPairPropertyDrawer.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByAlreadyAdded.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByLightmapIndex.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByOutOfBoundsUVs.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB_TextureBakerEditorConfigureMultiMaterials.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB3_BoneWeightCopierEditor.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB3_TextureBakerEditor.cs" />
+    <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerSettingsAssetEditor.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditor.cs" />
     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByStandardShaderType.cs" />
     <Compile Include="Assets\MeshBaker\Editor\MB3_DisableHiddenAnimationsEditor.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByStatic.cs" />
     <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB_ConvertTextureArrayFormatWizard.cs" />
-    <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerGrouperEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MeshBaker\Editor\MeshBakerEditor.asmdef" />
@@ -370,23 +370,38 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="AIFLogger">
       <HintPath>Assets\AdvancedInputField\AIFLogger.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -793,11 +808,11 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
