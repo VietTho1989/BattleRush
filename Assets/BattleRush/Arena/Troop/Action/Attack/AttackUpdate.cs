@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BattleRushS.ArenaS.TroopS.IntentionS
 {
@@ -16,7 +17,15 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                 dirty = false;
                 if (this.data != null)
                 {
-
+                    Troop troop = this.data.findDataInParent<Troop>();
+                    if (troop != null)
+                    {
+                                               
+                    }
+                    else
+                    {
+                        Logger.LogError("troop null");
+                    }                    
                 }
                 else
                 {
@@ -35,7 +44,72 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
             base.Update();
             if (this.data != null)
             {
+                // time
                 this.data.time.v += Time.deltaTime;
+                // move and attack
+                {
+                    Troop troop = this.data.findDataInParent<Troop>();
+                    if (troop != null)
+                    {
+                        Arena arena = this.data.findDataInParent<Arena>();
+                        if (arena != null)
+                        {
+                            // find target troop
+                            Troop targetTroop = arena.troops.vs.Find(check => check.uid == this.data.targetId.v);
+                            if (targetTroop != null)
+                            {
+                                TroopUI troopUI = troop.findCallBack<TroopUI>();
+                                TroopUI targetTroopUI = targetTroop.findCallBack<TroopUI>();
+                                if(troopUI && targetTroopUI != null)
+                                {
+                                    // check in range
+                                    bool isInRange = false;
+                                    {
+                                        // find range
+                                        // float rangeToAttack = 0.05f;
+                                        {
+                                            // TODO can hoan thien
+                                        }
+                                    }
+                                    // process
+                                    if (isInRange)
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        // move to range
+                                        NavMeshAgent navMeshAgent = troopUI.GetComponent<NavMeshAgent>();
+                                        if (navMeshAgent != null)
+                                        {
+                                            navMeshAgent.destination = targetTroopUI.transform.position;
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("navMeshAgent null");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("troopUI null");
+                                }                                
+                            }
+                            else
+                            {
+                                Logger.LogError("targetTroop null");
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("arena null");
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogError("troop null");
+                    }                    
+                }
             }
             else
             {
@@ -51,6 +125,19 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
         {
             if(data is Attack)
             {
+                Attack attack = data as Attack;
+                // name
+                {
+                    Troop troop = attack.findDataInParent<Troop>();
+                    if (troop != null)
+                    {
+                        this.name = "AttackUpdate: " + troop.uid + " attack " + attack.targetId.v;
+                    }
+                    else
+                    {
+                        Logger.LogError("troop null");
+                    }                   
+                }
                 dirty = true;
                 return;
             }

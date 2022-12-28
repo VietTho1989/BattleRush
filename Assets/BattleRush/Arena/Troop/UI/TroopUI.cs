@@ -53,6 +53,7 @@ namespace BattleRushS.ArenaS
                     Troop troop = this.data.troop.v.data;
                     if (troop != null)
                     {
+                        this.name = "TroopUI " + troop.uid;
                         // troopTypeModel
                         {
                             // find
@@ -131,7 +132,7 @@ namespace BattleRushS.ArenaS
                                                 {
                                                     // find x, z
                                                     float x = Random.Range(-10, 10);
-                                                    float z = Random.Range(-10, 10);
+                                                    float z = troop.teamId.v == 0 ? Random.Range(-10, 0) : Random.Range(0, 10);
                                                     this.transform.position = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
                                                 }
                                                 else

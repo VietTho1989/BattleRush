@@ -9,7 +9,15 @@ namespace BattleRushS.HeroS
 
         #region Constructor
 
+        public enum Property
+        {
 
+        }
+
+        public HeroMoveArena() : base()
+        {
+
+        }
 
         #endregion
 

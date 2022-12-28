@@ -18,7 +18,132 @@ namespace BattleRushS.ArenaS.TroopS
                 if (this.data != null)
                 {
                     Arena arena = this.data.findDataInParent<Arena>();
+                    if (arena != null)
+                    {
+                        switch (arena.stage.v.getType())
+                        {
+                            case Arena.Stage.Type.PreBattle:
+                                {
+                                    Rest rest = this.data.intention.newOrOld<Rest>();
+                                    {
 
+                                    }
+                                    this.data.intention.v = rest;
+                                }
+                                break;
+                            case Arena.Stage.Type.MoveTroopToFormation:
+                                {
+                                    Rest rest = this.data.intention.newOrOld<Rest>();
+                                    {
+
+                                    }
+                                    this.data.intention.v = rest;
+                                }
+                                break;
+                            case Arena.Stage.Type.AutoFight:
+                                {
+                                    // find
+                                    bool needFindTargetToAttack = false;
+                                    {
+                                        switch (this.data.intention.v.getType())
+                                        {
+                                            case TroopIntention.Intention.Type.Rest:
+                                                needFindTargetToAttack = true;
+                                                break;
+                                            case TroopIntention.Intention.Type.Attack:
+                                                {
+                                                    Attack attack = this.data.intention.v as Attack;
+                                                    // check target is dead or not
+                                                    Troop targetTroop = arena.troops.vs.Find(check => check.uid == attack.targetId.v);
+                                                    if (targetTroop != null)
+                                                    {
+                                                        // check target troop can be targeted any more
+                                                        bool canTarget = true;
+                                                        {
+                                                            // target already dead
+                                                            if (canTarget)
+                                                            {
+                                                                if (targetTroop.hitpoint.v <= 0)
+                                                                {
+                                                                    canTarget = false;
+                                                                }
+                                                            }                                                            
+                                                        }
+                                                        // process
+                                                        if (!canTarget)
+                                                        {
+                                                            needFindTargetToAttack = true;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        // target troop not exist anymore
+                                                        needFindTargetToAttack = true;
+                                                    }
+                                                }
+                                                break;
+                                            default:
+                                                Logger.LogError("unknown type: "+this.data.intention.v.getType());
+                                                break;
+                                        }
+                                    }
+                                    // process
+                                    if (needFindTargetToAttack)
+                                    {
+                                        // find target to attack
+                                        Troop targetToAttack = null;
+                                        {
+                                            Troop troop = this.data.findDataInParent<Troop>();
+                                            if (troop != null)
+                                            {
+                                                foreach (Troop check in arena.troops.vs)
+                                                {
+                                                    if (check.teamId.v != troop.teamId.v)
+                                                    {
+                                                        // set or not
+                                                        if (targetToAttack == null)
+                                                        {
+                                                            targetToAttack = check;
+                                                        }
+                                                        else
+                                                        {
+                                                            // choose target nearest
+                                                            if (Vector3.Distance(troop.worldPosition.v, targetToAttack.worldPosition.v) > Vector3.Distance(troop.worldPosition.v, check.worldPosition.v))
+                                                            {
+                                                                targetToAttack = check;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("troop null");
+                                            }                                           
+                                        }
+                                        // process
+                                        if (targetToAttack != null)
+                                        {
+                                            Attack attack = this.data.intention.newOrOld<Attack>();
+                                            {
+                                                attack.targetId.v = targetToAttack.uid;
+                                            }
+                                            this.data.intention.v = attack;
+                                        }
+                                    }
+                                }
+                                break;
+                            case Arena.Stage.Type.FightEnd:
+                                break;
+                            default:
+                                Logger.LogError("unknown type: " + arena.stage.v.getType());
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogError("arena null");
+                    }
                 }
                 else
                 {

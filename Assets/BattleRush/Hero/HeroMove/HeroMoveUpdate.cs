@@ -106,7 +106,7 @@ namespace BattleRushS.HeroS
                             // TODO can hoan thien
                             if (this.data.currentSegment.v != null)
                             {
-                                if(this.data.currentSegment.v.segmentType== Segment.SegmentType.Arena)
+                                if(this.data.currentSegment.v.segmentType == Segment.SegmentType.Arena)
                                 {
                                     isRun = false;
                                 }
