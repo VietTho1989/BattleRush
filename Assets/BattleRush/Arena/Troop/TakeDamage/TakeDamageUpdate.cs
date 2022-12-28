@@ -16,7 +16,46 @@ namespace BattleRushS.ArenaS
                 dirty = false;
                 if (this.data != null)
                 {
-
+                    Troop troop = this.data.findDataInParent<Troop>();
+                    if (troop != null)
+                    {
+                        if (this.data.damages.vs.Count > 0)
+                        {
+                            // get
+                            List<Damage> damages = new List<Damage>();
+                            {
+                                damages.AddRange(this.data.damages.vs);
+                            }
+                            // process
+                            foreach (Damage damage in damages)
+                            {
+                                // process
+                                {
+                                    if (troop.hitpoint.v > 0)
+                                    {
+                                        troop.hitpoint.v = Mathf.Clamp(troop.hitpoint.v - damage.damage.v, 0, 1);
+                                    }
+                                }
+                                // remove
+                                {
+                                    // find
+                                    bool needRemove = true;
+                                    {
+                                        // TODO sau nay co the cai tien poison damange khong remove ngay
+                                    }
+                                    // process
+                                    if (needRemove)
+                                    {
+                                        this.data.damages.remove(damage);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogError("troop null");
+                    }                    
                 }
                 else
                 {
@@ -38,6 +77,17 @@ namespace BattleRushS.ArenaS
         {
             if(data is TakeDamage)
             {
+                TakeDamage takeDamage = data as TakeDamage;
+                // Child
+                {
+                    takeDamage.damages.allAddCallBack(this);
+                }
+                dirty = true;
+                return;
+            }
+            // Child
+            if(data is Damage)
+            {
                 dirty = true;
                 return;
             }
@@ -49,7 +99,16 @@ namespace BattleRushS.ArenaS
             if(data is TakeDamage)
             {
                 TakeDamage takeDamage = data as TakeDamage;
+                // Child
+                {
+                    takeDamage.damages.allRemoveCallBack(this);
+                }
                 this.setDataNull(takeDamage);
+                return;
+            }
+            // Child
+            if(data is Damage)
+            {
                 return;
             }
             Logger.LogError("Don't process: " + data + "; " + this);
@@ -66,6 +125,22 @@ namespace BattleRushS.ArenaS
                 switch ((TakeDamage.Property)wrapProperty.n)
                 {
                     case TakeDamage.Property.damages:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                return;
+            }
+            // Child
+            if(wrapProperty.p is Damage)
+            {
+                switch ((Damage.Property)wrapProperty.n)
+                {
+                    case Damage.Property.damage:
                         dirty = true;
                         break;
                     default:

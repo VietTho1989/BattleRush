@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS;
 using BattleRushS.ObjectS;
 using BattleRushS.StateS;
 using Dreamteck.Forever;
@@ -52,6 +53,8 @@ namespace BattleRushS
 
             #endregion
 
+            public LD<ArenaUI.UIData> arenas;
+
             #region Constructor
 
             public enum Property
@@ -61,7 +64,8 @@ namespace BattleRushS
                 stateUI,
                 hero,
                 playerInput,
-                objectInPaths
+                objectInPaths,
+                arenas
             }
 
             public UIData() : base()
@@ -72,6 +76,7 @@ namespace BattleRushS
                 this.hero = new VD<HeroUI.UIData>(this, (byte)Property.hero, new HeroUI.UIData());
                 this.playerInput = new VD<PlayerInputUI.UIData>(this, (byte)Property.playerInput, new PlayerInputUI.UIData());
                 this.objectInPaths = new LD<ObjectInPathUI>(this, (byte)Property.objectInPaths);
+                this.arenas = new LD<ArenaUI.UIData>(this, (byte)Property.arenas);
             }
 
             #endregion
@@ -121,6 +126,8 @@ namespace BattleRushS
         }
 
         #region Refresh
+
+        public Transform worldCanvas;
 
         public override void refresh()
         {

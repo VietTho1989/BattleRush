@@ -17,14 +17,7 @@ namespace BattleRushS
                 dirty = false;
                 if (this.data != null)
                 {
-                    // skin
-                    {
-                        if (string.IsNullOrEmpty(this.data.skin.v))
-                        {
-                            string[] skins = { "Antuk_1", "Antuk_2", "Antuk_3", "Antuk_4", "Krakee_1", "Krakee_2", "Krakee_3", "Krakee_4", "Mantah_1", "Mantah_2", "Mantah_3", "Mantah_4", "Muu_1", "Muu_2", "Muu_3", "Muu_4" };
-                            this.data.skin.v = skins[Random.Range(0, skins.Length)];
-                        }
-                    }
+
                 }
                 else
                 {
@@ -128,7 +121,7 @@ namespace BattleRushS
             {
                 switch ((Hero.Property)wrapProperty.n)
                 {
-                    case Hero.Property.skin:
+                    case Hero.Property.troopType:
                         dirty = true;
                         break;
                     case Hero.Property.heroMove:

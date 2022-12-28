@@ -280,7 +280,6 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LayerMask.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Blade\Blade.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_EmissionModule.cs" />
-    <Compile Include="Assets\BattleRush\MakeArenaUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\DataRecordTaskUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\EditData\EditData.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\HaveTransformInterface.cs" />
@@ -306,6 +305,7 @@
     <Compile Include="Assets\CommonLibrary\Preload.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\LP\LO.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\GetKeyInterface.cs" />
+    <Compile Include="Assets\BattleRush\Arena\UI\ArenaUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\LoadUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3CollectionType.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Text.cs" />
@@ -511,6 +511,14 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
+    <Compile Include="Assets\BattleRush\Level\MyCustomSequence\ArenaSegment\Arena\TestNavMeshData.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\UI\HealthBar\HealthBarUI.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Action\TroopIntention.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Rest\Rest.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Rest\RestUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Attack\Attack.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Attack\AttackUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Action\TroopIntentionUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1420,6 +1428,14 @@
     <ProjectReference Include="AdvancedInputFieldEditor.csproj">
       <Project>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</Project>
       <Name>AdvancedInputFieldEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{03E373FB-7A47-73D6-165C-716D84826628}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
+      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

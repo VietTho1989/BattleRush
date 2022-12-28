@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dreamteck.Forever", "Dreamt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dreamteck.Splines", "Dreamteck.Splines.csproj", "{889C9618-7878-DBB6-0FC0-9D284D24FAAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponents", "NavMeshComponents.csproj", "{03E373FB-7A47-73D6-165C-716D84826628}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedInputFieldEditor", "AdvancedInputFieldEditor.csproj", "{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshBakerEditor", "MeshBakerEditor.csproj", "{14E836F2-7FBE-3FAE-CCFC-241F75738C45}"
@@ -28,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{F7B0E9B0-3858-E4B6-5F4E-66B81F0962CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSA-Editor", "OSA-Editor.csproj", "{D9B4713F-E9BC-CC06-A4FB-FABEA4A732DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponentsEditor", "NavMeshComponentsEditor.csproj", "{827C3093-2A86-E239-296E-CBE5263E014E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,10 @@ Global
 		{889C9618-7878-DBB6-0FC0-9D284D24FAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{889C9618-7878-DBB6-0FC0-9D284D24FAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{889C9618-7878-DBB6-0FC0-9D284D24FAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E373FB-7A47-73D6-165C-716D84826628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E373FB-7A47-73D6-165C-716D84826628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E373FB-7A47-73D6-165C-716D84826628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E373FB-7A47-73D6-165C-716D84826628}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -91,6 +99,10 @@ Global
 		{D9B4713F-E9BC-CC06-A4FB-FABEA4A732DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9B4713F-E9BC-CC06-A4FB-FABEA4A732DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9B4713F-E9BC-CC06-A4FB-FABEA4A732DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{827C3093-2A86-E239-296E-CBE5263E014E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827C3093-2A86-E239-296E-CBE5263E014E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827C3093-2A86-E239-296E-CBE5263E014E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827C3093-2A86-E239-296E-CBE5263E014E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS
@@ -42,6 +43,7 @@ namespace BattleRushS.ArenaS
                 // Child
                 {
                     troop.takeDamage.allAddCallBack(this);
+                    troop.intention.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -58,6 +60,16 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
+                if(data is TroopIntention)
+                {
+                    TroopIntention troopIntention = data as TroopIntention;
+                    // Update
+                    {
+                        UpdateUtils.makeUpdate<TroopIntentionUpdate, TroopIntention>(troopIntention, this.transform);
+                    }
+                    dirty = true;
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -70,6 +82,7 @@ namespace BattleRushS.ArenaS
                 // Child
                 {
                     troop.takeDamage.allRemoveCallBack(this);
+                    troop.intention.allRemoveCallBack(this);
                 }
                 this.setDataNull(troop);
                 return;
@@ -82,6 +95,15 @@ namespace BattleRushS.ArenaS
                     // Update
                     {
                         takeDamage.removeCallBackAndDestroy(typeof(TakeDamageUpdate));
+                    }
+                    return;
+                }
+                if (data is TroopIntention)
+                {
+                    TroopIntention troopIntention = data as TroopIntention;
+                    // Update
+                    {
+                        troopIntention.removeCallBackAndDestroy(typeof(TroopIntentionUpdate));
                     }
                     return;
                 }
@@ -105,6 +127,12 @@ namespace BattleRushS.ArenaS
                             dirty = true;
                         }
                         break;
+                    case Troop.Property.intention:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -113,6 +141,10 @@ namespace BattleRushS.ArenaS
             // Child
             {
                 if (wrapProperty.p is TakeDamage)
+                {
+                    return;
+                }
+                if (wrapProperty.p is TroopIntention)
                 {
                     return;
                 }

@@ -250,21 +250,25 @@ namespace BattleRushS.HeroS
                                         }
                                     }
                                     // process
-                                    if (offset != Vector3.zero)
                                     {
-                                        if (follow != null)
+                                        /*if (offset != Vector3.zero)
                                         {
-                                            follow.enabled = true;
-                                            follow.target = this.transform.parent;
-                                            follow.XOffset = offset.x;
-                                            follow.YOffset = offset.y;
-                                            follow.ZOffset = offset.z;
-                                        }
-                                        else
-                                        {
-                                            Logger.LogError("follow null");
-                                        }
-                                    }
+                                            if (follow != null)
+                                            {
+                                                follow.enabled = true;
+                                                follow.target = this.transform.parent;
+                                                follow.XOffset = offset.x;
+                                                follow.YOffset = offset.y;
+                                                follow.ZOffset = offset.z;
+                                                follow.LerpTime = 0;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("follow null");
+                                            }
+                                        }*/
+                                        this.transform.localPosition = offset;
+                                    }                                   
                                 }
                                 // animation
                                 {

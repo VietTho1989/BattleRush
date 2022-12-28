@@ -1002,6 +1002,14 @@
       <Project>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</Project>
       <Name>AdvancedInputFieldEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{03E373FB-7A47-73D6-165C-716D84826628}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

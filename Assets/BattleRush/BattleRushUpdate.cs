@@ -38,10 +38,6 @@ namespace BattleRushS
             if (data is BattleRush)
             {
                 BattleRush battleRush = data as BattleRush;
-                // Update
-                {
-                    UpdateUtils.makeUpdate<MakeArenaUpdate, BattleRush>(battleRush, this.transform);
-                }
                 // Child
                 {
                     battleRush.state.allAddCallBack(this);
@@ -224,10 +220,6 @@ namespace BattleRushS
             if (data is BattleRush)
             {
                 BattleRush battleRush = data as BattleRush;
-                // Update
-                {
-                    battleRush.removeCallBackAndDestroy(typeof(MakeArenaUpdate));
-                }
                 // Child
                 {
                     battleRush.state.allRemoveCallBack(this);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.HeroS;
 using UnityEngine;
 
 namespace BattleRushS
@@ -51,6 +52,7 @@ namespace BattleRushS
                     if (hero != null)
                     {
                         GameObject[] modules = { eyes, heads, legs, tops, wings };
+                        string skinName = TroopFollow.getHeroSkin(hero.troopType.v);
                         foreach(GameObject module in modules)
                         {
                             // find chosen skin
@@ -59,7 +61,7 @@ namespace BattleRushS
                                 for (int i = 0; i < module.transform.childCount; i++)
                                 {
                                     Transform child = module.transform.GetChild(i);
-                                    if (child.name.Contains(hero.skin.v))
+                                    if (child.name.Contains(skinName))
                                     {
                                         chosenIndex = i;
                                         break;
@@ -161,7 +163,7 @@ namespace BattleRushS
             {
                 switch ((Hero.Property)wrapProperty.n)
                 {
-                    case Hero.Property.skin:
+                    case Hero.Property.troopType:
                         dirty = true;
                         break;
                     default:

@@ -828,6 +828,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1285517210599240601}
   - component: {fileID: 2003099214135227341}
+  - component: {fileID: 7597731203197008770}
+  - component: {fileID: 1983770298776899666}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -887,6 +889,50 @@ MonoBehaviour:
     bendSprite: 0
     bendPolygonCollider: 0
     applyMeshColors: 0
+--- !u!114 &7597731203197008770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285517210599240600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f296074e0d08fee44b77aa8fad9f4b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashInstanceId: 0
+  center: {fileID: 8861778744270994065}
+  troopPrefab: {fileID: 582736463879002837, guid: 456a72382558f44479164b9d57d53fd3, type: 3}
+--- !u!114 &1983770298776899666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285517210599240600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: cc4e314c45b67e04b8768df88c1badfb, type: 2}
 --- !u!1 &1285517210619395547
 GameObject:
   m_ObjectHideFlags: 0
@@ -47338,6 +47384,7 @@ GameObject:
   - component: {fileID: 1611631617100098730}
   - component: {fileID: 2446142891807286031}
   - component: {fileID: 438686130260793285}
+  - component: {fileID: 3829730790395748946}
   m_Layer: 0
   m_Name: arena ground
   m_TagString: Untagged
@@ -47410,6 +47457,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3829730790395748946
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095997668025857552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4164361407500241290, guid: d74de697f31b427458ca7468c1641f75, type: 3}
 --- !u!1 &2095997669524534531
 GameObject:
   m_ObjectHideFlags: 0
@@ -62076,9 +62137,10 @@ MonoBehaviour:
     _settingsComponent: {fileID: 0}
     overrideSettingsComponent: 0
     meshFilter: {fileID: 2446142891807286031}
-    meshCollider: {fileID: 0}
+    meshCollider: {fileID: 3829730790395748946}
     spriteRenderer: {fileID: 0}
-    colliders: []
+    colliders:
+    - {fileID: 3829730790395748946}
     _isRoot: 0
   - transform: {fileID: 1285517210689338974}
     localRotation: {x: 0, y: 0, z: 0, w: 1}
