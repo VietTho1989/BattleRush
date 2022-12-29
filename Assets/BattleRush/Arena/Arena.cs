@@ -37,13 +37,16 @@ namespace BattleRushS
 
         public LD<Troop> troops;
 
+        public LD<Projectile> projectiles;
+
         #region Constructor
 
         public enum Property
         {
             segment,
             stage,
-            troops
+            troops,
+            projectiles
         }
 
         public Arena() : base()
@@ -51,6 +54,7 @@ namespace BattleRushS
             this.segment = new VO<Segment>(this, (byte)Property.segment, null);
             this.stage = new VD<Stage>(this, (byte)Property.stage, new PreBattle());
             this.troops = new LD<Troop>(this, (byte)Property.troops);
+            this.projectiles = new LD<Projectile>(this, (byte)Property.projectiles);
         }
 
         #endregion

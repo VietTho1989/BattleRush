@@ -44,6 +44,7 @@ namespace BattleRushS.ArenaS
                 {
                     troop.takeDamage.allAddCallBack(this);
                     troop.intention.allAddCallBack(this);
+                    troop.troopAttack.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -60,12 +61,22 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
-                if(data is TroopIntention)
+                if (data is TroopIntention)
                 {
                     TroopIntention troopIntention = data as TroopIntention;
                     // Update
                     {
                         UpdateUtils.makeUpdate<TroopIntentionUpdate, TroopIntention>(troopIntention, this.transform);
+                    }
+                    dirty = true;
+                    return;
+                }
+                if(data is TroopAttack)
+                {
+                    TroopAttack troopAttack = data as TroopAttack;
+                    // Update
+                    {
+                        UpdateUtils.makeUpdate<TroopAttackUpdate, TroopAttack>(troopAttack, this.transform);
                     }
                     dirty = true;
                     return;
@@ -83,6 +94,7 @@ namespace BattleRushS.ArenaS
                 {
                     troop.takeDamage.allRemoveCallBack(this);
                     troop.intention.allRemoveCallBack(this);
+                    troop.troopAttack.allRemoveCallBack(this);
                 }
                 this.setDataNull(troop);
                 return;
@@ -104,6 +116,15 @@ namespace BattleRushS.ArenaS
                     // Update
                     {
                         troopIntention.removeCallBackAndDestroy(typeof(TroopIntentionUpdate));
+                    }
+                    return;
+                }
+                if (data is TroopAttack)
+                {
+                    TroopAttack troopAttack = data as TroopAttack;
+                    // Update
+                    {
+                        troopAttack.removeCallBackAndDestroy(typeof(TroopAttackUpdate));
                     }
                     return;
                 }
@@ -133,6 +154,12 @@ namespace BattleRushS.ArenaS
                             dirty = true;
                         }
                         break;
+                    case Troop.Property.troopAttack:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -145,6 +172,10 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 if (wrapProperty.p is TroopIntention)
+                {
+                    return;
+                }
+                if (wrapProperty.p is TroopAttack)
                 {
                     return;
                 }

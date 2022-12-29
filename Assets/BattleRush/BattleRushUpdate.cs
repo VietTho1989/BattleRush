@@ -452,6 +452,10 @@ namespace BattleRushS
                 {
                     return;
                 }
+                if(wrapProperty.p is Arena)
+                {
+                    return;
+                }
                 if(wrapProperty.p is ObjectInPath)
                 {
                     return;

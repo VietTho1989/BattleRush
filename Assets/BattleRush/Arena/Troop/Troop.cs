@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS
@@ -31,10 +32,16 @@ namespace BattleRushS.ArenaS
 
         public VD<TakeDamage> takeDamage;
 
+        #region troop action
+
         /**
          * ai: what troop will do
          * */
         public VD<TroopIntention> intention;
+
+        public VD<TroopAttack> troopAttack;
+
+        #endregion
 
         #region Constructor
 
@@ -48,7 +55,8 @@ namespace BattleRushS.ArenaS
             attackRange,
             worldPosition,
             takeDamage,
-            intention
+            intention,
+            troopAttack
         }
 
         public Troop() : base()
@@ -62,6 +70,7 @@ namespace BattleRushS.ArenaS
             this.worldPosition = new VO<Vector3>(this, (byte)Property.worldPosition, Vector3.zero);
             this.takeDamage = new VD<TakeDamage>(this, (byte)Property.takeDamage, new TakeDamage());
             this.intention = new VD<TroopIntention>(this, (byte)Property.intention, new TroopIntention());
+            this.troopAttack = new VD<TroopAttack>(this, (byte)Property.troopAttack, new TroopAttack());
         }
 
         #endregion

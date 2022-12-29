@@ -255,12 +255,14 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Sync\SyncDictRemove.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\AutoFight.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\CheckIpAddress\Not\NotUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Intention\TroopIntention.cs" />
     <Compile Include="Assets\CommonLibrary\Common\DataUtils.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Color32.cs" />
     <Compile Include="Assets\BattleRush\State\1_Start\arrow\ArrowAnimation.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Quaternion.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES33DArrayType.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\TroopUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Level\MyCustomSequence\ArenaSegment\Arena\TestNavMeshData.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Disappear\DisappearUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UIConstants.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Gradient.cs" />
@@ -274,6 +276,7 @@
     <Compile Include="Assets\BattleRush\Object\Sub\Blade\BladeUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\0_PreBattle\PreBattleUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_MinMaxCurve.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Intention\Rest\Rest.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TriggerModule.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Bounds.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UIHaveTransformDataBehavior.cs" />
@@ -317,6 +320,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Texture.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ulong.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_byte.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\UI\HealthBar\HealthBarUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\2_Destroy\Destroyed.cs" />
     <Compile Include="Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutinesCameraMonoController.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadLevel.cs" />
@@ -391,6 +395,7 @@
     <Compile Include="Assets\CommonLibrary\Common\UIUtils.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Change\HistoryChange.cs" />
     <Compile Include="Assets\BattleRush\Hero\Hero.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Intention\Attack\Attack.cs" />
     <Compile Include="Assets\CommonLibrary\Common\WrapProperty.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\TroopCageUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_SphereCollider.cs" />
@@ -402,10 +407,12 @@
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\Collide\WayUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ushort.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\ToastData.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Intention\Attack\AttackUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RectTransform.cs" />
     <Compile Include="Assets\BattleRush\Map\MapData.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils.cs" />
     <Compile Include="Assets\BattleRush\Hero\UI\HeroSkinUI.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Intention\TroopIntentionUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UIRefresh.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\SawBlade\SawBlade.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3ListType.cs" />
@@ -445,6 +452,7 @@
     <Compile Include="Assets\BattleRush\Arena\Troop\TakeDamage\TakeDamageUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3Prefab.cs" />
     <Compile Include="Assets\CommonLibrary\AdvancedCoroutines\CoroutineManager.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Intention\Rest\RestUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_PolygonCollider2D.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\DataRecordTask.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\CocoonMantah\CocoonMantahUI.cs" />
@@ -492,7 +500,7 @@
     <Compile Include="Assets\BattleRush\Object\Sub\FireNozzle\FireNozzle.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\UI\Save\SaveRecordUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_EventSystem.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Prjojectile\Projectile.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\Projectile.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_intptr.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\Settings.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeCallBack.cs" />
@@ -505,20 +513,24 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3ReferenceMgrBase.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\GameBehavior.cs" />
     <Compile Include="Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Prjojectile\ProjectileUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\ProjectileUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Hide\HideUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\SawBlade\SawBladeUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
-    <Compile Include="Assets\BattleRush\Level\MyCustomSequence\ArenaSegment\Arena\TestNavMeshData.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\UI\HealthBar\HealthBarUI.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\Action\TroopIntention.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Rest\Rest.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Rest\RestUpdate.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Attack\Attack.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\Action\Attack\AttackUpdate.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\Action\TroopIntentionUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Hero\CenterLaneForCamera.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Attack\TroopAttack.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Attack\0_Normal\Normal.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Attack\0_Normal\NormalUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Attack\1_Animation\Anim.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Attack\1_Animation\AnimUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Attack\TroopAttackUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\UI\ProjectileUI.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\State\0_Move\Move.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\State\1_DealDamage\DealDamage.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\State\1_DealDamage\DealDamageUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Projectile\State\0_Move\MoveUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1401,6 +1413,14 @@
       <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>
       <Name>AdvancedInputField</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{03E373FB-7A47-73D6-165C-716D84826628}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Splines.csproj">
       <Project>{889C9618-7878-DBB6-0FC0-9D284D24FAAE}</Project>
       <Name>Dreamteck.Splines</Name>
@@ -1428,14 +1448,6 @@
     <ProjectReference Include="AdvancedInputFieldEditor.csproj">
       <Project>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</Project>
       <Name>AdvancedInputFieldEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{03E373FB-7A47-73D6-165C-716D84826628}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
-      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

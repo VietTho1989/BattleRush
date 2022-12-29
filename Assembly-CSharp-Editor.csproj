@@ -974,6 +974,14 @@
       <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>
       <Name>AdvancedInputField</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{03E373FB-7A47-73D6-165C-716D84826628}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Splines.csproj">
       <Project>{889C9618-7878-DBB6-0FC0-9D284D24FAAE}</Project>
       <Name>Dreamteck.Splines</Name>
@@ -1001,14 +1009,6 @@
     <ProjectReference Include="AdvancedInputFieldEditor.csproj">
       <Project>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</Project>
       <Name>AdvancedInputFieldEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{03E373FB-7A47-73D6-165C-716D84826628}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
-      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

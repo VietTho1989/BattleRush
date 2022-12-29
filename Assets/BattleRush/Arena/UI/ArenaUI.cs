@@ -17,18 +17,22 @@ namespace BattleRushS.ArenaS
 
             public LD<TroopUI.UIData> troops;
 
+            public LD<ProjectileUI.UIData> projectiles;
+
             #region Constructor
 
             public enum Property
             {
                 arena,
-                troops
+                troops,
+                projectiles
             }
 
             public UIData() : base()
             {
                 this.arena = new VO<ReferenceData<Arena>>(this, (byte)Property.arena, new ReferenceData<Arena>(null));
                 this.troops = new LD<TroopUI.UIData>(this, (byte)Property.troops);
+                this.projectiles = new LD<ProjectileUI.UIData>(this, (byte)Property.projectiles);
             }
 
             #endregion
@@ -154,6 +158,60 @@ namespace BattleRushS.ArenaS
                                 this.data.troops.remove(old);
                             }
                         }
+                        // projectiles
+                        {
+                            // get old 
+                            List<ProjectileUI.UIData> olds = new List<ProjectileUI.UIData>();
+                            {
+                                olds.AddRange(this.data.projectiles.vs);
+                            }
+                            // Update
+                            {
+                                foreach (Projectile projectile in arena.projectiles.vs)
+                                {
+                                    // get UIData
+                                    ProjectileUI.UIData projectileUIData = null;
+                                    bool needAdd = false;
+                                    {
+                                        // get old
+                                        foreach (ProjectileUI.UIData check in olds)
+                                        {
+                                            if (check.projectile.v.data == projectile)
+                                            {
+                                                projectileUIData = check;
+                                            }
+                                        }
+                                        // make new
+                                        if (projectileUIData == null)
+                                        {
+                                            projectileUIData = new ProjectileUI.UIData();
+                                            {
+                                                projectileUIData.uid = this.data.projectiles.makeId();
+                                            }
+                                            needAdd = true;
+                                        }
+                                        else
+                                        {
+                                            olds.Remove(projectileUIData);
+                                        }
+                                    }
+                                    // update
+                                    {
+                                        projectileUIData.projectile.v = new ReferenceData<Projectile>(projectile);
+                                    }
+                                    // add
+                                    if (needAdd)
+                                    {
+                                        this.data.projectiles.add(projectileUIData);
+                                    }
+                                }
+                            }
+                            // remove old
+                            foreach (ProjectileUI.UIData old in olds)
+                            {
+                                this.data.projectiles.remove(old);
+                            }
+                        }
                     }
                     else
                     {
@@ -220,6 +278,7 @@ namespace BattleRushS.ArenaS
         #region implement callBacks
 
         public TroopUI troopPrefab;
+        public ProjectileUI projectilePrefab;
 
         public override void onAddCallBack<T>(T data)
         {
@@ -230,6 +289,7 @@ namespace BattleRushS.ArenaS
                 {
                     uiData.arena.allAddCallBack(this);
                     uiData.troops.allAddCallBack(this);
+                    uiData.projectiles.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -251,6 +311,16 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
+                if(data is ProjectileUI.UIData)
+                {
+                    ProjectileUI.UIData projectileUIData = data as ProjectileUI.UIData;
+                    // UI
+                    {
+                        UIUtils.Instantiate(projectileUIData, projectilePrefab, this.transform);
+                    }
+                    dirty = true;
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -264,6 +334,7 @@ namespace BattleRushS.ArenaS
                 {
                     uiData.arena.allRemoveCallBack(this);
                     uiData.troops.allRemoveCallBack(this);
+                    uiData.projectiles.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
@@ -280,6 +351,15 @@ namespace BattleRushS.ArenaS
                     // UI
                     {
                         troopUIData.removeCallBackAndDestroy(typeof(TroopUI));
+                    }
+                    return;
+                }
+                if (data is ProjectileUI.UIData)
+                {
+                    ProjectileUI.UIData projectileUIData = data as ProjectileUI.UIData;
+                    // UI
+                    {
+                        projectileUIData.removeCallBackAndDestroy(typeof(ProjectileUI));
                     }
                     return;
                 }
@@ -309,6 +389,12 @@ namespace BattleRushS.ArenaS
                             dirty = true;
                         }
                         break;
+                    case UIData.Property.projectiles:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -329,6 +415,10 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 if (wrapProperty.p is TroopUI.UIData)
+                {
+                    return;
+                }
+                if(wrapProperty.p is ProjectileUI.UIData)
                 {
                     return;
                 }

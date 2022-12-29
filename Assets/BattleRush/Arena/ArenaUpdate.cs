@@ -43,6 +43,7 @@ namespace BattleRushS.ArenaS
                 {
                     arena.stage.allAddCallBack(this);
                     arena.troops.allAddCallBack(this);
+                    arena.projectiles.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -95,6 +96,16 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
+                if(data is Projectile)
+                {
+                    Projectile projectile = data as Projectile;
+                    // Update
+                    {
+                        UpdateUtils.makeUpdate<ProjectileUpdate, Projectile>(projectile, this.transform);
+                    }
+                    dirty = true;
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -108,6 +119,7 @@ namespace BattleRushS.ArenaS
                 {
                     arena.stage.allRemoveCallBack(this);
                     arena.troops.allRemoveCallBack(this);
+                    arena.projectiles.allRemoveCallBack(this);
                 }
                 return;
             }
@@ -158,6 +170,15 @@ namespace BattleRushS.ArenaS
                     }
                     return;
                 }
+                if (data is Projectile)
+                {
+                    Projectile projectile = data as Projectile;
+                    // Update
+                    {
+                        projectile.removeCallBackAndDestroy(typeof(ProjectileUpdate));
+                    }
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -184,6 +205,12 @@ namespace BattleRushS.ArenaS
                             dirty = true;
                         }
                         break;
+                    case Arena.Property.projectiles:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -196,6 +223,10 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 if(wrapProperty.p is Troop)
+                {
+                    return;
+                }
+                if(wrapProperty.p is Projectile)
                 {
                     return;
                 }
