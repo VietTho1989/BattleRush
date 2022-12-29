@@ -72,6 +72,7 @@ MonoBehaviour:
   - {fileID: -6602540191704800844, guid: 2848123235dd962478ff765196826e1f, type: 3}
   - {fileID: -4707468829253064168, guid: a31aceab5bca51946b0d5572f81c0de7, type: 3}
   - {fileID: 542586957687347361, guid: d5a87bb6e5099894cb879580f95d09a1, type: 3}
+  defaultTroopPrefab: {fileID: -6124612778043485977, guid: 687fe394a611580419e82e5bed57e4e9, type: 3}
   follow: {fileID: 7086749545017230242}
 --- !u!114 &7086749545017230242
 MonoBehaviour:

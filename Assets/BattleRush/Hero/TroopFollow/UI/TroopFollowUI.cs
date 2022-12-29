@@ -38,6 +38,7 @@ namespace BattleRushS.HeroS
 
         private TroopInformation currentTroopTypeModel;
         public List<TroopInformation> troopPrefabs;
+        public TroopInformation defaultTroopPrefab;
 
         public Follow follow;
 
@@ -70,6 +71,7 @@ namespace BattleRushS.HeroS
                                 // find prefab
                                 TroopInformation prefab = null;
                                 {
+                                    // find
                                     foreach(TroopInformation check in troopPrefabs)
                                     {
                                         if (check != null)
@@ -83,6 +85,19 @@ namespace BattleRushS.HeroS
                                         else
                                         {
                                             Logger.LogError("why prefab check null");
+                                        }
+                                    }
+                                    // prevent null
+                                    if (prefab == null)
+                                    {
+                                        if (currentTroopTypeModel != defaultTroopPrefab)
+                                        {
+                                            prefab = defaultTroopPrefab;
+                                        }
+                                        else
+                                        {
+                                            // already choose default, no need to make new
+                                            isNeedMakeNew = false;
                                         }
                                     }
                                 }

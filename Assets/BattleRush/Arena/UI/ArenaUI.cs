@@ -125,6 +125,7 @@ namespace BattleRushS.ArenaS
                                             if (check.troop.v.data == troop)
                                             {
                                                 troopUIData = check;
+                                                break;
                                             }
                                         }
                                         // make new
@@ -160,6 +161,7 @@ namespace BattleRushS.ArenaS
                         }
                         // projectiles
                         {
+                            Logger.Log("ArenaUI: projectile number: " + arena.projectiles.vs.Count);
                             // get old 
                             List<ProjectileUI.UIData> olds = new List<ProjectileUI.UIData>();
                             {
@@ -179,6 +181,7 @@ namespace BattleRushS.ArenaS
                                             if (check.projectile.v.data == projectile)
                                             {
                                                 projectileUIData = check;
+                                                break;
                                             }
                                         }
                                         // make new
@@ -202,6 +205,7 @@ namespace BattleRushS.ArenaS
                                     // add
                                     if (needAdd)
                                     {
+                                        Logger.Log("ArenaUI: projectile add");
                                         this.data.projectiles.add(projectileUIData);
                                     }
                                 }
@@ -407,6 +411,9 @@ namespace BattleRushS.ArenaS
                     switch ((Arena.Property)wrapProperty.n)
                     {
                         case Arena.Property.troops:
+                            dirty = true;
+                            break;
+                        case Arena.Property.projectiles:
                             dirty = true;
                             break;
                         default:

@@ -88,7 +88,7 @@ namespace BattleRushS.ArenaS.TroopS.TroopAttackS
                         {
                             Normal normal = troopAttack.state.newOrOld<Normal>();
                             {
-
+                                normal.coolDown.v = Normal.CoolDown;
                             }
                             troopAttack.state.v = normal;
                         }

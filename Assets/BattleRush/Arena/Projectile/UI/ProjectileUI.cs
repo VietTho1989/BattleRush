@@ -24,7 +24,7 @@ namespace BattleRushS.ArenaS
 
             public UIData() : base()
             {
-
+                this.projectile = new VO<ReferenceData<Projectile>>(this, (byte)Property.projectile, new ReferenceData<Projectile>(null));
             }
 
             #endregion
@@ -34,6 +34,10 @@ namespace BattleRushS.ArenaS
         #endregion
 
         #region Refresh
+
+        public MeshRenderer meshRenderer;
+        public Material team0Mat;
+        public Material team1Mat;
 
         public override void refresh()
         {
@@ -45,7 +49,50 @@ namespace BattleRushS.ArenaS
                     Projectile projectile = this.data.projectile.v.data;
                     if (projectile != null)
                     {
-
+                        // set color for projectile
+                        {
+                            if (meshRenderer != null && team0Mat!=null && team1Mat!=null)
+                            {
+                                // find teamId
+                                int teamId = 0;
+                                {
+                                    Arena arena = projectile.findDataInParent<Arena>();
+                                    if (arena != null)
+                                    {
+                                        Troop originTroop = arena.troops.vs.Find(check => check.uid == projectile.originId.v);
+                                        if (originTroop != null)
+                                        {
+                                            teamId = originTroop.teamId.v;
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("originTroop null");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("arena null");
+                                    }
+                                }
+                                // process
+                                switch (teamId)
+                                {
+                                    case 0:
+                                        meshRenderer.material = team0Mat;
+                                        break;
+                                    case 1:
+                                        meshRenderer.material = team1Mat;
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown teamId: "+teamId);
+                                        break;
+                                }                                
+                            }
+                            else
+                            {
+                                Logger.LogError("meshRenderer null");
+                            }
+                        }
                     }
                     else
                     {
@@ -125,7 +172,7 @@ namespace BattleRushS.ArenaS
 
         public override bool isShouldDisableUpdate()
         {
-            return true;
+            return false;
         }
 
         #endregion

@@ -98,7 +98,21 @@ namespace BattleRushS.ArenaS.TroopS
                                             {
                                                 foreach (Troop check in arena.troops.vs)
                                                 {
-                                                    if (check.teamId.v != troop.teamId.v)
+                                                    // find can target
+                                                    bool canTarget = true;
+                                                    {
+                                                        // check team
+                                                        if(check.teamId.v == troop.teamId.v)
+                                                        {
+                                                            canTarget = false;
+                                                        }
+                                                        // check hitpoint
+                                                        if (check.hitpoint.v <= 0)
+                                                        {
+                                                            canTarget = false;
+                                                        }
+                                                    }
+                                                    if (canTarget)
                                                     {
                                                         // set or not
                                                         if (targetToAttack == null)

@@ -67,7 +67,7 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                     bool isInRange = false;
                                     {
                                         // find range
-                                        float rangeToAttack = 5.0f;
+                                        float rangeToAttack = 10.0f;
                                         {
                                             // TODO can hoan thien
                                         }
@@ -98,11 +98,19 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                         {
                                             case TroopAttack.State.Type.Normal:
                                                 {
-                                                    Anim anim = troop.troopAttack.v.state.newOrOld<Anim>();
+                                                    Normal normal = troop.troopAttack.v.state.v as Normal;
+                                                    if (normal.coolDown.v <= 0)
                                                     {
-                                                        anim.target.v = targetTroop.uid;
+                                                        Anim anim = troop.troopAttack.v.state.newOrOld<Anim>();
+                                                        {
+                                                            anim.target.v = targetTroop.uid;
+                                                        }
+                                                        troop.troopAttack.v.state.v = anim;
                                                     }
-                                                    troop.troopAttack.v.state.v = anim;
+                                                    else
+                                                    {
+                                                        // in cooldown, cannot attack anymore
+                                                    }                                                    
                                                 }
                                                 break;
                                             case TroopAttack.State.Type.Animation:

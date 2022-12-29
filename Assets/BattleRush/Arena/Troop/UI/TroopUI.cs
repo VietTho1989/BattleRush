@@ -132,7 +132,7 @@ namespace BattleRushS.ArenaS
                                                 {
                                                     // find x, z
                                                     float x = Random.Range(-10, 10);
-                                                    float z = troop.teamId.v == 0 ? Random.Range(-10, 0) : Random.Range(0, 10);
+                                                    float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
                                                     this.transform.position = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
                                                 }
                                                 else
@@ -365,6 +365,9 @@ namespace BattleRushS.ArenaS
                         switch ((Troop.Property)wrapProperty.n)
                         {
                             case Troop.Property.troopType:
+                                dirty = true;
+                                break;
+                            case Troop.Property.hitpoint:
                                 dirty = true;
                                 break;
                             default:

@@ -25,7 +25,7 @@ namespace BattleRushS.ArenaS.TroopS.TroopAttackS
         public Anim() : base()
         {
             this.time = new VO<float>(this, (byte)Property.time, 0);
-            this.duration = new VO<float>(this, (byte)Property.duration, 0.2f);
+            this.duration = new VO<float>(this, (byte)Property.duration, 0.5f);
             this.target = new VO<uint>(this, (byte)Property.target, 0);
         }
 

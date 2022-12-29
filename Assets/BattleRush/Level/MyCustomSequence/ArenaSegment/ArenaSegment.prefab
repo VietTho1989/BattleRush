@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008588783084800049}
-  m_LocalRotation: {x: 0.31937903, y: -0.1203195, z: 0.040920984, w: 0.9390664}
+  m_LocalRotation: {x: 0.31937903, y: -0.12031947, z: 0.040920977, w: 0.9390664}
   m_LocalPosition: {x: 6.6800003, y: 22.38, z: -2.940003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -904,6 +904,7 @@ MonoBehaviour:
   trashInstanceId: 0
   center: {fileID: 8861778744270994065}
   troopPrefab: {fileID: 582736463879002837, guid: 456a72382558f44479164b9d57d53fd3, type: 3}
+  projectilePrefab: {fileID: 4966688968892559668, guid: 425904786b6856e4e870805ecdbebab1, type: 3}
 --- !u!114 &1983770298776899666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64282,7 +64283,7 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   - transform: {fileID: 434389613504333110}
-    localRotation: {x: 0.31937903, y: -0.1203195, z: 0.040920984, w: 0.9390664}
+    localRotation: {x: 0.31937903, y: -0.12031947, z: 0.040920977, w: 0.9390664}
     extrudedMesh: {fileID: 0}
     extrusionSpriteVertices: []
     extrusionSpriteUVs: []
@@ -64313,7 +64314,7 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   - transform: {fileID: 1939951152242263975}
-    localRotation: {x: 0.0055609345, y: -0.2720105, z: 0.011338182, w: -0.9622115}
+    localRotation: {x: 0.0055609345, y: -0.27201054, z: 0.011338182, w: -0.96221143}
     extrudedMesh: {fileID: 0}
     extrusionSpriteVertices: []
     extrusionSpriteUVs: []
@@ -64344,11 +64345,11 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   bounds:
-    center: {x: 0.6213341, y: 14.564459, z: 22.803728}
-    extents: {x: 25.686214, y: 15.841583, z: 27.151213}
+    center: {x: 0.6213341, y: 14.564459, z: 22.80373}
+    extents: {x: 25.686214, y: 15.841583, z: 27.15121}
     max: {x: 26.307549, y: 30.406042, z: 49.95494}
-    min: {x: -25.06488, y: -1.2771237, z: -4.347484}
-    size: {x: 51.37243, y: 31.683167, z: 54.302425}
+    min: {x: -25.06488, y: -1.2771237, z: -4.3474827}
+    size: {x: 51.37243, y: 31.683167, z: 54.30242}
   builders: []
   unpacked: 0
   alwaysDraw: 0

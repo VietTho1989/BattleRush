@@ -25,9 +25,21 @@ namespace BattleRushS.ArenaS.TroopS.TroopAttackS
             }
         }
 
+        private void FixedUpdate()
+        {
+            if (this.data != null)
+            {
+                this.data.coolDown.v = Mathf.Max(this.data.coolDown.v - Time.fixedDeltaTime, 0);
+            }
+            else
+            {
+                Logger.LogError("data null");
+            }
+        }
+
         public override bool isShouldDisableUpdate()
         {
-            return true;
+            return false;
         }
 
         #endregion

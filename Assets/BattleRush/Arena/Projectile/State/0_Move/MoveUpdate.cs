@@ -72,7 +72,7 @@ namespace BattleRushS.ArenaS.ProjectileS
                 {
                     if (targetTroopUI != null)
                     {
-                        float speed = 0.1f;
+                        float speed = 2.5f;
                         this.data.position.v = Vector3.MoveTowards(this.data.position.v, targetTroopUI.transform.position, speed * Time.fixedDeltaTime);
                     }
                     else
@@ -86,11 +86,11 @@ namespace BattleRushS.ArenaS.ProjectileS
                     // check time
                     if (!isReachTarget)
                     {
-                        /*float MaxMoveDuration = 10.0f;
+                        float MaxMoveDuration = 120.0f;
                         if (this.data.time.v > MaxMoveDuration)
                         {
                             isReachTarget = true;
-                        }*/
+                        }
                     }
                     // position
                     if (!isReachTarget)
