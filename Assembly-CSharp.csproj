@@ -538,6 +538,8 @@
     <Compile Include="Assets\BattleRush\Arena\Troop\UI\TroopAnimationUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\Move\TroopMove.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\CheckFightEndUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Stage\0_PreBattle\UI\PreBattleUI.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Stage\ArenaCanvasUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

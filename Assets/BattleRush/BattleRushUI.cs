@@ -556,6 +556,8 @@ namespace BattleRushS
 
         #endregion
 
+        public Transform arenaCanvas;
+
         #region implement callBacks
 
         public CameraUI cameraUI;

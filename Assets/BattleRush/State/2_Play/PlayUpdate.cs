@@ -43,6 +43,10 @@ namespace BattleRushS.StateS
                                             }
                                             break;
                                         case HeroS.HeroMove.Sub.Type.Arena:
+                                            {
+                                                
+
+                                            }
                                             break;
                                         default:
                                             Logger.LogError("unknown type: " + hero.heroMove.v.sub.v.getType());
