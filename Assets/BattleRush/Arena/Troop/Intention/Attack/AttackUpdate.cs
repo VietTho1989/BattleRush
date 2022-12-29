@@ -80,7 +80,7 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                     // process
                                     if (isInRange)
                                     {
-                                        Logger.Log("in range to attack: " + troop.uid);
+                                        // Logger.Log("in range to attack: " + troop.uid);
                                         // stop move
                                         {
                                             NavMeshAgent navMeshAgent = troopUI.GetComponent<NavMeshAgent>();
@@ -94,31 +94,41 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                             }
                                         }
                                         // make troop attack
-                                        switch (troop.troopAttack.v.state.v.getType())
                                         {
-                                            case TroopAttack.State.Type.Normal:
+                                            Live live = this.data.findDataInParent<Live>();
+                                            if (live != null)
+                                            {
+                                                switch (live.troopAttack.v.state.v.getType())
                                                 {
-                                                    Normal normal = troop.troopAttack.v.state.v as Normal;
-                                                    if (normal.coolDown.v <= 0)
-                                                    {
-                                                        Anim anim = troop.troopAttack.v.state.newOrOld<Anim>();
+                                                    case TroopAttack.State.Type.Normal:
                                                         {
-                                                            anim.target.v = targetTroop.uid;
+                                                            Normal normal = live.troopAttack.v.state.v as Normal;
+                                                            if (normal.coolDown.v <= 0)
+                                                            {
+                                                                Anim anim = live.troopAttack.v.state.newOrOld<Anim>();
+                                                                {
+                                                                    anim.target.v = targetTroop.uid;
+                                                                }
+                                                                live.troopAttack.v.state.v = anim;
+                                                            }
+                                                            else
+                                                            {
+                                                                // in cooldown, cannot attack anymore
+                                                            }
                                                         }
-                                                        troop.troopAttack.v.state.v = anim;
-                                                    }
-                                                    else
-                                                    {
-                                                        // in cooldown, cannot attack anymore
-                                                    }                                                    
+                                                        break;
+                                                    case TroopAttack.State.Type.Animation:
+                                                        break;
+                                                    default:
+                                                        Logger.LogError("unknown type: " + live.troopAttack.v.state.v.getType());
+                                                        break;
                                                 }
-                                                break;
-                                            case TroopAttack.State.Type.Animation:
-                                                break;
-                                            default:
-                                                Logger.LogError("unknown type: " + troop.troopAttack.v.state.v.getType());
-                                                break;
-                                        }
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("live null");
+                                            }                                            
+                                        }                                       
                                     }
                                     else
                                     {
@@ -126,6 +136,7 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                         NavMeshAgent navMeshAgent = troopUI.GetComponent<NavMeshAgent>();
                                         if (navMeshAgent != null)
                                         {
+                                            navMeshAgent.isStopped = false;
                                             navMeshAgent.destination = targetTroopUI.transform.position;
                                         }
                                         else

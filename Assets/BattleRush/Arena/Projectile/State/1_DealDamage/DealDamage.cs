@@ -22,7 +22,7 @@ namespace BattleRushS.ArenaS.ProjectileS
         public DealDamage() : base()
         {
             this.time = new VO<float>(this, (byte)Property.time, 0);
-            this.duration = new VO<float>(this, (byte)Property.duration, 1.0f);
+            this.duration = new VO<float>(this, (byte)Property.duration, 0.5f);
         }
 
         #endregion

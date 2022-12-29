@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.StateS.AutoFightS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS
@@ -38,6 +39,12 @@ namespace BattleRushS.ArenaS
         {
             if(data is AutoFight)
             {
+
+                AutoFight autoFight = data as AutoFight;
+                // Update
+                {
+                    UpdateUtils.makeUpdate<CheckFightEndUpdate, AutoFight>(autoFight, this.transform);
+                }
                 dirty = true;
                 return;
             }
@@ -49,6 +56,10 @@ namespace BattleRushS.ArenaS
             if(data is AutoFight)
             {
                 AutoFight autoFight = data as AutoFight;
+                // Update
+                {
+                    autoFight.removeCallBackAndDestroy(typeof(CheckFightEndUpdate));
+                }
                 this.setDataNull(autoFight);
                 return;
             }

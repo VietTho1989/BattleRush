@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS
@@ -16,8 +17,8 @@ namespace BattleRushS.ArenaS
                 dirty = false;
                 if (this.data != null)
                 {
-                    Troop troop = this.data.findDataInParent<Troop>();
-                    if (troop != null)
+                    Live live = this.data.findDataInParent<Live>();
+                    if (live != null)
                     {
                         if (this.data.damages.vs.Count > 0)
                         {
@@ -29,11 +30,11 @@ namespace BattleRushS.ArenaS
                             // process
                             foreach (Damage damage in damages)
                             {
-                                // process
+                                // reduce hitpoint
                                 {
-                                    if (troop.hitpoint.v > 0)
+                                    if (live.hitpoint.v > 0)
                                     {
-                                        troop.hitpoint.v = Mathf.Clamp(troop.hitpoint.v - damage.damage.v, 0, 1);
+                                        live.hitpoint.v = Mathf.Clamp(live.hitpoint.v - damage.damage.v, 0, 1);
                                     }
                                 }
                                 // remove
@@ -48,6 +49,24 @@ namespace BattleRushS.ArenaS
                                     {
                                         this.data.damages.remove(damage);
                                     }
+                                }
+                                // change state to die
+                                if (live.hitpoint.v <= 0)
+                                {
+                                    Troop troop = this.data.findDataInParent<Troop>();
+                                    if (troop != null)
+                                    {
+                                        Die die = troop.state.newOrOld<Die>();
+                                        {
+
+                                        }
+                                        troop.state.v = die;
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("troop null");
+                                    }
+                                    break;
                                 }
                             }
                         }

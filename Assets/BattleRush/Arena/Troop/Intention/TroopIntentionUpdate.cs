@@ -63,7 +63,7 @@ namespace BattleRushS.ArenaS.TroopS
                                                             // target already dead
                                                             if (canTarget)
                                                             {
-                                                                if (targetTroop.hitpoint.v <= 0)
+                                                                if (targetTroop.state.v.getType() != Troop.State.Type.Live)
                                                                 {
                                                                     canTarget = false;
                                                                 }
@@ -90,6 +90,7 @@ namespace BattleRushS.ArenaS.TroopS
                                     // process
                                     if (needFindTargetToAttack)
                                     {
+                                        Logger.Log("need find target to attack: " + needFindTargetToAttack);
                                         // find target to attack
                                         Troop targetToAttack = null;
                                         {
@@ -102,15 +103,21 @@ namespace BattleRushS.ArenaS.TroopS
                                                     bool canTarget = true;
                                                     {
                                                         // check team
-                                                        if(check.teamId.v == troop.teamId.v)
+                                                        if (canTarget)
                                                         {
-                                                            canTarget = false;
+                                                            if (check.teamId.v == troop.teamId.v)
+                                                            {
+                                                                canTarget = false;
+                                                            }
                                                         }
                                                         // check hitpoint
-                                                        if (check.hitpoint.v <= 0)
+                                                        if (canTarget)
                                                         {
-                                                            canTarget = false;
-                                                        }
+                                                            if (check.state.v.getType() != Troop.State.Type.Live)
+                                                            {
+                                                                canTarget = false;
+                                                            }
+                                                        }                                                        
                                                     }
                                                     if (canTarget)
                                                     {
@@ -206,7 +213,7 @@ namespace BattleRushS.ArenaS.TroopS
                     return;
                 }
                 // Child
-                if(data is Troop)
+                if (data is Troop)
                 {
                     dirty = true;
                     return;
@@ -359,8 +366,7 @@ namespace BattleRushS.ArenaS.TroopS
                             break;
                         case Troop.Property.level:
                             break;
-                        case Troop.Property.hitpoint:
-                            dirty = true;
+                        case Troop.Property.state:                        
                             break;
                         case Troop.Property.attack:
                             break;
@@ -368,10 +374,6 @@ namespace BattleRushS.ArenaS.TroopS
                             break;
                         case Troop.Property.worldPosition:
                             dirty = true;
-                            break;
-                        case Troop.Property.takeDamage:
-                            break;
-                        case Troop.Property.intention:
                             break;
                         default:
                             break;

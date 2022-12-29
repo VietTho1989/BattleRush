@@ -531,6 +531,13 @@
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\1_DealDamage\DealDamage.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\1_DealDamage\DealDamageUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\0_Move\MoveUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Live.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\LiveUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Die\Die.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Die\DieUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\UI\TroopAnimationUI.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\Move\TroopMove.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\CheckFightEndUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

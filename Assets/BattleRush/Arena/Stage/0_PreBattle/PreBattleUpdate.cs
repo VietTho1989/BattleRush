@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using BattleRushS.HeroS;
 using UnityEngine;
 
@@ -91,7 +92,14 @@ namespace BattleRushS.ArenaS
                                                 troop.uid = arena.troops.makeId();
                                                 troop.teamId.v = 0;
                                                 troop.troopType.v = hero.troopType.v;
-                                                troop.hitpoint.v = 1.0f;
+                                                // Live
+                                                {
+                                                    Live live = troop.state.newOrOld<Live>();
+                                                    {
+                                                        live.hitpoint.v = 1.0f;
+                                                    }
+                                                    troop.state.v = live;
+                                                }
                                             }
                                             arena.troops.add(troop);
                                         }
@@ -104,7 +112,14 @@ namespace BattleRushS.ArenaS
                                             troop.uid = arena.troops.makeId();
                                             troop.teamId.v = 0;
                                             troop.troopType.v = troopFollow.troopType.v;
-                                            troop.hitpoint.v = troopFollow.hitPoint.v;
+                                            // Live
+                                            {
+                                                Live live = troop.state.newOrOld<Live>();
+                                                {
+                                                    live.hitpoint.v = troopFollow.hitPoint.v;
+                                                }
+                                                troop.state.v = live;                                               
+                                            }                                           
                                         }
                                         arena.troops.add(troop);
                                     }
@@ -153,7 +168,14 @@ namespace BattleRushS.ArenaS
                                                 Logger.LogError("enemyTroopTypes null");
                                             }
                                         }
-                                        troop.hitpoint.v = 1.0f;
+                                        // Live
+                                        {
+                                            Live live = troop.state.newOrOld<Live>();
+                                            {
+                                                live.hitpoint.v = 1.0f;
+                                            }
+                                            troop.state.v = live;
+                                        }
                                     }
                                     arena.troops.add(troop);
                                 }

@@ -252,7 +252,7 @@ Material:
     - _AnimeColor1: {r: 1, g: 1, b: 1, a: 1}
     - _AnimeColor2: {r: 1.35, g: 1.35, b: 1.35, a: 1}
     - _AnimeColor3: {r: 2, g: 2, b: 2, a: 1}
-    - _Color: {r: 0.97365534, g: 0.9811321, b: 0.1064436, a: 1}
+    - _Color: {r: 0.99215686, g: 0, b: 0.078431375, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive: {r: 0, g: 0, b: 0, a: 0}

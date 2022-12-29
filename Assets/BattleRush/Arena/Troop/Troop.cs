@@ -14,9 +14,7 @@ namespace BattleRushS.ArenaS
 
         public VO<HeroS.TroopFollow.TroopType> troopType;
 
-        public VO<int> level;
-
-        public VO<float> hitpoint;
+        public VO<int> level;       
 
         public VO<int> attack;
 
@@ -30,18 +28,24 @@ namespace BattleRushS.ArenaS
 
         #endregion
 
-        public VD<TakeDamage> takeDamage;
+        #region state
 
-        #region troop action
+        public abstract class State : Data
+        {
 
-        /**
-         * ai: what troop will do
-         * */
-        public VD<TroopIntention> intention;
+            public enum Type
+            {
+                Live,
+                Die
+            }
 
-        public VD<TroopAttack> troopAttack;
+            public abstract Type getType();
 
-        #endregion
+        }
+
+        public VD<State> state;
+
+        #endregion      
 
         #region Constructor
 
@@ -50,13 +54,10 @@ namespace BattleRushS.ArenaS
             teamId,
             troopType,
             level,
-            hitpoint,
             attack,
             attackRange,
             worldPosition,
-            takeDamage,
-            intention,
-            troopAttack
+            state
         }
 
         public Troop() : base()
@@ -64,13 +65,10 @@ namespace BattleRushS.ArenaS
             this.teamId = new VO<int>(this, (byte)Property.teamId, 0);
             this.troopType = new VO<HeroS.TroopFollow.TroopType>(this, (byte)Property.troopType, HeroS.TroopFollow.TroopType.AntukAir);
             this.level = new VO<int>(this, (byte)Property.level, 0);
-            this.hitpoint = new VO<float>(this, (byte)Property.hitpoint, 0);
             this.attack = new VO<int>(this, (byte)Property.attack, 1);
             this.attackRange = new VO<float>(this, (byte)Property.attackRange, 1);
             this.worldPosition = new VO<Vector3>(this, (byte)Property.worldPosition, Vector3.zero);
-            this.takeDamage = new VD<TakeDamage>(this, (byte)Property.takeDamage, new TakeDamage());
-            this.intention = new VD<TroopIntention>(this, (byte)Property.intention, new TroopIntention());
-            this.troopAttack = new VD<TroopAttack>(this, (byte)Property.troopAttack, new TroopAttack());
+            this.state = new VD<State>(this, (byte)Property.state, new Live());
         }
 
         #endregion

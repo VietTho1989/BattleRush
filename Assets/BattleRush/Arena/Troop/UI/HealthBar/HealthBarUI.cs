@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -99,7 +100,26 @@ namespace BattleRushS.ArenaS
                                         }
                                     }
                                     // fill percent
-                                    fillImage.fillAmount = Mathf.Clamp(troop.hitpoint.v, 0, 1);
+                                    {
+                                        float hitPoint = 0.0f;
+                                        {
+                                            switch (troop.state.v.getType())
+                                            {
+                                                case Troop.State.Type.Live:
+                                                    {
+                                                        Live live = troop.state.v as Live;
+                                                        hitPoint = live.hitpoint.v;
+                                                    }
+                                                    break;
+                                                case Troop.State.Type.Die:
+                                                    break;
+                                                default:
+                                                    Logger.LogError("unknown type: " + troop.state.v.getType());
+                                                    break;
+                                            }
+                                        }
+                                        fillImage.fillAmount = Mathf.Clamp(hitPoint, 0, 1);
+                                    }                                    
                                 }
                                 else
                                 {
@@ -206,10 +226,23 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 // Child
-                if(data is Troop)
                 {
-                    dirty = true;
-                    return;
+                    if (data is Troop)
+                    {
+                        Troop troop = data as Troop;
+                        // Child
+                        {
+                            troop.state.allAddCallBack(this);
+                        }
+                        dirty = true;
+                        return;
+                    }
+                    // Child
+                    if(data is Troop.State)
+                    {
+                        dirty = true;
+                        return;
+                    }
                 }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
@@ -239,9 +272,21 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 // Child
-                if (data is Troop)
                 {
-                    return;
+                    if (data is Troop)
+                    {
+                        Troop troop = data as Troop;
+                        // Child
+                        {
+                            troop.state.allRemoveCallBack(this);
+                        }
+                        return;
+                    }
+                    // Child
+                    if(data is Troop.State)
+                    {
+                        return;
+                    }
                 }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
@@ -280,21 +325,51 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 // Child
-                if (wrapProperty.p is Troop)
                 {
-                    switch ((Troop.Property)wrapProperty.n)
+                    if (wrapProperty.p is Troop)
                     {
-                        case Troop.Property.teamId:
-                            dirty = true;
-                            break;
-                        case Troop.Property.hitpoint:
-                            dirty = true;
-                            break;
-                        default:
-                            break;
+                        switch ((Troop.Property)wrapProperty.n)
+                        {
+                            case Troop.Property.teamId:
+                                dirty = true;
+                                break;
+                            case Troop.Property.state:
+                                {
+                                    ValueChangeUtils.replaceCallBack(this, syncs);
+                                    dirty = true;
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        return;
                     }
-                    return;
-                }
+                    // Child
+                    if(wrapProperty.p is Troop.State)
+                    {
+                        Troop.State state = wrapProperty.p as Troop.State;
+                        switch (state.getType())
+                        {
+                            case Troop.State.Type.Live:
+                                {
+                                    switch ((Live.Property)wrapProperty.n)
+                                    {
+                                        case Live.Property.hitpoint:
+                                            dirty = true;
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+                            case Troop.State.Type.Die:
+                                break;
+                            default:
+                                break;
+                        }
+                        return;
+                    }
+                }               
             }
             Logger.LogError("Don't process: " + wrapProperty + "; " + syncs + "; " + this);
         }

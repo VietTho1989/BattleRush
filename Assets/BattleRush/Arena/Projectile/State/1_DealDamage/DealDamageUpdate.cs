@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS.ProjectileS
@@ -42,11 +43,30 @@ namespace BattleRushS.ArenaS.ProjectileS
                                 Troop targetTroop = arena.troops.vs.Find(check => check.uid == projectile.targetId.v);
                                 if (targetTroop != null)
                                 {
-                                    Damage newDamage = DataUtils.cloneData(projectile.damage.v) as Damage;
+                                    switch (targetTroop.state.v.getType())
                                     {
-                                        newDamage.uid = targetTroop.takeDamage.v.damages.makeId();
-                                    }
-                                    targetTroop.takeDamage.v.damages.add(newDamage);
+                                        case Troop.State.Type.Live:
+                                            {
+                                                Live live = targetTroop.state.v as Live;
+                                                // add damage
+                                                {
+                                                    Damage newDamage = DataUtils.cloneData(projectile.damage.v) as Damage;
+                                                    {
+                                                        newDamage.uid = live.takeDamage.v.damages.makeId();
+                                                    }
+                                                    live.takeDamage.v.damages.add(newDamage);
+                                                }
+                                            }
+                                            break;
+                                        case Troop.State.Type.Die:
+                                            {
+                                                // already die, not add damage anymore
+                                            }
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + targetTroop.state.v.getType());
+                                            break;
+                                    }                                   
                                 }
                                 else
                                 {

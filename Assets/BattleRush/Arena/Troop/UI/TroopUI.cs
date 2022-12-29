@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.TroopS;
 using BattleRushS.HeroS;
 using UnityEngine;
 
@@ -17,18 +18,22 @@ namespace BattleRushS.ArenaS
 
             public VD<HealthBarUI.UIData> healthBar;
 
+            public VD<TroopAnimationUI.UIData> animation;
+
             #region Constructor
 
             public enum Property
             {
                 troop,
-                healthBar
+                healthBar,
+                animation
             }
 
             public UIData() : base()
             {
                 this.troop = new VO<ReferenceData<Troop>>(this, (byte)Property.troop, new ReferenceData<Troop>(null));
-                this.healthBar = new VD<HealthBarUI.UIData>(this, (byte)Property.healthBar, new HealthBarUI.UIData());
+                this.healthBar = new VD<HealthBarUI.UIData>(this, (byte)Property.healthBar, null);
+                this.animation = new VD<TroopAnimationUI.UIData>(this, (byte)Property.animation, new TroopAnimationUI.UIData());
             }
 
             #endregion
@@ -40,6 +45,12 @@ namespace BattleRushS.ArenaS
         #region Refresh
 
         private TroopInformation currentTroopTypeModel;
+
+        public TroopInformation getCurrentTroopTypeModel()
+        {
+            return currentTroopTypeModel;
+        }
+
         public List<TroopInformation> troopPrefabs;
         public TroopInformation defaultTroopPrefab;
 
@@ -160,6 +171,29 @@ namespace BattleRushS.ArenaS
                                 Logger.LogError("arena null");
                             }
                         }
+                        // healthBar
+                        {
+                            switch (troop.state.v.getType())
+                            {
+                                case Troop.State.Type.Live:
+                                    {
+                                        HealthBarUI.UIData healthBarUIData = this.data.healthBar.newOrOld<HealthBarUI.UIData>();
+                                        {
+
+                                        }
+                                        this.data.healthBar.v = healthBarUIData;
+                                    }
+                                    break;
+                                case Troop.State.Type.Die:
+                                    {
+                                        this.data.healthBar.v = null;
+                                    }
+                                    break;
+                                default:
+                                    Logger.LogError("unknown type: "+troop.state.v.getType());
+                                    break;
+                            }
+                        }
                     }
                     else
                     {
@@ -206,6 +240,7 @@ namespace BattleRushS.ArenaS
         private Arena arena = null;
 
         public HealthBarUI healthBarPrefab;
+        public TroopAnimationUI troopAnimationUI;
 
         public override void onAddCallBack<T>(T data)
         {
@@ -216,6 +251,7 @@ namespace BattleRushS.ArenaS
                 {
                     uiData.troop.allAddCallBack(this);
                     uiData.healthBar.allAddCallBack(this);
+                    uiData.animation.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -280,6 +316,23 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
+                if(data is TroopAnimationUI.UIData)
+                {
+                    TroopAnimationUI.UIData troopAnimationUIData = data as TroopAnimationUI.UIData;
+                    // UI
+                    {
+                        if (troopAnimationUI != null)
+                        {
+                            troopAnimationUI.setData(troopAnimationUIData);
+                        }
+                        else
+                        {
+                            Logger.Log("troopAnimationUI null");
+                        }
+                    }
+                    dirty = true;
+                    return;
+                }
             }            
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -293,6 +346,7 @@ namespace BattleRushS.ArenaS
                 {
                     uiData.troop.allRemoveCallBack(this);
                     uiData.healthBar.allRemoveCallBack(this);
+                    uiData.animation.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
@@ -325,6 +379,22 @@ namespace BattleRushS.ArenaS
                     }
                     return;
                 }
+                if (data is TroopAnimationUI.UIData)
+                {
+                    TroopAnimationUI.UIData troopAnimationUIData = data as TroopAnimationUI.UIData;
+                    // UI
+                    {
+                        if (troopAnimationUI != null)
+                        {
+                            troopAnimationUI.setDataNull(troopAnimationUIData);
+                        }
+                        else
+                        {
+                            Logger.Log("troopAnimationUI null");
+                        }
+                    }
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -351,6 +421,12 @@ namespace BattleRushS.ArenaS
                             dirty = true;
                         }
                         break;
+                    case UIData.Property.animation:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -367,7 +443,7 @@ namespace BattleRushS.ArenaS
                             case Troop.Property.troopType:
                                 dirty = true;
                                 break;
-                            case Troop.Property.hitpoint:
+                            case Troop.Property.state:
                                 dirty = true;
                                 break;
                             default:
@@ -395,6 +471,10 @@ namespace BattleRushS.ArenaS
                     }
                 }
                 if(wrapProperty.p is HealthBarUI.UIData)
+                {
+                    return;
+                }
+                if(wrapProperty.p is TroopAnimationUI.UIData)
                 {
                     return;
                 }

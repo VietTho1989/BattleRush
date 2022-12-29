@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7616028385963056196}
   - component: {fileID: 3780847679693596043}
   - component: {fileID: 582736463879002837}
+  - component: {fileID: 1144829603546066885}
   m_Layer: 7
   m_Name: TroopUI
   m_TagString: Untagged
@@ -111,3 +112,17 @@ MonoBehaviour:
   - {fileID: 542586957687347361, guid: d5a87bb6e5099894cb879580f95d09a1, type: 3}
   defaultTroopPrefab: {fileID: -6124612778043485977, guid: 687fe394a611580419e82e5bed57e4e9, type: 3}
   healthBarPrefab: {fileID: 6380866473783226861, guid: 1d6a954fe5c7aaf4dac9e594db9585b4, type: 3}
+  troopAnimationUI: {fileID: 1144829603546066885}
+--- !u!114 &1144829603546066885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616028385963056198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396b56e96e76b244cb5cd6a00dd95760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashInstanceId: 0

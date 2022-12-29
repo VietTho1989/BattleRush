@@ -42,45 +42,38 @@ namespace BattleRushS.ArenaS
                 Troop troop = data as Troop;
                 // Child
                 {
-                    troop.takeDamage.allAddCallBack(this);
-                    troop.intention.allAddCallBack(this);
-                    troop.troopAttack.allAddCallBack(this);
+                    troop.state.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
             }
             // Child
+            if(data is Troop.State)
             {
-                if(data is TakeDamage)
+                Troop.State state = data as Troop.State;
+                // Update
                 {
-                    TakeDamage takeDamage = data as TakeDamage;
-                    // Update
+                    switch (state.getType())
                     {
-                        UpdateUtils.makeUpdate<TakeDamageUpdate, TakeDamage>(takeDamage, this.transform);
+                        case Troop.State.Type.Live:
+                            {
+                                Live live = state as Live;
+                                UpdateUtils.makeUpdate<LiveUpdate, Live>(live, this.transform);
+                            }
+                            break;
+                        case Troop.State.Type.Die:
+                            {
+                                Die die = state as Die;
+                                UpdateUtils.makeUpdate<DieUpdate, Die>(die, this.transform);
+                            }
+                            break;
+                        default:
+                            Logger.LogError("unknown type: " + state.getType());
+                            break;
                     }
-                    dirty = true;
-                    return;
                 }
-                if (data is TroopIntention)
-                {
-                    TroopIntention troopIntention = data as TroopIntention;
-                    // Update
-                    {
-                        UpdateUtils.makeUpdate<TroopIntentionUpdate, TroopIntention>(troopIntention, this.transform);
-                    }
-                    dirty = true;
-                    return;
-                }
-                if(data is TroopAttack)
-                {
-                    TroopAttack troopAttack = data as TroopAttack;
-                    // Update
-                    {
-                        UpdateUtils.makeUpdate<TroopAttackUpdate, TroopAttack>(troopAttack, this.transform);
-                    }
-                    dirty = true;
-                    return;
-                }
+                dirty = true;
+                return;
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -92,42 +85,37 @@ namespace BattleRushS.ArenaS
                 Troop troop = data as Troop;
                 // Child
                 {
-                    troop.takeDamage.allRemoveCallBack(this);
-                    troop.intention.allRemoveCallBack(this);
-                    troop.troopAttack.allRemoveCallBack(this);
+                    troop.state.allRemoveCallBack(this);
                 }
                 this.setDataNull(troop);
                 return;
             }
             // Child
+            if (data is Troop.State)
             {
-                if (data is TakeDamage)
+                Troop.State state = data as Troop.State;
+                // Update
                 {
-                    TakeDamage takeDamage = data as TakeDamage;
-                    // Update
+                    switch (state.getType())
                     {
-                        takeDamage.removeCallBackAndDestroy(typeof(TakeDamageUpdate));
+                        case Troop.State.Type.Live:
+                            {
+                                Live live = state as Live;
+                                live.removeCallBackAndDestroy(typeof(LiveUpdate));
+                            }
+                            break;
+                        case Troop.State.Type.Die:
+                            {
+                                Die die = state as Die;
+                                die.removeCallBackAndDestroy(typeof(DieUpdate));
+                            }
+                            break;
+                        default:
+                            Logger.LogError("unknown type: " + state.getType());
+                            break;
                     }
-                    return;
                 }
-                if (data is TroopIntention)
-                {
-                    TroopIntention troopIntention = data as TroopIntention;
-                    // Update
-                    {
-                        troopIntention.removeCallBackAndDestroy(typeof(TroopIntentionUpdate));
-                    }
-                    return;
-                }
-                if (data is TroopAttack)
-                {
-                    TroopAttack troopAttack = data as TroopAttack;
-                    // Update
-                    {
-                        troopAttack.removeCallBackAndDestroy(typeof(TroopAttackUpdate));
-                    }
-                    return;
-                }
+                return;
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -142,19 +130,7 @@ namespace BattleRushS.ArenaS
             {
                 switch ((Troop.Property)wrapProperty.n)
                 {
-                    case Troop.Property.takeDamage:
-                        {
-                            ValueChangeUtils.replaceCallBack(this, syncs);
-                            dirty = true;
-                        }
-                        break;
-                    case Troop.Property.intention:
-                        {
-                            ValueChangeUtils.replaceCallBack(this, syncs);
-                            dirty = true;
-                        }
-                        break;
-                    case Troop.Property.troopAttack:
+                    case Troop.Property.state:
                         {
                             ValueChangeUtils.replaceCallBack(this, syncs);
                             dirty = true;
@@ -166,19 +142,9 @@ namespace BattleRushS.ArenaS
                 return;
             }
             // Child
+            if(wrapProperty.p is Troop.State)
             {
-                if (wrapProperty.p is TakeDamage)
-                {
-                    return;
-                }
-                if (wrapProperty.p is TroopIntention)
-                {
-                    return;
-                }
-                if (wrapProperty.p is TroopAttack)
-                {
-                    return;
-                }
+                return;
             }
             Logger.LogError("Don't process: " + data + "; " + syncs + "; " + this);
         }
