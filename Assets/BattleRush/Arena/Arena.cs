@@ -8,11 +8,6 @@ namespace BattleRushS
     public class Arena : Data
     {
 
-        /**
-         * segment in the map where arena in
-         * */
-        public VO<Segment> segment;
-
         #region stage
 
         public abstract class Stage : Data
@@ -43,7 +38,6 @@ namespace BattleRushS
 
         public enum Property
         {
-            segment,
             stage,
             troops,
             projectiles
@@ -51,7 +45,6 @@ namespace BattleRushS
 
         public Arena() : base()
         {
-            this.segment = new VO<Segment>(this, (byte)Property.segment, null);
             this.stage = new VD<Stage>(this, (byte)Property.stage, new PreBattle());
             this.troops = new LD<Troop>(this, (byte)Property.troops);
             this.projectiles = new LD<Projectile>(this, (byte)Property.projectiles);

@@ -44,6 +44,7 @@ namespace BattleRushS.ArenaS.TroopS
                     live.takeDamage.allAddCallBack(this);
                     live.intention.allAddCallBack(this);
                     live.troopAttack.allAddCallBack(this);
+                    live.troopMove.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -80,6 +81,16 @@ namespace BattleRushS.ArenaS.TroopS
                     dirty = true;
                     return;
                 }
+                if(data is TroopMove)
+                {
+                    TroopMove troopMove = data as TroopMove;
+                    // Update
+                    {
+                        UpdateUtils.makeUpdate<TroopMoveUpdate, TroopMove>(troopMove, this.transform);
+                    }
+                    dirty = true;
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -94,6 +105,7 @@ namespace BattleRushS.ArenaS.TroopS
                     live.takeDamage.allRemoveCallBack(this);
                     live.intention.allRemoveCallBack(this);
                     live.troopAttack.allRemoveCallBack(this);
+                    live.troopMove.allRemoveCallBack(this);
                 }
                 this.setDataNull(live);
                 return;
@@ -124,6 +136,15 @@ namespace BattleRushS.ArenaS.TroopS
                     // Update
                     {
                         troopAttack.removeCallBackAndDestroy(typeof(TroopAttackUpdate));
+                    }
+                    return;
+                }
+                if (data is TroopMove)
+                {
+                    TroopMove troopMove = data as TroopMove;
+                    // Update
+                    {
+                        troopMove.removeCallBackAndDestroy(typeof(TroopMoveUpdate));
                     }
                     return;
                 }
@@ -159,6 +180,12 @@ namespace BattleRushS.ArenaS.TroopS
                             dirty = true;
                         }
                         break;
+                    case Live.Property.troopMove:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -175,6 +202,10 @@ namespace BattleRushS.ArenaS.TroopS
                     return;
                 }
                 if (wrapProperty.p is TroopAttack)
+                {
+                    return;
+                }
+                if(wrapProperty.p is TroopMove)
                 {
                     return;
                 }

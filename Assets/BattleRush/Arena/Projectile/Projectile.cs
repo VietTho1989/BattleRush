@@ -11,7 +11,7 @@ namespace BattleRushS.ArenaS
     public class Projectile : Data
     {
 
-        public VO<Damage> damage;
+        public VD<Damage> damage;
 
         public VO<uint> originId;
 
@@ -48,7 +48,7 @@ namespace BattleRushS.ArenaS
 
         public Projectile() : base()
         {
-            this.damage = new VO<Damage>(this, (byte)Property.damage, new Damage());
+            this.damage = new VD<Damage>(this, (byte)Property.damage, new Damage());
             this.originId = new VO<uint>(this, (byte)Property.originId, 0);
             this.targetId = new VO<uint>(this, (byte)Property.targetId, 0);
             this.state = new VD<State>(this, (byte)Property.state, new Move());

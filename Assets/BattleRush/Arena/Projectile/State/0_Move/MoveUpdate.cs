@@ -70,7 +70,7 @@ namespace BattleRushS.ArenaS.ProjectileS
                 }
                 // update position
                 {
-                    if (targetTroopUI != null)
+                    if (targetTroopUI)
                     {
                         float speed = 2.5f;
                         this.data.position.v = Vector3.MoveTowards(this.data.position.v, targetTroopUI.transform.position, speed * Time.fixedDeltaTime);
@@ -82,7 +82,7 @@ namespace BattleRushS.ArenaS.ProjectileS
                 }
                 // check reach target or not
                 bool isReachTarget = false;
-                {
+                {                    
                     // check time
                     if (!isReachTarget)
                     {
@@ -105,6 +105,18 @@ namespace BattleRushS.ArenaS.ProjectileS
                         else
                         {
                             Logger.LogError("targetTroopUI null");
+                        }
+                    }
+                    // check target exist anymore
+                    if (!isReachTarget)
+                    {
+                        if (targetTroopUI.data != null)
+                        {
+                            Troop targetTroop = targetTroopUI.data.troop.v.data;
+                            if(targetTroop.state.v.getType() != Troop.State.Type.Live)
+                            {
+                                isReachTarget = true;
+                            }
                         }
                     }
                 }

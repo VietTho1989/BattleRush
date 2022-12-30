@@ -47,7 +47,17 @@ namespace BattleRushS.ArenaS.StateS.AutoFightS
                         {
                             FightEnd fightEnd = arena.stage.newOrOld<FightEnd>();
                             {
-
+                                // team win
+                                {
+                                    if (isTeam0Alive)
+                                    {
+                                        fightEnd.teamWin.v = 0;
+                                    }
+                                    else
+                                    {
+                                        fightEnd.teamWin.v = 1;
+                                    }
+                                }
                             }
                             arena.stage.v = fightEnd;
                         }

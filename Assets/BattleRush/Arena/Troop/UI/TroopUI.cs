@@ -235,6 +235,20 @@ namespace BattleRushS.ArenaS
 
         #endregion
 
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            if (this.data != null)
+            {
+                // so co luc van con hien health bar
+                this.data.healthBar.v = null;
+            }
+            else
+            {
+                Logger.LogError("data null");
+            }
+        }
+
         #region implement callBacks
 
         private Arena arena = null;
@@ -456,8 +470,6 @@ namespace BattleRushS.ArenaS
                     {
                         switch ((Arena.Property)wrapProperty.n)
                         {
-                            case Arena.Property.segment:
-                                break;
                             case Arena.Property.stage:
                                 dirty = true;
                                 break;

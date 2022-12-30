@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BattleRushS.ArenaS.TroopS
 {
@@ -16,7 +17,34 @@ namespace BattleRushS.ArenaS.TroopS
                 dirty = false;
                 if (this.data != null)
                 {
-
+                    // disable NavMeshAgent
+                    {
+                        Troop troop = this.data.findDataInParent<Troop>();
+                        if (troop != null)
+                        {
+                            TroopUI troopUI = troop.findCallBack<TroopUI>();
+                            if (troopUI != null)
+                            {
+                                NavMeshAgent agent = troopUI.GetComponent<NavMeshAgent>();
+                                if (agent != null)
+                                {
+                                    agent.enabled = false;
+                                }
+                                else
+                                {
+                                    Logger.LogError("agent null");
+                                }
+                            }
+                            else
+                            {
+                                Logger.LogError("troopUI null");
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("troop null");
+                        }
+                    }
                 }
                 else
                 {

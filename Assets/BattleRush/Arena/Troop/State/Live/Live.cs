@@ -20,6 +20,8 @@ namespace BattleRushS.ArenaS.TroopS
 
         public VD<TroopAttack> troopAttack;
 
+        public VD<TroopMove> troopMove;
+
         #endregion
 
         #region Constructor
@@ -29,7 +31,8 @@ namespace BattleRushS.ArenaS.TroopS
             hitpoint,
             takeDamage,
             intention,
-            troopAttack
+            troopAttack,
+            troopMove
         }
 
         public Live() : base()
@@ -38,6 +41,7 @@ namespace BattleRushS.ArenaS.TroopS
             this.takeDamage = new VD<TakeDamage>(this, (byte)Property.takeDamage, new TakeDamage());
             this.intention = new VD<TroopIntention>(this, (byte)Property.intention, new TroopIntention());
             this.troopAttack = new VD<TroopAttack>(this, (byte)Property.troopAttack, new TroopAttack());
+            this.troopMove = new VD<TroopMove>(this, (byte)Property.troopMove, new TroopMove());
         }
 
         #endregion

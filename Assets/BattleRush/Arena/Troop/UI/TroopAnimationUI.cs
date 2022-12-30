@@ -85,19 +85,18 @@ namespace BattleRushS.ArenaS.TroopS
                                                             }
                                                             else
                                                             {
-                                                                // Move or Idle
-                                                                bool isMove = false;
+                                                                switch (live.troopMove.v.sub.v.getType())
                                                                 {
-                                                                    // TODO can hoan thien
-                                                                }
-                                                                // process
-                                                                if (isMove)
-                                                                {
-                                                                    troopInformation.troopAnimator.Play("Move");
-                                                                }
-                                                                else
-                                                                {
-                                                                    troopInformation.troopAnimator.Play("Idle");
+                                                                    case TroopMove.Sub.Type.Idle:
+                                                                        troopInformation.troopAnimator.Play("Idle");
+                                                                        break;
+                                                                    case TroopMove.Sub.Type.MoveToDest:
+                                                                        troopInformation.troopAnimator.Play("Move");
+                                                                        break;
+                                                                    default:
+                                                                        Logger.LogError("unknown type: " + live.troopMove.v.sub.v.getType());
+                                                                        troopInformation.troopAnimator.Play("Idle");
+                                                                        break;
                                                                 }
                                                             }
                                                         }
@@ -206,6 +205,7 @@ namespace BattleRushS.ArenaS.TroopS
                                         {
                                             Live live = state as Live;
                                             live.troopAttack.allAddCallBack(this);
+                                            live.troopMove.allAddCallBack(this);
                                         }
                                         break;
                                     case Troop.State.Type.Die:
@@ -219,11 +219,18 @@ namespace BattleRushS.ArenaS.TroopS
                             return;
                         }
                         // Child
-                        if(data is TroopAttack)
                         {
-                            dirty = true;
-                            return;
-                        }
+                            if (data is TroopAttack)
+                            {
+                                dirty = true;
+                                return;
+                            }
+                            if(data is TroopMove)
+                            {
+                                dirty = true;
+                                return;
+                            }
+                        }                        
                     }
                 }
             }
@@ -277,6 +284,7 @@ namespace BattleRushS.ArenaS.TroopS
                                         {
                                             Live live = state as Live;
                                             live.troopAttack.allRemoveCallBack(this);
+                                            live.troopMove.allRemoveCallBack(this);
                                         }
                                         break;
                                     case Troop.State.Type.Die:
@@ -289,10 +297,16 @@ namespace BattleRushS.ArenaS.TroopS
                             return;
                         }
                         // Child
-                        if (data is TroopAttack)
                         {
-                            return;
-                        }
+                            if (data is TroopAttack)
+                            {
+                                return;
+                            }
+                            if(data is TroopMove)
+                            {
+                                return;
+                            }
+                        }                       
                     }
                 }
             }
@@ -367,6 +381,12 @@ namespace BattleRushS.ArenaS.TroopS
                                                         dirty = true;
                                                     }
                                                     break;
+                                                case Live.Property.troopMove:
+                                                    {
+                                                        ValueChangeUtils.replaceCallBack(this, syncs);
+                                                        dirty = true;
+                                                    }
+                                                    break;
                                                 default:
                                                     break;
                                             }
@@ -383,18 +403,32 @@ namespace BattleRushS.ArenaS.TroopS
                             return;
                         }
                         // Child
-                        if (wrapProperty.p is TroopAttack)
                         {
-                            switch ((TroopAttack.Property)wrapProperty.n)
+                            if (wrapProperty.p is TroopAttack)
                             {
-                                case TroopAttack.Property.state:
-                                    dirty = true;
-                                    break;
-                                default:
-                                    break;
+                                switch ((TroopAttack.Property)wrapProperty.n)
+                                {
+                                    case TroopAttack.Property.state:
+                                        dirty = true;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
                             }
-                            return;
-                        }
+                            if(wrapProperty.p is TroopMove)
+                            {
+                                switch ((TroopMove.Property)wrapProperty.n)
+                                {
+                                    case TroopMove.Property.sub:
+                                        dirty = true;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
+                            }
+                        }                        
                     }
                 }
             }

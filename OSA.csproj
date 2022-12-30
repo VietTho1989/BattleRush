@@ -150,8 +150,8 @@
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\Util\ScrollbarRotateOnPull.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\Core\Data\Animations\AnimationCancelling.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\Util\PackedGridLayoutGroup.cs" />
-    <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\Core\Data\Animations\AnimationParams.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\CustomAdapters\TableView\Tuple\Basic\BasicHeaderTupleAdapter.cs" />
+    <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\Core\Data\Animations\AnimationParams.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\CustomAdapters\TableView\Tuple\Basic\BasicTupleValueViewsHolder.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\CustomParams\BaseParamsWithPrefab.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Scripts\CustomAdapters\TableView\TableResizingMode.cs" />

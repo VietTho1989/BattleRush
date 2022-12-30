@@ -8,16 +8,18 @@ namespace BattleRushS.StateS
     public class End : BattleRush.State
     {
 
+        public VO<bool> isWin;
+
         #region Constructor
 
         public enum Property
         {
-
+            isWin
         }
 
         public End() : base()
         {
-
+            this.isWin = new VO<bool>(this, (byte)Property.isWin, false);
         }
 
         #endregion
