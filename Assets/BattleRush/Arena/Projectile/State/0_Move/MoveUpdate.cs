@@ -70,14 +70,21 @@ namespace BattleRushS.ArenaS.ProjectileS
                 }
                 // update position
                 {
-                    if (targetTroopUI)
+                    // update dest
+                    {
+                        if (targetTroopUI)
+                        {
+                            this.data.dest.v = targetTroopUI.transform.position;
+                        }
+                        else
+                        {
+                            Logger.LogError("targetTroopUI null");
+                        }
+                    }                    
+                    // move
                     {
                         float speed = 2.5f;
                         this.data.position.v = Vector3.MoveTowards(this.data.position.v, targetTroopUI.transform.position, speed * Time.fixedDeltaTime);
-                    }
-                    else
-                    {
-                        Logger.LogError("targetTroopUI null");
                     }
                 }
                 // check reach target or not
@@ -95,28 +102,9 @@ namespace BattleRushS.ArenaS.ProjectileS
                     // position
                     if (!isReachTarget)
                     {
-                        if (targetTroopUI != null)
+                        if (Vector3.Distance(this.data.position.v, this.data.dest.v) < 0.05f)
                         {
-                            if(Vector3.Distance(this.data.position.v, targetTroopUI.transform.position) < 0.05f)
-                            {
-                                isReachTarget = true;
-                            }
-                        }
-                        else
-                        {
-                            Logger.LogError("targetTroopUI null");
-                        }
-                    }
-                    // check target exist anymore
-                    if (!isReachTarget)
-                    {
-                        if (targetTroopUI.data != null)
-                        {
-                            Troop targetTroop = targetTroopUI.data.troop.v.data;
-                            if(targetTroop.state.v.getType() != Troop.State.Type.Live)
-                            {
-                                isReachTarget = true;
-                            }
+                            isReachTarget = true;
                         }
                     }
                 }

@@ -9,6 +9,8 @@ namespace BattleRushS.ArenaS.ProjectileS
 
         public VO<Vector3> position;
 
+        public VO<Vector3> dest;
+
         public VO<float> time;
 
         #region Constructor
@@ -16,12 +18,14 @@ namespace BattleRushS.ArenaS.ProjectileS
         public enum Property
         {
             position,
+            dest,
             time
         }
 
         public Move() : base()
         {
             this.position = new VO<Vector3>(this, (byte)Property.position, Vector3.zero);
+            this.dest = new VO<Vector3>(this, (byte)Property.dest, Vector3.zero);
             this.time = new VO<float>(this, (byte)Property.time, 0);
         }
 
