@@ -1,0 +1,602 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec415608ccfebc4fba47619c0dd355e, type: 3}
+  m_Name: CustomPathGenerator
+  m_EditorClassIdentifier: 
+  pathType: 2
+  sampleRate: 10
+  controlPointsPerSegment: 5
+  normalInterpolation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  customNormalInterpolation: 0
+  valueInterpolation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  customValueInterpolation: 0
+  loop: 0
+  useRelativeCoordinates: 0
+  segmentCount: 10
+  points:
+  - _type: 0
+    position: {x: -1208.3899, y: -816.04346, z: -2442.0278}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -1218.8304, y: -816.04346, z: -2442.7495}
+    tangent2: {x: -1197.9493, y: -816.04346, z: -2441.3062}
+  - _type: 0
+    position: {x: -1811.9746, y: 0, z: -1395.49}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -3273.0403, y: 0, z: -2801.8591}
+    tangent2: {x: -350.90894, y: 0, z: 10.87915}
+  - _type: 0
+    position: {x: 360.21814, y: -330.28418, z: -406.37598}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -154.91199, y: -330.28418, z: -3057.585}
+    tangent2: {x: 875.34827, y: -330.28418, z: 2244.8345}
+  - _type: 0
+    position: {x: -564.1554, y: 0, z: 753.1052}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2171.406, y: 0, z: 2826.392}
+    tangent2: {x: 1043.0952, y: 0, z: -1320.1816}
+  - _type: 0
+    position: {x: -1121.2126, y: 389.30103, z: -184.26758}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -1658.5579, y: 389.30103, z: -2195.281}
+    tangent2: {x: -583.86743, y: 389.30103, z: 1826.7465}
+  - _type: 0
+    position: {x: -2772.4597, y: 160.23706, z: 934.8175}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2758.1829, y: 160.23706, z: 1063.2899}
+    tangent2: {x: -2786.7366, y: 160.23706, z: 806.3451}
+  - _type: 0
+    position: {x: -2870.5813, y: 39.908203, z: 122.57849}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2615.503, y: 39.908203, z: 661.15344}
+    tangent2: {x: -3125.6597, y: 39.908203, z: -415.99646}
+  - _type: 0
+    position: {x: -2875.7158, y: 0, z: -885.7273}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -3218.9973, y: 0, z: -774.7468}
+    tangent2: {x: -2532.4343, y: 0, z: -996.70776}
+  - _type: 0
+    position: {x: -1846.4979, y: 0, z: -3710.481}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -1846.4979, y: 0, z: -3710.481}
+    tangent2: {x: -1846.4979, y: 0, z: -3710.481}
+  - _type: 0
+    position: {x: -1865.6398, y: 0, z: -3279.7725}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2029.5173, y: 0, z: -3684.259}
+    tangent2: {x: -1701.7622, y: 0, z: -2875.286}
+  - _type: 0
+    position: {x: -1863.8918, y: 0, z: -2013.1482}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -1863.8918, y: 0, z: -2013.1482}
+    tangent2: {x: -1863.8918, y: 0, z: -2013.1482}
+  - _type: 0
+    position: {x: -3945.1597, y: 0, z: -2661.7354}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -3693.812, y: 0, z: -3066.7903}
+    tangent2: {x: -4196.5073, y: 0, z: -2256.6804}
+  - _type: 0
+    position: {x: -4452.0845, y: 0, z: -1706.5642}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -4240.1577, y: 0, z: -2312.1973}
+    tangent2: {x: -4664.011, y: 0, z: -1100.9312}
+  - _type: 0
+    position: {x: -5080.9487, y: 0, z: 141.78906}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5846.463, y: 0, z: -1104.3594}
+    tangent2: {x: -4315.4346, y: 0, z: 1387.9375}
+  - _type: 0
+    position: {x: -3986.2827, y: 0, z: 2154.1997}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -4598.1255, y: 0, z: 2170.6196}
+    tangent2: {x: -3374.44, y: 0, z: 2137.7798}
+  - _type: 0
+    position: {x: -1686.2192, y: 0, z: 2731.4883}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -4061.1553, y: 0, z: 2778.145}
+    tangent2: {x: 688.7168, y: 0, z: 2684.8315}
+  - _type: 0
+    position: {x: -2508.4026, y: 0, z: -5045.4805}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2508.4026, y: 0, z: -5045.4805}
+    tangent2: {x: -2508.4026, y: 0, z: -5045.4805}
+  - _type: 0
+    position: {x: -3731.1606, y: 0, z: -4489.643}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -3603.7212, y: 0, z: -4614.031}
+    tangent2: {x: -3858.6, y: 0, z: -4365.2554}
+  - _type: 0
+    position: {x: -5466.389, y: 0, z: -2687.6484}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5154.7476, y: 0, z: -3794.8152}
+    tangent2: {x: -5778.031, y: 0, z: -1580.4817}
+  - _type: 0
+    position: {x: -7174.5254, y: 0, z: 434.71875}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -7265.1885, y: 0, z: 428.45312}
+    tangent2: {x: -7083.8623, y: 0, z: 440.98438}
+  - _type: 0
+    position: {x: -6286.3843, y: 0, z: 2876.6045}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -7941.087, y: 0, z: 2185.2236}
+    tangent2: {x: -4631.6816, y: 0, z: 3567.9854}
+  - _type: 0
+    position: {x: -3021.011, y: 0, z: 4349.5107}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -4429.765, y: 0, z: 4320.605}
+    tangent2: {x: -1612.2568, y: 0, z: 4378.4165}
+  - _type: 0
+    position: {x: -140.09052, y: 0, z: 7047.1465}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1079.616, y: 0, z: 7610.3716}
+    tangent2: {x: -1359.7971, y: 0, z: 6483.9214}
+  - _type: 0
+    position: {x: -3452.512, y: 0, z: 5760.8804}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2701.7446, y: 0, z: 6800.901}
+    tangent2: {x: -4203.2793, y: 0, z: 4720.86}
+  - _type: 0
+    position: {x: -4959.2583, y: 0, z: 3643.8784}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5098.2847, y: 0, z: 4215.305}
+    tangent2: {x: -4820.232, y: 0, z: 3072.4517}
+  - _type: 0
+    position: {x: -4496.515, y: 0, z: 1741.916}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -4829.385, y: 0, z: 3479.3535}
+    tangent2: {x: -4163.6455, y: 0, z: 4.4785156}
+  - _type: 0
+    position: {x: -4068.4897, y: 0, z: -380.7251}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -4356.773, y: 0, z: 614.83057}
+    tangent2: {x: -3780.2065, y: 0, z: -1376.2808}
+  - _type: 0
+    position: {x: -2936.9731, y: 0, z: -3316.9915}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -3400.9858, y: 0, z: -2499.4736}
+    tangent2: {x: -2472.9604, y: 0, z: -4134.5093}
+  - _type: 0
+    position: {x: -2397.1458, y: 0, z: -4230.6777}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2397.1458, y: 0, z: -4230.6777}
+    tangent2: {x: -2397.1458, y: 0, z: -4230.6777}
+  - _type: 0
+    position: {x: -2342.6687, y: 0, z: -4226.912}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -2342.6687, y: 0, z: -4226.912}
+    tangent2: {x: -2342.6687, y: 0, z: -4226.912}
+  - _type: 0
+    position: {x: -1752.1304, y: 0, z: -5273.9053}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -1050.9656, y: 0, z: -5004.8813}
+    tangent2: {x: -2453.2952, y: 0, z: -5542.929}
+  - _type: 0
+    position: {x: -3900.3604, y: 0, z: -5642.935}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -3697.4326, y: 0, z: -5529.978}
+    tangent2: {x: -4103.288, y: 0, z: -5755.892}
+  - _type: 0
+    position: {x: -5092.6904, y: 0, z: -5824.2695}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5071.1807, y: 0, z: -5822.7827}
+    tangent2: {x: -5114.2, y: 0, z: -5825.7563}
+  - _type: 0
+    position: {x: -5572.752, y: 0, z: -5251.2803}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5555.5547, y: 0, z: -5459.0557}
+    tangent2: {x: -5589.949, y: 0, z: -5043.505}
+  - _type: 0
+    position: {x: -5769.8154, y: 0, z: -4317.945}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5550.1963, y: 0, z: -5038.869}
+    tangent2: {x: -5989.4346, y: 0, z: -3597.0205}
+  - _type: 0
+    position: {x: -6398.7227, y: 0, z: -2642.9177}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -5549.113, y: 0, z: -4090.5234}
+    tangent2: {x: -7248.3325, y: 0, z: -1195.312}
+  - _type: 0
+    position: {x: -7406.7173, y: 0, z: -1006.1177}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -7371.688, y: 0, z: -1090.3306}
+    tangent2: {x: -7441.7466, y: 0, z: -921.9048}
+  - _type: 0
+    position: {x: -8275.785, y: 0, z: 674.01514}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -8860.041, y: 0, z: -753.92236}
+    tangent2: {x: -7691.5293, y: 0, z: 2101.9526}
+  - _type: 0
+    position: {x: -7706.2725, y: 0, z: 2531.206}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -8171.7935, y: -0.0009765625, z: 1906.9834}
+    tangent2: {x: -7240.7515, y: 0.0009765625, z: 3155.4287}
+  - _type: 0
+    position: {x: -7263.0396, y: 0, z: 3651.1133}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -7263.0396, y: 0, z: 3651.1133}
+    tangent2: {x: -7263.0396, y: 0, z: 3651.1133}
+  - _type: 0
+    position: {x: 7263.0396, y: 0, z: 3651.1133}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 7263.0396, y: 0, z: 3651.1133}
+    tangent2: {x: 7263.0396, y: 0, z: 3651.1133}
+  - _type: 0
+    position: {x: 7706.2725, y: 0, z: 2531.206}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 7240.7515, y: 0.0009765625, z: 3155.4287}
+    tangent2: {x: 8171.7935, y: -0.0009765625, z: 1906.9834}
+  - _type: 0
+    position: {x: 8275.785, y: 0, z: 674.01514}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 7691.5293, y: 0, z: 2101.9526}
+    tangent2: {x: 8860.041, y: 0, z: -753.92236}
+  - _type: 0
+    position: {x: 7406.7173, y: 0, z: -1006.1177}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 7441.7466, y: 0, z: -921.9048}
+    tangent2: {x: 7371.688, y: 0, z: -1090.3306}
+  - _type: 0
+    position: {x: 6398.7227, y: 0, z: -2642.9177}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 7248.3325, y: 0, z: -1195.312}
+    tangent2: {x: 5549.113, y: 0, z: -4090.5234}
+  - _type: 0
+    position: {x: 5769.8154, y: 0, z: -4317.945}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 5989.4346, y: 0, z: -3597.0205}
+    tangent2: {x: 5550.1963, y: 0, z: -5038.869}
+  - _type: 0
+    position: {x: 5572.752, y: 0, z: -5251.2803}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 5589.949, y: 0, z: -5043.505}
+    tangent2: {x: 5555.5547, y: 0, z: -5459.0557}
+  - _type: 0
+    position: {x: 5092.6904, y: 0, z: -5824.2695}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 5114.2, y: 0, z: -5825.7563}
+    tangent2: {x: 5071.1807, y: 0, z: -5822.7827}
+  - _type: 0
+    position: {x: 3900.3604, y: 0, z: -5642.935}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4103.288, y: 0, z: -5755.892}
+    tangent2: {x: 3697.4326, y: 0, z: -5529.978}
+  - _type: 0
+    position: {x: 1752.1304, y: 0, z: -5273.9053}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2453.2952, y: 0, z: -5542.929}
+    tangent2: {x: 1050.9656, y: 0, z: -5004.8813}
+  - _type: 0
+    position: {x: 2342.6687, y: 0, z: -4226.912}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2342.6687, y: 0, z: -4226.912}
+    tangent2: {x: 2342.6687, y: 0, z: -4226.912}
+  - _type: 0
+    position: {x: 2397.1458, y: 0, z: -4230.6777}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2397.1458, y: 0, z: -4230.6777}
+    tangent2: {x: 2397.1458, y: 0, z: -4230.6777}
+  - _type: 0
+    position: {x: 2936.9731, y: 0, z: -3316.9915}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2472.9604, y: 0, z: -4134.5093}
+    tangent2: {x: 3400.9858, y: 0, z: -2499.4736}
+  - _type: 0
+    position: {x: 4068.4897, y: 0, z: -380.7251}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 3780.2065, y: 0, z: -1376.2808}
+    tangent2: {x: 4356.773, y: 0, z: 614.83057}
+  - _type: 0
+    position: {x: 4496.515, y: 0, z: 1741.916}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4163.6455, y: 0, z: 4.4785156}
+    tangent2: {x: 4829.385, y: 0, z: 3479.3535}
+  - _type: 0
+    position: {x: 4959.2583, y: 0, z: 3643.8784}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4820.232, y: 0, z: 3072.4517}
+    tangent2: {x: 5098.2847, y: 0, z: 4215.305}
+  - _type: 0
+    position: {x: 3452.512, y: 0, z: 5760.8804}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4203.2793, y: 0, z: 4720.86}
+    tangent2: {x: 2701.7446, y: 0, z: 6800.901}
+  - _type: 0
+    position: {x: 2627.9795, y: -1193.46, z: 6955.4453}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 3847.6865, y: -1193.46, z: 6392.22}
+    tangent2: {x: 1408.273, y: -1193.46, z: 7518.67}
+  - _type: 0
+    position: {x: 3021.011, y: 0, z: 4349.5107}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1612.2568, y: 0, z: 4378.4165}
+    tangent2: {x: 4429.765, y: 0, z: 4320.605}
+  - _type: 0
+    position: {x: 6286.3843, y: 0, z: 2876.6045}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4631.6816, y: 0, z: 3567.9854}
+    tangent2: {x: 7941.087, y: 0, z: 2185.2236}
+  - _type: 0
+    position: {x: 7174.5254, y: 0, z: 434.71875}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 7083.8623, y: 0, z: 440.98438}
+    tangent2: {x: 7265.1885, y: 0, z: 428.45312}
+  - _type: 0
+    position: {x: 5466.389, y: 0, z: -2687.6484}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 5778.031, y: 0, z: -1580.4817}
+    tangent2: {x: 5154.7476, y: 0, z: -3794.8152}
+  - _type: 0
+    position: {x: 3731.1606, y: 0, z: -4489.643}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 3858.6, y: 0, z: -4365.2554}
+    tangent2: {x: 3603.7212, y: 0, z: -4614.031}
+  - _type: 0
+    position: {x: 2508.4026, y: 0, z: -5045.4805}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2508.4026, y: 0, z: -5045.4805}
+    tangent2: {x: 2508.4026, y: 0, z: -5045.4805}
+  - _type: 0
+    position: {x: 1686.2192, y: 0, z: 2731.4883}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -688.7168, y: 0, z: 2684.8315}
+    tangent2: {x: 4061.1553, y: 0, z: 2778.145}
+  - _type: 0
+    position: {x: 3986.2827, y: 0, z: 2154.1997}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 3374.44, y: 0, z: 2137.7798}
+    tangent2: {x: 4598.1255, y: 0, z: 2170.6196}
+  - _type: 0
+    position: {x: 5080.9487, y: 0, z: 141.78906}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4315.4346, y: 0, z: 1387.9375}
+    tangent2: {x: 5846.463, y: 0, z: -1104.3594}
+  - _type: 0
+    position: {x: 4452.0845, y: 0, z: -1706.5642}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4664.011, y: 0, z: -1100.9312}
+    tangent2: {x: 4240.1577, y: 0, z: -2312.1973}
+  - _type: 0
+    position: {x: 3945.1597, y: 0, z: -2661.7354}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 4196.5073, y: 0, z: -2256.6804}
+    tangent2: {x: 3693.812, y: 0, z: -3066.7903}
+  - _type: 0
+    position: {x: 1863.8918, y: 0, z: -2013.1482}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1863.8918, y: 0, z: -2013.1482}
+    tangent2: {x: 1863.8918, y: 0, z: -2013.1482}
+  - _type: 0
+    position: {x: 1865.6398, y: 0, z: -3279.7725}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1701.7622, y: 0, z: -2875.286}
+    tangent2: {x: 2029.5173, y: 0, z: -3684.259}
+  - _type: 0
+    position: {x: 1846.4979, y: 0, z: -3710.481}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1846.4979, y: 0, z: -3710.481}
+    tangent2: {x: 1846.4979, y: 0, z: -3710.481}
+  - _type: 0
+    position: {x: 2875.7158, y: 0, z: -885.7273}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2532.4343, y: 0, z: -996.70776}
+    tangent2: {x: 3218.9973, y: 0, z: -774.7468}
+  - _type: 0
+    position: {x: 2618.7625, y: 0, z: 248.76929}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 2873.8408, y: 0, z: -289.80566}
+    tangent2: {x: 2363.684, y: 0, z: 787.34424}
+  - _type: 0
+    position: {x: 1713.8867, y: 0, z: 1477.8914}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1728.1635, y: 0, z: 1349.419}
+    tangent2: {x: 1699.61, y: 0, z: 1606.3638}
+  - _type: 0
+    position: {x: 2129.9023, y: 0, z: -1609.4441}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1592.5571, y: 0, z: 401.56982}
+    tangent2: {x: 2667.2476, y: 0, z: -3620.458}
+  - _type: 0
+    position: {x: -177.35742, y: -980.5005, z: -1457.3843}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -1784.6079, y: -980.5005, z: -3530.6724}
+    tangent2: {x: 1429.8933, y: -980.5005, z: 615.90234}
+  - _type: 0
+    position: {x: 2052.3723, y: 0, z: -1702.561}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 1537.2422, y: 0, z: 948.64844}
+    tangent2: {x: 2567.5024, y: 0, z: -4353.7705}
+  - _type: 0
+    position: {x: 1811.9746, y: 0, z: -1395.49}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 350.90894, y: 0, z: 10.87915}
+    tangent2: {x: 3273.0403, y: 0, z: -2801.8591}
+  - _type: 0
+    position: {x: 539.5917, y: -302.33105, z: -2386.0574}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: -919.5863, y: -811.8887, z: -4349.2207}
+    tangent2: {x: 1998.7697, y: 207.22656, z: -422.89404}
+  - _type: 0
+    position: {x: 1155.4644, y: -386.42236, z: -1868.6797}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    normal: {x: 0, y: 1, z: 0}
+    size: 1
+    tangent: {x: 918.42957, y: -320.00098, z: -1939.1355}
+    tangent2: {x: 1392.4991, y: -452.84375, z: -1798.2239}
