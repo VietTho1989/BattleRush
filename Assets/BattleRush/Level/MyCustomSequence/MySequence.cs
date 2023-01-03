@@ -74,6 +74,8 @@ namespace BattleRushS
                     if (isArena)
                     {
                         ret = arenaSegment;
+                        // TODO dung sinh khi da sinh arena
+                        stopped = true;
                     }
                     else
                     {
@@ -81,6 +83,9 @@ namespace BattleRushS
                         LevelSegment levelSegment = ret.GetComponent<LevelSegment>();
                         if (levelSegment != null)
                         {
+                            /**
+                             * cac object them vao can them segmentobjectsetting, chon bound no di, de tranh choan qua segment
+                             * */ 
                             // add object to segment
                             {
                                 int lastAddIndex = battleRush.mapData.v.lastAddIndex.v;

@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 4679731683992329825}
   - component: {fileID: 2559403003649840676}
   - component: {fileID: 7813576979065524564}
+  - component: {fileID: 5413914578102044327}
   m_Layer: 8
   m_Name: Prison
   m_TagString: Untagged
@@ -370,6 +371,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
+--- !u!114 &5413914578102044327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073133411028130540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    meshColliderHandling: 0
+    boundsInclusion: 0
+    indexing: 0
+    applyRotation: 1
+    keepUpright: 0
+    upVector: {x: 0, y: 1, z: 0}
+    applyScale: 0
+    bendMesh: 0
+    bendSprite: 0
+    bendPolygonCollider: 0
+    applyMeshColors: 0
 --- !u!1 &1293592205128934224
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277717499069348184}
   - component: {fileID: 4860010071459010379}
+  - component: {fileID: 1343674536226708510}
   m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
@@ -454,6 +480,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1343674536226708510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293592205128934224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    meshColliderHandling: 0
+    boundsInclusion: 0
+    indexing: 0
+    applyRotation: 1
+    keepUpright: 0
+    upVector: {x: 0, y: 1, z: 0}
+    applyScale: 0
+    bendMesh: 0
+    bendSprite: 0
+    bendPolygonCollider: 0
+    applyMeshColors: 0
 --- !u!1 &1295631849316398720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1316,7 @@ GameObject:
   - component: {fileID: 8508790576731846757}
   - component: {fileID: 7503291836431566226}
   - component: {fileID: 2680709705315015844}
+  - component: {fileID: 1814618203781309563}
   m_Layer: 0
   m_Name: Way
   m_TagString: Untagged
@@ -1352,7 +1403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     meshColliderHandling: 1
-    boundsInclusion: -1
+    boundsInclusion: 0
     indexing: 0
     applyRotation: 1
     keepUpright: 0
@@ -1404,6 +1455,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 2, z: 24}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1814618203781309563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492353877555386806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    meshColliderHandling: 0
+    boundsInclusion: 0
+    indexing: 0
+    applyRotation: 1
+    keepUpright: 0
+    upVector: {x: 0, y: 1, z: 0}
+    applyScale: 0
+    bendMesh: 0
+    bendSprite: 0
+    bendPolygonCollider: 0
+    applyMeshColors: 0
 --- !u!1 &4499359033915733026
 GameObject:
   m_ObjectHideFlags: 0

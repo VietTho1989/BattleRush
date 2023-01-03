@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3352092919780081513}
   - component: {fileID: 7800165780762748387}
   - component: {fileID: 8586063146293576380}
+  - component: {fileID: 5353261757612051819}
   m_Layer: 8
   m_Name: shooting way
   m_TagString: Untagged
@@ -115,6 +116,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5353261757612051819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723573252739877168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    meshColliderHandling: 0
+    boundsInclusion: 0
+    indexing: 0
+    applyRotation: 1
+    keepUpright: 0
+    upVector: {x: 0, y: 1, z: 0}
+    applyScale: 0
+    bendMesh: 0
+    bendSprite: 0
+    bendPolygonCollider: 0
+    applyMeshColors: 0
 --- !u!1 &1989005533270962493
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,6 +5694,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 11.12, z: 1.84}
   m_Center: {x: 0.03289342, y: 5.5696096, z: -0.5567004}
+--- !u!114 &3970282389772612321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682996263654278232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    meshColliderHandling: 0
+    boundsInclusion: 0
+    indexing: 0
+    applyRotation: 1
+    keepUpright: 0
+    upVector: {x: 0, y: 1, z: 0}
+    applyScale: 0
+    bendMesh: 0
+    bendSprite: 0
+    bendPolygonCollider: 0
+    applyMeshColors: 0
 --- !u!4 &2022367487468510946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc9d528148149574c98fe9ada51b31a5, type: 3}

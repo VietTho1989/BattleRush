@@ -2697,6 +2697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segment: {fileID: 7785843639031599074}
+  segmentType: 0
 --- !u!114 &433774533032878344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,7 +2917,7 @@ Transform:
   m_GameObject: {fileID: 7989100379059351965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7589767182436476279}

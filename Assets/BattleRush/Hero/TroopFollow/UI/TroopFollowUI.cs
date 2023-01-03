@@ -238,7 +238,7 @@ namespace BattleRushS.HeroS
                                                     float x = 0;
                                                     {
                                                         const float DistanceBetweenRow = 1.5f;
-                                                        x += ((col + 1) / 2.0f - troopCountInRow / 2.0f) * DistanceBetweenRow;
+                                                        x += ((col + 2) / 2.0f - troopCountInRow / 2.0f) * DistanceBetweenRow;
                                                         Logger.Log("troopCage: ");
                                                     }
                                                     // z

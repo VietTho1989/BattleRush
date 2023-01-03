@@ -40,6 +40,7 @@ namespace BattleRushS.StateS.LoadS
                                         {
                                             MySequence mySequence = customSequence as MySequence;
                                             mySequence.setCurrentNextSegmentIdex(0);
+                                            mySequence.stopped = false;
                                         }
                                     }
                                     // tempSegmentContainer

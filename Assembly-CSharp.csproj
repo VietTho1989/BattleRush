@@ -62,6 +62,7 @@
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeBoolUI.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\MyGrid\MyGridUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Grinder\Grinder.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\Idle\Idle.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SkinnedMeshRenderer.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Change\ChangeDictAdd.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalSizeCheckChange.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="Assets\BattleRush\Object\Obstruction\Obstruction.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\DirtyInterface.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GradientAlphaKey.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\MoveToDest\MoveToDest.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\0_Reset\ResetUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TrailModule.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector4.cs" />
@@ -233,6 +235,7 @@
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeEnumUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Hammer\Hammer.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Keyframe.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\Idle\IdleUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\RecyclerKit\TrashMan.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GradientColorKey.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\View\Controller\ViewRecordControllerUI.cs" />
@@ -251,6 +254,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadLevelUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\Cache\State\Success\Success.cs" />
     <Compile Include="Assets\BattleRush\Map\ObjectData.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\TroopMoveUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Obstruction\ObstructionUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector3Int.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\VP\VD.cs" />
@@ -382,6 +386,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_uint.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UITransform\UIRectTransform.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Sync\SyncDictAdd.cs" />
+    <Compile Include="Assets\BattleRush\State\2_Play\CheckGameEndUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Sprite.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_AnimationCurve.cs" />
     <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
@@ -516,6 +521,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Light.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
     <Compile Include="Assets\CommonLibrary\PluginShare.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\MoveToDest\MoveToDestUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3Spreadsheet.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\FireNozzle\FireNozzle.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\UI\Save\SaveRecordUI.cs" />
@@ -540,12 +546,7 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
-    <Compile Include="Assets\BattleRush\State\2_Play\CheckGameEndUpdate.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\Idle\Idle.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\TroopMoveUpdate.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\Idle\IdleUpdate.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\MoveToDest\MoveToDest.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\MoveToDest\MoveToDestUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Level\MyCustomPath\MyCustomPath.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
