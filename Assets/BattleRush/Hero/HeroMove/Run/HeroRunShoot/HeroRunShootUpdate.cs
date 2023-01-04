@@ -25,7 +25,7 @@ namespace BattleRushS.HeroS.RunS
             }
         }
 
-        public override void Update()
+        public void FixedUpdate()
         {
             // increase time when cool down
             {
@@ -38,7 +38,7 @@ namespace BattleRushS.HeroS.RunS
                         case HeroRunShoot.State.Type.CoolDown:
                             {
                                 HeroRunShoot.State.CoolDown coolDown = this.data.state.v as HeroRunShoot.State.CoolDown;
-                                coolDown.time.v += Time.deltaTime;
+                                coolDown.time.v += Time.fixedDeltaTime;
                                 // change back to normal
                                 {
                                     if (coolDown.time.v >= coolDown.duration.v)
