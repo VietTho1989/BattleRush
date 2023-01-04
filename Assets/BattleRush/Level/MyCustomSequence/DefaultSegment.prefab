@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1806971437209043938}
   - component: {fileID: 3693354331265475230}
   m_Layer: 0
-  m_Name: MyEmptySegment
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 149562731265057335}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 3.36, y: 1, z: 2.1}
+  m_LocalScale: {x: 3.84, y: 1, z: 2.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3762263799119860930}
@@ -177,7 +177,216 @@ MonoBehaviour:
   customKeepUpright: 0
   _customMainPath: -1
   axis: 2
-  customPaths: []
+  customPaths:
+  - spline:
+      points:
+      - _type: 0
+        position: {x: 0, y: 0, z: -12}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 0, y: 0, z: -20}
+        tangent2: {x: 0, y: 0, z: -4}
+      - _type: 0
+        position: {x: 0, y: 0, z: 12}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 0, y: 0, z: 4}
+        tangent2: {x: 0, y: 0, z: 20}
+      - _type: 0
+        position: {x: -5.8766737, y: 0, z: -2.5564098}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: -5.8766737, y: 0, z: -2.5564098}
+        tangent2: {x: -5.8766737, y: 0, z: -2.5564098}
+      - _type: 0
+        position: {x: -3.4551716, y: -0.0000019073486, z: -8.62488}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: -3.4551716, y: -0.0000019073486, z: -8.62488}
+        tangent2: {x: -3.4551716, y: -0.0000019073486, z: -8.62488}
+      - _type: 0
+        position: {x: -0.15779305, y: -0.0000019073486, z: -11.791149}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: -0.15779305, y: -0.0000019073486, z: -11.791149}
+        tangent2: {x: -0.15779305, y: -0.0000019073486, z: -11.791149}
+      - _type: 0
+        position: {x: 4.3821087, y: 0.0000019073486, z: -6.123831}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 4.3821087, y: 0.0000019073486, z: -6.123831}
+        tangent2: {x: 4.3821087, y: 0.0000019073486, z: -6.123831}
+      - _type: 0
+        position: {x: 5.5644455, y: 0.0000019073486, z: -2.355256}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 5.6605473, y: 0.000005722046, z: -2.4950762}
+        tangent2: {x: 5.4683437, y: -0.0000019073486, z: -2.215436}
+      - _type: 0
+        position: {x: 3.278123, y: 0, z: 2.3862438}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 3.278123, y: 0, z: 2.3862438}
+        tangent2: {x: 3.278123, y: 0, z: 2.3862438}
+      - _type: 0
+        position: {x: 8.749052, y: 0, z: 2.3919716}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 8.141616, y: 0.0000019073486, z: 2.7111855}
+        tangent2: {x: 9.356488, y: -0.0000019073486, z: 2.0727577}
+      - _type: 0
+        position: {x: 13.032433, y: -0.0000019073486, z: 3.5827198}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 12.973798, y: -0.0000038146973, z: 3.537777}
+        tangent2: {x: 13.091067, y: 0, z: 3.6276627}
+      - _type: 0
+        position: {x: 10.570154, y: 0, z: 7.3490868}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 10.570154, y: 0, z: 7.3490868}
+        tangent2: {x: 10.570154, y: 0, z: 7.3490868}
+      - _type: 0
+        position: {x: 7.2653704, y: 0.0000019073486, z: 9.985968}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: 7.2653704, y: 0.0000019073486, z: 9.985968}
+        tangent2: {x: 7.2653704, y: 0.0000019073486, z: 9.985968}
+      - _type: 0
+        position: {x: -0.07940674, y: 0, z: 12.243883}
+        color: {r: 1, g: 1, b: 1, a: 1}
+        normal: {x: 0, y: 1, z: 0}
+        size: 1
+        tangent: {x: -0.07940674, y: 0, z: 12.243883}
+        tangent2: {x: -0.07940674, y: 0, z: 12.243883}
+      closed: 0
+      type: 2
+      linearAverageDirection: 1
+      customValueInterpolation:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      customNormalInterpolation:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      sampleRate: 10
+    sampleRate: 10
+    samples: []
+    name: Lane 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+    seamlessEnds: 1
+    confineToBounds: 0
+    segment: {fileID: 6645721604503534259}
+    transform: {fileID: 3762263799119860930}
+    localPoints:
+    - _type: 0
+      position: {x: 0, y: 0, z: -12}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 0, y: 0, z: -20}
+      tangent2: {x: 0, y: 0, z: -4}
+    - _type: 0
+      position: {x: 0, y: 0, z: 12}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 0, y: 0, z: 4}
+      tangent2: {x: 0, y: 0, z: 20}
+    - _type: 0
+      position: {x: -5.8766737, y: 0, z: -2.5564098}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: -5.8766737, y: 0, z: -2.5564098}
+      tangent2: {x: -5.8766737, y: 0, z: -2.5564098}
+    - _type: 0
+      position: {x: -3.4551716, y: -0.0000019073486, z: -8.62488}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: -3.4551716, y: -0.0000019073486, z: -8.62488}
+      tangent2: {x: -3.4551716, y: -0.0000019073486, z: -8.62488}
+    - _type: 0
+      position: {x: -0.15779305, y: -0.0000019073486, z: -11.791149}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: -0.15779305, y: -0.0000019073486, z: -11.791149}
+      tangent2: {x: -0.15779305, y: -0.0000019073486, z: -11.791149}
+    - _type: 0
+      position: {x: 4.3821087, y: 0.0000019073486, z: -6.123831}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 4.3821087, y: 0.0000019073486, z: -6.123831}
+      tangent2: {x: 4.3821087, y: 0.0000019073486, z: -6.123831}
+    - _type: 0
+      position: {x: 5.5644455, y: 0.0000019073486, z: -2.355256}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 5.6605473, y: 0.000005722046, z: -2.4950762}
+      tangent2: {x: 5.4683437, y: -0.0000019073486, z: -2.215436}
+    - _type: 0
+      position: {x: 3.278123, y: 0, z: 2.3862438}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 3.278123, y: 0, z: 2.3862438}
+      tangent2: {x: 3.278123, y: 0, z: 2.3862438}
+    - _type: 0
+      position: {x: 8.749052, y: 0, z: 2.3919716}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 8.141616, y: 0.0000019073486, z: 2.7111855}
+      tangent2: {x: 9.356488, y: -0.0000019073486, z: 2.0727577}
+    - _type: 0
+      position: {x: 13.032433, y: -0.0000019073486, z: 3.5827198}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 12.973798, y: -0.0000038146973, z: 3.537777}
+      tangent2: {x: 13.091067, y: 0, z: 3.6276627}
+    - _type: 0
+      position: {x: 10.570154, y: 0, z: 7.3490868}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 10.570154, y: 0, z: 7.3490868}
+      tangent2: {x: 10.570154, y: 0, z: 7.3490868}
+    - _type: 0
+      position: {x: 7.2653704, y: 0.0000019073486, z: 9.985968}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: 7.2653704, y: 0.0000019073486, z: 9.985968}
+      tangent2: {x: 7.2653704, y: 0.0000019073486, z: 9.985968}
+    - _type: 0
+      position: {x: -0.07940674, y: 0, z: 12.243883}
+      color: {r: 1, g: 1, b: 1, a: 1}
+      normal: {x: 0, y: 1, z: 0}
+      size: 1
+      tangent: {x: -0.07940674, y: 0, z: 12.243883}
+      tangent2: {x: -0.07940674, y: 0, z: 12.243883}
   objectProperties:
   - transform: {fileID: 3762263799119860930}
     localRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -243,10 +452,10 @@ MonoBehaviour:
     _isRoot: 1
   bounds:
     center: {x: 0, y: 0, z: 0}
-    extents: {x: 16, y: 1.110223e-16, z: 10}
-    max: {x: 16, y: 1.110223e-16, z: 10}
-    min: {x: -16, y: -1.110223e-16, z: -10}
-    size: {x: 32, y: 2.220446e-16, z: 20}
+    extents: {x: 19.199999, y: 1.110223e-16, z: 12}
+    max: {x: 19.199999, y: 1.110223e-16, z: 12}
+    min: {x: -19.199999, y: -1.110223e-16, z: -12}
+    size: {x: 38.399998, y: 2.220446e-16, z: 24}
   builders: []
   unpacked: 1
   alwaysDraw: 0

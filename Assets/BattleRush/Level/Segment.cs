@@ -21,13 +21,8 @@ public class Segment : MonoBehaviour
 
     void Start()
     {
-        
+        if (segment != null)
+            this.name = "Segment " + segment.index + "; " + segment.EvaluatePosition(0) + "; " + segment.EvaluatePosition(100) + ", " + segment.GetBounds().size;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (segment != null)
-            this.name = "Segment " + segment.index + "; " + segment.EvaluatePosition(0) + "; " + segment.EvaluatePosition(100);
-    }
 }

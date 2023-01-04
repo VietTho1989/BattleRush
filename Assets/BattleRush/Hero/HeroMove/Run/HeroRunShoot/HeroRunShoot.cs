@@ -68,7 +68,7 @@ namespace BattleRushS.HeroS.RunS
                 public CoolDown() : base()
                 {
                     this.time = new VO<float>(this, (byte)Property.time, 0);
-                    this.duration = new VO<float>(this, (byte)Property.duration, 0.3f);
+                    this.duration = new VO<float>(this, (byte)Property.duration, 0.2f);
                 }
 
                 #endregion

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BattleRushS.ArenaS
 {
@@ -41,9 +42,22 @@ namespace BattleRushS.ArenaS
 
         #endregion
 
+        public NavMeshSurface navMeshSurface;
+
         public override void Awake()
         {
-            base.Awake();          
+            base.Awake();
+            // bake navMesh
+            /*{
+                if (navMeshSurface != null)
+                {
+                    navMeshSurface.BuildNavMesh();
+                }
+                else
+                {
+                    Logger.LogError("navMeshSurface null");
+                }
+            }*/
         }
 
         public override void OnDestroy()

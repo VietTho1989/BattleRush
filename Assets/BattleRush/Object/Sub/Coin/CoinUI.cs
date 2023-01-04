@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.HeroS;
 using Dreamteck.Forever;
 using UnityEngine;
 
@@ -57,8 +58,6 @@ namespace BattleRushS.ObjectS
 
         #region Refresh
 
-        private LevelGenerator levelGenerator = null;
-
         public MeshRenderer coinMeshRenderer;
         public ParticleSystem coinPickUpEffect;
 
@@ -73,36 +72,6 @@ namespace BattleRushS.ObjectS
                     if (coin != null)
                     {
                         this.name = "Coin " + coin.P.v;
-                        // set position
-                        {
-                            // find levelGenerator
-                            if (levelGenerator == null)
-                            {
-                                BattleRush battleRush = coin.findDataInParent<BattleRush>();
-                                if (battleRush != null)
-                                {
-                                    BattleRushUI battleRushUI = battleRush.findCallBack<BattleRushUI>();
-                                    if (battleRushUI != null)
-                                    {
-                                        levelGenerator = battleRushUI.GetComponent<LevelGenerator>();
-                                    }
-                                    else
-                                    {
-                                        Logger.LogError("battleRushUI null");
-                                    }
-                                }
-                                else
-                                {
-                                    Logger.LogError("battleRush null");
-                                }
-                            }
-                            // set position
-                            if (levelGenerator != null)
-                            {
-                                /*Vector3 position = MakeObjectUpdate.GetPositionInLevelGenerator(levelGenerator, coin.P.v.z);
-                                this.transform.position = new Vector3(position.x, position.y + 0.9f, position.z);*/
-                            }
-                        }
                         // collider enter
                         {
                             switch (coin.state.v)
@@ -115,7 +84,7 @@ namespace BattleRushS.ObjectS
                                             foreach(Collider collider in this.data.colliderEnters.vs)
                                             {
                                                 // get hero
-                                                {
+                                                if(!isPickedUp){
                                                     HeroUI heroUI = collider.GetComponent<HeroUI>();
                                                     if (heroUI != null)
                                                     {
@@ -147,8 +116,74 @@ namespace BattleRushS.ObjectS
                                                         {
                                                             Logger.LogError("heroUIData null");
                                                         }
+                                                    }                                                   
+                                                }
+                                                // get troop follow
+                                                if (!isPickedUp)
+                                                {
+                                                    TroopInformation troopInformation = collider.GetComponent<TroopInformation>();
+                                                    if (troopInformation != null)
+                                                    {
+                                                        TroopFollowUI troopFollowUI = troopInformation.GetComponentInParent<TroopFollowUI>();
+                                                        if (troopFollowUI != null)
+                                                        {
+                                                            TroopFollowUI.UIData troopFollowUIData = troopFollowUI.data;
+                                                            if (troopFollowUIData != null)
+                                                            {
+                                                                TroopFollow troopFollow = troopFollowUIData.troopFollow.v.data;
+                                                                if (troopFollow != null)
+                                                                {
+                                                                    // check this troop is running, follow hero, not in cage
+                                                                    bool isTroopRunFollowHero = false;
+                                                                    {
+                                                                        Hero hero = troopFollow.findDataInParent<Hero>();
+                                                                        if (hero != null)
+                                                                        {
+                                                                            BattleRush battleRush = troopFollow.findDataInParent<BattleRush>();
+                                                                            if (battleRush != null)
+                                                                            {
+                                                                                if (battleRush.hero.v == hero)
+                                                                                {
+                                                                                    isTroopRunFollowHero = true;
+                                                                                }
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                Logger.Log("battleRush null");
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    // process
+                                                                    if (isTroopRunFollowHero)
+                                                                    {
+                                                                        if (troopFollow.hitPoint.v > 0)
+                                                                        {
+                                                                            // alive, so can pick
+                                                                            Logger.Log("CoinUI: troop follow pick coin: " + this.gameObject);
+                                                                            isPickedUp = true;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    Logger.LogError("troopFollow null");
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("troopFollowUIData null");
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("troopFollowUI null");
+                                                        }
                                                     }
-                                                }                                                
+                                                    else
+                                                    {
+                                                        Logger.LogError("troopInformation null");
+                                                    }                                                    
+                                                }
                                             }
                                         }
                                         // process
