@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     meshColliderHandling: 0
-    boundsInclusion: -1
+    boundsInclusion: 0
     indexing: 0
     applyRotation: 1
     keepUpright: 0

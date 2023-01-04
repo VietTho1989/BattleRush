@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008588783084800049}
-  m_LocalRotation: {x: 0.31937903, y: -0.12031947, z: 0.040920977, w: 0.9390664}
+  m_LocalRotation: {x: 0.31937903, y: -0.1203195, z: 0.040920984, w: 0.9390664}
   m_LocalPosition: {x: 6.6800003, y: 22.38, z: -2.940003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1939951152242263975}
   m_Father: {fileID: 7971326914115651515}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 23.472, y: -12.048, z: 1.83}
 --- !u!114 &4310403281821024441
 MonoBehaviour:
@@ -827,9 +827,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1285517210599240601}
-  - component: {fileID: 2003099214135227341}
   - component: {fileID: 7597731203197008770}
   - component: {fileID: 1983770298776899666}
+  - component: {fileID: 4931186461990920844}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -862,33 +862,10 @@ Transform:
   - {fileID: 1285517211553576645}
   - {fileID: 1285517211528142622}
   - {fileID: 1285517211350192067}
+  - {fileID: 8861778744270994065}
   m_Father: {fileID: 7971326914115651515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2003099214135227341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285517210599240600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings:
-    meshColliderHandling: 0
-    boundsInclusion: -1
-    indexing: 0
-    applyRotation: 1
-    keepUpright: 0
-    upVector: {x: 0, y: 1, z: 0}
-    applyScale: 0
-    bendMesh: 0
-    bendSprite: 0
-    bendPolygonCollider: 0
-    applyMeshColors: 0
 --- !u!114 &7597731203197008770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +911,30 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: cc4e314c45b67e04b8768df88c1badfb, type: 2}
+--- !u!114 &4931186461990920844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285517210599240600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    meshColliderHandling: 0
+    boundsInclusion: -1
+    indexing: 0
+    applyRotation: 1
+    keepUpright: 0
+    upVector: {x: 0, y: 1, z: 0}
+    applyScale: 0
+    bendMesh: 0
+    bendSprite: 0
+    bendPolygonCollider: 0
+    applyMeshColors: 0
 --- !u!1 &1285517210619395547
 GameObject:
   m_ObjectHideFlags: 0
@@ -47585,8 +47586,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7971326914115651515}
-  m_RootOrder: 1
+  m_Father: {fileID: 1285517210599240601}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2971622705101472291
 GameObject:
@@ -61977,7 +61978,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1285517210599240601}
-  - {fileID: 8861778744270994065}
   - {fileID: 434389613504333110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62073,7 +62073,7 @@ MonoBehaviour:
       bendSprite: 0
       bendPolygonCollider: 0
       applyMeshColors: 0
-    _settingsComponent: {fileID: 2003099214135227341}
+    _settingsComponent: {fileID: 4931186461990920844}
     overrideSettingsComponent: 0
     meshFilter: {fileID: 0}
     meshCollider: {fileID: 0}
@@ -64283,7 +64283,7 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   - transform: {fileID: 434389613504333110}
-    localRotation: {x: 0.31937903, y: -0.12031947, z: 0.040920977, w: 0.9390664}
+    localRotation: {x: 0.31937903, y: -0.1203195, z: 0.040920984, w: 0.9390664}
     extrudedMesh: {fileID: 0}
     extrusionSpriteVertices: []
     extrusionSpriteUVs: []
@@ -64314,7 +64314,7 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   - transform: {fileID: 1939951152242263975}
-    localRotation: {x: 0.0055609345, y: -0.27201054, z: 0.011338182, w: -0.96221143}
+    localRotation: {x: 0.0055609345, y: -0.2720105, z: 0.011338182, w: -0.9622115}
     extrudedMesh: {fileID: 0}
     extrusionSpriteVertices: []
     extrusionSpriteUVs: []
@@ -64345,11 +64345,11 @@ MonoBehaviour:
     colliders: []
     _isRoot: 0
   bounds:
-    center: {x: 0.6213341, y: 14.564459, z: 22.80373}
-    extents: {x: 25.686214, y: 15.841583, z: 27.15121}
+    center: {x: 0.6213341, y: 14.564459, z: 22.803728}
+    extents: {x: 25.686214, y: 15.841583, z: 27.151213}
     max: {x: 26.307549, y: 30.406042, z: 49.95494}
-    min: {x: -25.06488, y: -1.2771237, z: -4.3474827}
-    size: {x: 51.37243, y: 31.683167, z: 54.30242}
+    min: {x: -25.06488, y: -1.2771237, z: -4.347484}
+    size: {x: 51.37243, y: 31.683167, z: 54.302425}
   builders: []
   unpacked: 0
   alwaysDraw: 0
