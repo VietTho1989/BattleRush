@@ -67,6 +67,18 @@ namespace BattleRushS.ObjectS.TroopCageS
                     {
                         Logger.LogError("battleRush null");
                     }
+                    // remove troop
+                    {
+                        TroopCage troopCage = this.data.findDataInParent<TroopCage>();
+                        if (troopCage != null)
+                        {
+                            troopCage.troops.clear();
+                        }
+                        else
+                        {
+                            Logger.LogError("troops null");
+                        }
+                    }
                 }
                 // time
                 {

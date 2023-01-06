@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{91F3F1BA-6C98-130E-8933-B92D244C1522}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena/NavMeshPrefabInstance.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BattleRush/Object/Sub/TroopCage/State/1_ReleaseTroop/ReleaseTroopUpdate.cs">
     <Files>
-      <File FileName="Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena/Editor/NavMeshPrefabInstanceEditor.cs" Line="67" Column="1" />
-      <File FileName="Assets/Dreamteck/Forever/Level Generator/Path Generation/WavyPathGenerator.cs" Line="16" Column="1" />
-      <File FileName="Assets/Dreamteck/Forever/Level Generator/Path Generation/HighLevelPathGenerator.cs" Line="76" Column="24" />
-      <File FileName="Assets/Dreamteck/Forever/Level Generator/Path Generation/SpiralPathGenerator.cs" Line="27" Column="39" />
-      <File FileName="Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/Arena/NavMeshPrefabInstance.cs" Line="1" Column="1" />
+      <File FileName="Assets/BattleRush/Object/Sub/TroopCage/State/1_ReleaseTroop/ReleaseTroopUpdate.cs" Line="45" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

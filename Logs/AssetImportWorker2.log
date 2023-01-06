@@ -2595,3 +2595,399 @@ Received Import Request.
   path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaSegment.prefab
   artifactKey: Guid(68aac98f284ea0b4fab4545a62a328d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaSegment.prefab using Guid(68aac98f284ea0b4fab4545a62a328d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d108023060bcd438d4cd131d1aa898') in 25.516212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 310.484836 seconds.
+  path: Assets/AdvancedInputField/Images/action_bar.png
+  artifactKey: Guid(207c51b7c6f55ac499040d1fd5cc8f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AdvancedInputField/Images/action_bar.png using Guid(207c51b7c6f55ac499040d1fd5cc8f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e03d0677fb57e67082bd0315794bbb67') in 0.403298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000768 seconds.
+  path: Assets/Dreamteck/Splines/Editor/Icons/add_dark.png
+  artifactKey: Guid(96b7dbe2cec681345a8b3f4dc38944d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Splines/Editor/Icons/add_dark.png using Guid(96b7dbe2cec681345a8b3f4dc38944d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85b441e9fc2c485d5ad60ce69a2798c') in 0.142593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Dreamteck/Splines/Editor/Icons/remove_on_dark.png
+  artifactKey: Guid(f7ec1d1aa89e3594bb4563b68b1055bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Splines/Editor/Icons/remove_on_dark.png using Guid(f7ec1d1aa89e3594bb4563b68b1055bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6c24e08734584a560f0a45592b40290') in 0.026902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/Dreamteck/Splines/Editor/Icons/remove_dark.png
+  artifactKey: Guid(6c52483422841154a88cf13e132c0252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Splines/Editor/Icons/remove_dark.png using Guid(6c52483422841154a88cf13e132c0252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb3e2a2936eaf224493777b50a61e63c') in 0.022043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Dreamteck/Splines/Editor/Icons/remove.png
+  artifactKey: Guid(34ec387670b2ac84198cf7daf3f99b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Splines/Editor/Icons/remove.png using Guid(34ec387670b2ac84198cf7daf3f99b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22af23458bd752aa0026f1434d122f4c') in 0.029063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Dreamteck/Splines/Editor/Icons/add_on_dark.png
+  artifactKey: Guid(0fe44e4f40f01a944acc051bb6a386ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Splines/Editor/Icons/add_on_dark.png using Guid(0fe44e4f40f01a944acc051bb6a386ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25320212afb88ca7a36fab61a6e37fc') in 0.028999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000925 seconds.
+  path: Assets/Dreamteck/Splines/Editor/Icons/remove_on.png
+  artifactKey: Guid(3597e623538af98449ca9f6d8a5b182e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Splines/Editor/Icons/remove_on.png using Guid(3597e623538af98449ca9f6d8a5b182e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e47dc040c2f6f86137e9d692897330') in 0.050551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.521395 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Remove.png
+  artifactKey: Guid(4ff71d806d58fd041be6e55d1d1ca70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Remove.png using Guid(4ff71d806d58fd041be6e55d1d1ca70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48e9cd46e1cfe0ce2a35bc986c624e73') in 0.044337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Remove@2x.png
+  artifactKey: Guid(cc27e95868ab32345b74b8338c01ebed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Remove@2x.png using Guid(cc27e95868ab32345b74b8338c01ebed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59da3101fa39799eec2a814fa7ba2eee') in 0.044603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Remove@2x.png
+  artifactKey: Guid(049c8a7821177594692244298d82e4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Remove@2x.png using Guid(049c8a7821177594692244298d82e4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf7ba28a780169d445052abdbe441c59') in 0.067751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Remove.png
+  artifactKey: Guid(a5c48bfebeb031a4b8d66da4be0e27b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Remove.png using Guid(a5c48bfebeb031a4b8d66da4be0e27b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad6ceebd350b7cf2e1346294bc63a15') in 0.096654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointRemovePreview.png
+  artifactKey: Guid(91da11e81541eec4e8b125dbf7ac18fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointRemovePreview.png using Guid(91da11e81541eec4e8b125dbf7ac18fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e67cb2d22f596f39a60c76b7a5059d4') in 0.059354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.580562 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/BattleRushS.MySequence.asset
+  artifactKey: Guid(e225545241ca2fa489a5287027fb3c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/BattleRushS.MySequence.asset using Guid(e225545241ca2fa489a5287027fb3c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60586e5689cfa010b2b23cca63903c4c') in 5.320021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ezgif.com-gif-maker.jpg
+  artifactKey: Guid(7d70396f56df73946a9b3d9d0478ab33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ezgif.com-gif-maker.jpg using Guid(7d70396f56df73946a9b3d9d0478ab33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9ff3bd2d67c5c6a20319db1cca6d543') in 0.071895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ground arema.mat
+  artifactKey: Guid(48c5309e55a50784291274b02933a963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ground arema.mat using Guid(48c5309e55a50784291274b02933a963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '799538f70ccccab13cdadb034c80d546') in 0.305282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000898 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/DefaultSegment.prefab
+  artifactKey: Guid(ec5e221a40a8c1643aa6e6d723df8fab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/DefaultSegment.prefab using Guid(ec5e221a40a8c1643aa6e6d723df8fab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07401e242a810b72e709955f717645ef') in 0.047025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009010 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/runway1.jpg
+  artifactKey: Guid(e6d58727e82ed1140aa545624ff3cc2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/runway1.jpg using Guid(e6d58727e82ed1140aa545624ff3cc2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6f939d02886c3e5f310a3cfa2480ae7') in 0.026649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/MyEmptySegment.fbx
+  artifactKey: Guid(8dbd6f3fa5db7094285900c8ab07db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/MyEmptySegment.fbx using Guid(8dbd6f3fa5db7094285900c8ab07db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27267dcf6405a8717edc5c21fd3aaaa6') in 0.231127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.735490 seconds.
+  path: Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaMakeNavMesh
+  artifactKey: Guid(ecbb825ed27594d38970992e52663c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomSequence/ArenaSegment/ArenaMakeNavMesh using Guid(ecbb825ed27594d38970992e52663c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ecc915a510af81cc70a7e1e96058e7') in 0.002914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.037728 seconds.
+  path: Assets/BattleRush/Map/ArenaData.cs
+  artifactKey: Guid(080477d7532a9ba4c87859d3d7b1f41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Map/ArenaData.cs using Guid(080477d7532a9ba4c87859d3d7b1f41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68326dc1fb1908f48c5ad72f970f08a7') in 0.045086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.507066 seconds.
+  path: Assets/BattleRush/Map/MapData.cs
+  artifactKey: Guid(2196bf1200715fa4b83c025660a54206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Map/MapData.cs using Guid(2196bf1200715fa4b83c025660a54206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf9b31a3b299533dea3f946258a4b642') in 0.009256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.711008 seconds.
+  path: Assets/BattleRush/Map/ObjectData.cs
+  artifactKey: Guid(fd2c51f0b5ca11f41ac95047ad1a905e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Map/ObjectData.cs using Guid(fd2c51f0b5ca11f41ac95047ad1a905e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '429f504265a3faf06e892e91f8b56d54') in 0.004364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 104.427241 seconds.
+  path: Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Range/fbx/Antuk_Range.fbx
+  artifactKey: Guid(989ae87e662e9e84db45008e98af151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Hero/TroopFollow/UI/Troops/Antuk/Range/fbx/Antuk_Range.fbx using Guid(989ae87e662e9e84db45008e98af151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f667396a92b1d714190f65dbbe696f') in 0.360256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Props/Troop Cage Level2.prefab
+  artifactKey: Guid(06ddf2035ce62a0428a8ad00635ab324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Props/Troop Cage Level2.prefab using Guid(06ddf2035ce62a0428a8ad00635ab324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c0dd1051d3e6de2c9e93f3479644419') in 3.501047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000517 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab
+  artifactKey: Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab using Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '058879142759a18f28b92812c0f7ca81') in 3.950080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Props/troop_cage_1.prefab
+  artifactKey: Guid(fe4bd45be04b0174c91b1dd8757ae829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Props/troop_cage_1.prefab using Guid(fe4bd45be04b0174c91b1dd8757ae829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9726543382f3760b53040251f55c6da0') in 0.048641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Props/troop_cage_2.prefab
+  artifactKey: Guid(6219197a774b94a4c8ba31a28d3eb1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Props/troop_cage_2.prefab using Guid(6219197a774b94a4c8ba31a28d3eb1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a41f1e896d61c2c958a065121834c5c') in 0.118318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/State/0_Live/ShootProjectile/TroopCageProjectileUI/TroopCageShootProjectileUI.prefab
+  artifactKey: Guid(9160e526faa1bcd46876457701c75eb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/State/0_Live/ShootProjectile/TroopCageProjectileUI/TroopCageShootProjectileUI.prefab using Guid(9160e526faa1bcd46876457701c75eb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07eb518c3f72ede91bc175e52d13f0b') in 0.095527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Props/Troop Cage Level1.prefab
+  artifactKey: Guid(c6e45899d0f88ae40b0b86584248a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Props/Troop Cage Level1.prefab using Guid(c6e45899d0f88ae40b0b86584248a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7606ca029ad8e1a787985fc48cc071f3') in 0.061834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/TroopCage.cs
+  artifactKey: Guid(11202268b3906f54e99162bc355b8a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/TroopCage.cs using Guid(11202268b3906f54e99162bc355b8a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d6eb8e125926e395f58354673a663a') in 0.013062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.008443 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/State/1_ReleaseTroop/ReleaseTroopUpdate.cs
+  artifactKey: Guid(241a9a70be4034c4d86deeb4636b27dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/State/1_ReleaseTroop/ReleaseTroopUpdate.cs using Guid(241a9a70be4034c4d86deeb4636b27dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ddd40ecf4a93c1bdbe688a58d57fd2') in 0.003661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.015112 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/State/1_ReleaseTroop/ReleaseTroop.cs
+  artifactKey: Guid(c9dd380111c0c7442be50e40c719fc98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/State/1_ReleaseTroop/ReleaseTroop.cs using Guid(c9dd380111c0c7442be50e40c719fc98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '788b771fc778f919542b0427114cfd77') in 0.016829 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017864 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <ce55bcfc0fb149719c220ddcbac47ca1>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in /Users/viettho/Desktop/Cros/Github/BattleRush/Assets/CommonLibrary/AdvancedCoroutines/AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in /Users/viettho/Desktop/Cros/Github/BattleRush/Assets/CommonLibrary/AdvancedCoroutines/AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.043 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3045ms)
+		BeginReloadAssembly (541ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (26ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (260ms)
+		EndReloadAssembly (2335ms)
+			LoadAssemblies (464ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (719ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (103ms)
+			SetupLoadedEditorAssemblies (961ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (50ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (631ms)
+				ProcessInitializeOnLoadMethodAttributes (141ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (33ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 4.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6887 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.6 MB). Loaded Objects now: 8332.
+Memory consumption went from 475.8 MB to 474.3 MB.
+Total: 8.685098 ms (FindLiveObjects: 0.929094 ms CreateObjectMapping: 0.918330 ms MarkObjects: 5.752287 ms  DeleteObjects: 1.083411 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006760 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <ce55bcfc0fb149719c220ddcbac47ca1>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in /Users/viettho/Desktop/Cros/Github/BattleRush/Assets/CommonLibrary/AdvancedCoroutines/AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in /Users/viettho/Desktop/Cros/Github/BattleRush/Assets/CommonLibrary/AdvancedCoroutines/AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.764 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3769ms)
+		BeginReloadAssembly (847ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (39ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (403ms)
+		EndReloadAssembly (2343ms)
+			LoadAssemblies (453ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (762ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (117ms)
+			SetupLoadedEditorAssemblies (994ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (63ms)
+				SetLoadedEditorAssemblies (4ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (138ms)
+				ProcessInitializeOnLoadAttributes (643ms)
+				ProcessInitializeOnLoadMethodAttributes (142ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (36ms)
+Platform modules already initialized, skipping
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+State comes from an incompatible keyword space
+Refreshing native plugins compatible for Editor in 17.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6888 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.6 MB). Loaded Objects now: 8347.
+Memory consumption went from 476.2 MB to 474.6 MB.
+Total: 18.736213 ms (FindLiveObjects: 0.995963 ms CreateObjectMapping: 0.966375 ms MarkObjects: 15.130606 ms  DeleteObjects: 1.641622 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
