@@ -114,8 +114,38 @@ namespace Dreamteck.Forever
 
                     if (spline.points[j].type != SplinePoint.Type.Broken && j > 0 && j < localPoints.Length-1)
                     {
-                        Quaternion tan1Rot = Quaternion.LookRotation(spline.points[j].position - tan1Pos, spline.points[j].normal);
-                        Quaternion tan2Rot = Quaternion.LookRotation(tan2Pos - spline.points[j].position, spline.points[j].normal);
+                        // tan1Rot
+                        Quaternion tan1Rot;
+                        {
+                            // TODO prevent zero
+                            Vector3 forward = spline.points[j].position - tan1Pos;
+                            Vector3 upward = spline.points[j].normal;
+                            // Debug.Log("forward, upward: " + forward + ", " + upward);
+                            if(!(forward==Vector3.zero))// && upward == Vector3.zero))
+                            {
+                                tan1Rot = Quaternion.LookRotation(forward, upward);
+                            }
+                            else
+                            {
+                                tan1Rot = Quaternion.identity;
+                            }                            
+                        }
+                        // tan2Rot
+                        Quaternion tan2Rot;
+                        {
+                            // TODO prevent zero
+                            Vector3 forward = tan2Pos - spline.points[j].position;
+                            Vector3 upward = spline.points[j].normal;
+                            // Debug.Log("forward, upward: " + forward + ", " + upward);
+                            if (!(forward == Vector3.zero))// && upward == Vector3.zero))
+                            {
+                                tan2Rot = Quaternion.LookRotation(forward, upward);
+                            }
+                            else
+                            {
+                                tan2Rot = Quaternion.identity;
+                            }
+                        }
                         Quaternion averageRot = Quaternion.Slerp(tan1Rot, tan2Rot, 0.5f);
                         spline.points[j].tangent = spline.points[j].position + averageRot * tangent1Delta;
                         spline.points[j].tangent2 = spline.points[j].position + averageRot * tangent2Delta;

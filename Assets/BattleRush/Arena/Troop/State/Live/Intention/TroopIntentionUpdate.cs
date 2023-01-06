@@ -33,11 +33,22 @@ namespace BattleRushS.ArenaS.TroopS
                                 break;
                             case Arena.Stage.Type.MoveTroopToFormation:
                                 {
-                                    Rest rest = this.data.intention.newOrOld<Rest>();
+                                    MoveToDest moveToDest = this.data.intention.newOrOld<MoveToDest>();
                                     {
-
+                                        // dest
+                                        {
+                                            Troop troop = this.data.findDataInParent<Troop>();
+                                            if (troop != null)
+                                            {
+                                                moveToDest.dest.v = troop.formationPosition.v;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("troop null");
+                                            }
+                                        }                                        
                                     }
-                                    this.data.intention.v = rest;
+                                    this.data.intention.v = moveToDest;
                                 }
                                 break;
                             case Arena.Stage.Type.AutoFight:
@@ -248,6 +259,12 @@ namespace BattleRushS.ArenaS.TroopS
                                 UpdateUtils.makeUpdate<AttackUpdate, Attack>(attack, this.transform);
                             }
                             break;
+                        case TroopIntention.Intention.Type.MoveToDest:
+                            {
+                                MoveToDest moveToDest = intention as MoveToDest;
+                                UpdateUtils.makeUpdate<MoveToDestUpdate, MoveToDest>(moveToDest, this.transform);
+                            }
+                            break;
                         default:
                             Logger.LogError("unknown type: "+intention.getType());
                             break;
@@ -310,6 +327,12 @@ namespace BattleRushS.ArenaS.TroopS
                             {
                                 Attack attack = intention as Attack;
                                 attack.removeCallBackAndDestroy(typeof(AttackUpdate));
+                            }
+                            break;
+                        case TroopIntention.Intention.Type.MoveToDest:
+                            {
+                                MoveToDest moveToDest = intention as MoveToDest;
+                                moveToDest.removeCallBackAndDestroy(typeof(MoveToDestUpdate));
                             }
                             break;
                         default:

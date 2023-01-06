@@ -1073,7 +1073,7 @@ namespace BattleRushS
                             dirty = true;
                             break;
                         default:
-                            Logger.LogError("Don't process: " + wrapProperty + "; " + this);
+                            //Logger.LogError("Don't process: " + wrapProperty + "; " + this);
                             break;
                     }
                     return;

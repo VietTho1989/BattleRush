@@ -51,6 +51,11 @@ namespace BattleRushS.ObjectS
                     {
                         foreach(Collider collider in this.data.colliderEnters.vs)
                         {
+                            if (!collider)
+                            {
+                                // collider already destroyed
+                                continue;
+                            }
                             // hero
                             {
                                 HeroUI heroUI = collider.GetComponent<HeroUI>();

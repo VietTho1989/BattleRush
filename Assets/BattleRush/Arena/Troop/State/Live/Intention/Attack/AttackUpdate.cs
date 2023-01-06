@@ -158,7 +158,7 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                             TroopMove troopMove = live.troopMove.v;
                                             if (troopMove != null)
                                             {
-                                                MoveToDest moveToDest = troopMove.sub.newOrOld<MoveToDest>();
+                                                TroopMoveS.MoveToDest moveToDest = troopMove.sub.newOrOld<TroopMoveS.MoveToDest>();
                                                 {
                                                     moveToDest.dest.v = targetTroopUI.transform.position;
                                                 }

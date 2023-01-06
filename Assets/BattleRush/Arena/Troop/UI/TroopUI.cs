@@ -54,6 +54,8 @@ namespace BattleRushS.ArenaS
         public List<TroopInformation> troopPrefabs;
         public TroopInformation defaultTroopPrefab;
 
+        private bool isAlreadySetFirstPosition = false;
+
         public override void refresh()
         {
             if (dirty)
@@ -65,6 +67,14 @@ namespace BattleRushS.ArenaS
                     if (troop != null)
                     {
                         this.name = "TroopUI " + troop.uid;
+                        // set first position
+                        {
+                            if (!isAlreadySetFirstPosition)
+                            {
+                                isAlreadySetFirstPosition = true;
+                                this.transform.position = troop.startPosition.v;
+                            }
+                        }
                         // troopTypeModel
                         {
                             // find
@@ -133,28 +143,13 @@ namespace BattleRushS.ArenaS
                                 switch (arena.stage.v.getType())
                                 {
                                     case Arena.Stage.Type.PreBattle:
+                                        {
+                                            this.transform.position = troop.startPosition.v;
+                                        }
                                         break;
                                     case Arena.Stage.Type.MoveTroopToFormation:
                                         {
-                                            ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
-                                            if (arenaUI != null)
-                                            {
-                                                if (arenaUI.center != null)
-                                                {
-                                                    // find x, z
-                                                    float x = Random.Range(-10, 10);
-                                                    float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
-                                                    this.transform.position = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
-                                                }
-                                                else
-                                                {
-                                                    Logger.LogError("center null");
-                                                }
-                                            }
-                                            else
-                                            {
-                                                Logger.LogError("arenaUI null");
-                                            }
+                                            // TODO can hoan thien                                           
                                         }
                                         break;
                                     case Arena.Stage.Type.AutoFight:
@@ -267,6 +262,7 @@ namespace BattleRushS.ArenaS
                     uiData.healthBar.allAddCallBack(this);
                     uiData.animation.allAddCallBack(this);
                 }
+                isAlreadySetFirstPosition = false;
                 dirty = true;
                 return;
             }
@@ -454,6 +450,12 @@ namespace BattleRushS.ArenaS
                     {
                         switch ((Troop.Property)wrapProperty.n)
                         {
+                            case Troop.Property.startPosition:
+                                dirty = true;
+                                break;
+                            case Troop.Property.formationPosition:
+                                dirty = true;
+                                break;
                             case Troop.Property.troopType:
                                 dirty = true;
                                 break;

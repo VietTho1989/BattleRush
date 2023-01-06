@@ -8,6 +8,14 @@ namespace BattleRushS.ArenaS
     public class Troop : Data
     {
 
+        #region position
+
+        public VO<Vector3> startPosition;
+
+        public VO<Vector3> formationPosition;
+
+        #endregion
+
         public VO<int> teamId;
 
         #region troop type
@@ -164,6 +172,9 @@ namespace BattleRushS.ArenaS
 
         public enum Property
         {
+            startPosition,
+            formationPosition,
+
             teamId,
             troopType,
             worldPosition,
@@ -172,6 +183,11 @@ namespace BattleRushS.ArenaS
 
         public Troop() : base()
         {
+            // position
+            {
+                this.startPosition = new VO<Vector3>(this, (byte)Property.startPosition, Vector3.zero);
+                this.formationPosition = new VO<Vector3>(this, (byte)Property.formationPosition, Vector3.zero);
+            }
             this.teamId = new VO<int>(this, (byte)Property.teamId, 0);
             this.troopType = new VO<HeroS.TroopFollow.TroopType>(this, (byte)Property.troopType, HeroS.TroopFollow.TroopType.AntukAir);
             this.worldPosition = new VO<Vector3>(this, (byte)Property.worldPosition, Vector3.zero);

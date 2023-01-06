@@ -100,29 +100,108 @@ namespace BattleRushS.ArenaS
                                                     }
                                                     troop.state.v = live;
                                                 }
+                                                // position
+                                                {
+                                                    // start position
+                                                    {
+                                                        HeroUI heroUI = hero.findCallBack<HeroUI>();
+                                                        if (heroUI != null)
+                                                        {
+                                                            troop.startPosition.v = heroUI.transform.position;
+                                                            Logger.Log("PreBattleUpdate: startPosition: " + troop.startPosition.v);
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("PreBattleUpdate troopFollowUI null");
+                                                        }
+                                                    }
+                                                    // formation position
+                                                    {
+                                                        ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
+                                                        if (arenaUI != null)
+                                                        {
+                                                            if (arenaUI.center != null)
+                                                            {
+                                                                // find x, z
+                                                                float x = Random.Range(-10, 10);
+                                                                float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
+                                                                troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("center null");
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("arenaUI null");
+                                                        }
+                                                    }
+                                                }
                                             }
                                             arena.troops.add(troop);
                                         }
                                     }
                                     // troop
-                                    foreach (TroopFollow troopFollow in battleRush.hero.v.troopFollows.vs)
                                     {
-                                        Troop troop = new Troop();
+                                        foreach (TroopFollow troopFollow in battleRush.hero.v.troopFollows.vs)
                                         {
-                                            troop.uid = arena.troops.makeId();
-                                            troop.teamId.v = 0;
-                                            troop.troopType.v = troopFollow.troopType.v;
-                                            // Live
+                                            Troop troop = new Troop();
                                             {
-                                                Live live = troop.state.newOrOld<Live>();
+                                                troop.uid = arena.troops.makeId();
+                                                troop.teamId.v = 0;
+                                                troop.troopType.v = troopFollow.troopType.v;
+                                                // Live
                                                 {
-                                                    live.hitpoint.v = troopFollow.hitPoint.v;
+                                                    Live live = troop.state.newOrOld<Live>();
+                                                    {
+                                                        live.hitpoint.v = troopFollow.hitPoint.v;
+                                                    }
+                                                    troop.state.v = live;
                                                 }
-                                                troop.state.v = live;                                               
-                                            }                                           
+                                                // position
+                                                {
+                                                    // start position
+                                                    {
+                                                        TroopFollowUI troopFollowUI = troopFollow.findCallBack<TroopFollowUI>();
+                                                        if (troopFollowUI != null)
+                                                        {                                                            
+                                                            troop.startPosition.v = troopFollowUI.transform.position;
+                                                            Logger.Log("PreBattleUpdate: startPosition: " + troop.startPosition.v);
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("PreBattleUpdate troopFollowUI null");
+                                                        }
+                                                    }
+                                                    // formation position
+                                                    {
+                                                        ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
+                                                        if (arenaUI != null)
+                                                        {
+                                                            if (arenaUI.center != null)
+                                                            {
+                                                                // find x, z
+                                                                float x = Random.Range(-10, 10);
+                                                                float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
+                                                                troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("center null");
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("arenaUI null");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            arena.troops.add(troop);
                                         }
-                                        arena.troops.add(troop);
-                                    }
+                                        battleRush.hero.v.troopFollows.clear();
+                                    }                                    
                                 }
                                 else
                                 {
@@ -175,6 +254,38 @@ namespace BattleRushS.ArenaS
                                                 live.hitpoint.v = 1.0f;
                                             }
                                             troop.state.v = live;
+                                        }
+                                        // position
+                                        {
+                                            ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
+                                            if (arenaUI != null)
+                                            {
+                                                if (arenaUI.center != null)
+                                                {
+                                                    // start oisutuib
+                                                    {
+                                                        // find x, z
+                                                        float x = Random.Range(-10, 10);
+                                                        float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
+                                                        troop.startPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                    }
+                                                    // formation position
+                                                    {
+                                                        // find x, z
+                                                        float x = Random.Range(-10, 10);
+                                                        float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
+                                                        troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                    }                                            
+                                                }
+                                                else
+                                                {
+                                                    Logger.LogError("center null");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("arenaUI null");
+                                            }
                                         }
                                     }
                                     arena.troops.add(troop);

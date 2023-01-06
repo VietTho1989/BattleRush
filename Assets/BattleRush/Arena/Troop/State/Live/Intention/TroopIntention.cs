@@ -17,7 +17,8 @@ namespace BattleRushS.ArenaS
             public enum Type
             {
                 Rest,
-                Attack
+                Attack,
+                MoveToDest
             }
 
             public abstract Type getType();

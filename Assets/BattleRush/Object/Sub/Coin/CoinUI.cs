@@ -440,7 +440,7 @@ namespace BattleRushS.ObjectS
 
         private void OnTriggerEnter(Collider collider)
         {
-            Logger.Log("onTriggerEnter: " + collider);
+            //Logger.Log("onTriggerEnter: " + collider);
             if (this.data != null)
             {
                 this.data.colliderEnters.add(collider);
@@ -450,7 +450,7 @@ namespace BattleRushS.ObjectS
 
         private void OnTriggerExit(Collider collider)
         {
-            Logger.Log("onTriggerEnter: " + collider);
+            //Logger.Log("onTriggerEnter: " + collider);
             if (this.data != null)
             {
                 this.data.colliderEnters.remove(collider);
