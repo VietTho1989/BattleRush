@@ -22,3 +22,4 @@ Cmd: compileSnippet
   error: 1 plat 14 at Assets/OmniShade/Shaders/OmniShadeCore.cginc(1037): 'SampleSHVertex': implicit truncation of vector type
  ok=1 outsize=16501
 
+Cmd: shutdown
