@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0707d172cf8fe3409268347de1d3867, type: 3}
+  m_Name: Level_0
+  m_EditorClassIdentifier: 
+  segments:
+  - pathInfo:
+      angle: 0
+      turnRate: 0
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 3
+  - pathInfo:
+      angle: 90
+      turnRate: 30
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 2
+  - pathInfo:
+      angle: 0
+      turnRate: 0
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 2
+  - pathInfo:
+      angle: 0
+      turnRate: 30
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 2
+  - pathInfo:
+      angle: 0
+      turnRate: 0
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 3
+  - pathInfo:
+      angle: 90
+      turnRate: 30
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 2
+  - pathInfo:
+      angle: 0
+      turnRate: 0
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 4
+  - pathInfo:
+      angle: 0
+      turnRate: 30
+      turnAxis: {x: 0, y: 1, z: 0}
+    repeat: 4

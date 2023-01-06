@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49796
+49646
 Successfully changed project path to: /Users/viettho/Desktop/Cros/Github/BattleRush
 /Users/viettho/Desktop/Cros/Github/BattleRush
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/viettho/Desktop/Cros/Github/BattleR
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 838.95 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 495.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.14f1 (eee1884e7226)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.14f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,452 +69,58 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.14f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.14f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.14f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56847
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.14f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.14f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.14f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.008712 seconds.
+Registered in 0.021116 seconds.
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 320.96 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 853.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.516 seconds
+- Completed reload, in  3.520 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3518ms)
-		BeginReloadAssembly (645ms)
+	ReloadAssembly (3521ms)
+		BeginReloadAssembly (396ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1914ms)
-			LoadAssemblies (656ms)
+		EndReloadAssembly (2704ms)
+			LoadAssemblies (407ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (724ms)
+			SetupTypeCache (506ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (69ms)
-			SetupLoadedEditorAssemblies (951ms)
+			RebuildScriptCaches (157ms)
+			SetupLoadedEditorAssemblies (1642ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (356ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (321ms)
+				InitializePlatformSupportModulesInManaged (309ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (854ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (171ms)
-				ProcessInitializeOnLoadMethodAttributes (99ms)
-				AfterProcessingInitializeOnLoad (0ms)
+				ProcessInitializeOnLoadAttributes (350ms)
+				ProcessInitializeOnLoadMethodAttributes (125ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.036226 seconds.
-Android Extension - Scanning For ADB Devices 4105 ms
+Registered in 0.031838 seconds.
+Android Extension - Scanning For ADB Devices 4449 ms
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 391.36 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 415.90 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.992 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4997ms)
-		BeginReloadAssembly (376ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (68ms)
-		EndReloadAssembly (4346ms)
-			LoadAssemblies (633ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (917ms)
-			ReleaseScriptCaches (7ms)
-			RebuildScriptCaches (214ms)
-			SetupLoadedEditorAssemblies (2473ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (794ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (391ms)
-				BeforeProcessingInitializeOnLoad (220ms)
-				ProcessInitializeOnLoadAttributes (861ms)
-				ProcessInitializeOnLoadMethodAttributes (200ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (3ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-Launching external process: /Applications/Unity/Hub/Editor/2021.3.14f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.11 seconds
-Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6976 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 66 unused Assets / (1.6 MB). Loaded Objects now: 7411.
-Memory consumption went from 416.1 MB to 414.5 MB.
-Total: 12.430410 ms (FindLiveObjects: 2.206094 ms CreateObjectMapping: 1.360152 ms MarkObjects: 7.330821 ms  DeleteObjects: 1.530008 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 2571.125959 seconds.
-  path: Assets/UniversalRenderPipelineGlobalSettings.asset
-  artifactKey: Guid(b72105e373f5e5b42b2f34783b70d556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(b72105e373f5e5b42b2f34783b70d556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b33645dc6c3d244b8903c549bcf2d1') in 0.318152 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 232.799900 seconds.
-  path: Assets/MeshBaker/Examples/CharacterCustomization/paintwars_gameassets.fbx
-  artifactKey: Guid(33dc55d6aa48f95498362c733e434014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MeshBaker/Examples/CharacterCustomization/paintwars_gameassets.fbx using Guid(33dc55d6aa48f95498362c733e434014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5341ac0b417d7117b35a80210062593c') in 2.139659 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/BattleRush/Hero/TroopFollow/UI/Troops/0_TroopVFX/aura_troop_level2.prefab
-  artifactKey: Guid(82b9d25cdeda22344bd0409fd08fbc9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Hero/TroopFollow/UI/Troops/0_TroopVFX/aura_troop_level2.prefab using Guid(82b9d25cdeda22344bd0409fd08fbc9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49aa9f4053d4368c4777eadc55ade150') in 0.421264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Magic Valley/Levels/Level 1.asset
-  artifactKey: Guid(dd01d68586731fa4fafd269562e3af11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Magic Valley/Levels/Level 1.asset using Guid(dd01d68586731fa4fafd269562e3af11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d24d574da95fc3bb3a535d90ad0b650') in 0.242644 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000109 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 3.asset
-  artifactKey: Guid(377302bc71ba6c9409bf09fd19fcead9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 3.asset using Guid(377302bc71ba6c9409bf09fd19fcead9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df7c0c203427093e80f4d1bb551a4384') in 0.033025 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000836 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 1.asset
-  artifactKey: Guid(6cd69fd3b92f30f4b94bb34a51d579ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 1.asset using Guid(6cd69fd3b92f30f4b94bb34a51d579ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5d433f33c37e80f8f9ec77fa09b1f5') in 0.017472 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000488 seconds.
-  path: Assets/Dreamteck/Forever/Level Generator/Icons/LevelGenerator.png
-  artifactKey: Guid(64d1d942db3bc154f9e98dba085ef893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Level Generator/Icons/LevelGenerator.png using Guid(64d1d942db3bc154f9e98dba085ef893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f18784f7dbf87edbe19debcb2aff799') in 1.705482 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001359 seconds.
-  path: Assets/Dreamteck/Forever/Editor/Level Generator/LevelGeneratorEditor.cs
-  artifactKey: Guid(39aec2e9f9805954dae4f206e5f1433d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Editor/Level Generator/LevelGeneratorEditor.cs using Guid(39aec2e9f9805954dae4f206e5f1433d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab7a640f4573802123541ad0b8b46041') in 0.414206 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000114 seconds.
-  path: Assets/BattleRush/Level/Level.asset
-  artifactKey: Guid(aa644ba29ab11cd429a191f9f3b2850d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/Level.asset using Guid(aa644ba29ab11cd429a191f9f3b2850d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f95ed403caf83379d120825e4e99cc5e') in 4.004456 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.004728 seconds.
-  path: Assets/Dreamteck/Forever/Level Generator/LevelGenerator.cs
-  artifactKey: Guid(c623274580f39f948ab0f5c9019cff7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Level Generator/LevelGenerator.cs using Guid(c623274580f39f948ab0f5c9019cff7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fde3a0703d0d0d1d0e265378307d07f') in 0.009215 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001728 seconds.
-  path: Assets/BattleRush/Hero/TroopFollow/UI/Troops/0_TroopVFX/aura_troop_level3.prefab
-  artifactKey: Guid(3f77f8ac30573c346a607f99d61a65e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Hero/TroopFollow/UI/Troops/0_TroopVFX/aura_troop_level3.prefab using Guid(3f77f8ac30573c346a607f99d61a65e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8098a376c7ed64b36decc1bd39dab43') in 0.758605 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000101 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Math Highway/Levels/Level 1.asset
-  artifactKey: Guid(a37dcbd7f3a3fee4bbecec0450685680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Levels/Level 1.asset using Guid(a37dcbd7f3a3fee4bbecec0450685680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e301f97bc8553ec0af8ea886881477dc') in 0.019986 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000431 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Retro Wave/Levels/Level.asset
-  artifactKey: Guid(5fbc66559d0055e48b1bb82db4b261e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Retro Wave/Levels/Level.asset using Guid(5fbc66559d0055e48b1bb82db4b261e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7613d99b9fff02ae0a3bcf833bafad37') in 0.173061 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001766 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 4.asset
-  artifactKey: Guid(6d4e16e5596392c4cab3740bef6ad3db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 4.asset using Guid(6d4e16e5596392c4cab3740bef6ad3db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f47b07b3b4a1c450674a27ea9ff792c6') in 0.052726 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000756 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Math Highway/Levels/Level 2.asset
-  artifactKey: Guid(a3760d8e092cc42f6acbab2d5ef00146) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Levels/Level 2.asset using Guid(a3760d8e092cc42f6acbab2d5ef00146) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa4f0966e551a83db1fccaa2da5162a') in 0.027395 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001665 seconds.
-  path: Assets/BattleRush/State/0_Load/Sub/1_ChooseLevel/ChooseLevelUI.prefab
-  artifactKey: Guid(1d2a983da892ed140b96894d01a6c9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/State/0_Load/Sub/1_ChooseLevel/ChooseLevelUI.prefab using Guid(1d2a983da892ed140b96894d01a6c9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47d028276c605169f385b90142046072') in 0.131869 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/AdvancedInputField/AdvancedInputField.asmdef
-  artifactKey: Guid(a55a177d34a6ae74395901c9258e6b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AdvancedInputField/AdvancedInputField.asmdef using Guid(a55a177d34a6ae74395901c9258e6b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6bc176ef258b47ec42577879403159') in 0.361078 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.043161 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Magic Valley/HighLevelPathGenerator.asset
-  artifactKey: Guid(c98a8512e03fab94291baef6290e36fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Magic Valley/HighLevelPathGenerator.asset using Guid(c98a8512e03fab94291baef6290e36fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c22f033fc6f4702dd7f7cbe82a24e59') in 0.059458 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/Dreamteck/Forever/Level Generator/Icons/ForeverLevel.png
-  artifactKey: Guid(fe99e92fb14da5a4eaf94e805e013515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Level Generator/Icons/ForeverLevel.png using Guid(fe99e92fb14da5a4eaf94e805e013515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75767c1955935fa6c1a73e999acdc8b0') in 0.047930 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001890 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 2.asset
-  artifactKey: Guid(546413b1a691f654ea7ebabb8919b1de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Collider Run/Levels/Level 2.asset using Guid(546413b1a691f654ea7ebabb8919b1de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28268f9d81322b4a91f177d677f25e26') in 0.047002 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24747.894004 seconds.
-  path: Assets/BattleRush
-  artifactKey: Guid(a1c9138148f244748aa1268ba24126d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush using Guid(a1c9138148f244748aa1268ba24126d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0079dad8530107dc5faa658709e20555') in 0.138549 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.006874 seconds.
-  path: Assets/BattleRush/MainCameraBlends.asset
-  artifactKey: Guid(866b4e8cb76b1974b9e96cb289ec5123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/MainCameraBlends.asset using Guid(866b4e8cb76b1974b9e96cb289ec5123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61b15994cf341dc9dbffded30079cc4c') in 0.235961 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.576644 seconds.
-  path: Assets/BattleRush/BattleRush.unity
-  artifactKey: Guid(047f173697c9549498c6f729a70b73f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/BattleRush.unity using Guid(047f173697c9549498c6f729a70b73f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b018dfd568a898aae2c51acd6803d9') in 0.005597 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.119600 seconds.
-  path: Assets/BattleRush/Level/MyCustomPath/CustomPathGenerator.asset
-  artifactKey: Guid(cb60dff50a9d3b7408d5d76230e5fd47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/MyCustomPath/CustomPathGenerator.asset using Guid(cb60dff50a9d3b7408d5d76230e5fd47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65623dfe296a258811ea0a9862cb96a1') in 0.337100 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Math Highway/WavyPathGenerator.asset
-  artifactKey: Guid(739713b2d138d4a5389bb27b7fbe2d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Math Highway/WavyPathGenerator.asset using Guid(739713b2d138d4a5389bb27b7fbe2d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fa0d60fe61f2c2343a3fcb3fa266995') in 0.050866 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002350 seconds.
-  path: Assets/BattleRush/Level/RandomPathGenerator.asset
-  artifactKey: Guid(1f468c743eab4a84aafeacb073b8ea8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/RandomPathGenerator.asset using Guid(1f468c743eab4a84aafeacb073b8ea8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55dc55f764537b40c12ff1cbff7201a0') in 0.101993 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/BattleRush/Level/PathGenerator.asset
-  artifactKey: Guid(67bf744f33047ec469ffedd06d5307fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/PathGenerator.asset using Guid(67bf744f33047ec469ffedd06d5307fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '524b47684f5d783bc47e206f6ba95bb2') in 0.019794 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/BattleRush/Level/MyCustomPath/MyCustomPath.asset
-  artifactKey: Guid(417893719fb9aaf479e265142f2ba45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/MyCustomPath/MyCustomPath.asset using Guid(417893719fb9aaf479e265142f2ba45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db5483d68c21f2c8eef2997ee00472b') in 0.031504 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000892 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Math Highway/myMathPath.asset
-  artifactKey: Guid(12763258f1f4d43a7b091dbe2a4b3f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Math Highway/myMathPath.asset using Guid(12763258f1f4d43a7b091dbe2a4b3f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c19e98dcac2a8b1030f173778d7550') in 0.015946 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/BattleRush/Level/MyCustomPath/Level1_Path.asset
-  artifactKey: Guid(dd11ce7f4a226bf449513174be44973f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/MyCustomPath/Level1_Path.asset using Guid(dd11ce7f4a226bf449513174be44973f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7156771f3346634ca3938ca5b93716ab') in 0.008371 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Math Highway/Math Path.asset
-  artifactKey: Guid(52f7c407f5216974e80eef88fe9c9aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Math Highway/Math Path.asset using Guid(52f7c407f5216974e80eef88fe9c9aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22b45a2b217975327a3b9729034e17f') in 0.011879 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000728 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Retro Wave/RandomPathGenerator.asset
-  artifactKey: Guid(3529cc9903db546449d530fea2dc69de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Retro Wave/RandomPathGenerator.asset using Guid(3529cc9903db546449d530fea2dc69de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90daa333bc926e3cf765836cb9078d7a') in 0.040540 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.286391 seconds.
-  path: Assets/Dreamteck/Forever/Examples/Collider Run/Collider Path.asset
-  artifactKey: Guid(ca9d6af862b3c8c4f8f1c667e0fc3782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dreamteck/Forever/Examples/Collider Run/Collider Path.asset using Guid(ca9d6af862b3c8c4f8f1c667e0fc3782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7670837c3659017f1dc91e4e7ddd55') in 0.015238 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.151187 seconds.
-  path: Assets/BattleRush/Level/New Preserve Objects Data.asset
-  artifactKey: Guid(9491cc8ba3aaf58489aaec922d6ad4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/New Preserve Objects Data.asset using Guid(9491cc8ba3aaf58489aaec922d6ad4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd8f1effe645751ac05edf7a777cabfb') in 0.028169 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.918237 seconds.
-  path: Assets/BattleRush/Level/PathGenerator.asset
-  artifactKey: Guid(67bf744f33047ec469ffedd06d5307fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Level/PathGenerator.asset using Guid(67bf744f33047ec469ffedd06d5307fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824a5c2890ba76139bd3ddea37ff1cf5') in 0.007717 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011661 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/viettho/Desktop/Cros/Github/BattleRush/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 20.17 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <ce55bcfc0fb149719c220ddcbac47ca1>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in /Users/viettho/Desktop/Cros/Github/BattleRush/Assets/CommonLibrary/AdvancedCoroutines/AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in /Users/viettho/Desktop/Cros/Github/BattleRush/Assets/CommonLibrary/AdvancedCoroutines/AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:130)
-
-(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs Line: 130)
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in 15.770 seconds
-Domain Reload Profiling:
-	ReloadAssembly (15784ms)
-		BeginReloadAssembly (2696ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (164ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (33ms)
-			CreateAndSetChildDomain (1520ms)
-		EndReloadAssembly (12501ms)
-			LoadAssemblies (1101ms)
-			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (2504ms)
-			ReleaseScriptCaches (354ms)
-			RebuildScriptCaches (1366ms)
-			SetupLoadedEditorAssemblies (6441ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (328ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (20ms)
-				BeforeProcessingInitializeOnLoad (543ms)
-				ProcessInitializeOnLoadAttributes (4626ms)
-				ProcessInitializeOnLoadMethodAttributes (913ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (120ms)
-Platform modules already initialized, skipping
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-State comes from an incompatible keyword space
-Refreshing native plugins compatible for Editor in 15.68 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6885 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (1.7 MB). Loaded Objects now: 7486.
-Memory consumption went from 461.3 MB to 459.6 MB.
-Total: 74.039083 ms (FindLiveObjects: 3.639069 ms CreateObjectMapping: 9.547726 ms MarkObjects: 55.276288 ms  DeleteObjects: 5.573542 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

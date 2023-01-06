@@ -56,7 +56,19 @@ namespace BattleRushS.StateS.LoadS
                                                             LevelGenerator levelGenerator = battleRushUI.GetComponent<LevelGenerator>();
                                                             if (levelGenerator != null)
                                                             {
-                                                                Logger.Log("LevelGenerator start");                                                             
+                                                                Logger.Log("LevelGenerator start");
+                                                                // set custom path
+                                                                {
+                                                                    if(levelGenerator.pathGenerator is MyCustomPath)
+                                                                    {
+                                                                        MyCustomPath myCustomPath = levelGenerator.pathGenerator as MyCustomPath;
+                                                                        myCustomPath.battleRush = battleRush;
+                                                                        // make map manager
+                                                                        {
+                                                                            battleRush.makeSegmentManager.v.mapAsset.v = battleRushUI.level_0;
+                                                                        }
+                                                                    }
+                                                                }
                                                                 levelGenerator.StartGeneration();
                                                             }
                                                             else

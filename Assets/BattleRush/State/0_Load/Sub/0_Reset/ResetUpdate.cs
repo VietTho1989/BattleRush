@@ -22,7 +22,8 @@ namespace BattleRushS.StateS.LoadS
                     {
                         battleRush.mapData.v.reset();
                         battleRush.hero.v.reset();
-                        battleRush.laneObjects.clear();
+                        battleRush.makeSegmentManager.v.reset();
+                        battleRush.laneObjects.clear();                        
                         // levelGenerator
                         {
                             BattleRushUI battleRushUI = battleRush.findCallBack<BattleRushUI>();
@@ -39,7 +40,6 @@ namespace BattleRushS.StateS.LoadS
                                         if (customSequence != null && customSequence is MySequence)
                                         {
                                             MySequence mySequence = customSequence as MySequence;
-                                            mySequence.setCurrentNextSegmentIdex(0);
                                             mySequence.stopped = false;
                                         }
                                     }

@@ -9,9 +9,11 @@ namespace BattleRushS
     public class MyCustomPath : HighLevelPathGenerator
     {
 
-        public float angle = 45f;
-        public float turnRate = 0f;
-        public Vector3 turnAxis = Vector3.up;
+        #region battleRush
+
+        public BattleRush battleRush = null;
+
+        #endregion
 
         private float currentAngle = 0f;
         private bool positive = true;
@@ -27,34 +29,92 @@ namespace BattleRushS
         protected override void GeneratePoint(ref Point point, int pointIndex)
         {
             base.GeneratePoint(ref point, pointIndex);
-            if (isFirstPoint) return;
-            if (positive && currentAngle == angle) positive = false;
-            else if (currentAngle == -angle) positive = true;
-            currentAngle = MoveAngle(currentAngle, pointIndex);
-            SetOrientation(continueOrientation + currentAngle * turnAxis.normalized);
-            point.position = GetPointPosition();
-            point.autoRotation = false;
-            point.rotation = Vector3.Lerp(orientation, orientation + MoveAngle(currentAngle, pointIndex) * turnAxis.normalized, 0.5f);
-        }
-
-        float MoveAngle(float current, int pointIndex)
-        {
-            /*float myTurnRate = this.turnRate;
+            if (isFirstPoint)
             {
-                if (pointIndex % 100 >= 4)
+                return;
+            }
+            Logger.Log("myCustomPath generate point: " + pointIndex);
+            // find segment path info
+            SegmentPathInfo segmentPathInfo = null;
+            {
+                // get from battle rush
+                if (battleRush != null && battleRush.makeSegmentManager.v.mapAsset.v!=null)
                 {
-                    myTurnRate = 0;
+                    // increase index
+                    if (pointIndex == 1)
+                    {
+                        battleRush.makeSegmentManager.v.next();
+                        Logger.Log("myCustomPath next: " + battleRush.makeSegmentManager.v.assetIndex.v);
+                    }
+                    // make segment path info
+                    {
+                        // find segment asset
+                        SegmentAsset segmentAsset = null;
+                        {
+                            if (battleRush.makeSegmentManager.v.assetIndex.v >= 0 && battleRush.makeSegmentManager.v.assetIndex.v < battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                            {
+                                segmentAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.assetIndex.v];
+                            }
+                            else
+                            {
+                                Logger.LogError("myCustomPath: why index error");
+                            }
+                        }
+                        // process
+                        if (segmentAsset != null)
+                        {
+                            Logger.Log("myCustomPath: found segment asset: " + segmentAsset);
+                            segmentPathInfo = segmentAsset.pathInfo;
+                        }
+                        else
+                        {
+                            Logger.LogError("myCustomPath: segmentAsset null");
+                        }
+                    }
+                }
+                else
+                {
+                    Logger.LogError("myCustomPath: battleRush null");
+                }
+                // prevent null
+                if (segmentPathInfo == null)
+                {
+                    segmentPathInfo = new SegmentPathInfo();
+                    /*{
+                        segmentPathInfo.angle = 45f;
+                        segmentPathInfo.turnRate = 10f;
+                        segmentPathInfo.turnAxis = Vector3.up;
+                    }*/
                 }
             }
-            Logger.Log("MyCustomPath: Move Angle: " + pointIndex + ", " + myTurnRate);*/
-            float myTurnRate = 0;
+            // process
+            {
+                Logger.Log("myCustomPath: path: " + segmentPathInfo.angle + ", " + segmentPathInfo.turnRate + ", " + segmentPathInfo.turnAxis);
+                /*if (positive && currentAngle == segmentPathInfo.angle)
+                {
+                    positive = false;
+                }
+                else if (currentAngle == -segmentPathInfo.angle)
+                {
+                    positive = true;
+                }*/
+                currentAngle = MoveAngle(currentAngle, segmentPathInfo.angle, segmentPathInfo.turnRate);
+                SetOrientation(continueOrientation + currentAngle * segmentPathInfo.turnAxis.normalized);
+                point.position = GetPointPosition();
+                point.autoRotation = true;// false;
+                point.rotation = Vector3.Lerp(orientation, orientation + MoveAngle(currentAngle, segmentPathInfo.angle, segmentPathInfo.turnRate) * segmentPathInfo.turnAxis.normalized, 0.5f);
+            }          
+        }
+
+        float MoveAngle(float current, float target, float turnRate)
+        {
             if (positive)
             {
-                return Mathf.MoveTowards(current, angle, myTurnRate);
+                return Mathf.MoveTowards(current, target, turnRate);
             }
             else
             {
-                return Mathf.MoveTowards(current, -angle, myTurnRate);
+                return Mathf.MoveTowards(current, -target, turnRate);
             }
         }
 

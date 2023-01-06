@@ -26,7 +26,6 @@ namespace BattleRushS
         public void setBattleRush(BattleRush battleRush)
         {
             this.battleRush = battleRush;
-            currentNextSegmentIndex = 0;
         }
 
         #endregion
@@ -41,14 +40,6 @@ namespace BattleRushS
             isDone = false;
         }
 
-        /** TODO cai nay can reset nua*/
-        private int currentNextSegmentIndex = 0;
-
-        public void setCurrentNextSegmentIdex(int currentNextSegmentIndex)
-        {
-            this.currentNextSegmentIndex = currentNextSegmentIndex;
-        }
-
         public override GameObject Next()
         {
             Logger.Log("Choose next sequence");
@@ -61,13 +52,16 @@ namespace BattleRushS
                     // find
                     bool isArena = false;
                     {
-                        foreach(ArenaData arenaData in battleRush.mapData.v.arenaDatas.vs)
+                        if (battleRush.makeSegmentManager.v.mapAsset.v != null)
                         {
-                            if (arenaData.segmentIndex.v == currentNextSegmentIndex)
+                            if(battleRush.makeSegmentManager.v.assetIndex.v>= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
                             {
                                 isArena = true;
-                                break;
                             }
+                        }
+                        else
+                        {
+                            Logger.LogError("mapAsset null");
                         }
                     }
                     // process
@@ -96,8 +90,8 @@ namespace BattleRushS
                                         // check is in segment or not
                                         bool isInSegment = false;
                                         {
-                                            Logger.Log("check object is in segment or not: " + objectData.P.v.z + ", " + currentNextSegmentIndex);
-                                            if (objectData.P.v.z > currentNextSegmentIndex * SegmentSize && objectData.P.v.z <= (currentNextSegmentIndex + 1) * SegmentSize)
+                                            Logger.Log("check object is in segment or not: " + objectData.P.v.z + ", " + battleRush.makeSegmentManager.v.currentNextSegmentIndex.v);
+                                            if (objectData.P.v.z > battleRush.makeSegmentManager.v.currentNextSegmentIndex.v * SegmentSize && objectData.P.v.z <= (battleRush.makeSegmentManager.v.currentNextSegmentIndex.v + 1) * SegmentSize)
                                             {
                                                 isInSegment = true;
                                             }
@@ -499,7 +493,7 @@ namespace BattleRushS
                                                 if (objectUI != null)
                                                 {
                                                     float x = Random.Range(-4, 4);// 4
-                                                    float z = (objectData.P.v.z - (currentNextSegmentIndex * SegmentSize + SegmentSize / 2));
+                                                    float z = (objectData.P.v.z - (battleRush.makeSegmentManager.v.currentNextSegmentIndex.v * SegmentSize + SegmentSize / 2));
                                                     Logger.Log("z local: " + z);
                                                     // set
                                                     objectUI.localPosition = new Vector3(x, 1, z);
@@ -536,7 +530,7 @@ namespace BattleRushS
                     Logger.LogError("battleRushUI null");
                 }
             }
-            currentNextSegmentIndex++;
+            battleRush.makeSegmentManager.v.currentNextSegmentIndex.v++;
             return ret;
         }
 

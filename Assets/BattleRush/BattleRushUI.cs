@@ -87,6 +87,11 @@ namespace BattleRushS
 
         public LevelGenerator levelGenerator;
 
+        /**
+         * TODO de tam level 0
+         * */
+        public MapAsset level_0;
+
         public override void Awake()
         {
             base.Awake();

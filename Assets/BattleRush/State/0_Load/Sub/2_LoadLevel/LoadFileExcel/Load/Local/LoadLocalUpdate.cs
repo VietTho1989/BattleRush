@@ -129,15 +129,6 @@ namespace BattleRushS.StateS.LoadS
                                     Logger.Log("strSpecialItem: " + strItem);
                                     mapData.parse(strItem);
                                 }
-                                // arena data
-                                {
-                                    // TODO de tam
-                                    ArenaData arenaData = new ArenaData();
-                                    {
-                                        arenaData.uid = mapData.arenaDatas.makeId();
-                                    }
-                                    mapData.arenaDatas.add(arenaData);
-                                }
                             }
                         }
                     }

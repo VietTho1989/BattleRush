@@ -30,6 +30,8 @@ namespace BattleRushS
 
         public VD<MapData> mapData;
 
+        public VD<MakeSegmentManager> makeSegmentManager;
+
         public VD<Hero> hero;
 
         public LD<ObjectInPath> laneObjects;
@@ -44,7 +46,8 @@ namespace BattleRushS
         public enum Property
         {
             state,
-            mapData, 
+            mapData,
+            makeSegmentManager,
             hero,
             laneObjects,
             segmentIndex,
@@ -55,6 +58,7 @@ namespace BattleRushS
         {
             this.state = new VD<State>(this, (byte)Property.state, new Load());
             this.mapData = new VD<MapData>(this, (byte)Property.mapData, new MapData());
+            this.makeSegmentManager = new VD<MakeSegmentManager>(this, (byte)Property.makeSegmentManager, new MakeSegmentManager());
             this.hero = new VD<Hero>(this, (byte)Property.hero, new Hero());
             this.laneObjects = new LD<ObjectInPath>(this, (byte)Property.laneObjects);
             this.segmentIndex = new VO<int>(this, (byte)Property.segmentIndex, -1);
