@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.HeroS;
 using UnityEngine;
 
 namespace BattleRushS.StateS

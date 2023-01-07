@@ -46,6 +46,7 @@ namespace BattleRushS
         #endregion
 
         public Transform troopPoint;
+        public CenterLaneForCamera centerLaneForCamera;
 
         #region Refresh
 

@@ -541,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashInstanceId: 0
   troopPoint: {fileID: 1843770248}
+  centerLaneForCamera: {fileID: 703193287}
   heroAnimation: {fileID: 190351505}
   heroSkin: {fileID: 190351506}
   troopFollowPrefab: {fileID: 3843287685521183876, guid: 1f7c0e0cfe0a57d4dae35bab8355b8ff, type: 3}
@@ -616,7 +617,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215113183}
-  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 21, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7135,7 +7136,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2770611436488937649}
-  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 20, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -36,60 +36,92 @@ namespace BattleRushS.StateS.LoadS
                                         case LoadLocal.State.Type.Success:
                                             {
                                                 LoadLocal.State.Success success = loadLocal.state.v as LoadLocal.State.Success;
-                                                // change state
-                                                BattleRush battleRush = this.data.findDataInParent<BattleRush>();
-                                                if (battleRush != null)
+                                                switch (success.state.v)
                                                 {
-                                                    // map
-                                                    {
-                                                        MapData mapData = success.mapData.v.data;
+                                                    case LoadLocal.State.Success.State.Start:
                                                         {
-                                                            mapData.uid = battleRush.mapData.makeId();
-                                                        }
-                                                        battleRush.mapData.v = mapData;
-                                                    }
-                                                    // levelGenerator
-                                                    {
-                                                        BattleRushUI battleRushUI = battleRush.findCallBack<BattleRushUI>();
-                                                        if (battleRushUI != null)
-                                                        {
-                                                            LevelGenerator levelGenerator = battleRushUI.GetComponent<LevelGenerator>();
-                                                            if (levelGenerator != null)
+                                                            // change state
+                                                            BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                                                            if (battleRush != null)
                                                             {
-                                                                Logger.Log("LevelGenerator start");
-                                                                // set custom path
+                                                                // map
                                                                 {
-                                                                    if(levelGenerator.pathGenerator is MyCustomPath)
+                                                                    MapData mapData = success.mapData.v.data;
                                                                     {
-                                                                        MyCustomPath myCustomPath = levelGenerator.pathGenerator as MyCustomPath;
-                                                                        myCustomPath.battleRush = battleRush;
-                                                                        // make map manager
+                                                                        mapData.uid = battleRush.mapData.makeId();
+                                                                    }
+                                                                    battleRush.mapData.v = mapData;
+                                                                }
+                                                                // levelGenerator
+                                                                {
+                                                                    BattleRushUI battleRushUI = battleRush.findCallBack<BattleRushUI>();
+                                                                    if (battleRushUI != null)
+                                                                    {
+                                                                        LevelGenerator levelGenerator = battleRushUI.GetComponent<LevelGenerator>();
+                                                                        if (levelGenerator != null)
                                                                         {
-                                                                            battleRush.makeSegmentManager.v.mapAsset.v = battleRushUI.level_0;
+                                                                            Logger.Log("LevelGenerator start");
+                                                                            // set custom path
+                                                                            {
+                                                                                if (levelGenerator.pathGenerator is MyCustomPath)
+                                                                                {
+                                                                                    MyCustomPath myCustomPath = levelGenerator.pathGenerator as MyCustomPath;
+                                                                                    myCustomPath.battleRush = battleRush;
+                                                                                    // make map manager
+                                                                                    {
+                                                                                        battleRush.makeSegmentManager.v.mapAsset.v = battleRushUI.level_0;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                            levelGenerator.StartGeneration(() =>
+                                                                            {
+                                                                                success.state.v = LoadLocal.State.Success.State.Ready;
+                                                                            }
+                                                                                );
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            Logger.LogError("levelGenerator null");
                                                                         }
                                                                     }
+                                                                    else
+                                                                    {
+                                                                        Logger.LogError("battleRushUI null");
+                                                                    }
                                                                 }
-                                                                levelGenerator.StartGeneration();
-                                                            }
-                                                            else
-                                                            {
-                                                                Logger.LogError("levelGenerator null");
+                                                                // state
+                                                                {
+                                                                    success.state.v = LoadLocal.State.Success.State.WaitReady;                                                                   
+                                                                }
                                                             }
                                                         }
-                                                        else
-                                                        {
-                                                            Logger.LogError("battleRushUI null");
-                                                        }
-                                                    }
-                                                    // state
-                                                    {
-                                                        Start start = battleRush.state.newOrOld<Start>();
+                                                        break;
+                                                    case LoadLocal.State.Success.State.WaitReady:
                                                         {
 
                                                         }
-                                                        battleRush.state.v = start;
-                                                    }
-                                                }
+                                                        break;
+                                                    case LoadLocal.State.Success.State.Ready:
+                                                        {
+                                                            BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                                                            if (battleRush != null)
+                                                            {
+                                                                Start start = battleRush.state.newOrOld<Start>();
+                                                                {
+
+                                                                }
+                                                                battleRush.state.v = start;
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("battleRush null");
+                                                            }                                                           
+                                                        }
+                                                        break;
+                                                    default:
+                                                        Logger.LogError("unknown state: " + success.state.v);
+                                                        break;
+                                                }                                                
                                             }
                                             break;
                                         case LoadLocal.State.Type.Fail:
@@ -150,11 +182,37 @@ namespace BattleRushS.StateS.LoadS
                     return;
                 }
                 // Child
-                if (data is LoadLevelByFileExcel.Step)
                 {
-                    dirty = true;
-                    return;
-                }
+                    if (data is LoadLevelByFileExcel.Step)
+                    {
+                        LoadLevelByFileExcel.Step step = data as LoadLevelByFileExcel.Step;
+                        // Child
+                        {
+                            switch (step.getType())
+                            {
+                                case LoadLevelByFileExcel.Step.Type.Internet:
+                                    break;
+                                case LoadLevelByFileExcel.Step.Type.Local:
+                                    {
+                                        LoadLocal loadLocal = step as LoadLocal;
+                                        loadLocal.state.allAddCallBack(this);
+                                    }
+                                    break;
+                                default:
+                                    Logger.LogError("unknown type: " + step.getType());
+                                    break;
+                            }
+                        }
+                        dirty = true;
+                        return;
+                    }
+                    // Child
+                    if(data is LoadLocal.State)
+                    {
+                        dirty = true;
+                        return;
+                    }
+                }                
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -184,9 +242,34 @@ namespace BattleRushS.StateS.LoadS
                     return;
                 }
                 // Child
-                if (data is LoadLevelByFileExcel.Step)
                 {
-                    return;
+                    if (data is LoadLevelByFileExcel.Step)
+                    {
+                        LoadLevelByFileExcel.Step step = data as LoadLevelByFileExcel.Step;
+                        // Child
+                        {
+                            switch (step.getType())
+                            {
+                                case LoadLevelByFileExcel.Step.Type.Internet:
+                                    break;
+                                case LoadLevelByFileExcel.Step.Type.Local:
+                                    {
+                                        LoadLocal loadLocal = step as LoadLocal;
+                                        loadLocal.state.allRemoveCallBack(this);
+                                    }
+                                    break;
+                                default:
+                                    Logger.LogError("unknown type: " + step.getType());
+                                    break;
+                            }
+                        }
+                        return;
+                    }
+                    // Child
+                    if (data is LoadLocal.State)
+                    {
+                        return;
+                    }
                 }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
@@ -232,28 +315,64 @@ namespace BattleRushS.StateS.LoadS
                     return;
                 }
                 // Child
-                if (wrapProperty.p is LoadLevelByFileExcel.Step)
                 {
-                    LoadLevelByFileExcel.Step step = wrapProperty.p as LoadLevelByFileExcel.Step;
-                    switch (step.getType())
+                    if (wrapProperty.p is LoadLevelByFileExcel.Step)
                     {
-                        case LoadLevelByFileExcel.Step.Type.Internet:
-                            break;
-                        case LoadLevelByFileExcel.Step.Type.Local:
-                            {
-                                switch ((LoadLocal.Property)wrapProperty.n)
+                        LoadLevelByFileExcel.Step step = wrapProperty.p as LoadLevelByFileExcel.Step;
+                        switch (step.getType())
+                        {
+                            case LoadLevelByFileExcel.Step.Type.Internet:
+                                break;
+                            case LoadLevelByFileExcel.Step.Type.Local:
                                 {
-                                    case LoadLocal.Property.state:
-                                        dirty = true;
-                                        break;
-                                    default:
-                                        break;
+                                    switch ((LoadLocal.Property)wrapProperty.n)
+                                    {
+                                        case LoadLocal.Property.state:
+                                            {
+                                                ValueChangeUtils.replaceCallBack(this, syncs);
+                                                dirty = true;
+                                            }
+                                            break;
+                                        default:
+                                            break;
+                                    }
                                 }
-                            }
-                            break;
+                                break;
+                        }
+                        return;
                     }
-                    return;
-                }
+                    // Child
+                    if (wrapProperty.p is LoadLocal.State)
+                    {
+                        LoadLocal.State state = wrapProperty.p as LoadLocal.State;
+                        switch (state.getType())
+                        {
+                            case LoadLocal.State.Type.Load:
+                                break;
+                            case LoadLocal.State.Type.Success:
+                                {
+                                    switch ((LoadLocal.State.Success.Property)wrapProperty.n)
+                                    {
+                                        case LoadLocal.State.Success.Property.mapData:
+                                            dirty = true;
+                                            break;
+                                        case LoadLocal.State.Success.Property.state:
+                                            dirty = true;
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+                            case LoadLocal.State.Type.Fail:
+                                break;
+                            default:
+                                Logger.LogError("unknown type: " + state.getType());
+                                break;
+                        }
+                        return;
+                    }
+                }               
             }
             Logger.LogError("Don't process: " + data + "; " + syncs + "; " + this);
         }

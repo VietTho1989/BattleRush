@@ -85,6 +85,7 @@ namespace BattleRushS.ObjectS
                                             case BattleRush.State.Type.Load:
                                                 break;
                                             case BattleRush.State.Type.Start:
+                                                needAnimation = true;
                                                 break;
                                             case BattleRush.State.Type.Play:
                                                 {

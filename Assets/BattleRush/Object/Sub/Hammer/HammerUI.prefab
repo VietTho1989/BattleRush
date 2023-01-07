@@ -201,7 +201,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1157629473699222483}
   - component: {fileID: 5555628089075749991}
-  - component: {fileID: 3338262051698181868}
   m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
@@ -276,30 +275,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3338262051698181868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3756013176393061607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings:
-    meshColliderHandling: 0
-    boundsInclusion: 0
-    indexing: 0
-    applyRotation: 1
-    keepUpright: 0
-    upVector: {x: 0, y: 1, z: 0}
-    applyScale: 0
-    bendMesh: 0
-    bendSprite: 0
-    bendPolygonCollider: 0
-    applyMeshColors: 0
 --- !u!1 &7488870442205487874
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +285,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6909657008045310905}
   - component: {fileID: 1535698791077435633}
-  - component: {fileID: 8515543262095564553}
   m_Layer: 8
   m_Name: Shadow (1)
   m_TagString: Untagged
@@ -385,30 +359,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8515543262095564553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7488870442205487874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings:
-    meshColliderHandling: 0
-    boundsInclusion: 0
-    indexing: 0
-    applyRotation: 1
-    keepUpright: 0
-    upVector: {x: 0, y: 1, z: 0}
-    applyScale: 0
-    bendMesh: 0
-    bendSprite: 0
-    bendPolygonCollider: 0
-    applyMeshColors: 0
 --- !u!1001 &2487737413329547711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -510,35 +460,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea4f0b9dc05328242988f9d86b3a4897, type: 3}
---- !u!1 &807931554835354204 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3004022485596152803, guid: ea4f0b9dc05328242988f9d86b3a4897, type: 3}
-  m_PrefabInstance: {fileID: 2487737413329547711}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4120768292078101367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807931554835354204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings:
-    meshColliderHandling: 0
-    boundsInclusion: 0
-    indexing: 0
-    applyRotation: 1
-    keepUpright: 0
-    upVector: {x: 0, y: 1, z: 0}
-    applyScale: 0
-    bendMesh: 0
-    bendSprite: 0
-    bendPolygonCollider: 0
-    applyMeshColors: 0
 --- !u!4 &2669665369484531284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea4f0b9dc05328242988f9d86b3a4897, type: 3}
@@ -600,27 +521,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
---- !u!114 &5757277920698658950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6416597065964451515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5381a3ffb656af42830b52e8dc1b484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings:
-    meshColliderHandling: 0
-    boundsInclusion: 0
-    indexing: 0
-    applyRotation: 1
-    keepUpright: 0
-    upVector: {x: 0, y: 1, z: 0}
-    applyScale: 0
-    bendMesh: 0
-    bendSprite: 0
-    bendPolygonCollider: 0
-    applyMeshColors: 0

@@ -26,6 +26,8 @@ namespace BattleRushS.HeroS
         {
             if (!LevelGenerator.instance.ready)
             {
+                this.transform.localPosition = Vector3.zero;
+                runner.result.percent = 0;
                 return;
             }
             // run logic

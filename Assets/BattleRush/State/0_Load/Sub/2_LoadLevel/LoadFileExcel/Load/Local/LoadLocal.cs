@@ -54,16 +54,31 @@ namespace BattleRushS.StateS.LoadS
 
                 public VO<ReferenceData<MapData>> mapData;
 
+                #region state
+
+                public enum State
+                {
+                    Start,
+                    WaitReady,
+                    Ready
+                }
+
+                public VO<State> state;
+
+                #endregion
+
                 #region Constructor
 
                 public enum Property
                 {
-                    mapData
+                    mapData,
+                    state
                 }
 
                 public Success() : base()
                 {
                     this.mapData = new VO<ReferenceData<MapData>>(this, (byte)Property.mapData, new ReferenceData<MapData>(null));
+                    this.state = new VO<State>(this, (byte)Property.state, State.Start);
                 }
 
                 #endregion
