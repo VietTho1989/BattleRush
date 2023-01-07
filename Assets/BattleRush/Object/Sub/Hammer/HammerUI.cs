@@ -357,10 +357,7 @@ namespace BattleRushS.ObjectS
                     {
                         switch ((Hammer.Property)wrapProperty.n)
                         {
-                            case Hammer.Property.P:
-                                dirty = true;
-                                break;
-                            case Hammer.Property.R:
+                            case Hammer.Property.position:
                                 dirty = true;
                                 break;
                             case Hammer.Property.obstruction:

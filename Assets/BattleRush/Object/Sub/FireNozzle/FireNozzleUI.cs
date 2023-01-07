@@ -240,10 +240,7 @@ namespace BattleRushS.ObjectS
                 {
                     switch ((FireNozzle.Property)wrapProperty.n)
                     {
-                        case FireNozzle.Property.P:
-                            dirty = true;
-                            break;
-                        case FireNozzle.Property.R:
+                        case FireNozzle.Property.position:
                             dirty = true;
                             break;
                         default:

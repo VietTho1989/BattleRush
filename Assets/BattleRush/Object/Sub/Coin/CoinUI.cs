@@ -71,7 +71,7 @@ namespace BattleRushS.ObjectS
                     Coin coin = this.data.coin.v.data;
                     if (coin != null)
                     {
-                        this.name = "Coin " + coin.P.v;
+                        this.name = "Coin " + coin.position.v;
                         // collider enter
                         {
                             switch (coin.state.v)
@@ -407,10 +407,7 @@ namespace BattleRushS.ObjectS
                         case Coin.Property.state:
                             dirty = true;
                             break;
-                        case Coin.Property.P:
-                            dirty = true;
-                            break;
-                        case Coin.Property.R:
+                        case Coin.Property.position:
                             dirty = true;
                             break;
                         default:

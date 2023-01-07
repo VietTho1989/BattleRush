@@ -671,10 +671,7 @@ namespace BattleRushS.ObjectS
                                     dirty = true;
                                 }
                                 break;
-                            case TroopCage.Property.P:
-                                dirty = true;
-                                break;
-                            case TroopCage.Property.R:
+                            case TroopCage.Property.position:
                                 dirty = true;
                                 break;
                             case TroopCage.Property.obstruction:

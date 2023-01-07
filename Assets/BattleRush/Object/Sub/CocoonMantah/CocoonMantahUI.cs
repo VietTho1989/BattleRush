@@ -240,10 +240,7 @@ namespace BattleRushS.ObjectS
                 {
                     switch ((CocoonMantah.Property)wrapProperty.n)
                     {
-                        case CocoonMantah.Property.P:
-                            dirty = true;
-                            break;
-                        case CocoonMantah.Property.R:
+                        case CocoonMantah.Property.position:
                             dirty = true;
                             break;
                         default:

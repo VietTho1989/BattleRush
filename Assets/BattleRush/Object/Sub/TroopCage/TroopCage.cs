@@ -9,9 +9,7 @@ namespace BattleRushS.ObjectS
     public class TroopCage : ObjectInPath
     {
 
-        public VO<Vector3> P;
-
-        public VO<Vector3> R;
+        public VO<Position> position;
 
         #region state
 
@@ -42,8 +40,7 @@ namespace BattleRushS.ObjectS
 
         public enum Property
         {
-            P,
-            R,
+            position,
             state,
             troops,
             obstruction
@@ -51,8 +48,7 @@ namespace BattleRushS.ObjectS
 
         public TroopCage() : base()
         {
-            this.P = new VO<Vector3>(this, (byte)Property.P, Vector3.zero);
-            this.R = new VO<Vector3>(this, (byte)Property.R, Vector3.zero);
+            this.position = new VO<Position>(this, (byte)Property.position, Position.Zero);
             this.state = new VD<State>(this, (byte)Property.state, new Live());
             this.troops = new LD<TroopFollow>(this, (byte)Property.troops);
             this.obstruction = new VD<Obstruction>(this, (byte)Property.obstruction, new Obstruction());

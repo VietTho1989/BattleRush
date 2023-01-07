@@ -357,10 +357,7 @@ namespace BattleRushS.ObjectS
                     {
                         switch ((Grinder.Property)wrapProperty.n)
                         {
-                            case Grinder.Property.P:
-                                dirty = true;
-                                break;
-                            case Grinder.Property.R:
+                            case Grinder.Property.position:
                                 dirty = true;
                                 break;
                             case Grinder.Property.obstruction:

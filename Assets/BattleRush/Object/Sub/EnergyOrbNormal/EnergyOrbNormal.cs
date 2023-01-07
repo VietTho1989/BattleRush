@@ -20,24 +20,20 @@ namespace BattleRushS.ObjectS
 
         #endregion
 
-        public VO<Vector3> P;
-
-        public VO<Vector3> R;
+        public VO<Position> position;
 
         #region Constructor
 
         public enum Property
         {
             state,
-            P,
-            R
+            position
         }
 
         public EnergyOrbNormal() : base()
         {
             this.state = new VO<State>(this, (byte)Property.state, State.Normal);
-            this.P = new VO<Vector3>(this, (byte)Property.P, Vector3.zero);
-            this.R = new VO<Vector3>(this, (byte)Property.R, Vector3.zero);
+            this.position = new VO<Position>(this, (byte)Property.position, Position.Zero);
         }
 
         #endregion

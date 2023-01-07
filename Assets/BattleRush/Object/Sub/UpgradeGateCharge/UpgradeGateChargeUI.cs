@@ -240,10 +240,7 @@ namespace BattleRushS.ObjectS
                 {
                     switch ((UpgradeGateCharge.Property)wrapProperty.n)
                     {
-                        case UpgradeGateCharge.Property.P:
-                            dirty = true;
-                            break;
-                        case UpgradeGateCharge.Property.R:
+                        case UpgradeGateCharge.Property.position:
                             dirty = true;
                             break;
                         default:

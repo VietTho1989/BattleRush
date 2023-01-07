@@ -37,3 +37,28 @@ public abstract class ObjectInPath : Data
 
     public abstract Type getType();
 }
+
+public struct Position
+{
+
+    public static Position Zero = new Position(0, 0);
+
+    public const float DefaultSegmentWidth = 8.0f;// -4 -> 4
+    public const float DefaultSegmentHeight = 24.0f;
+
+    public Position(float x, float z)
+    {
+        this.x = x;
+        this.z = z;
+    }
+
+    /**
+     * tu 0 den 1: vi tri phan tram chieu ngang segment
+     * */
+    public float x;
+
+    /**
+     * vi tri chieu doc, phan du 1 la % thuoc chieu doc segment
+     * */
+    public float z;
+}

@@ -7,22 +7,18 @@ namespace BattleRushS.ObjectS
     public class UpgradeGateFree : ObjectInPath
     {
 
-        public VO<Vector3> P;
-
-        public VO<Vector3> R;
+        public VO<Position> position;
 
         #region Constructor
 
         public enum Property
         {
-            P,
-            R
+            position
         }
 
         public UpgradeGateFree() : base()
         {
-            this.P = new VO<Vector3>(this, (byte)Property.P, Vector3.zero);
-            this.R = new VO<Vector3>(this, (byte)Property.R, Vector3.zero);
+            this.position = new VO<Position>(this, (byte)Property.position, Position.Zero);
         }
 
         #endregion

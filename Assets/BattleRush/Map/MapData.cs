@@ -45,7 +45,7 @@ namespace BattleRushS
 
         public static int CompareByDistance(ObjectData A, ObjectData B)
         {
-            return A.P.v.z.CompareTo(B.P.v.z);
+            return A.position.v.z.CompareTo(B.position.v.z);
         }
 
         public void parse(string dataStr)

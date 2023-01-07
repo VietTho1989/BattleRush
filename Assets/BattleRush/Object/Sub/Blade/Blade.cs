@@ -5,10 +5,9 @@ using UnityEngine;
 namespace BattleRushS.ObjectS
 {
     public class Blade : ObjectInPath
-    { 
-        public VO<Vector3> P;
+    {
 
-        public VO<Vector3> R;
+        public VO<Position> position;
 
         public VD<Obstruction> obstruction;
 
@@ -16,15 +15,13 @@ namespace BattleRushS.ObjectS
 
         public enum Property
         {
-            P,
-            R,
+            position,
             obstruction
         }
 
         public Blade() : base()
         {
-            this.P = new VO<Vector3>(this, (byte)Property.P, Vector3.zero);
-            this.R = new VO<Vector3>(this, (byte)Property.R, Vector3.zero);
+            this.position = new VO<Position>(this, (byte)Property.position, Position.Zero);
             this.obstruction = new VD<Obstruction>(this, (byte)Property.obstruction, new Obstruction());
         }
 

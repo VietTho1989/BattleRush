@@ -404,10 +404,7 @@ namespace BattleRushS.ObjectS
                         case EnergyOrbPower.Property.state:
                             dirty = true;
                             break;
-                        case EnergyOrbPower.Property.P:
-                            dirty = true;
-                            break;
-                        case EnergyOrbPower.Property.R:
+                        case EnergyOrbPower.Property.position:
                             dirty = true;
                             break;
                         default:

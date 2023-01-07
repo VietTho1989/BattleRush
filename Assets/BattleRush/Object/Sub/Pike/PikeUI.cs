@@ -275,10 +275,7 @@ namespace BattleRushS.ObjectS
                     {
                         switch ((Pike.Property)wrapProperty.n)
                         {
-                            case Pike.Property.P:
-                                dirty = true;
-                                break;
-                            case Pike.Property.R:
+                            case Pike.Property.position:
                                 dirty = true;
                                 break;
                             case Pike.Property.obstruction:

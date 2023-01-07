@@ -12,8 +12,6 @@ namespace BattleRushS
 
         #region segment
 
-        public const float SegmentSize = 20;
-
         public GameObject[] segments;
         public GameObject arenaSegment;
 
@@ -90,8 +88,8 @@ namespace BattleRushS
                                         // check is in segment or not
                                         bool isInSegment = false;
                                         {
-                                            Logger.Log("check object is in segment or not: " + objectData.P.v.z + ", " + battleRush.makeSegmentManager.v.currentNextSegmentIndex.v);
-                                            if (objectData.P.v.z > battleRush.makeSegmentManager.v.currentNextSegmentIndex.v * SegmentSize && objectData.P.v.z <= (battleRush.makeSegmentManager.v.currentNextSegmentIndex.v + 1) * SegmentSize)
+                                            Logger.Log("check object is in segment or not: " + objectData.position.v + ", " + battleRush.makeSegmentManager.v.currentNextSegmentIndex.v);
+                                            if (objectData.position.v.z > battleRush.makeSegmentManager.v.currentNextSegmentIndex.v && objectData.position.v.z <= (battleRush.makeSegmentManager.v.currentNextSegmentIndex.v + 1))
                                             {
                                                 isInSegment = true;
                                             }
@@ -100,7 +98,7 @@ namespace BattleRushS
                                         if (isInSegment)
                                         {
                                             lastAddIndex = i;
-                                            Logger.Log("create object: " + objectData.I.v + ", " + objectData.P.v);
+                                            Logger.Log("create object: " + objectData.I.v + ", " + objectData.position.v);
                                             // make data and UI
                                             Transform objectUI = null;
                                             {
@@ -112,8 +110,7 @@ namespace BattleRushS
                                                             Coin coin = new Coin();
                                                             {
                                                                 coin.uid = battleRush.laneObjects.makeId();
-                                                                coin.P.v = objectData.P.v;
-                                                                coin.R.v = objectData.R.v;
+                                                                coin.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(coin);
                                                             // make UI
@@ -138,8 +135,7 @@ namespace BattleRushS
                                                             CocoonMantah cocoonMantah = new CocoonMantah();
                                                             {
                                                                 cocoonMantah.uid = battleRush.laneObjects.makeId();
-                                                                cocoonMantah.P.v = objectData.P.v;
-                                                                cocoonMantah.R.v = objectData.R.v;
+                                                                cocoonMantah.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(cocoonMantah);
                                                             // make UI
@@ -163,8 +159,7 @@ namespace BattleRushS
                                                             EnergyOrbNormal energyOrbNormal = new EnergyOrbNormal();
                                                             {
                                                                 energyOrbNormal.uid = battleRush.laneObjects.makeId();
-                                                                energyOrbNormal.P.v = objectData.P.v;
-                                                                energyOrbNormal.R.v = objectData.R.v;
+                                                                energyOrbNormal.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(energyOrbNormal);
                                                             // make UI
@@ -192,8 +187,7 @@ namespace BattleRushS
                                                             TroopCage troopCage = new TroopCage();
                                                             {
                                                                 troopCage.uid = battleRush.laneObjects.makeId();
-                                                                troopCage.P.v = objectData.P.v;
-                                                                troopCage.R.v = objectData.R.v;
+                                                                troopCage.position.v = objectData.position.v;
                                                                 // troop follows
                                                                 {
                                                                     int troopNumber = Random.Range(5, 15);// 10;// Random.Range(1, 5)
@@ -238,8 +232,7 @@ namespace BattleRushS
                                                             SawBlade sawBlade = new SawBlade();
                                                             {
                                                                 sawBlade.uid = battleRush.laneObjects.makeId();
-                                                                sawBlade.P.v = objectData.P.v;
-                                                                sawBlade.R.v = objectData.R.v;
+                                                                sawBlade.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(sawBlade);
                                                             // make UI
@@ -263,8 +256,7 @@ namespace BattleRushS
                                                             Blade blade = new Blade();
                                                             {
                                                                 blade.uid = battleRush.laneObjects.makeId();
-                                                                blade.P.v = objectData.P.v;
-                                                                blade.R.v = objectData.R.v;
+                                                                blade.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(blade);
                                                             // make UI
@@ -288,8 +280,7 @@ namespace BattleRushS
                                                             FireNozzle fireNozzle = new FireNozzle();
                                                             {
                                                                 fireNozzle.uid = battleRush.laneObjects.makeId();
-                                                                fireNozzle.P.v = objectData.P.v;
-                                                                fireNozzle.R.v = objectData.R.v;
+                                                                fireNozzle.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(fireNozzle);
                                                             // make UI
@@ -313,8 +304,7 @@ namespace BattleRushS
                                                             Pike pike = new Pike();
                                                             {
                                                                 pike.uid = battleRush.laneObjects.makeId();
-                                                                pike.P.v = objectData.P.v;
-                                                                pike.R.v = objectData.R.v;
+                                                                pike.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(pike);
                                                             // make UI
@@ -338,8 +328,7 @@ namespace BattleRushS
                                                             EnergyOrbUpgrade energyOrbUpgrade = new EnergyOrbUpgrade();
                                                             {
                                                                 energyOrbUpgrade.uid = battleRush.laneObjects.makeId();
-                                                                energyOrbUpgrade.P.v = objectData.P.v;
-                                                                energyOrbUpgrade.R.v = objectData.R.v;
+                                                                energyOrbUpgrade.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(energyOrbUpgrade);
                                                             // make UI
@@ -363,8 +352,7 @@ namespace BattleRushS
                                                             UpgradeGateFree upgradeGateFree = new UpgradeGateFree();
                                                             {
                                                                 upgradeGateFree.uid = battleRush.laneObjects.makeId();
-                                                                upgradeGateFree.P.v = objectData.P.v;
-                                                                upgradeGateFree.R.v = objectData.R.v;
+                                                                upgradeGateFree.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(upgradeGateFree);
                                                             // make UI
@@ -388,8 +376,7 @@ namespace BattleRushS
                                                             UpgradeGateCharge upgradeGateCharge = new UpgradeGateCharge();
                                                             {
                                                                 upgradeGateCharge.uid = battleRush.laneObjects.makeId();
-                                                                upgradeGateCharge.P.v = objectData.P.v;
-                                                                upgradeGateCharge.R.v = objectData.R.v;
+                                                                upgradeGateCharge.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(upgradeGateCharge);
                                                             // make UI
@@ -413,8 +400,7 @@ namespace BattleRushS
                                                             Hammer hammer = new Hammer();
                                                             {
                                                                 hammer.uid = battleRush.laneObjects.makeId();
-                                                                hammer.P.v = objectData.P.v;
-                                                                hammer.R.v = objectData.R.v;
+                                                                hammer.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(hammer);
                                                             // make UI
@@ -438,8 +424,7 @@ namespace BattleRushS
                                                             Grinder grinder = new Grinder();
                                                             {
                                                                 grinder.uid = battleRush.laneObjects.makeId();
-                                                                grinder.P.v = objectData.P.v;
-                                                                grinder.R.v = objectData.R.v;
+                                                                grinder.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(grinder);
                                                             // make UI
@@ -463,8 +448,7 @@ namespace BattleRushS
                                                             EnergyOrbPower energyOrbPower = new EnergyOrbPower();
                                                             {
                                                                 energyOrbPower.uid = battleRush.laneObjects.makeId();
-                                                                energyOrbPower.P.v = objectData.P.v;
-                                                                energyOrbPower.R.v = objectData.R.v;
+                                                                energyOrbPower.position.v = objectData.position.v;
                                                             }
                                                             battleRush.laneObjects.add(energyOrbPower);
                                                             // make UI
@@ -492,8 +476,8 @@ namespace BattleRushS
                                             {
                                                 if (objectUI != null)
                                                 {
-                                                    float x = Random.Range(-4, 4);// 4
-                                                    float z = (objectData.P.v.z - (battleRush.makeSegmentManager.v.currentNextSegmentIndex.v * SegmentSize + SegmentSize / 2));
+                                                    float x = objectData.position.v.x * Position.DefaultSegmentWidth - Position.DefaultSegmentWidth / 2;
+                                                    float z = (objectData.position.v.z % 1) * Position.DefaultSegmentHeight - Position.DefaultSegmentHeight / 2;
                                                     Logger.Log("z local: " + z);
                                                     // set
                                                     objectUI.localPosition = new Vector3(x, 1, z);
