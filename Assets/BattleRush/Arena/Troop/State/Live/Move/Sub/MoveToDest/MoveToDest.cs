@@ -10,16 +10,20 @@ namespace BattleRushS.ArenaS.TroopS.TroopMoveS
 
         public VO<Vector3> dest;
 
+        public VO<bool> alreadyCallAgent;
+
         #region Constructor
 
         public enum Property
         {
-            dest
+            dest,
+            alreadyCallAgent
         }
 
         public MoveToDest() : base()
         {
             this.dest = new VO<Vector3>(this, (byte)Property.dest, Vector3.zero);
+            this.alreadyCallAgent = new VO<bool>(this, (byte)Property.alreadyCallAgent, false);
         }
 
         #endregion

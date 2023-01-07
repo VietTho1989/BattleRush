@@ -40,6 +40,7 @@ namespace BattleRushS.ArenaS.TroopS.TroopMoveS
                     // process
                     if (agent != null)
                     {
+                        this.data.alreadyCallAgent.v = true;
                         agent.enabled = true;
                         agent.isStopped = false;
                         agent.destination = this.data.dest.v;
@@ -94,11 +95,15 @@ namespace BattleRushS.ArenaS.TroopS.TroopMoveS
                 return;
             }
             if(wrapProperty.p is MoveToDest)
-            {
+            {               
                 switch ((MoveToDest.Property)wrapProperty.n)
                 {
                     case MoveToDest.Property.dest:
-                        dirty = true;
+                        {
+                            MoveToDest moveToDest = wrapProperty.p as MoveToDest;
+                            moveToDest.alreadyCallAgent.v = false;
+                            dirty = true;
+                        }                       
                         break;
                     default:
                         break;

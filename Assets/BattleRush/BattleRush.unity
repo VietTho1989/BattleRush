@@ -453,7 +453,7 @@ MonoBehaviour:
   startPercent: 0
   startDistance: 0
   startMode: 0
-  followSpeed: 7
+  followSpeed: 10
   follow: 1
   isPlayer: 1
   loop: 0

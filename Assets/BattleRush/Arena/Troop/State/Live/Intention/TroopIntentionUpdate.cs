@@ -33,22 +33,40 @@ namespace BattleRushS.ArenaS.TroopS
                                 break;
                             case Arena.Stage.Type.MoveTroopToFormation:
                                 {
-                                    MoveToDest moveToDest = this.data.intention.newOrOld<MoveToDest>();
+                                    MoveTroopToFormation moveTroopToFormation = arena.stage.v as MoveTroopToFormation;
+                                    switch (moveTroopToFormation.state.v)
                                     {
-                                        // dest
-                                        {
-                                            Troop troop = this.data.findDataInParent<Troop>();
-                                            if (troop != null)
+                                        case MoveTroopToFormation.State.Start:
                                             {
-                                                moveToDest.dest.v = troop.formationPosition.v;
+                                                Logger.Log("TroopIntentionUpdate move troop to formation");
+                                                MoveToDest moveToDest = this.data.intention.newOrOld<MoveToDest>();
+                                                {
+                                                    // dest
+                                                    {
+                                                        Troop troop = this.data.findDataInParent<Troop>();
+                                                        if (troop != null)
+                                                        {
+                                                            moveToDest.dest.v = troop.formationPosition.v;
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("troop null");
+                                                        }
+                                                    }
+                                                }
+                                                this.data.intention.v = moveToDest;
                                             }
-                                            else
-                                            {
-                                                Logger.LogError("troop null");
-                                            }
-                                        }                                        
-                                    }
-                                    this.data.intention.v = moveToDest;
+                                            break;
+                                        case MoveTroopToFormation.State.Move:
+                                            break;
+                                        case MoveTroopToFormation.State.Came:
+                                            break;
+                                        case MoveTroopToFormation.State.Ready:
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown state: " + moveTroopToFormation.state.v);
+                                            break;
+                                    }                                   
                                 }
                                 break;
                             case Arena.Stage.Type.AutoFight:

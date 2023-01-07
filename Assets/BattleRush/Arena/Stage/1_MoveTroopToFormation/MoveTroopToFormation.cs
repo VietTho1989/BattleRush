@@ -15,6 +15,7 @@ namespace BattleRushS.ArenaS
 
         public enum State
         {
+            Start,
             Move,
             Came,
             Ready,
@@ -37,7 +38,7 @@ namespace BattleRushS.ArenaS
         {
             this.time = new VO<float>(this, (byte)Property.time, 0);
             this.duration = new VO<float>(this, (byte)Property.duration, 10);
-            this.state = new VO<State>(this, (byte)Property.state, State.Move);
+            this.state = new VO<State>(this, (byte)Property.state, State.Start);
         }
 
         #endregion

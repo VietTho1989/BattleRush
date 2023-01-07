@@ -11,6 +11,9 @@ namespace BattleRushS.ArenaS
 
         #region Update
 
+        private const float HeroFormationZ = 10.0f;
+        private const float DistanceBetweenTroop = 1.5f;
+
         public override void update()
         {
             if (dirty)
@@ -81,7 +84,7 @@ namespace BattleRushS.ArenaS
                             {
                                 BattleRush battleRush = this.data.findDataInParent<BattleRush>();
                                 if (battleRush != null)
-                                {
+                                {                                    
                                     // hero
                                     {
                                         Hero hero = battleRush.hero.v;
@@ -123,8 +126,8 @@ namespace BattleRushS.ArenaS
                                                             if (arenaUI.center != null)
                                                             {
                                                                 // find x, z
-                                                                float x = Random.Range(-10, 10);
-                                                                float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
+                                                                float x = 0; // Random.Range(-10, 10);
+                                                                float z = troop.teamId.v == 0 ? -HeroFormationZ : HeroFormationZ;// Random.Range(-15, -5) : Random.Range(5, 15);
                                                                 troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
                                                             }
                                                             else
@@ -144,6 +147,7 @@ namespace BattleRushS.ArenaS
                                     }
                                     // troop
                                     {
+                                        List<Troop> team0Troops = new List<Troop>();
                                         foreach (TroopFollow troopFollow in battleRush.hero.v.troopFollows.vs)
                                         {
                                             Troop troop = new Troop();
@@ -176,31 +180,111 @@ namespace BattleRushS.ArenaS
                                                     }
                                                     // formation position
                                                     {
-                                                        ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
-                                                        if (arenaUI != null)
-                                                        {
-                                                            if (arenaUI.center != null)
-                                                            {
-                                                                // find x, z
-                                                                float x = Random.Range(-10, 10);
-                                                                float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
-                                                                troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
-                                                            }
-                                                            else
-                                                            {
-                                                                Logger.LogError("center null");
-                                                            }
-                                                        }
-                                                        else
-                                                        {
-                                                            Logger.LogError("arenaUI null");
-                                                        }
+                                                        // xu ly phia duoi
                                                     }
                                                 }
                                             }
                                             arena.troops.add(troop);
+                                            team0Troops.Add(troop);
                                         }
                                         battleRush.hero.v.troopFollows.clear();
+                                        // formation position
+                                        {
+                                            ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
+                                            if (arenaUI != null)
+                                            {
+                                                if (arenaUI.center != null)
+                                                {
+                                                    // get count
+                                                    int rangeCount = 0;
+                                                    int meleeCount = 0;
+                                                    {
+                                                        foreach (Troop troop in team0Troops)
+                                                        {
+                                                            if (troop.isRange())
+                                                            {
+                                                                rangeCount++;
+                                                            }
+                                                            else
+                                                            {
+                                                                meleeCount++;
+                                                            }
+                                                        }
+                                                    }
+                                                    // set position
+                                                    {
+                                                        int rangeIndex = 0;
+                                                        int meleeIndex = 0;
+                                                        foreach (Troop troop in team0Troops)
+                                                        {
+                                                            // row
+                                                            int row = 0;
+                                                            {
+                                                                if (troop.isRange())
+                                                                {
+                                                                    row = 0;
+                                                                }
+                                                                else
+                                                                {
+                                                                    row = 1;
+                                                                }
+                                                            }
+                                                            // col
+                                                            int col = 0;
+                                                            {
+                                                                if (troop.isRange())
+                                                                {
+                                                                    col = rangeIndex;
+                                                                }
+                                                                else
+                                                                {
+                                                                    col = meleeIndex;
+                                                                }
+                                                            }
+                                                            // rowNumber
+                                                            int rowNumber = 0;
+                                                            {
+                                                                if (troop.isRange())
+                                                                {
+                                                                    rowNumber = rangeCount;
+                                                                }
+                                                                else
+                                                                {
+                                                                    rowNumber = meleeCount;
+                                                                }
+                                                            }
+                                                            // set position
+                                                            {
+                                                                // find x, z
+                                                                float x = (col - rowNumber / 2 + 0.5f) * DistanceBetweenTroop;//  Random.Range(-10, 10);
+                                                                float z = (-HeroFormationZ + DistanceBetweenTroop) + row * DistanceBetweenTroop;
+                                                                troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                            }
+
+                                                            // new index
+                                                            {
+                                                                if (troop.isRange())
+                                                                {
+                                                                    rangeIndex++;
+                                                                }
+                                                                else
+                                                                {
+                                                                    meleeIndex++;
+                                                                }
+                                                            }
+                                                        }
+                                                    }                                           
+                                                }
+                                                else
+                                                {
+                                                    Logger.LogError("center null");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("arenaUI null");
+                                            }
+                                        }
                                     }                                    
                                 }
                                 else
@@ -230,6 +314,7 @@ namespace BattleRushS.ArenaS
                                     }
                                 }
                                 // make
+                                List<Troop> team1Troops = new List<Troop>();
                                 for (int i = 0; i < Random.Range(5, 12); i++)
                                 {
                                     Troop troop = new Troop();
@@ -257,38 +342,109 @@ namespace BattleRushS.ArenaS
                                         }
                                         // position
                                         {
-                                            ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
-                                            if (arenaUI != null)
-                                            {
-                                                if (arenaUI.center != null)
-                                                {
-                                                    // start oisutuib
-                                                    {
-                                                        // find x, z
-                                                        float x = Random.Range(-10, 10);
-                                                        float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
-                                                        troop.startPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
-                                                    }
-                                                    // formation position
-                                                    {
-                                                        // find x, z
-                                                        float x = Random.Range(-10, 10);
-                                                        float z = troop.teamId.v == 0 ? Random.Range(-15, 5) : Random.Range(5, 15);
-                                                        troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
-                                                    }                                            
-                                                }
-                                                else
-                                                {
-                                                    Logger.LogError("center null");
-                                                }
-                                            }
-                                            else
-                                            {
-                                                Logger.LogError("arenaUI null");
-                                            }
+                                            // xu ly phia duoi
                                         }
                                     }
                                     arena.troops.add(troop);
+                                    team1Troops.Add(troop);
+                                }
+                                // formation position
+                                {
+                                    ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
+                                    if (arenaUI != null)
+                                    {
+                                        if (arenaUI.center != null)
+                                        {
+                                            // get count
+                                            int rangeCount = 0;
+                                            int meleeCount = 0;
+                                            {
+                                                foreach (Troop troop in team1Troops)
+                                                {
+                                                    if (troop.isRange())
+                                                    {
+                                                        rangeCount++;
+                                                    }
+                                                    else
+                                                    {
+                                                        meleeCount++;
+                                                    }
+                                                }
+                                            }
+                                            // set position
+                                            {
+                                                int rangeIndex = 0;
+                                                int meleeIndex = 0;
+                                                foreach (Troop troop in team1Troops)
+                                                {
+                                                    // row
+                                                    int row = 0;
+                                                    {
+                                                        if (troop.isRange())
+                                                        {
+                                                            row = 0;
+                                                        }
+                                                        else
+                                                        {
+                                                            row = 1;
+                                                        }
+                                                    }
+                                                    // col
+                                                    int col = 0;
+                                                    {
+                                                        if (troop.isRange())
+                                                        {
+                                                            col = rangeIndex;
+                                                        }
+                                                        else
+                                                        {
+                                                            col = meleeIndex;
+                                                        }
+                                                    }
+                                                    // rowNumber
+                                                    int rowNumber = 0;
+                                                    {
+                                                        if (troop.isRange())
+                                                        {
+                                                            rowNumber = rangeCount;
+                                                        }
+                                                        else
+                                                        {
+                                                            rowNumber = meleeCount;
+                                                        }
+                                                    }
+                                                    // set position
+                                                    {
+                                                        // find x, z
+                                                        float x = (col - rowNumber / 2 + 0.5f) * DistanceBetweenTroop;//  Random.Range(-10, 10);
+                                                        float z = -((-HeroFormationZ + DistanceBetweenTroop) + row * DistanceBetweenTroop);
+                                                        troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                        troop.startPosition.v = new Vector3(troop.formationPosition.v.x, troop.formationPosition.v.y, troop.formationPosition.v.z + 3 * DistanceBetweenTroop);
+                                                    }
+
+                                                    // new index
+                                                    {
+                                                        if (troop.isRange())
+                                                        {
+                                                            rangeIndex++;
+                                                        }
+                                                        else
+                                                        {
+                                                            meleeIndex++;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("center null");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("arenaUI null");
+                                    }
                                 }
                             }
                             else

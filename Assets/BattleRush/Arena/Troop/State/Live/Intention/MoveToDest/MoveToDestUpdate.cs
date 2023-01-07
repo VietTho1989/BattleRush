@@ -86,29 +86,62 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                 // process
                 if (agent != null)
                 {
-                    if (!agent.pathPending)
+                    // find
+                    bool alreadyCallAgent = false;
                     {
-                        if (agent.remainingDistance <= agent.stoppingDistance)
+                        Live live = this.data.findDataInParent<Live>();
+                        if (live != null)
                         {
-                            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                            switch (live.troopMove.v.sub.v.getType())
                             {
-                                // Done, change to rest
-                                TroopIntention troopIntention = this.data.findDataInParent<TroopIntention>();
-                                if (troopIntention != null)
-                                {
-                                    Rest rest = troopIntention.intention.newOrOld<Rest>();
+                                case TroopMove.Sub.Type.Idle:
+                                    break;
+                                case TroopMove.Sub.Type.MoveToDest:
                                     {
-
+                                        TroopMoveS.MoveToDest moveToDest = live.troopMove.v.sub.v as TroopMoveS.MoveToDest;
+                                        if (moveToDest.alreadyCallAgent.v)
+                                        {
+                                            alreadyCallAgent = true;
+                                        }
                                     }
-                                    troopIntention.intention.v = rest;
-                                }
-                                else
+                                    break;
+                                default:
+                                    Logger.LogError("unknown type: " + live.troopMove.v.sub.v.getType());
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("live null");
+                        }
+                    }
+                    // process
+                    if(alreadyCallAgent)
+                    {
+                        if (!agent.pathPending)
+                        {
+                            if (agent.remainingDistance <= agent.stoppingDistance)
+                            {
+                                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                                 {
-                                    Logger.LogError("troopIntention null");
+                                    // Done, change to rest
+                                    TroopIntention troopIntention = this.data.findDataInParent<TroopIntention>();
+                                    if (troopIntention != null)
+                                    {
+                                        Rest rest = troopIntention.intention.newOrOld<Rest>();
+                                        {
+
+                                        }
+                                        troopIntention.intention.v = rest;
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("troopIntention null");
+                                    }
                                 }
                             }
                         }
-                    }
+                    }                   
                 }
                 else
                 {

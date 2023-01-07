@@ -23,7 +23,7 @@ namespace BattleRushS.ArenaS.TroopS
         public Die() : base()
         {
             this.time = new VO<float>(this, (byte)Property.time, 0);
-            this.duration = new VO<float>(this, (byte)Property.duration, 60);
+            this.duration = new VO<float>(this, (byte)Property.duration, 15);
         }
 
         #endregion
