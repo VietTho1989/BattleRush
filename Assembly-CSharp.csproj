@@ -122,6 +122,7 @@
     <Compile Include="Assets\BattleRush\Object\Sub\Pike\PikeUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Matrix4x4.cs" />
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\Troops\TroopInformation.cs" />
+    <Compile Include="Assets\BattleRush\Hero\UI\Prefab\HeroInformation.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Hammer\HammerUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeStringUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_bool.cs" />
@@ -551,7 +552,6 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
-    <Compile Include="Assets\BattleRush\Hero\UI\Prefab\HeroInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -642,7 +642,7 @@ namespace Dreamteck.Forever
 
         private void GetBounds(ref ObjectProperty property)
         {
-            Debug.Log("LevelSegment: get bounds: " + property.extrusionSettings.boundsInclusion);
+            // Debug.Log("LevelSegment: get bounds: " + property.extrusionSettings.boundsInclusion);
             if ((property.extrusionSettings.boundsInclusion & ExtrusionSettings.BoundsInclusion.Transform) != 0)
             {
                 Vector3 localPos = transform.InverseTransformPoint(property.transform.position);
