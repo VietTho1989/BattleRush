@@ -635,8 +635,12 @@ MonoBehaviour:
   attackType: 0
   unlockPriority: 19
   modelName: muu_range
+  renderers:
+  - {fileID: 2854242823607960253}
   armyMaterial: mat_muu_range_optimized_blue
+  team0Mat: {fileID: 2100000, guid: a07f9cce8f88dd546bb7e26270da1715, type: 2}
   enemyMaterial: mat_muu_range_optimized_red
+  team1Mat: {fileID: 2100000, guid: 1e35ab857b64b854db76f98920ae2b6f, type: 2}
   weapon: troop_muu_bow
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_cokoum

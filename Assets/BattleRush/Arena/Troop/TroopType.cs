@@ -21,5 +21,7 @@ namespace BattleRushS.ArenaS
 
         public abstract GameObject getGameObject();
 
+        public abstract void setUIByTeam(int teamId);
+
     }
 }

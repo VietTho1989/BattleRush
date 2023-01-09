@@ -1007,8 +1007,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 0
   modelName: antuk_melee
+  renderers:
+  - {fileID: 4227388671321302203}
   armyMaterial: mat_antuk_melee_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 9b28715fe1c676c4a9241492f1dee844, type: 2}
   enemyMaterial: mat_antuk_melee_optimized_red
+  team1Mat: {fileID: 2100000, guid: c88a5c3cd5ceb4e4b8ea76774b707ed0, type: 2}
   weapon: troop_antuk_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_alck

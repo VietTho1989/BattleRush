@@ -1161,8 +1161,13 @@ MonoBehaviour:
   attackType: 0
   unlockPriority: 0
   modelName: antuk_air
+  renderers:
+  - {fileID: 8475336776543967418}
+  - {fileID: 6359000639615588538}
   armyMaterial: mat_antuk_air_optimized_blue
+  team0Mat: {fileID: 2100000, guid: db949c0d675cffb4894e563ff1039b00, type: 2}
   enemyMaterial: mat_antuk_air_optimized_red
+  team1Mat: {fileID: 2100000, guid: 4e73ec0ef9b673544b30180aa0d00915, type: 2}
   weapon: troop_antuk_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_mezaa
@@ -1408,6 +1413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea344ef0ff62d52468c6f268419fe71f, type: 3}
+--- !u!137 &6359000639615588538 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3076138552580877421, guid: ea344ef0ff62d52468c6f268419fe71f, type: 3}
+  m_PrefabInstance: {fileID: 8254841745015272663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8432339020894049084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea344ef0ff62d52468c6f268419fe71f, type: 3}

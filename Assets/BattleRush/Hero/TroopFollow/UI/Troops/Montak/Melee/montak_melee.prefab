@@ -256,8 +256,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 15
   modelName: montak_melee
+  renderers:
+  - {fileID: 5959626396465964202}
   armyMaterial: mat_montak_melee_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 741f4f4df94cbda438410e5e0556ad66, type: 2}
   enemyMaterial: mat_montak_melee_optimized_red
+  team1Mat: {fileID: 2100000, guid: d4399bdbcad3b1e4db6ca0ee62d5cbb6, type: 2}
   weapon: troop_montak_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_glairon

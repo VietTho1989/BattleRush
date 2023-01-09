@@ -920,8 +920,13 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 17
   modelName: muu_air
+  renderers:
+  - {fileID: 3095474145134193547}
+  - {fileID: 730699280092546205}
   armyMaterial: mat_muu_air_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 3fce931b2443dae4b88fae8db1fea511, type: 2}
   enemyMaterial: mat_muu_air_optimized_red
+  team1Mat: {fileID: 2100000, guid: c2897530dfda16d47a507aa26fd01e26, type: 2}
   weapon: troop_muu_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_tempa
@@ -1570,6 +1575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2093d2875e5b849b97447838604725, type: 3}
+--- !u!137 &3095474145134193547 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3529036919018585877, guid: 0c2093d2875e5b849b97447838604725, type: 3}
+  m_PrefabInstance: {fileID: 7346218488249822048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7095909080206986379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c2093d2875e5b849b97447838604725, type: 3}

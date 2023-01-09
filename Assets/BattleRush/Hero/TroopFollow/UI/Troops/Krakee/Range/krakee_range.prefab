@@ -710,8 +710,12 @@ MonoBehaviour:
   attackType: 0
   unlockPriority: 3
   modelName: krakee_range
+  renderers:
+  - {fileID: 3412325038816890080}
   armyMaterial: mat_krakee_range_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 07ad719b234b4bb4da9cc424b6c89382, type: 2}
   enemyMaterial: mat_krakee_range_optimized_red
+  team1Mat: {fileID: 2100000, guid: 11384977505572844972f930b5b8087a, type: 2}
   weapon: troop_krakee_bow
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_azzax

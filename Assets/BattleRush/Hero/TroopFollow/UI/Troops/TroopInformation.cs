@@ -46,8 +46,34 @@ namespace BattleRushS.HeroS
 
         public int unlockPriority;
         public string modelName;
+
+        #region material to show team
+
+        public SkinnedMeshRenderer[] renderers;
+
         public string armyMaterial;
+        public Material team0Mat;
+
         public string enemyMaterial;
+        public Material team1Mat;
+
+        public void setUIByTeam(int teamId)
+        {
+            foreach(SkinnedMeshRenderer renderer in renderers)
+            {
+                if (renderer != null)
+                {
+                    renderer.material = teamId == 0 ? team0Mat : team1Mat;
+                }
+                else
+                {
+                    Logger.LogError("renderer null");
+                }
+            }
+        }
+
+        #endregion
+
         public string weapon;
         public string vfxDeadName;
         public string portraitName;

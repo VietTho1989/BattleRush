@@ -492,8 +492,12 @@ MonoBehaviour:
   attackType: 0
   unlockPriority: 0
   modelName: antuk_range
+  renderers:
+  - {fileID: 8616525850076483838}
   armyMaterial: mat_antuk_range_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 204ec778846bd154ebafa7b8c21b1ef5, type: 2}
   enemyMaterial: mat_antuk_range_optimized_red
+  team1Mat: {fileID: 2100000, guid: 94fdc7b076775524ba872633a0598550, type: 2}
   weapon: troop_antuk_bow
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_tuboc

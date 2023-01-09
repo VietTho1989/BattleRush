@@ -67,8 +67,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 16
   modelName: montak_tank
+  renderers:
+  - {fileID: 1905278621307511256}
   armyMaterial: mat_montak_tank_optimized_blue
+  team0Mat: {fileID: 2100000, guid: d4b932ae1ac1e414180c7b62fe540300, type: 2}
   enemyMaterial: mat_montak_tank_optimized_red
+  team1Mat: {fileID: 2100000, guid: db469bd7cd06e33488bd67f7d1058e55, type: 2}
   weapon: troop_montak_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_taradae

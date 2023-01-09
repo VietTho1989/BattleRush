@@ -495,8 +495,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 5
   modelName: krakee_tank
+  renderers:
+  - {fileID: 2653741350432770515}
   armyMaterial: mat_krakee_tank_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 1d9bb4834c8fbd340a7a49dda6e74c86, type: 2}
   enemyMaterial: mat_krakee_tank_optimized_red
+  team1Mat: {fileID: 2100000, guid: 7b37bf56b6aa359458f10e433c5e8d42, type: 2}
   weapon: troop_krakee_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_burrier

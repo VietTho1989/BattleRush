@@ -130,8 +130,13 @@ MonoBehaviour:
   attackType: 0
   unlockPriority: 7
   modelName: mantah_air
+  renderers:
+  - {fileID: 58106214113129659}
+  - {fileID: 2023048380284018580}
   armyMaterial: mat_mantah_air_optimized_blue
+  team0Mat: {fileID: 2100000, guid: d40aa983c3bb8774d802fbdfb9fd59b3, type: 2}
   enemyMaterial: mat_mantah_air_optimized_red
+  team1Mat: {fileID: 2100000, guid: ff3326a8eca301946b5a2625f0cece5a, type: 2}
   weapon: troop_mantah_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_dolore
@@ -1570,6 +1575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72c0e1998a96ee4097afb5315ee74ec, type: 3}
+--- !u!137 &2023048380284018580 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6084083991160010940, guid: a72c0e1998a96ee4097afb5315ee74ec, type: 3}
+  m_PrefabInstance: {fileID: 5223135357590677288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5762061682449105091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a72c0e1998a96ee4097afb5315ee74ec, type: 3}

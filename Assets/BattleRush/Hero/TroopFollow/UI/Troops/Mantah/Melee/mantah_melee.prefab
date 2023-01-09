@@ -470,8 +470,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 10
   modelName: mantah_melee
+  renderers:
+  - {fileID: 1679436145482985637}
   armyMaterial: mat_mantah_melee_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 16a7558fcc3d96847b3c956263b1cc08, type: 2}
   enemyMaterial: mat_mantah_melee_optimized_red
+  team1Mat: {fileID: 2100000, guid: b45ed8c5f20137a4c8fb91ade37cf0e0, type: 2}
   weapon: troop_mantah_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_tornadator

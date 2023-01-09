@@ -1327,8 +1327,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 4
   modelName: krakee_melee
+  renderers:
+  - {fileID: 1192178472309669318}
   armyMaterial: mat_krakee_melee_optimized_blue
+  team0Mat: {fileID: 2100000, guid: a8cec74c00ee1d146be3d0d313a3be58, type: 2}
   enemyMaterial: mat_krakee_melee_optimized_red
+  team1Mat: {fileID: 2100000, guid: 7690e52cec097b14cb6f91af007d4be5, type: 2}
   weapon: troop_krakee_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_punchbox

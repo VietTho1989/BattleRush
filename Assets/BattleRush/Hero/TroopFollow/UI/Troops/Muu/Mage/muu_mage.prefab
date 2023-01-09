@@ -252,8 +252,12 @@ MonoBehaviour:
   attackType: 0
   unlockPriority: 18
   modelName: muu_mage
+  renderers:
+  - {fileID: 8832825555961071298}
   armyMaterial: mat_muu_mage_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 39104b2665dbee445a3d7db5909a450c, type: 2}
   enemyMaterial: mat_muu_mage_optimized_red
+  team1Mat: {fileID: 2100000, guid: 8bf87f8e7d3a12e4898e47faa4f63e38, type: 2}
   weapon: troop_muu_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_wize

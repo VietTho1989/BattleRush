@@ -188,6 +188,17 @@ namespace BattleRushS.ArenaS
                             }
                             this.transform.localScale = new Vector3(scale, scale, scale);
                         }
+                        // team
+                        {
+                            if (currentTroopTypeModel != null)
+                            {
+                                currentTroopTypeModel.setUIByTeam(troop.teamId.v);
+                            }
+                            else
+                            {
+                                Logger.LogError("currentTroopTypeModel null");
+                            }
+                        }
                         // position
                         {
                             Arena arena = troop.findDataInParent<Arena>();
@@ -510,6 +521,9 @@ namespace BattleRushS.ArenaS
                                 dirty = true;
                                 break;
                             case Troop.Property.troopType:
+                                dirty = true;
+                                break;
+                            case Troop.Property.teamId:
                                 dirty = true;
                                 break;
                             case Troop.Property.state:

@@ -66,6 +66,9 @@ namespace BattleRushS.HeroS
             }
         }
 
-        
+        public void setUIByTeam(int teamId)
+        {
+            
+        }
     }
 }

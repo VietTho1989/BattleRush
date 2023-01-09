@@ -846,8 +846,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 11
   modelName: mantah_tank
+  renderers:
+  - {fileID: 769875457667447696}
   armyMaterial: mat_mantah_tank_optimized_blue
+  team0Mat: {fileID: 2100000, guid: 3a609405afe6823409bf265a4068c617, type: 2}
   enemyMaterial: mat_mantah_tank_optimized_red
+  team1Mat: {fileID: 2100000, guid: 3b6f652a55d3a3d4480d67dc3e261fa1, type: 2}
   weapon: troop_mantah_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_teetoum

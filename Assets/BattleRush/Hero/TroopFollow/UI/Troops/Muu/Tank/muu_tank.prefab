@@ -1359,8 +1359,12 @@ MonoBehaviour:
   attackType: 1
   unlockPriority: 21
   modelName: muu_tank
+  renderers:
+  - {fileID: 6610333454259027721}
   armyMaterial: mat_muu_tank_optimized_blue
+  team0Mat: {fileID: 2100000, guid: abdf8bc4327142e4c90fa2ee35c1145b, type: 2}
   enemyMaterial: mat_muu_tank_optimized_red
+  team1Mat: {fileID: 2100000, guid: 7b14b57bac5e6f14cbc71b79f6e44cfa, type: 2}
   weapon: troop_muu_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_formidator
