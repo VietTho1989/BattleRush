@@ -249,10 +249,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 17
   troopAnimator: {fileID: 8113724133147315314}
   animationIdle: {fileID: 7400000, guid: 71905572ab4e0464b898145eae94ef55, type: 2}
   animationMove: {fileID: 7400000, guid: 453ce60fd66f4ff49b2b50cde52d9f4f, type: 2}
+  troopName: GLAIRON
+  attackType: 1
+  unlockPriority: 15
+  modelName: montak_melee
+  armyMaterial: mat_montak_melee_optimized_blue
+  enemyMaterial: mat_montak_melee_optimized_red
+  weapon: troop_montak_melee
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_glairon
+  levels:
+  - level: 1
+    hp: 30
+    attack: 10
+    attackRange: 0.25
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 60
+    attack: 20
+    attackRange: 0.25
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 120
+    attack: 40
+    attackRange: 0.25
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_montak_melee
 --- !u!1 &887102522994486742
 GameObject:
   m_ObjectHideFlags: 0

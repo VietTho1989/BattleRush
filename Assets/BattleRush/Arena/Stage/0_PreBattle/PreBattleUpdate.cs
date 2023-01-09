@@ -94,7 +94,7 @@ namespace BattleRushS.ArenaS
                                             {
                                                 troop.uid = arena.troops.makeId();
                                                 troop.teamId.v = 0;
-                                                troop.troopType.v = hero.troopType.v;
+                                                troop.troopType.v = hero.heroInformation.v;
                                                 // Live
                                                 {
                                                     Live live = troop.state.newOrOld<Live>();
@@ -155,6 +155,7 @@ namespace BattleRushS.ArenaS
                                                 troop.uid = arena.troops.makeId();
                                                 troop.teamId.v = 0;
                                                 troop.troopType.v = troopFollow.troopType.v;
+                                                troop.level.v = troopFollow.level.v;
                                                 // Live
                                                 {
                                                     Live live = troop.state.newOrOld<Live>();
@@ -201,13 +202,17 @@ namespace BattleRushS.ArenaS
                                                     {
                                                         foreach (Troop troop in team0Troops)
                                                         {
-                                                            if (troop.isRange())
+                                                            switch (troop.getAttackType())
                                                             {
-                                                                rangeCount++;
-                                                            }
-                                                            else
-                                                            {
-                                                                meleeCount++;
+                                                                case Troop.AttackType.Range:
+                                                                    rangeCount++;
+                                                                    break;
+                                                                case Troop.AttackType.Melee:
+                                                                    meleeCount++;
+                                                                    break;
+                                                                default:
+                                                                    Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                    break;
                                                             }
                                                         }
                                                     }
@@ -220,37 +225,49 @@ namespace BattleRushS.ArenaS
                                                             // row
                                                             int row = 0;
                                                             {
-                                                                if (troop.isRange())
+                                                                switch (troop.getAttackType())
                                                                 {
-                                                                    row = 0;
-                                                                }
-                                                                else
-                                                                {
-                                                                    row = 1;
+                                                                    case Troop.AttackType.Range:
+                                                                        row = 0;
+                                                                        break;
+                                                                    case Troop.AttackType.Melee:
+                                                                        row = 1;
+                                                                        break;
+                                                                    default:
+                                                                        Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                        break;
                                                                 }
                                                             }
                                                             // col
                                                             int col = 0;
                                                             {
-                                                                if (troop.isRange())
+                                                                switch (troop.getAttackType())
                                                                 {
-                                                                    col = rangeIndex;
-                                                                }
-                                                                else
-                                                                {
-                                                                    col = meleeIndex;
+                                                                    case Troop.AttackType.Range:
+                                                                        col = rangeIndex;
+                                                                        break;
+                                                                    case Troop.AttackType.Melee:
+                                                                        col = meleeIndex;
+                                                                        break;
+                                                                    default:
+                                                                        Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                        break;
                                                                 }
                                                             }
                                                             // rowNumber
                                                             int rowNumber = 0;
                                                             {
-                                                                if (troop.isRange())
+                                                                switch (troop.getAttackType())
                                                                 {
-                                                                    rowNumber = rangeCount;
-                                                                }
-                                                                else
-                                                                {
-                                                                    rowNumber = meleeCount;
+                                                                    case Troop.AttackType.Range:
+                                                                        rowNumber = rangeCount;
+                                                                        break;
+                                                                    case Troop.AttackType.Melee:
+                                                                        rowNumber = meleeCount;
+                                                                        break;
+                                                                    default:
+                                                                        Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                        break;
                                                                 }
                                                             }
                                                             // set position
@@ -263,13 +280,17 @@ namespace BattleRushS.ArenaS
 
                                                             // new index
                                                             {
-                                                                if (troop.isRange())
+                                                                switch (troop.getAttackType())
                                                                 {
-                                                                    rangeIndex++;
-                                                                }
-                                                                else
-                                                                {
-                                                                    meleeIndex++;
+                                                                    case Troop.AttackType.Range:
+                                                                        rangeIndex++;
+                                                                        break;
+                                                                    case Troop.AttackType.Melee:
+                                                                        meleeIndex++;
+                                                                        break;
+                                                                    default:
+                                                                        Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                        break;
                                                                 }
                                                             }
                                                         }
@@ -302,18 +323,6 @@ namespace BattleRushS.ArenaS
                             Arena arena = this.data.findDataInParent<Arena>();
                             if (arena != null)
                             {
-                                // get
-                                List<TroopFollow.TroopType> enemyTroopTypes = new List<TroopFollow.TroopType>();
-                                {
-                                    foreach (TroopFollow.TroopType check in System.Enum.GetValues(typeof(TroopFollow.TroopType)))
-                                    {
-                                        if (!TroopFollow.IsHero(check))
-                                        {
-                                            enemyTroopTypes.Add(check);
-                                        }
-                                    }
-                                }
-                                // make
                                 List<Troop> team1Troops = new List<Troop>();
                                 for (int i = 0; i < Random.Range(5, 12); i++)
                                 {
@@ -321,15 +330,20 @@ namespace BattleRushS.ArenaS
                                     {
                                         troop.uid = arena.troops.makeId();
                                         troop.teamId.v = 1;
+                                        // level
+                                        {
+                                            troop.level.v = UnityEngine.Random.Range(0, 3);
+                                        }
                                         // troopType
                                         {
-                                            if (enemyTroopTypes.Count > 0)
+                                            BattleRushUI battleRushUI = battleRush.findCallBack<BattleRushUI>();
+                                            if (battleRushUI != null)
                                             {
-                                                troop.troopType.v = enemyTroopTypes[Random.Range(0, enemyTroopTypes.Count)];
+                                                troop.troopType.v = battleRushUI.troopInformations[Random.Range(0, battleRushUI.troopInformations.Count)];
                                             }
                                             else
                                             {
-                                                Logger.LogError("enemyTroopTypes null");
+                                                Logger.LogError("battleRushUI null");
                                             }
                                         }
                                         // Live
@@ -361,13 +375,17 @@ namespace BattleRushS.ArenaS
                                             {
                                                 foreach (Troop troop in team1Troops)
                                                 {
-                                                    if (troop.isRange())
+                                                    switch (troop.getAttackType())
                                                     {
-                                                        rangeCount++;
-                                                    }
-                                                    else
-                                                    {
-                                                        meleeCount++;
+                                                        case Troop.AttackType.Range:
+                                                            rangeCount++;
+                                                            break;
+                                                        case Troop.AttackType.Melee:
+                                                            meleeCount++;
+                                                            break;
+                                                        default:
+                                                            Logger.LogError("unknown type: " + troop.getAttackType());
+                                                            break;
                                                     }
                                                 }
                                             }
@@ -380,37 +398,49 @@ namespace BattleRushS.ArenaS
                                                     // row
                                                     int row = 0;
                                                     {
-                                                        if (troop.isRange())
+                                                        switch (troop.getAttackType())
                                                         {
-                                                            row = 0;
-                                                        }
-                                                        else
-                                                        {
-                                                            row = 1;
+                                                            case Troop.AttackType.Range:
+                                                                row = 0;
+                                                                break;
+                                                            case Troop.AttackType.Melee:
+                                                                row = 1;
+                                                                break;
+                                                            default:
+                                                                Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                break;
                                                         }
                                                     }
                                                     // col
                                                     int col = 0;
                                                     {
-                                                        if (troop.isRange())
+                                                        switch (troop.getAttackType())
                                                         {
-                                                            col = rangeIndex;
-                                                        }
-                                                        else
-                                                        {
-                                                            col = meleeIndex;
+                                                            case Troop.AttackType.Range:
+                                                                col = rangeIndex;
+                                                                break;
+                                                            case Troop.AttackType.Melee:
+                                                                col = meleeIndex;
+                                                                break;
+                                                            default:
+                                                                Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                break;
                                                         }
                                                     }
                                                     // rowNumber
                                                     int rowNumber = 0;
                                                     {
-                                                        if (troop.isRange())
+                                                        switch (troop.getAttackType())
                                                         {
-                                                            rowNumber = rangeCount;
-                                                        }
-                                                        else
-                                                        {
-                                                            rowNumber = meleeCount;
+                                                            case Troop.AttackType.Range:
+                                                                rowNumber = rangeCount;
+                                                                break;
+                                                            case Troop.AttackType.Melee:
+                                                                rowNumber = meleeCount;
+                                                                break;
+                                                            default:
+                                                                Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                break;
                                                         }
                                                     }
                                                     // set position
@@ -424,13 +454,17 @@ namespace BattleRushS.ArenaS
 
                                                     // new index
                                                     {
-                                                        if (troop.isRange())
+                                                        switch (troop.getAttackType())
                                                         {
-                                                            rangeIndex++;
-                                                        }
-                                                        else
-                                                        {
-                                                            meleeIndex++;
+                                                            case Troop.AttackType.Range:
+                                                                rangeIndex++;
+                                                                break;
+                                                            case Troop.AttackType.Melee:
+                                                                meleeIndex++;
+                                                                break;
+                                                            default:
+                                                                Logger.LogError("unknown attack type: " + troop.getAttackType());
+                                                                break;
                                                         }
                                                     }
                                                 }

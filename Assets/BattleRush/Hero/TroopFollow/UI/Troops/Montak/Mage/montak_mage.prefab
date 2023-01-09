@@ -740,10 +740,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 16
   troopAnimator: {fileID: 6321218024343079431}
   animationIdle: {fileID: 7400000, guid: 6f8ee490bf6c0ba41aa95a03cbd3c84d, type: 2}
   animationMove: {fileID: 7400000, guid: 67cdf5d4913721941b863076faec6efe, type: 2}
+  troopName: LUNA
+  attackType: 0
+  unlockPriority: 13
+  modelName: montak_mage
+  armyMaterial: mat_montak_mage_optimized_blue
+  enemyMaterial: mat_montak_mage_optimized_red
+  weapon: troop_montak_magic
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_luna
+  levels:
+  - level: 1
+    hp: 20
+    attack: 14
+    attackRange: 2
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 40
+    attack: 28
+    attackRange: 2
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 80
+    attack: 56
+    attackRange: 2
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_montak_mage
 --- !u!1 &3470496617652614874
 GameObject:
   m_ObjectHideFlags: 0

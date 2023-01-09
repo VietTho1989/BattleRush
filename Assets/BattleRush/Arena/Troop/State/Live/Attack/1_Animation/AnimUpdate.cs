@@ -46,7 +46,7 @@ namespace BattleRushS.ArenaS.TroopS.TroopAttackS
                             {
                                 // damage
                                 {
-                                    if (troop.isRange())
+                                    if (troop.getAttackType() == Troop.AttackType.Range)
                                     {
                                         damage.damage.v = 0.1f;
                                     }
@@ -57,7 +57,7 @@ namespace BattleRushS.ArenaS.TroopS.TroopAttackS
                                 }
                             }
                             // range attackk
-                            if (troop.isRange())
+                            if (troop.getAttackType()== Troop.AttackType.Range)
                             {
                                 Arena arena = this.data.findDataInParent<Arena>();
                                 if (arena != null)

@@ -488,10 +488,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 9
   troopAnimator: {fileID: 8453126237027581231}
   animationIdle: {fileID: 7400000, guid: c1a8091604a6e4c44b25537e9b255493, type: 2}
   animationMove: {fileID: 7400000, guid: 890628f4c05a1a14286b9a4f076b3950, type: 2}
+  troopName: BURRIER
+  attackType: 1
+  unlockPriority: 5
+  modelName: krakee_tank
+  armyMaterial: mat_krakee_tank_optimized_blue
+  enemyMaterial: mat_krakee_tank_optimized_red
+  weapon: troop_krakee_melee
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_burrier
+  levels:
+  - level: 1
+    hp: 30
+    attack: 10
+    attackRange: 0.25
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 60
+    attack: 20
+    attackRange: 0.25
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 120
+    attack: 40
+    attackRange: 0.25
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_krakee_tank
 --- !u!1 &3134802590577257427
 GameObject:
   m_ObjectHideFlags: 0

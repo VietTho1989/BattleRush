@@ -463,10 +463,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 12
   troopAnimator: {fileID: 6930349143706799723}
   animationIdle: {fileID: 7400000, guid: 12c0980339fcb7149942ac1e6dbf3857, type: 2}
   animationMove: {fileID: 7400000, guid: ea54e5194c8ea954bb235e405107958b, type: 2}
+  troopName: TORNADATOR
+  attackType: 1
+  unlockPriority: 10
+  modelName: mantah_melee
+  armyMaterial: mat_mantah_melee_optimized_blue
+  enemyMaterial: mat_mantah_melee_optimized_red
+  weapon: troop_mantah_melee
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_tornadator
+  levels:
+  - level: 1
+    hp: 30
+    attack: 10
+    attackRange: 0.25
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 60
+    attack: 20
+    attackRange: 0.25
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 120
+    attack: 40
+    attackRange: 0.25
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_mantah_melee
 --- !u!1 &2644759704980857662
 GameObject:
   m_ObjectHideFlags: 0

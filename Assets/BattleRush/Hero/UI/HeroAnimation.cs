@@ -36,8 +36,6 @@ namespace BattleRushS
 
         #region Refresh
 
-        public Animator myAnimator;
-
         public override void refresh()
         {
             if (dirty)
@@ -48,8 +46,21 @@ namespace BattleRushS
                     Hero hero = this.data.hero.v.data;
                     if (hero != null)
                     {
-                        Debug.Log("update hero animation");
-                        if (myAnimator != null)
+                        // find hero information
+                        HeroInformation heroInformation = null;
+                        {
+                            HeroSkinUI heroSkinUI = hero.findCallBack<HeroSkinUI>();
+                            if (heroSkinUI != null)
+                            {
+                                heroInformation = heroSkinUI.currentSkin;
+                            }
+                            else
+                            {
+                                Logger.LogError("heroSkinUI null");
+                            }
+                        }
+                        // process
+                        if (heroInformation != null)
                         {
                             BattleRush battleRush = hero.findDataInParent<BattleRush>();
                             if (battleRush != null)
@@ -59,12 +70,12 @@ namespace BattleRushS
                                 {
                                     case BattleRush.State.Type.Load:
                                         {
-                                            myAnimator.Play("Idle");
+                                            heroInformation.playAnimation("Idle");
                                         }
                                         break;
                                     case BattleRush.State.Type.Start:
                                         {
-                                            myAnimator.Play("Idle");
+                                            heroInformation.playAnimation("Idle");
                                         }
                                         break;
                                     case BattleRush.State.Type.Play:
@@ -80,10 +91,10 @@ namespace BattleRushS
                                                             switch (hero.heroMove.v.currentSegment.v.segmentType)
                                                             {
                                                                 case Segment.SegmentType.Run:
-                                                                    myAnimator.Play("Run");
+                                                                    heroInformation.playAnimation("Run");
                                                                     break;
                                                                 case Segment.SegmentType.Arena:
-                                                                    myAnimator.Play("Idle");
+                                                                    heroInformation.playAnimation("Idle");
                                                                     break;
                                                                 default:
                                                                     Logger.LogError("unknown segmentType: "+ hero.heroMove.v.currentSegment.v.segmentType);
@@ -93,19 +104,19 @@ namespace BattleRushS
                                                         else
                                                         {
                                                             Logger.LogError("currentSegment null");
-                                                            myAnimator.Play("Idle");
+                                                            heroInformation.playAnimation("Idle");
                                                         }                                                      
                                                     }                                                   
                                                     break;
                                                 case Play.State.Pause:
-                                                    myAnimator.Play("Idle");
+                                                    heroInformation.playAnimation("Idle");
                                                     break;
                                             }                                           
                                         }
                                         break;
                                     case BattleRush.State.Type.End:
                                         {
-                                            myAnimator.Play("Death");
+                                            heroInformation.playAnimation("Death");
                                         }
                                         break;
                                 }
@@ -118,6 +129,7 @@ namespace BattleRushS
                         else
                         {
                             Logger.LogError("myAnimator null");
+                            dirty = true;
                         }
                     }
                     else

@@ -725,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422471338103854675, guid: 51480ca866ded8e4587b088c48f698be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422471338103854675, guid: 51480ca866ded8e4587b088c48f698be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -733,7 +733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422471338103854675, guid: 51480ca866ded8e4587b088c48f698be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422471338103854675, guid: 51480ca866ded8e4587b088c48f698be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1643,3 +1643,4 @@ MonoBehaviour:
   vfxDeadName: vfx_hero_dead
   unLockType: Purchase
   unlockPrice: 295356
+  myAnimator: {fileID: 0}

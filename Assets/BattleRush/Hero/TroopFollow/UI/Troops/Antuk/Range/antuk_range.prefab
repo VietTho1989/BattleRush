@@ -485,10 +485,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 3
   troopAnimator: {fileID: 5003289974674151297}
   animationIdle: {fileID: 7400000, guid: cd697c9b20fd52a4cbfdc3c4eda6a54e, type: 2}
   animationMove: {fileID: 7400000, guid: 0f1801577e2a6d743a886f70daf74e60, type: 2}
+  troopName: TUBOC
+  attackType: 0
+  unlockPriority: 0
+  modelName: antuk_range
+  armyMaterial: mat_antuk_range_optimized_blue
+  enemyMaterial: mat_antuk_range_optimized_red
+  weapon: troop_antuk_bow
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_tuboc
+  levels:
+  - level: 1
+    hp: 20
+    attack: 14
+    attackRange: 2
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 40
+    attack: 28
+    attackRange: 2
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 80
+    attack: 56
+    attackRange: 2
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_antuk_range
 --- !u!1 &5310891107468074038
 GameObject:
   m_ObjectHideFlags: 0

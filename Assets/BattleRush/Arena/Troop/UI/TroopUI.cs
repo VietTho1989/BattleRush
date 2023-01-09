@@ -44,15 +44,12 @@ namespace BattleRushS.ArenaS
 
         #region Refresh
 
-        private TroopInformation currentTroopTypeModel;
+        private TroopType currentTroopTypeModel;
 
-        public TroopInformation getCurrentTroopTypeModel()
+        public TroopType getCurrentTroopTypeModel()
         {
             return currentTroopTypeModel;
         }
-
-        public List<TroopInformation> troopPrefabs;
-        public TroopInformation defaultTroopPrefab;
 
         private bool isAlreadySetFirstPosition = false;
 
@@ -82,56 +79,78 @@ namespace BattleRushS.ArenaS
                             {
                                 if (currentTroopTypeModel != null)
                                 {
-                                    if (currentTroopTypeModel.troopType == troop.troopType.v)
+                                    if (currentTroopTypeModel.getType() == troop.troopType.v.getType())
                                     {
-                                        isNeedMakeNew = false;
+                                        switch (troop.troopType.v.getType())
+                                        {
+                                            case TroopType.Type.Hero:
+                                                {
+                                                    HeroInformation currentHero = currentTroopTypeModel as HeroInformation;
+                                                    HeroInformation troopType = troop.troopType.v as HeroInformation;
+                                                    if (currentHero.id == troopType.id)
+                                                    {
+                                                        isNeedMakeNew = false;
+                                                    }                                                    
+                                                }
+                                                break;
+                                            case TroopType.Type.Normal:
+                                                {
+                                                    TroopInformation currentTroop = currentTroopTypeModel as TroopInformation;
+                                                    TroopInformation troopType = troop.troopType.v as TroopInformation;
+                                                    if (currentTroop.modelName == troopType.modelName)
+                                                    {
+                                                        isNeedMakeNew = false;
+                                                    }
+                                                }
+                                                break;
+                                            case TroopType.Type.Monster:
+                                                break;
+                                            default:
+                                                Logger.LogError("unknown type: "+troop.troopType.v.getType());
+                                                break;
+                                        }                                       
                                     }
                                 }
                             }
                             // make new
                             if (isNeedMakeNew)
                             {
-                                // find prefab
-                                TroopInformation prefab = null;
+                                // destroy old
                                 {
-                                    foreach (TroopInformation check in troopPrefabs)
+                                    if (currentTroopTypeModel != null)
                                     {
-                                        if (check != null)
-                                        {
-                                            if (check.troopType == troop.troopType.v)
-                                            {
-                                                prefab = check;
-                                                break;
-                                            }
-                                        }
-                                        else
-                                        {
-                                            Logger.LogError("why prefab check null");
-                                        }
+                                        Destroy(currentTroopTypeModel.getGameObject());
                                     }
-                                    // prevent null
-                                    if (prefab == null)
+                                    else
                                     {
-                                        if (currentTroopTypeModel != defaultTroopPrefab)
-                                        {
-                                            prefab = defaultTroopPrefab;
-                                        }
-                                        else
-                                        {
-                                            // already choose default, no need to make new
-                                            isNeedMakeNew = false;
-                                        }                                                                       
+                                        Logger.LogError("currentTroopTypeModel null");
                                     }
                                 }
-                                // process
-                                if (prefab != null)
+                                // instantiate new
+                                switch (troop.troopType.v.getType())
                                 {
-                                    currentTroopTypeModel = Instantiate(prefab, this.transform);
-                                    currentTroopTypeModel.transform.localPosition = Vector3.zero;
-                                }
-                                else
-                                {
-                                    Logger.LogError("prefab null");
+                                    case TroopType.Type.Hero:
+                                        {
+                                            HeroInformation heroInformation = troop.troopType.v as HeroInformation;
+                                            currentTroopTypeModel = Instantiate(heroInformation, this.transform);
+                                            currentTroopTypeModel.getGameObject().transform.localPosition = Vector3.zero;
+                                        }
+                                        break;
+                                    case TroopType.Type.Normal:
+                                        {
+                                            TroopInformation troopInformation = troop.troopType.v as TroopInformation;
+                                            currentTroopTypeModel = Instantiate(troopInformation, this.transform);
+                                            currentTroopTypeModel.getGameObject().transform.localPosition = Vector3.zero;
+                                        }
+                                        break;
+                                    case TroopType.Type.Monster:
+                                        {
+                                            // TODO can hoan thien
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown type: " + troop.troopType.v.getType());
+                                        break;
                                 }
                             }
                         }

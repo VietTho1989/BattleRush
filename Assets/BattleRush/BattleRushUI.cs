@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using BattleRushS.ArenaS;
+using BattleRushS.HeroS;
 using BattleRushS.ObjectS;
 using BattleRushS.StateS;
 using Dreamteck.Forever;
@@ -10,6 +11,9 @@ namespace BattleRushS
 {
     public class BattleRushUI : UIBehavior<BattleRushUI.UIData>
     {
+
+        public List<HeroInformation> heroInformations;
+        public List<TroopInformation> troopInformations;
 
         #region Data
 

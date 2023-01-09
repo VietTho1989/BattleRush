@@ -46,10 +46,11 @@ namespace BattleRushS.ArenaS.TroopS
                         TroopUI troopUI = troopUIData.findCallBack<TroopUI>();
                         if (troopUI != null)
                         {
-                            TroopInformation troopInformation = troopUI.getCurrentTroopTypeModel();
-                            if (troopInformation != null)
+                            // find troopInformation
+                            TroopType troopType = troopUI.getCurrentTroopTypeModel();
+                            if (troopType != null)
                             {
-                                if (troopInformation.troopAnimator != null)
+
                                 {
                                     Troop troop = troopUIData.troop.v.data;
                                     if (troop != null)
@@ -73,7 +74,7 @@ namespace BattleRushS.ArenaS.TroopS
                                                                     isAttack = true;
                                                                     break;
                                                                 default:
-                                                                    Logger.LogError("unknown type: "+ live.troopAttack.v.state.v.getType());
+                                                                    Logger.LogError("unknown type: " + live.troopAttack.v.state.v.getType());
                                                                     break;
                                                             }
                                                         }
@@ -81,21 +82,21 @@ namespace BattleRushS.ArenaS.TroopS
                                                         {
                                                             if (isAttack)
                                                             {
-                                                                troopInformation.troopAnimator.Play("Attack");
+                                                                troopType.playAnimation("Attack");
                                                             }
                                                             else
                                                             {
                                                                 switch (live.troopMove.v.sub.v.getType())
                                                                 {
                                                                     case TroopMove.Sub.Type.Idle:
-                                                                        troopInformation.troopAnimator.Play("Idle");
+                                                                        troopType.playAnimation("Idle");
                                                                         break;
                                                                     case TroopMove.Sub.Type.MoveToDest:
-                                                                        troopInformation.troopAnimator.Play("Move");
+                                                                        troopType.playAnimation("Move");
                                                                         break;
                                                                     default:
                                                                         Logger.LogError("unknown type: " + live.troopMove.v.sub.v.getType());
-                                                                        troopInformation.troopAnimator.Play("Idle");
+                                                                        troopType.playAnimation("Idle");
                                                                         break;
                                                                 }
                                                             }
@@ -105,7 +106,7 @@ namespace BattleRushS.ArenaS.TroopS
                                                 break;
                                             case Troop.State.Type.Die:
                                                 {
-                                                    troopInformation.troopAnimator.Play("Die");
+                                                    troopType.playAnimation("Die");
                                                 }
                                                 break;
                                             default:
@@ -118,10 +119,6 @@ namespace BattleRushS.ArenaS.TroopS
                                         Logger.LogError("troop null");
                                     }
                                 }
-                                else
-                                {
-                                    Logger.LogError("troopAnimator null");
-                                }                               
                             }
                             else
                             {

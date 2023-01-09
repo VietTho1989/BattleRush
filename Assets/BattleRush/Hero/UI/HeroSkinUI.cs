@@ -35,11 +35,7 @@ namespace BattleRushS
 
         #region Refresh
 
-        public GameObject eyes;
-        public GameObject heads;
-        public GameObject legs;
-        public GameObject tops;
-        public GameObject wings;
+        public HeroInformation currentSkin;
 
         public override void refresh()
         {
@@ -51,28 +47,39 @@ namespace BattleRushS
                     Hero hero = this.data.hero.v.data;
                     if (hero != null)
                     {
-                        GameObject[] modules = { eyes, heads, legs, tops, wings };
-                        string skinName = TroopFollow.getHeroSkin(hero.troopType.v);
-                        foreach(GameObject module in modules)
+                        // find
+                        bool needMakeNew = true;
                         {
-                            // find chosen skin
-                            int chosenIndex = 0;
+                            if (currentSkin != null && hero.heroInformation.v != null)
                             {
-                                for (int i = 0; i < module.transform.childCount; i++)
+                                if (currentSkin.id == hero.heroInformation.v.id)
                                 {
-                                    Transform child = module.transform.GetChild(i);
-                                    if (child.name.Contains(skinName))
-                                    {
-                                        chosenIndex = i;
-                                        break;
-                                    }
+                                    needMakeNew = false;
                                 }
                             }
-                            // process
-                            for(int i=0; i<module.transform.childCount; i++)
+                        }
+                        // make new
+                        if (needMakeNew)
+                        {
+                            if (hero.heroInformation.v != null)
                             {
-                                module.transform.GetChild(i).gameObject.SetActive(i == chosenIndex);
+                                // delete current
+                                {
+                                    if (currentSkin != null)
+                                    {
+                                        Destroy(currentSkin.gameObject);
+                                    }
+                                }
+                                // instantiate
+                                {
+                                    currentSkin = Instantiate(hero.heroInformation.v, this.transform);
+                                    currentSkin.transform.localPosition = Vector3.zero;
+                                }                              
                             }
+                            else
+                            {
+                                Logger.LogError("heroInformation null");
+                            }                          
                         }
                     }
                     else
@@ -163,7 +170,7 @@ namespace BattleRushS
             {
                 switch ((Hero.Property)wrapProperty.n)
                 {
-                    case Hero.Property.troopType:
+                    case Hero.Property.heroInformation:
                         dirty = true;
                         break;
                     default:

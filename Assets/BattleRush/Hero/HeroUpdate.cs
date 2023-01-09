@@ -17,7 +17,34 @@ namespace BattleRushS
                 dirty = false;
                 if (this.data != null)
                 {
-
+                    // prevent skin null
+                    {
+                        if (this.data.heroInformation.v == null)
+                        {
+                            BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                            if (battleRush != null)
+                            {
+                                BattleRushUI battleRushUI = battleRush.findCallBack<BattleRushUI>();
+                                if (battleRushUI != null)
+                                {
+                                    this.data.heroInformation.v = battleRushUI.heroInformations[Random.Range(0, battleRushUI.heroInformations.Count)];
+                                }
+                                else
+                                {
+                                    Logger.LogError("battleRushUI null");
+                                }
+                            }
+                            else
+                            {
+                                Logger.LogError("battleRush null");
+                            }
+                        }
+                        // prevent in another frame
+                        if (this.data.heroInformation.v == null)
+                        {
+                            dirty = true;
+                        }
+                    }
                 }
                 else
                 {
@@ -121,7 +148,7 @@ namespace BattleRushS
             {
                 switch ((Hero.Property)wrapProperty.n)
                 {
-                    case Hero.Property.troopType:
+                    case Hero.Property.heroInformation:
                         dirty = true;
                         break;
                     case Hero.Property.heroMove:

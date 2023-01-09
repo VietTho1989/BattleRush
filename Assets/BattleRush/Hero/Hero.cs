@@ -20,7 +20,7 @@ namespace BattleRushS
 
         #region skin
 
-        public VO<TroopFollow.TroopType> troopType;
+        public VO<HeroInformation> heroInformation;
 
         #endregion
 
@@ -33,7 +33,7 @@ namespace BattleRushS
         public enum Property
         {
             hitPoint,
-            troopType,
+            heroInformation,
             heroMove,
             troopFollows
         }
@@ -41,30 +41,7 @@ namespace BattleRushS
         public Hero() : base()
         {
             this.hitPoint = new VO<float>(this, (byte)Property.hitPoint, 1);
-            // skin
-            {
-                TroopFollow.TroopType skin = TroopFollow.TroopType.AntukAir;
-                {
-                    // find
-                    List<TroopFollow.TroopType> allHeroesType = new List<TroopFollow.TroopType>();
-                    {
-                        foreach (TroopFollow.TroopType check in System.Enum.GetValues(typeof(TroopFollow.TroopType)))
-                        {
-                            if (TroopFollow.IsHero(check))
-                            {
-                                allHeroesType.Add(check);
-                            }
-                        }
-                    }
-                    // process
-                    if (allHeroesType.Count > 0)
-                    {
-                        skin = allHeroesType[Random.Range(0, allHeroesType.Count)];
-                    }
-                    Logger.Log("Hero random skin: " + skin);
-                }                
-                this.troopType = new VO<TroopFollow.TroopType>(this, (byte)Property.troopType, skin);
-            }
+            this.heroInformation = new VO<HeroInformation>(this, (byte)Property.heroInformation, null);
             this.heroMove = new VD<HeroMove>(this, (byte)Property.heroMove, new HeroMove());
             this.troopFollows = new LD<TroopFollow>(this, (byte)Property.troopFollows);
         }

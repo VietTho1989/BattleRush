@@ -198,8 +198,8 @@ namespace BattleRushS
                                                                             troopFollow.uid = troopCage.troops.makeId();
                                                                             // troopType
                                                                             {
-                                                                                System.Array values = System.Enum.GetValues(typeof(TroopFollow.TroopType));
-                                                                                troopFollow.troopType.v = (TroopFollow.TroopType)values.GetValue(Random.Range(0, values.Length));
+                                                                                // TODO tam de random
+                                                                                troopFollow.troopType.v = battleRushUI.troopInformations[Random.Range(0, battleRushUI.troopInformations.Count)];
                                                                             }
                                                                             // TODO can hoan thien them thong tin
                                                                             {

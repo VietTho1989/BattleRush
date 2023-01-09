@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using BattleRushS.ArenaS.TroopS.TroopAttackS;
 using BattleRushS.ArenaS.TroopS.TroopMoveS;
+using BattleRushS.HeroS;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -70,17 +71,56 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                         // find range
                                         float rangeToAttack = 10.0f;
                                         {
-                                            if (troop.isRange())
+                                            /*if (troop.getAttackType() == Troop.AttackType.Range)
                                             {
                                                 rangeToAttack = 10.0f;
                                             }
                                             else
                                             {
                                                 rangeToAttack = 1.0f;
-                                            }
+                                            }*/
+                                            const float Ratio = 8;
+                                            switch (troop.troopType.v.getType())
+                                            {
+                                                case TroopType.Type.Hero:
+                                                    {
+                                                        rangeToAttack = 2.5f * Ratio;
+                                                    }
+                                                    break;
+                                                case TroopType.Type.Normal:
+                                                    {
+                                                        TroopInformation troopInformation = troop.troopType.v as TroopInformation;
+                                                        // find
+                                                        float range = 2;
+                                                        {
+                                                            /*foreach(TroopInformation.Level level in troopInformation.levels)
+                                                            {
+
+                                                            }*/
+                                                            TroopInformation.Level level = troopInformation.levels.Find(check => check.level == troop.level.v);
+                                                            if (level.level == troop.level.v)
+                                                            {
+                                                                range = level.attackRange;
+                                                                range = Mathf.Max(range, 0.25f);
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("level error");
+                                                            }
+                                                        }                                                    
+                                                        rangeToAttack = range * Ratio;
+                                                    }
+                                                    break;
+                                                case TroopType.Type.Monster:
+                                                    break;
+                                                default:
+                                                    Logger.LogError("unknown type: " + troop.troopType.v.getType());
+                                                    break;
+                                            }                                           
                                         }
                                         // process
-                                        if(Vector3.Distance(troopUI.transform.position, targetTroopUI.transform.position) < rangeToAttack)
+                                        Logger.Log("AttackUpdate: range to attack: " + rangeToAttack);
+                                        if(Vector3.Distance(troopUI.transform.position, targetTroopUI.transform.position) <= rangeToAttack)
                                         {
                                             isInRange = true;
                                         }

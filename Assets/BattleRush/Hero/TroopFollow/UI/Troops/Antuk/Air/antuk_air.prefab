@@ -1120,7 +1120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8559324983397443881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: -12}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1154,10 +1154,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 0
   troopAnimator: {fileID: 2586618135638634984}
   animationIdle: {fileID: 7400000, guid: 80e6eade4844c7048ab35e5f533882b9, type: 2}
   animationMove: {fileID: 7400000, guid: 2ad094bcd890461488422f7e10dfde43, type: 2}
+  troopName: MEZAA
+  attackType: 0
+  unlockPriority: 0
+  modelName: antuk_air
+  armyMaterial: mat_antuk_air_optimized_blue
+  enemyMaterial: mat_antuk_air_optimized_red
+  weapon: troop_antuk_magic
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_mezaa
+  levels:
+  - level: 1
+    hp: 20
+    attack: 14
+    attackRange: 2
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 40
+    attack: 28
+    attackRange: 2
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 80
+    attack: 56
+    attackRange: 2
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_antuk_air
 --- !u!1 &8748287444347338083
 GameObject:
   m_ObjectHideFlags: 0

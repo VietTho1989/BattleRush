@@ -346,10 +346,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 4
   troopAnimator: {fileID: 8572822108141680306}
   animationIdle: {fileID: 7400000, guid: 7a8a63807b61ab045be64385a4f62907, type: 2}
   animationMove: {fileID: 7400000, guid: 7497afb5c4be4dc419f36c6e49ed6249, type: 2}
+  troopName: ARMOK
+  attackType: 1
+  unlockPriority: 0
+  modelName: antuk_tank
+  armyMaterial: mat_antuk_tank_optimized_blue
+  enemyMaterial: mat_antuk_tank_optimized_red
+  weapon: troop_antuk_melee
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_armok
+  levels:
+  - level: 1
+    hp: 30
+    attack: 10
+    attackRange: 0.25
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 60
+    attack: 20
+    attackRange: 0.25
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 120
+    attack: 40
+    attackRange: 0.25
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_antuk_tank
 --- !u!1 &2676571595436906831
 GameObject:
   m_ObjectHideFlags: 0

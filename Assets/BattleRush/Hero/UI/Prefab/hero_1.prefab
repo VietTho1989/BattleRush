@@ -1643,3 +1643,9 @@ MonoBehaviour:
   vfxDeadName: vfx_hero_dead
   unLockType: Default
   unlockPrice: 0
+  myAnimator: {fileID: 8679468928122710836}
+--- !u!95 &8679468928122710836 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2244820273444776433, guid: a01f5c1af9c1b1048b4104ac9c9908cb, type: 3}
+  m_PrefabInstance: {fileID: 7445751061933851333}
+  m_PrefabAsset: {fileID: 0}

@@ -548,10 +548,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 22
   troopAnimator: {fileID: 5828121896982390470}
   animationIdle: {fileID: 7400000, guid: b8cc41c047e095446bbca330f5d57187, type: 2}
   animationMove: {fileID: 7400000, guid: c53e8263724a55448806e8268e6db5e3, type: 2}
+  troopName: DOCKER
+  attackType: 1
+  unlockPriority: 20
+  modelName: muu_melee
+  armyMaterial: mat_muu_melee_optimized_blue
+  enemyMaterial: mat_muu_melee_optimized_red
+  weapon: troop_muu_melee
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_docker
+  levels:
+  - level: 1
+    hp: 30
+    attack: 10
+    attackRange: 0.25
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 60
+    attack: 20
+    attackRange: 0.25
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 120
+    attack: 40
+    attackRange: 0.25
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_muu_melee
 --- !u!1 &3156617200277125647
 GameObject:
   m_ObjectHideFlags: 0

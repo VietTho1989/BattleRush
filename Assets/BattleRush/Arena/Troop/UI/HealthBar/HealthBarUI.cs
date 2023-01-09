@@ -83,6 +83,10 @@ namespace BattleRushS.ArenaS
                                 Troop troop = troopUIData.troop.v.data;
                                 if (troop != null)
                                 {
+                                    // name
+                                    {
+                                        this.name = "HealthBarUI" + troop.uid;
+                                    }
                                     // team color
                                     {
                                         switch (troop.teamId.v)

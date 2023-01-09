@@ -628,10 +628,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 23
   troopAnimator: {fileID: 3156021660731969715}
   animationIdle: {fileID: 7400000, guid: 3b27c138c4187dc458f816732bff4439, type: 2}
   animationMove: {fileID: 7400000, guid: c95514930cef48742ba8b585812db76f, type: 2}
+  troopName: COKOUM
+  attackType: 0
+  unlockPriority: 19
+  modelName: muu_range
+  armyMaterial: mat_muu_range_optimized_blue
+  enemyMaterial: mat_muu_range_optimized_red
+  weapon: troop_muu_bow
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_cokoum
+  levels:
+  - level: 1
+    hp: 20
+    attack: 14
+    attackRange: 2
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 40
+    attack: 28
+    attackRange: 2
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 80
+    attack: 56
+    attackRange: 2
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_muu_range
 --- !u!1 &4580090080908203788
 GameObject:
   m_ObjectHideFlags: 0

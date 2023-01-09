@@ -839,10 +839,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dabe076abad1a40943ff7a7a90df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopType: 14
   troopAnimator: {fileID: 7685341250909877230}
   animationIdle: {fileID: 7400000, guid: 99d421257d9dfb2418adb2f7394a1a2b, type: 2}
   animationMove: {fileID: 7400000, guid: 3192a96b6f83eaa4faffdae1a0f2e6b3, type: 2}
+  troopName: TEETOUM
+  attackType: 1
+  unlockPriority: 11
+  modelName: mantah_tank
+  armyMaterial: mat_mantah_tank_optimized_blue
+  enemyMaterial: mat_mantah_tank_optimized_red
+  weapon: troop_mantah_melee
+  vfxDeadName: vfx_troop_dead
+  portraitName: portrait_teetoum
+  levels:
+  - level: 1
+    hp: 30
+    attack: 10
+    attackRange: 0.25
+    scale: 1.2
+    vfxLevelAuraName: 
+  - level: 2
+    hp: 60
+    attack: 20
+    attackRange: 0.25
+    scale: 1.4
+    vfxLevelAuraName: aura_troop_level2
+  - level: 3
+    hp: 120
+    attack: 40
+    attackRange: 0.25
+    scale: 1.6
+    vfxLevelAuraName: aura_troop_level3
+  potraitTroopUnlockName: portrait_troop_unlock_mantah_tank
 --- !u!1 &4413733570944362349
 GameObject:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ namespace BattleRushS.HeroS
                             {
                                 if (currentTroopTypeModel != null)
                                 {
-                                    if (currentTroopTypeModel.troopType == troopFollow.troopType.v)
+                                    if (currentTroopTypeModel.modelName == troopFollow.troopType.v.modelName)
                                     {
                                         isNeedMakeNew = false;
                                     }
@@ -68,48 +68,22 @@ namespace BattleRushS.HeroS
                             // make new
                             if (isNeedMakeNew)
                             {
-                                // find prefab
-                                TroopInformation prefab = null;
+                                // destroy old
                                 {
-                                    // find
-                                    foreach(TroopInformation check in troopPrefabs)
+                                    if (currentTroopTypeModel != null)
                                     {
-                                        if (check != null)
-                                        {
-                                            if (check.troopType == troopFollow.troopType.v)
-                                            {
-                                                prefab = check;
-                                                break;
-                                            }
-                                        }
-                                        else
-                                        {
-                                            Logger.LogError("why prefab check null");
-                                        }
-                                    }
-                                    // prevent null
-                                    if (prefab == null)
-                                    {
-                                        if (currentTroopTypeModel != defaultTroopPrefab)
-                                        {
-                                            prefab = defaultTroopPrefab;
-                                        }
-                                        else
-                                        {
-                                            // already choose default, no need to make new
-                                            isNeedMakeNew = false;
-                                        }
+                                        Destroy(currentTroopTypeModel.getGameObject());
                                     }
                                 }
-                                // process
-                                if (prefab != null)
+                                // instantiate new
+                                if (troopFollow.troopType.v != null)
                                 {
-                                    currentTroopTypeModel = Instantiate(prefab, this.transform);
+                                    currentTroopTypeModel = Instantiate(troopFollow.troopType.v, this.transform);
                                     currentTroopTypeModel.transform.localPosition = Vector3.zero;
                                 }
                                 else
                                 {
-                                    Logger.LogError("prefab null");
+                                    Logger.LogError("troop type null");
                                 }
                             }
                         }

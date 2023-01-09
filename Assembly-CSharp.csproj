@@ -434,6 +434,7 @@
     <Compile Include="Assets\CommonLibrary\Common\Language\Locale.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshRenderer.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\Collide\WayUI.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Troop\TroopType.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ushort.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\ToastData.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\Attack\AttackUpdate.cs" />
