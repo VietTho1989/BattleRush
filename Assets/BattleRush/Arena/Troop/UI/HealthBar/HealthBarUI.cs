@@ -123,7 +123,28 @@ namespace BattleRushS.ArenaS
                                             }
                                         }
                                         fillImage.fillAmount = Mathf.Clamp(hitPoint, 0, 1);
-                                    }                                    
+                                    }
+                                    // delta
+                                    {
+                                        TroopUI troopUI = troopUIData.findCallBack<TroopUI>();
+                                        if (troopUI != null)
+                                        {
+                                            Collider collider = troopUI.GetComponentInChildren<Collider>();
+                                            if (collider != null)
+                                            {
+                                                Logger.Log("HealthBarUI: bounds: " + collider.bounds.size);
+                                                delta = collider.bounds.size.y / 2 + 0.5f;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("collider null");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("troopUI null");
+                                        }
+                                    }
                                 }
                                 else
                                 {
@@ -159,6 +180,8 @@ namespace BattleRushS.ArenaS
 
         private TroopUI troopUI = null;
 
+        float delta = 1.5f;
+
         public override void LateUpdate()
         {
             base.Update();
@@ -186,7 +209,7 @@ namespace BattleRushS.ArenaS
             {
                 if (troopUI != null)
                 {
-                    this.transform.position = new Vector3(troopUI.transform.position.x, troopUI.transform.position.y + 1.5f, troopUI.transform.position.z);
+                    this.transform.position = new Vector3(troopUI.transform.position.x, troopUI.transform.position.y + delta, troopUI.transform.position.z);
                 }
                 else
                 {

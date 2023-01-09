@@ -482,12 +482,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 190351494}
-  - component: {fileID: 190351507}
+  - component: {fileID: 190351508}
   - component: {fileID: 190351498}
   - component: {fileID: 190351497}
   - component: {fileID: 190351504}
   - component: {fileID: 190351505}
   - component: {fileID: 190351506}
+  - component: {fileID: 190351507}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -650,6 +651,20 @@ MonoBehaviour:
   trashInstanceId: 0
   currentSkin: {fileID: 208435939}
 --- !u!136 &190351507
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190351493}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!136 &190351508
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

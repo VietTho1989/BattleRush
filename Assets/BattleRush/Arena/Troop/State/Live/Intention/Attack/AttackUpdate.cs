@@ -100,8 +100,7 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                                             TroopInformation.Level level = troopInformation.levels.Find(check => check.level == troop.level.v);
                                                             if (level.level == troop.level.v)
                                                             {
-                                                                range = level.attackRange;
-                                                                range = Mathf.Max(range, 0.25f);
+                                                                rangeToAttack = level.attackRange;                                                                
                                                             }
                                                             else
                                                             {
@@ -116,7 +115,8 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                                 default:
                                                     Logger.LogError("unknown type: " + troop.troopType.v.getType());
                                                     break;
-                                            }                                           
+                                            }
+                                            rangeToAttack = Mathf.Max(rangeToAttack, 0.25f*Ratio);
                                         }
                                         // process
                                         Logger.Log("AttackUpdate: range to attack: " + rangeToAttack);
