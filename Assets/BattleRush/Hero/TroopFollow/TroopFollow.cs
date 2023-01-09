@@ -33,7 +33,10 @@ namespace BattleRushS.HeroS
         {
             this.troopType = new VO<TroopInformation>(this, (byte)Property.troopType, null);
             this.hitPoint = new VO<float>(this, (byte)Property.hitPoint, 1);
-            this.level = new VO<int>(this, (byte)Property.level, 0);
+            // level
+            {
+                this.level = new VO<int>(this, (byte)Property.level, 1);
+            }           
         }
 
         #endregion

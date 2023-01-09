@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using BattleRushS.ArenaS.ProjectileS;
+using BattleRushS.HeroS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS.TroopS.TroopAttackS
@@ -46,14 +47,46 @@ namespace BattleRushS.ArenaS.TroopS.TroopAttackS
                             {
                                 // damage
                                 {
-                                    if (troop.getAttackType() == Troop.AttackType.Range)
+                                    float damageNumber = 14.0f;
                                     {
-                                        damage.damage.v = 0.1f;
+                                        if (troop.troopType.v != null)
+                                        {
+                                            switch (troop.troopType.v.getType())
+                                            {
+                                                case TroopType.Type.Hero:
+                                                    {
+                                                        damageNumber = 28.0f;
+                                                    }
+                                                    break;
+                                                case TroopType.Type.Normal:
+                                                    {
+                                                        TroopInformation troopInformation = troop.troopType.v as TroopInformation;
+                                                        // find
+                                                        TroopInformation.Level level = troopInformation.levels.Find(check => check.level == troop.level.v);
+                                                        // set
+                                                        if (level != null)
+                                                        {
+                                                            damageNumber = level.attack;
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("level null");
+                                                        }
+                                                    }
+                                                    break;
+                                                case TroopType.Type.Monster:
+                                                    break;
+                                                default:
+                                                    Logger.LogError("unknown type: "+troop.troopType.v);
+                                                    break;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("troop type null");
+                                        }
                                     }
-                                    else
-                                    {
-                                        damage.damage.v = 0.2f;
-                                    }
+                                    damage.damage.v = damageNumber;
                                 }
                             }
                             // range attackk

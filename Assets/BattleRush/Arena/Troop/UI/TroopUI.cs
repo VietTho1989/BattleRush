@@ -154,6 +154,40 @@ namespace BattleRushS.ArenaS
                                 }
                             }
                         }
+                        // scale
+                        {
+                            float scale = 1.0f;
+                            {
+                                switch (troop.troopType.v.getType())
+                                {
+                                    case TroopType.Type.Hero:
+                                        break;
+                                    case TroopType.Type.Normal:
+                                        {
+                                            TroopInformation troopInformation = troop.troopType.v as TroopInformation;
+                                            TroopInformation.Level level = troopInformation.levels.Find(check => check.level == troop.level.v);
+                                            if (level != null)
+                                            {
+                                                scale = level.scale;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("level null");
+                                            }
+                                        }
+                                        break;
+                                    case TroopType.Type.Monster:
+                                        {
+                                            // TODO can hoan thien
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown type: " + troop.troopType.v.getType());
+                                        break;
+                                }
+                            }
+                            this.transform.localScale = new Vector3(scale, scale, scale);
+                        }
                         // position
                         {
                             Arena arena = troop.findDataInParent<Arena>();

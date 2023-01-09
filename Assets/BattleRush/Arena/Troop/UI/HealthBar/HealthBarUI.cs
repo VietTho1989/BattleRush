@@ -126,14 +126,14 @@ namespace BattleRushS.ArenaS
                                     }
                                     // delta
                                     {
-                                        TroopUI troopUI = troopUIData.findCallBack<TroopUI>();
+                                        /*TroopUI troopUI = troopUIData.findCallBack<TroopUI>();
                                         if (troopUI != null)
                                         {
                                             Collider collider = troopUI.GetComponentInChildren<Collider>();
                                             if (collider != null)
                                             {
                                                 Logger.Log("HealthBarUI: bounds: " + collider.bounds.size);
-                                                delta = collider.bounds.size.y / 2 + 0.5f;
+                                                delta = collider.gameObject.transform.localScale.y * collider.bounds.size.y / 2 + 0.5f;
                                             }
                                             else
                                             {
@@ -143,6 +143,24 @@ namespace BattleRushS.ArenaS
                                         else
                                         {
                                             Logger.LogError("troopUI null");
+                                        }*/
+                                        switch (troop.troopType.v.getType())
+                                        {
+                                            case TroopType.Type.Hero:
+                                                delta = 3.0f;
+                                                break;
+                                            case TroopType.Type.Monster:
+                                                delta = 3.0f;
+                                                break;
+                                            case TroopType.Type.Normal:
+                                                delta = 1.5f;
+                                                break;
+                                            default:
+                                                {
+                                                    delta = 1.5f;
+                                                    Logger.LogError("unknown troop type: " + troop.troopType.v.getType());
+                                                }                                                
+                                                break;
                                         }
                                     }
                                 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using BattleRushS.ArenaS.TroopS;
+using BattleRushS.HeroS;
 using UnityEngine;
 
 namespace BattleRushS.ArenaS
@@ -34,7 +35,61 @@ namespace BattleRushS.ArenaS
                                 {
                                     if (live.hitpoint.v > 0)
                                     {
-                                        live.hitpoint.v = Mathf.Clamp(live.hitpoint.v - damage.damage.v, 0, 1);
+                                        // find percent
+                                        float percent = 0.1f;
+                                        {
+                                            // find hp
+                                            float hp = 100;
+                                            {
+                                                Troop troop = this.data.findDataInParent<Troop>();
+                                                if (troop != null)
+                                                {
+                                                    if (troop.troopType.v != null)
+                                                    {
+                                                        switch (troop.troopType.v.getType())
+                                                        {
+                                                            case TroopType.Type.Hero:
+                                                                {
+                                                                    // TODO can hoan thien
+                                                                }
+                                                                break;
+                                                            case TroopType.Type.Normal:
+                                                                break;
+                                                            case TroopType.Type.Monster:
+                                                                {
+                                                                    TroopInformation troopInformation = troop.troopType.v as TroopInformation;
+                                                                    TroopInformation.Level level = troopInformation.levels.Find(check => check.level == troop.level.v);
+                                                                    if (level != null)
+                                                                    {
+                                                                        hp = level.hp;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        Logger.LogError("level null");
+                                                                    }
+                                                                }
+                                                                break;
+                                                            default:
+                                                                Logger.LogError("unknown troop type: " + troop.troopType.v.getType());
+                                                                break;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        Logger.LogError("troopType null");
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    Logger.LogError("troop null");
+                                                }
+                                                // prevent = 0
+                                                hp = Mathf.Max(hp, 1.0f);
+                                            }
+                                            percent = damage.damage.v / hp;
+                                        }
+                                        // process
+                                        live.hitpoint.v = Mathf.Clamp(live.hitpoint.v - percent, 0, 1);
                                     }
                                 }
                                 // remove

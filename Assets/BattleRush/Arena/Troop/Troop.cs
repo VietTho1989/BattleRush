@@ -113,7 +113,7 @@ namespace BattleRushS.ArenaS
                 this.formationPosition = new VO<Vector3>(this, (byte)Property.formationPosition, Vector3.zero);
             }
             this.teamId = new VO<int>(this, (byte)Property.teamId, 0);
-            this.level = new VO<int>(this, (byte)Property.level, 0);
+            this.level = new VO<int>(this, (byte)Property.level, 1);
             this.troopType = new VO<TroopType>(this, (byte)Property.troopType, null);
             this.worldPosition = new VO<Vector3>(this, (byte)Property.worldPosition, Vector3.zero);
             this.state = new VD<State>(this, (byte)Property.state, new Live());

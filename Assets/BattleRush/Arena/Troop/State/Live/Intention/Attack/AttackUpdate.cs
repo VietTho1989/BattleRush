@@ -98,9 +98,9 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
 
                                                             }*/
                                                             TroopInformation.Level level = troopInformation.levels.Find(check => check.level == troop.level.v);
-                                                            if (level.level == troop.level.v)
+                                                            if (level != null)
                                                             {
-                                                                rangeToAttack = level.attackRange;                                                                
+                                                                range = level.attackRange;
                                                             }
                                                             else
                                                             {

@@ -332,7 +332,7 @@ namespace BattleRushS.ArenaS
                                         troop.teamId.v = 1;
                                         // level
                                         {
-                                            troop.level.v = UnityEngine.Random.Range(0, 3);
+                                            troop.level.v = UnityEngine.Random.Range(1, 3);
                                         }
                                         // troopType
                                         {

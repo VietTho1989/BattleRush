@@ -55,7 +55,7 @@ namespace BattleRushS.HeroS
         #region level
 
         [System.Serializable]
-        public struct Level
+        public class Level
         {
             public int level;
             public float hp;

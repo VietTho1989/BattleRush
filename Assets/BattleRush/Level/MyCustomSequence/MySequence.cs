@@ -201,6 +201,11 @@ namespace BattleRushS
                                                                                 // TODO tam de random
                                                                                 troopFollow.troopType.v = battleRushUI.troopInformations[Random.Range(0, battleRushUI.troopInformations.Count)];
                                                                             }
+                                                                            // level
+                                                                            {
+                                                                                // TODO de tam random
+                                                                                troopFollow.level.v = Random.Range(1, 3);
+                                                                            }
                                                                             // TODO can hoan thien them thong tin
                                                                             {
 
