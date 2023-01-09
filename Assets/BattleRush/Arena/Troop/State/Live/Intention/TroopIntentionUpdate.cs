@@ -41,6 +41,27 @@ namespace BattleRushS.ArenaS.TroopS
                                                 Logger.Log("TroopIntentionUpdate move troop to formation");
                                                 MoveToDest moveToDest = this.data.intention.newOrOld<MoveToDest>();
                                                 {
+                                                    // delay
+                                                    {
+                                                        // find
+                                                        float delay = 0;
+                                                        {
+                                                            Troop troop = this.data.findDataInParent<Troop>();
+                                                            if (troop != null)
+                                                            {
+                                                                if (troop.troopType.v.getType() == TroopType.Type.Hero)
+                                                                {
+                                                                    delay = 5.0f;
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("troop null");
+                                                            }
+                                                        }
+                                                        // process
+                                                        moveToDest.delay.v = delay;
+                                                    }
                                                     // dest
                                                     {
                                                         Troop troop = this.data.findDataInParent<Troop>();

@@ -23,11 +23,23 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                         TroopMove troopMove = live.troopMove.v;
                         if (troopMove != null)
                         {
-                            TroopMoveS.MoveToDest moveToDest = troopMove.sub.newOrOld<TroopMoveS.MoveToDest>();
+                            if (this.data.time.v >= this.data.delay.v)
                             {
-                                moveToDest.dest.v = this.data.dest.v;
+                                TroopMoveS.MoveToDest moveToDest = troopMove.sub.newOrOld<TroopMoveS.MoveToDest>();
+                                {
+                                    moveToDest.dest.v = this.data.dest.v;
+                                }
+                                troopMove.sub.v = moveToDest;
                             }
-                            troopMove.sub.v = moveToDest;
+                            else
+                            {
+                                // wait for some time before start to move
+                                TroopMoveS.Idle idle = troopMove.sub.newOrOld<TroopMoveS.Idle>();
+                                {
+                                    
+                                }
+                                troopMove.sub.v = idle;
+                            }
                         }
                         else
                         {
@@ -56,6 +68,18 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
         #region check when agent stop
 
         private NavMeshAgent agent;
+
+        private void FixedUpdate()
+        {
+            if (this.data != null)
+            {
+                this.data.time.v += Time.fixedDeltaTime;
+            }
+            else
+            {
+                Logger.LogError("data null");
+            }
+        }
 
         public override void Update()
         {
@@ -189,6 +213,12 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
             {
                 switch ((MoveToDest.Property)wrapProperty.n)
                 {
+                    case MoveToDest.Property.time:
+                        dirty = true;
+                        break;
+                    case MoveToDest.Property.delay:
+                        dirty = true;
+                        break;
                     case MoveToDest.Property.dest:
                         dirty = true;
                         break;

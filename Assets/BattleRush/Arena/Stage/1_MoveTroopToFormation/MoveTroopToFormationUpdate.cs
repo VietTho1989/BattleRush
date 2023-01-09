@@ -100,16 +100,6 @@ namespace BattleRushS.ArenaS
                                                 {
                                                     Logger.LogError("troopIntentionUpdate null");
                                                 }
-                                                /*TroopIntention troopIntention = live.intention.v;
-                                                MoveToDest moveToDest = troopIntention.intention.newOrOld<MoveToDest>();
-                                                {
-                                                    // dest
-                                                    {
-                                                        moveToDest.dest.v = troop.formationPosition.v;
-                                                    }
-                                                    Logger.Log("MoveTroopToFormationUpdate move to dest: " + troop.uid + ": " + moveToDest.dest.v);
-                                                }
-                                                troopIntention.intention.v = moveToDest;*/
                                             }
                                         }
                                         break;
