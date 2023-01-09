@@ -51,7 +51,7 @@ namespace BattleRushS.ArenaS.TroopS
                                                             {
                                                                 if (troop.troopType.v.getType() == TroopType.Type.Hero)
                                                                 {
-                                                                    delay = 5.0f;
+                                                                    delay = 3.0f;
                                                                 }
                                                             }
                                                             else
@@ -100,6 +100,9 @@ namespace BattleRushS.ArenaS.TroopS
                                             case TroopIntention.Intention.Type.Rest:
                                                 needFindTargetToAttack = true;
                                                 break;
+                                            case TroopIntention.Intention.Type.MoveToDest:
+                                                needFindTargetToAttack = true;
+                                                break;
                                             case TroopIntention.Intention.Type.Attack:
                                                 {
                                                     Attack attack = this.data.intention.v as Attack;
@@ -133,7 +136,7 @@ namespace BattleRushS.ArenaS.TroopS
                                                 }
                                                 break;
                                             default:
-                                                Logger.LogError("unknown type: "+this.data.intention.v.getType());
+                                                Logger.LogError("unknown type: " + this.data.intention.v.getType());
                                                 break;
                                         }
                                     }

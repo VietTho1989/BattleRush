@@ -951,18 +951,21 @@ MonoBehaviour:
     attackRange: 2
     scale: 1.2
     vfxLevelAuraName: 
+    auraPrefab: {fileID: 0}
   - level: 2
     hp: 40
     attack: 28
     attackRange: 2
     scale: 1.4
     vfxLevelAuraName: aura_troop_level2
+    auraPrefab: {fileID: 8687632752242766052, guid: 82b9d25cdeda22344bd0409fd08fbc9c, type: 3}
   - level: 3
     hp: 80
     attack: 56
     attackRange: 2
     scale: 1.6
     vfxLevelAuraName: aura_troop_level3
+    auraPrefab: {fileID: 8337946000938523235, guid: 3f77f8ac30573c346a607f99d61a65e2, type: 3}
   potraitTroopUnlockName: portrait_troop_unlock_mantah_range
 --- !u!1 &4522313165464443911
 GameObject:

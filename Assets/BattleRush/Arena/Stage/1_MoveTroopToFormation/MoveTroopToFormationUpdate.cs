@@ -30,7 +30,7 @@ namespace BattleRushS.ArenaS
                             break;
                         case MoveTroopToFormation.State.Came:
                             {
-                                if (this.data.time.v >= this.data.duration.v + 1.0f)
+                                if (this.data.time.v >= this.data.duration.v + 0.5f)
                                 {
                                     this.data.state.v = MoveTroopToFormation.State.Ready;
                                 }
@@ -38,7 +38,7 @@ namespace BattleRushS.ArenaS
                             break;
                         case MoveTroopToFormation.State.Ready:
                             {
-                                if (this.data.time.v >= this.data.duration.v + 4.0f)
+                                if (this.data.time.v >= this.data.duration.v + 2.5f)
                                 {
                                     // change to auto fight
                                     Arena arena = this.data.findDataInParent<Arena>();

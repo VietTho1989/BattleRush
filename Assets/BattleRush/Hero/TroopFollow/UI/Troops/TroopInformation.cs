@@ -88,7 +88,9 @@ namespace BattleRushS.HeroS
             public float attack;
             public float attackRange;
             public float scale;
+
             public string vfxLevelAuraName;
+            public GameObject auraPrefab;
         }
 
         public List<Level> levels = new List<Level>();

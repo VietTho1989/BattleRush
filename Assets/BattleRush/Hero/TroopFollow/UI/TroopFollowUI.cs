@@ -16,16 +16,20 @@ namespace BattleRushS.HeroS
 
             public VO<ReferenceData<TroopFollow>> troopFollow;
 
+            public VD<TroopAuraUI.UIData> aura;
+
             #region Constructor
 
             public enum Property
             {
-                troopFollow
+                troopFollow,
+                aura
             }
 
             public UIData() : base()
             {
                 this.troopFollow = new VO<ReferenceData<TroopFollow>>(this, (byte)Property.troopFollow, new ReferenceData<TroopFollow>(null));
+                this.aura = new VD<TroopAuraUI.UIData>(this, (byte)Property.aura, new TroopAuraUI.UIData());
             }
 
             #endregion
@@ -211,14 +215,14 @@ namespace BattleRushS.HeroS
                                                     // x
                                                     float x = 0;
                                                     {
-                                                        const float DistanceBetweenRow = 1.5f;
+                                                        const float DistanceBetweenRow = 3.0f;
                                                         x += ((col + 2) / 2.0f - troopCountInRow / 2.0f) * DistanceBetweenRow;
                                                         Logger.Log("troopCage: ");
                                                     }
                                                     // z
                                                     float z = 0;
                                                     {
-                                                        const float DistanceBetweenCol = 1.0f;
+                                                        const float DistanceBetweenCol = 1.5f;
                                                         z -= row * DistanceBetweenCol;
                                                     }
                                                     offset = new Vector3(x, 0, z);
@@ -363,6 +367,27 @@ namespace BattleRushS.HeroS
                                 }
                             }
                         }
+
+                        // scale
+                        {
+                            // find
+                            float scale = 1.0f;
+                            {
+                                // find level
+                                TroopInformation.Level level = troopFollow.troopType.v.levels.Find(check => check.level == troopFollow.level.v);
+                                // process
+                                if (level != null)
+                                {
+                                    scale = level.scale;
+                                }
+                                else
+                                {
+                                    Logger.LogError("level null");
+                                }
+                            }
+                            // set
+                            this.transform.localScale = new Vector3(scale, scale, scale);
+                        }
                     }
                     else
                     {
@@ -390,6 +415,8 @@ namespace BattleRushS.HeroS
 
         private BattleRush battleRush = null;
 
+        public TroopAuraUI troopAuraUI;
+
         public override void onAddCallBack<T>(T data)
         {
             if(data is UIData)
@@ -398,69 +425,90 @@ namespace BattleRushS.HeroS
                 // Child
                 {
                     uiData.troopFollow.allAddCallBack(this);
+                    uiData.aura.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
             }
             // Child
             {
-                if (data is TroopFollow)
+                // troopFollow
                 {
-                    TroopFollow troopFollow = data as TroopFollow;
-                    // Parent
+                    if (data is TroopFollow)
                     {
-                        DataUtils.addParentCallBack(troopFollow, this, ref this.hero);
-                        DataUtils.addParentCallBack(troopFollow, this, ref this.troopCage);
-                        DataUtils.addParentCallBack(troopFollow, this, ref this.battleRush);
-                    }
-                    dirty = true;
-                    return;
-                }
-                // Parent
-                {
-                    // Hero
-                    {
-                        if (data is Hero)
+                        TroopFollow troopFollow = data as TroopFollow;
+                        // Parent
                         {
-                            Hero hero = data as Hero;
-                            // Child
-                            {
-                                hero.heroMove.allAddCallBack(this);
-                            }
-                            dirty = true;
-                            return;
+                            DataUtils.addParentCallBack(troopFollow, this, ref this.hero);
+                            DataUtils.addParentCallBack(troopFollow, this, ref this.troopCage);
+                            DataUtils.addParentCallBack(troopFollow, this, ref this.battleRush);
                         }
-                        // Child
-                        if(data is HeroMove)
-                        {
-                            dirty = true;
-                            return;
-                        }
-                    }                    
-                    if(data is TroopCage)
-                    {
                         dirty = true;
                         return;
                     }
-                    // battleRush
+                    // Parent
                     {
-                        if(data is BattleRush)
+                        // Hero
                         {
-                            BattleRush battleRush = data as BattleRush;
-                            // Child
+                            if (data is Hero)
                             {
-                                battleRush.state.allAddCallBack(this);
+                                Hero hero = data as Hero;
+                                // Child
+                                {
+                                    hero.heroMove.allAddCallBack(this);
+                                }
+                                dirty = true;
+                                return;
                             }
+                            // Child
+                            if (data is HeroMove)
+                            {
+                                dirty = true;
+                                return;
+                            }
+                        }
+                        if (data is TroopCage)
+                        {
                             dirty = true;
                             return;
                         }
-                        // Child
-                        if(data is BattleRush.State)
+                        // battleRush
                         {
-                            dirty = true;
-                            return;
+                            if (data is BattleRush)
+                            {
+                                BattleRush battleRush = data as BattleRush;
+                                // Child
+                                {
+                                    battleRush.state.allAddCallBack(this);
+                                }
+                                dirty = true;
+                                return;
+                            }
+                            // Child
+                            if (data is BattleRush.State)
+                            {
+                                dirty = true;
+                                return;
+                            }
                         }
                     }
+                }
+                if(data is TroopAuraUI.UIData)
+                {
+                    TroopAuraUI.UIData troopAuraUIData = data as TroopAuraUI.UIData;
+                    // UI
+                    {
+                        if (troopAuraUI != null)
+                        {
+                            troopAuraUI.setData(troopAuraUIData);
+                        }
+                        else
+                        {
+                            Logger.LogError("troopAuraUI null");
+                        }
+                    }
+                    dirty = true;
+                    return;
                 }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
@@ -474,63 +522,83 @@ namespace BattleRushS.HeroS
                 // Child
                 {
                     uiData.troopFollow.allRemoveCallBack(this);
+                    uiData.aura.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
             }
             // Child
             {
-                if (data is TroopFollow)
+                // troopFollow
                 {
-                    TroopFollow troopFollow = data as TroopFollow;
-                    // Parent
+                    if (data is TroopFollow)
                     {
-                        DataUtils.removeParentCallBack(troopFollow, this, ref this.hero);
-                        DataUtils.removeParentCallBack(troopFollow, this, ref this.troopCage);
-                        DataUtils.removeParentCallBack(troopFollow, this, ref this.battleRush);
-                    }
-                    return;
-                }
-                // Parent
-                {
-                    // Hero
-                    {
-                        if (data is Hero)
+                        TroopFollow troopFollow = data as TroopFollow;
+                        // Parent
                         {
-                            Hero hero = data as Hero;
-                            // Child
-                            {
-                                hero.heroMove.allRemoveCallBack(this);
-                            }
-                            return;
+                            DataUtils.removeParentCallBack(troopFollow, this, ref this.hero);
+                            DataUtils.removeParentCallBack(troopFollow, this, ref this.troopCage);
+                            DataUtils.removeParentCallBack(troopFollow, this, ref this.battleRush);
                         }
-                        // Child
-                        if(data is HeroMove)
-                        {
-                            return;
-                        }
-                    }                    
-                    if (data is TroopCage)
-                    {
                         return;
                     }
-                    // battleRush
+                    // Parent
                     {
-                        if (data is BattleRush)
+                        // Hero
                         {
-                            BattleRush battleRush = data as BattleRush;
-                            // Child
+                            if (data is Hero)
                             {
-                                battleRush.state.allRemoveCallBack(this);
+                                Hero hero = data as Hero;
+                                // Child
+                                {
+                                    hero.heroMove.allRemoveCallBack(this);
+                                }
+                                return;
                             }
+                            // Child
+                            if (data is HeroMove)
+                            {
+                                return;
+                            }
+                        }
+                        if (data is TroopCage)
+                        {
                             return;
                         }
-                        // Child
-                        if (data is BattleRush.State)
+                        // battleRush
                         {
-                            return;
+                            if (data is BattleRush)
+                            {
+                                BattleRush battleRush = data as BattleRush;
+                                // Child
+                                {
+                                    battleRush.state.allRemoveCallBack(this);
+                                }
+                                return;
+                            }
+                            // Child
+                            if (data is BattleRush.State)
+                            {
+                                return;
+                            }
                         }
                     }
+                }
+                if (data is TroopAuraUI.UIData)
+                {
+                    TroopAuraUI.UIData troopAuraUIData = data as TroopAuraUI.UIData;
+                    // UI
+                    {
+                        if (troopAuraUI != null)
+                        {
+                            troopAuraUI.setDataNull(troopAuraUIData);
+                        }
+                        else
+                        {
+                            Logger.LogError("troopAuraUI null");
+                        }
+                    }
+                    return;
                 }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
@@ -552,6 +620,12 @@ namespace BattleRushS.HeroS
                             dirty = true;
                         }
                         break;
+                    case UIData.Property.aura:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -559,65 +633,19 @@ namespace BattleRushS.HeroS
             }
             // Child
             {
-                if (wrapProperty.p is TroopFollow)
+                // troopFollow
                 {
-                    switch ((TroopFollow.Property)wrapProperty.n)
+                    if (wrapProperty.p is TroopFollow)
                     {
-                        case TroopFollow.Property.hitPoint:
-                            dirty = true;
-                            break;
-                        case TroopFollow.Property.troopType:
-                            dirty = true;
-                            break;
-                        default:
-                            break;
-                    }
-                    return;
-                }
-                // Parent
-                {
-                    // Hero
-                    {
-                        if (wrapProperty.p is Hero)
+                        switch ((TroopFollow.Property)wrapProperty.n)
                         {
-                            switch ((Hero.Property)wrapProperty.n)
-                            {
-                                case Hero.Property.troopFollows:
-                                    dirty = true;
-                                    break;
-                                case Hero.Property.heroMove:
-                                    {
-                                        ValueChangeUtils.replaceCallBack(this, syncs);
-                                        dirty = true;
-                                    }
-                                    break;
-                                default:
-                                    break;
-                            }
-                            return;
-                        }
-                        // Child
-                        if(wrapProperty.p is HeroMove)
-                        {
-                            switch ((HeroMove.Property)wrapProperty.n)
-                            {
-                                case HeroMove.Property.sub:
-                                    dirty = true;
-                                    break;
-                                default:
-                                    break;
-                            }
-                            return;
-                        }
-                    }                   
-                    if (wrapProperty.p is TroopCage)
-                    {
-                        switch ((TroopCage.Property)wrapProperty.n)
-                        {
-                            case TroopCage.Property.state:
+                            case TroopFollow.Property.hitPoint:
                                 dirty = true;
                                 break;
-                            case TroopCage.Property.troops:
+                            case TroopFollow.Property.troopType:
+                                dirty = true;
+                                break;
+                            case TroopFollow.Property.level:
                                 dirty = true;
                                 break;
                             default:
@@ -625,48 +653,104 @@ namespace BattleRushS.HeroS
                         }
                         return;
                     }
-                    // battleRush
+                    // Parent
                     {
-                        if (wrapProperty.p is BattleRush)
+                        // Hero
                         {
-                            switch ((BattleRush.Property)wrapProperty.n)
+                            if (wrapProperty.p is Hero)
                             {
-                                case BattleRush.Property.state:
-                                    {
-                                        ValueChangeUtils.replaceCallBack(this, syncs);
+                                switch ((Hero.Property)wrapProperty.n)
+                                {
+                                    case Hero.Property.troopFollows:
                                         dirty = true;
-                                    }
+                                        break;
+                                    case Hero.Property.heroMove:
+                                        {
+                                            ValueChangeUtils.replaceCallBack(this, syncs);
+                                            dirty = true;
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
+                            }
+                            // Child
+                            if (wrapProperty.p is HeroMove)
+                            {
+                                switch ((HeroMove.Property)wrapProperty.n)
+                                {
+                                    case HeroMove.Property.sub:
+                                        dirty = true;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
+                            }
+                        }
+                        if (wrapProperty.p is TroopCage)
+                        {
+                            switch ((TroopCage.Property)wrapProperty.n)
+                            {
+                                case TroopCage.Property.state:
+                                    dirty = true;
+                                    break;
+                                case TroopCage.Property.troops:
+                                    dirty = true;
                                     break;
                                 default:
                                     break;
                             }
                             return;
                         }
-                        // Child
-                        if (wrapProperty.p is BattleRush.State)
+                        // battleRush
                         {
-                            BattleRush.State state = wrapProperty.p as BattleRush.State;
-                            switch (state.getType())
+                            if (wrapProperty.p is BattleRush)
                             {
-                                case BattleRush.State.Type.Play:
-                                    {
-                                        switch ((Play.Property)wrapProperty.n)
+                                switch ((BattleRush.Property)wrapProperty.n)
+                                {
+                                    case BattleRush.Property.state:
                                         {
-                                            case Play.Property.state:
-                                                dirty = true;
-                                                break;
-                                            default:
-                                                break;
+                                            ValueChangeUtils.replaceCallBack(this, syncs);
+                                            dirty = true;
                                         }
-                                    }
-                                    break;
-                                default:
-                                    Logger.LogError("unknown type: " + state.getType());
-                                    break;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
                             }
-                            return;
+                            // Child
+                            if (wrapProperty.p is BattleRush.State)
+                            {
+                                BattleRush.State state = wrapProperty.p as BattleRush.State;
+                                switch (state.getType())
+                                {
+                                    case BattleRush.State.Type.Play:
+                                        {
+                                            switch ((Play.Property)wrapProperty.n)
+                                            {
+                                                case Play.Property.state:
+                                                    dirty = true;
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown type: " + state.getType());
+                                        break;
+                                }
+                                return;
+                            }
                         }
                     }
+                }
+                if (wrapProperty.p is TroopAuraUI.UIData)
+                {
+                    return;
                 }
             }            
             Logger.LogError("Don't process: " + wrapProperty + "; " + syncs + "; " + this);

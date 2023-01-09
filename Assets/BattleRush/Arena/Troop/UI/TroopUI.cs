@@ -20,13 +20,16 @@ namespace BattleRushS.ArenaS
 
             public VD<TroopAnimationUI.UIData> animation;
 
+            public VD<TroopAuraUI.UIData> aura;
+
             #region Constructor
 
             public enum Property
             {
                 troop,
                 healthBar,
-                animation
+                animation,
+                aura
             }
 
             public UIData() : base()
@@ -34,6 +37,7 @@ namespace BattleRushS.ArenaS
                 this.troop = new VO<ReferenceData<Troop>>(this, (byte)Property.troop, new ReferenceData<Troop>(null));
                 this.healthBar = new VD<HealthBarUI.UIData>(this, (byte)Property.healthBar, null);
                 this.animation = new VD<TroopAnimationUI.UIData>(this, (byte)Property.animation, new TroopAnimationUI.UIData());
+                this.aura = new VD<TroopAuraUI.UIData>(this, (byte)Property.aura, new TroopAuraUI.UIData());
             }
 
             #endregion
@@ -314,6 +318,7 @@ namespace BattleRushS.ArenaS
 
         public HealthBarUI healthBarPrefab;
         public TroopAnimationUI troopAnimationUI;
+        public TroopAuraUI troopAuraUI;
 
         public override void onAddCallBack<T>(T data)
         {
@@ -325,6 +330,7 @@ namespace BattleRushS.ArenaS
                     uiData.troop.allAddCallBack(this);
                     uiData.healthBar.allAddCallBack(this);
                     uiData.animation.allAddCallBack(this);
+                    uiData.aura.allAddCallBack(this);
                 }
                 isAlreadySetFirstPosition = false;
                 dirty = true;
@@ -407,6 +413,23 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
+                if(data is TroopAuraUI.UIData)
+                {
+                    TroopAuraUI.UIData troopAuraUIData = data as TroopAuraUI.UIData;
+                    // UI
+                    {
+                        if (troopAuraUI != null)
+                        {
+                            troopAuraUI.setData(troopAuraUIData);
+                        }
+                        else
+                        {
+                            Logger.LogError("troopAuraUI null");
+                        }
+                    }
+                    dirty = true;
+                    return;
+                }
             }            
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -421,6 +444,7 @@ namespace BattleRushS.ArenaS
                     uiData.troop.allRemoveCallBack(this);
                     uiData.healthBar.allRemoveCallBack(this);
                     uiData.animation.allRemoveCallBack(this);
+                    uiData.aura.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
@@ -469,6 +493,22 @@ namespace BattleRushS.ArenaS
                     }
                     return;
                 }
+                if (data is TroopAuraUI.UIData)
+                {
+                    TroopAuraUI.UIData troopAuraUIData = data as TroopAuraUI.UIData;
+                    // UI
+                    {
+                        if (troopAuraUI != null)
+                        {
+                            troopAuraUI.setDataNull(troopAuraUIData);
+                        }
+                        else
+                        {
+                            Logger.LogError("troopAuraUI null");
+                        }
+                    }
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -496,6 +536,12 @@ namespace BattleRushS.ArenaS
                         }
                         break;
                     case UIData.Property.animation:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
+                    case UIData.Property.aura:
                         {
                             ValueChangeUtils.replaceCallBack(this, syncs);
                             dirty = true;
@@ -556,6 +602,10 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 if(wrapProperty.p is TroopAnimationUI.UIData)
+                {
+                    return;
+                }
+                if (wrapProperty.p is TroopAuraUI.UIData)
                 {
                     return;
                 }

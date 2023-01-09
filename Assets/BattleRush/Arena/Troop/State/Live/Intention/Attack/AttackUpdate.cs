@@ -119,7 +119,7 @@ namespace BattleRushS.ArenaS.TroopS.IntentionS
                                             rangeToAttack = Mathf.Max(rangeToAttack, 0.25f*Ratio);
                                         }
                                         // process
-                                        Logger.Log("AttackUpdate: range to attack: " + rangeToAttack);
+                                        //Logger.Log("AttackUpdate: range to attack: " + rangeToAttack);
                                         if(Vector3.Distance(troopUI.transform.position, targetTroopUI.transform.position) <= rangeToAttack)
                                         {
                                             isInRange = true;

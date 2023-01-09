@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4400153208490081878}
   - component: {fileID: 3843287685521183876}
+  - component: {fileID: -8683170913495833055}
   - component: {fileID: 7086749545017230242}
   m_Layer: 0
   m_Name: TroopFollowUI
@@ -74,6 +75,20 @@ MonoBehaviour:
   - {fileID: 542586957687347361, guid: d5a87bb6e5099894cb879580f95d09a1, type: 3}
   defaultTroopPrefab: {fileID: -6124612778043485977, guid: 687fe394a611580419e82e5bed57e4e9, type: 3}
   follow: {fileID: 7086749545017230242}
+  troopAuraUI: {fileID: -8683170913495833055}
+--- !u!114 &-8683170913495833055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671652999377550865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341cf341ac1210d46b4e5d19b8e81c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashInstanceId: 0
 --- !u!114 &7086749545017230242
 MonoBehaviour:
   m_ObjectHideFlags: 0
