@@ -38,13 +38,14 @@ public abstract class ObjectInPath : Data
     public abstract Type getType();
 }
 
+[System.Serializable]
 public struct Position
 {
 
     public static Position Zero = new Position(0, 0);
 
     public const float DefaultSegmentWidth = 8.0f;// -4 -> 4
-    public const float DefaultSegmentHeight = 24.0f;
+    public const float DefaultSegmentHeight = 48.0f;
 
     public Position(float x, float z)
     {

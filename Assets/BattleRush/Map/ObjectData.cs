@@ -11,7 +11,7 @@ namespace BattleRushS
     public class ObjectData : Data
     {
 
-        public VO<string> I;
+        public VO<ObjectInPath.Type> I;
 
         public VO<Position> position;
 
@@ -25,7 +25,7 @@ namespace BattleRushS
 
         public ObjectData() : base()
         {
-            this.I = new VO<string>(this, (byte)Property.I, "");
+            this.I = new VO<ObjectInPath.Type>(this, (byte)Property.I, ObjectInPath.Type.OkgCoin);
             this.position = new VO<Position>(this, (byte)Property.position, Position.Zero);
         }
 
@@ -46,7 +46,85 @@ namespace BattleRushS
                         Logger.LogWarning("status: " + e);
                     }
                 }
-                this.I.v = value;
+                switch (value)
+                {
+                    case "okg_coin":
+                        {
+                            this.I.v = ObjectInPath.Type.OkgCoin;                           
+                        }
+                        break;
+                    case "cocoon_mantah":// "cocoon_mantah":
+                        {
+                            this.I.v = ObjectInPath.Type.CocoonMantah;
+                        }
+                        break;
+                    case "energy_orb_normal":
+                        {
+                            this.I.v = ObjectInPath.Type.EnergyOrbNormal;
+                        }
+                        break;
+
+                    case "troop_cage_1":
+                    case "troop_cage_2":
+                    case "troop_cage_3":
+                        {
+                            this.I.v = ObjectInPath.Type.TroopCage;
+                        }
+                        break;
+                    case "saw_blade":
+                        {
+                            this.I.v = ObjectInPath.Type.SawBlade;
+                        }
+                        break;
+                    case "blade":
+                        {
+                            this.I.v = ObjectInPath.Type.Blade;
+                        }
+                        break;
+                    case "fire_nozzle":
+                        {
+                            this.I.v = ObjectInPath.Type.FireNozzle;
+                        }
+                        break;
+                    case "pike":
+                        {
+                            this.I.v = ObjectInPath.Type.Pike;
+                        }
+                        break;
+                    case "energy_orb_upgrade":
+                        {
+                            this.I.v = ObjectInPath.Type.EnergyOrbUpgrade;
+                        }
+                        break;
+                    case "upgrade_gate_free":
+                        {
+                            this.I.v = ObjectInPath.Type.UpgradeGateFree;
+                        }
+                        break;
+                    case "upgrade_gate_charge":
+                        {
+                            this.I.v = ObjectInPath.Type.UpgradeGateCharge;
+                        }
+                        break;
+                    case "hammer":
+                        {
+                            this.I.v = ObjectInPath.Type.Hammer;
+                        }
+                        break;
+                    case "grinder":
+                        {
+                            this.I.v = ObjectInPath.Type.Grinder;
+                        }
+                        break;
+                    case "energy_orb_power":
+                        {
+                            this.I.v = ObjectInPath.Type.EnergyOrbPower;
+                        }
+                        break;
+                    default:
+                        Logger.LogError("unknown object data: " + value);
+                        break;
+                }              
             }
             // position
             {

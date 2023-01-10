@@ -53,7 +53,7 @@ namespace BattleRushS.StateS.LoadS
         public LoadLevel() : base()
         {
             this.level = new VO<int>(this, (byte)Property.level, 0);
-            this.sub = new VD<Sub>(this, (byte)Property.sub, new LoadLevelByFileExcel());
+            this.sub = new VD<Sub>(this, (byte)Property.sub, new LoadLevelByScriptableObject());
             this.state = new VO<State>(this, (byte)Property.state, State.Start);
         }
 

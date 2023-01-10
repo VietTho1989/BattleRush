@@ -104,7 +104,7 @@ namespace BattleRushS
                                             {
                                                 switch (objectData.I.v)
                                                 {
-                                                    case "okg_coin":
+                                                    case ObjectInPath.Type.OkgCoin:
                                                         {
                                                             // make data
                                                             Coin coin = new Coin();
@@ -129,7 +129,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "cocoon_mantah":// "cocoon_mantah":
+                                                    case ObjectInPath.Type.CocoonMantah:// "cocoon_mantah":
                                                         {
                                                             Logger.LogWarning("create cocoon mantah");
                                                             CocoonMantah cocoonMantah = new CocoonMantah();
@@ -154,7 +154,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "energy_orb_normal":
+                                                    case ObjectInPath.Type.EnergyOrbNormal:
                                                         {
                                                             EnergyOrbNormal energyOrbNormal = new EnergyOrbNormal();
                                                             {
@@ -179,9 +179,7 @@ namespace BattleRushS
                                                         }
                                                         break;
 
-                                                    case "troop_cage_1":
-                                                    case "troop_cage_2":
-                                                    case "troop_cage_3":
+                                                    case ObjectInPath.Type.TroopCage:
                                                         {
                                                             Logger.LogWarning("make troop cage");
                                                             TroopCage troopCage = new TroopCage();
@@ -232,7 +230,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "saw_blade":
+                                                    case ObjectInPath.Type.SawBlade:
                                                         {
                                                             SawBlade sawBlade = new SawBlade();
                                                             {
@@ -256,7 +254,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "blade":
+                                                    case ObjectInPath.Type.Blade:
                                                         {
                                                             Blade blade = new Blade();
                                                             {
@@ -280,7 +278,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "fire_nozzle":
+                                                    case ObjectInPath.Type.FireNozzle:
                                                         {
                                                             FireNozzle fireNozzle = new FireNozzle();
                                                             {
@@ -304,7 +302,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "pike":
+                                                    case ObjectInPath.Type.Pike:
                                                         {
                                                             Pike pike = new Pike();
                                                             {
@@ -328,7 +326,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "energy_orb_upgrade":
+                                                    case ObjectInPath.Type.EnergyOrbUpgrade:
                                                         {
                                                             EnergyOrbUpgrade energyOrbUpgrade = new EnergyOrbUpgrade();
                                                             {
@@ -352,7 +350,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "upgrade_gate_free":
+                                                    case ObjectInPath.Type.UpgradeGateFree:
                                                         {
                                                             UpgradeGateFree upgradeGateFree = new UpgradeGateFree();
                                                             {
@@ -376,7 +374,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "upgrade_gate_charge":
+                                                    case ObjectInPath.Type.UpgradeGateCharge:
                                                         {
                                                             UpgradeGateCharge upgradeGateCharge = new UpgradeGateCharge();
                                                             {
@@ -400,7 +398,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "hammer":
+                                                    case ObjectInPath.Type.Hammer:
                                                         {
                                                             Hammer hammer = new Hammer();
                                                             {
@@ -424,7 +422,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "grinder":
+                                                    case ObjectInPath.Type.Grinder:
                                                         {
                                                             Grinder grinder = new Grinder();
                                                             {
@@ -448,7 +446,7 @@ namespace BattleRushS
                                                             }
                                                         }
                                                         break;
-                                                    case "energy_orb_power":
+                                                    case ObjectInPath.Type.EnergyOrbPower:
                                                         {
                                                             EnergyOrbPower energyOrbPower = new EnergyOrbPower();
                                                             {

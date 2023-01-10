@@ -69,6 +69,10 @@ namespace BattleRushS.StateS.LoadS
                                             }
                                             break;
                                         case LoadLevel.Sub.Type.ScriptableObject:
+                                            {
+                                                LoadLevelByScriptableObject loadLevelByScriptableObject = this.data.sub.v as LoadLevelByScriptableObject;
+                                                mapData = loadLevelByScriptableObject.mapData.v.data;
+                                            }
                                             break;
                                         default:
                                             Logger.LogError("unknown type: " + this.data.sub.v.getType());
@@ -415,7 +419,14 @@ namespace BattleRushS.StateS.LoadS
                                 break;
                             case LoadLevel.Sub.Type.ScriptableObject:
                                 {
-                                    
+                                    switch ((LoadLevelByScriptableObject.Property)wrapProperty.n)
+                                    {
+                                        case LoadLevelByScriptableObject.Property.mapData:
+                                            dirty = true;
+                                            break;
+                                        default:
+                                            break;
+                                    }
                                 }
                                 break;
                             default:
