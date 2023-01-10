@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BattleRushS.StateS.LoadS
 {
-    public class LoadLevelByFileExcel : Data
+    public class LoadLevelByFileExcel : LoadLevel.Sub
     {
 
         public const string FileLevel = "GameplayMapLevel.csv";// "MapLevel.csv";
@@ -38,6 +38,11 @@ namespace BattleRushS.StateS.LoadS
         public LoadLevelByFileExcel() : base()
         {
             this.step = new VD<Step>(this, (byte)Property.step, null);
+        }
+
+        public override Type getType()
+        {
+            return Type.Excel;
         }
 
         #endregion

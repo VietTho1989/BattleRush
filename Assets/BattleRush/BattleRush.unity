@@ -286,10 +286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c623274580f39f948ab0f5c9019cff7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _generateSegmentsAhead: 5
+  _generateSegmentsAhead: 50
   _activateSegmentsAhead: 1
   _loadTimeout: 10
-  _maxSegments: 7
+  _maxSegments: 50
   _buildOnAwake: 0
   _multithreaded: 1
   _useUnloadUnusedAssets: 0
@@ -416,6 +416,8 @@ MonoBehaviour:
   - {fileID: -6602540191704800844, guid: 2848123235dd962478ff765196826e1f, type: 3}
   - {fileID: -4707468829253064168, guid: a31aceab5bca51946b0d5572f81c0de7, type: 3}
   - {fileID: 542586957687347361, guid: d5a87bb6e5099894cb879580f95d09a1, type: 3}
+  itemMaps:
+  - {fileID: 11400000, guid: e2cdcf68e48a8bb4a9e05c35848a5b41, type: 2}
   levelGenerator: {fileID: 0}
   level_0: {fileID: 11400000, guid: 06bb9069586036f4eb9ec8fe80fb287a, type: 2}
   worldCanvas: {fileID: 4315714329130928029}
@@ -786,7 +788,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215113183}
-  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 21, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1338,7 +1340,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2770611436488937649}
-  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 20, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

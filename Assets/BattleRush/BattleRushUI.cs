@@ -15,6 +15,8 @@ namespace BattleRushS
         public List<HeroInformation> heroInformations;
         public List<TroopInformation> troopInformations;
 
+        public List<ItemMap> itemMaps;
+
         #region Data
 
         public class UIData : Data

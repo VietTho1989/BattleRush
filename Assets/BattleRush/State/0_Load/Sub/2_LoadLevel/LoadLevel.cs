@@ -9,20 +9,52 @@ namespace BattleRushS.StateS.LoadS
 
         public VO<int> level;
 
-        public VD<LoadLevelByFileExcel> loadLevelByFileExcel;
+        #region sub
+
+        public abstract class Sub : Data
+        {
+
+            public enum Type
+            {
+                Excel,
+                ScriptableObject
+            }
+
+            public abstract Type getType();
+
+        }
+
+        public VD<Sub> sub;
+
+        #endregion
+
+        #region state
+
+        public enum State
+        {
+            Start,
+            WaitReady,
+            Ready
+        }
+
+        public VO<State> state;
+
+        #endregion
 
         #region Constructor
 
         public enum Property
         {
             level,
-            loadLevelByFileExcel
+            sub,
+            state
         }
 
         public LoadLevel() : base()
         {
             this.level = new VO<int>(this, (byte)Property.level, 0);
-            this.loadLevelByFileExcel = new VD<LoadLevelByFileExcel>(this, (byte)Property.loadLevelByFileExcel, new LoadLevelByFileExcel());
+            this.sub = new VD<Sub>(this, (byte)Property.sub, new LoadLevelByFileExcel());
+            this.state = new VO<State>(this, (byte)Property.state, State.Start);
         }
 
         #endregion

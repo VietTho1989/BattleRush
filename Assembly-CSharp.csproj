@@ -134,6 +134,7 @@
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\Troops\Antuk\Air\MoveToClickPoint.cs" />
     <Compile Include="Assets\CommonLibrary\RecyclerKit\RecyclerKit.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedObjectType.cs" />
+    <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\TroopAuraUI.cs" />
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\Follow.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_double.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroRunShoot\HeroRunShootUpdate.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroMoveRunUpdate.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalUpdate.cs" />
+    <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadScriptableObject\LoadLevelByScriptableObjectUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Grinder\GrinderUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Readers\ES3Reader.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3File.cs" />
@@ -243,6 +245,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GradientColorKey.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\View\Controller\ViewRecordControllerUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_PhysicsMaterial2D.cs" />
+    <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadScriptableObject\LoadLevelByScriptableObject.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\0_Live\ShootProjectile\TroopCageShootProjectileUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Logger.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3DictionaryType.cs" />
@@ -440,6 +443,7 @@
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\Attack\AttackUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RectTransform.cs" />
     <Compile Include="Assets\BattleRush\Map\MapData.cs" />
+    <Compile Include="Assets\BattleRush\MapAsset\Item\ItemMap.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils.cs" />
     <Compile Include="Assets\BattleRush\Hero\UI\HeroSkinUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\TroopIntentionUpdate.cs" />
@@ -492,6 +496,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\1_ChooseLevel\ChooseLevelUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\CheckIpAddress\Already\AlreadyUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ForceOverLifetimeModule.cs" />
+    <Compile Include="Assets\BattleRush\MapAsset\Item\ItemAsset.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Rect.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\0_Live\ShootProjectile\TroopCageProjectileUI\TroopCageShootProjectileUI.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroRunShoot\HeroRunShoot.cs" />
@@ -553,7 +558,6 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
-    <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\TroopAuraUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
