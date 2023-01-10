@@ -12,7 +12,7 @@ namespace BattleRushS.ArenaS
         #region Update
 
         private const float HeroFormationZ = 10.0f;
-        private const float DistanceBetweenTroop = 1.5f;
+        private const float DistanceBetweenTroop = 1.8f;
 
         public override void update()
         {
@@ -128,7 +128,7 @@ namespace BattleRushS.ArenaS
                                                                 // find x, z
                                                                 float x = 0; // Random.Range(-10, 10);
                                                                 float z = troop.teamId.v == 0 ? -HeroFormationZ : HeroFormationZ;// Random.Range(-15, -5) : Random.Range(5, 15);
-                                                                troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                                troop.formationPosition.v = new Vector3(arenaUI.center.localPosition.x + x, arenaUI.center.localPosition.y, arenaUI.center.localPosition.z + z);
                                                             }
                                                             else
                                                             {
@@ -275,7 +275,7 @@ namespace BattleRushS.ArenaS
                                                                 // find x, z
                                                                 float x = (col - rowNumber / 2 + 0.5f) * DistanceBetweenTroop;//  Random.Range(-10, 10);
                                                                 float z = (-HeroFormationZ + DistanceBetweenTroop) + row * DistanceBetweenTroop;
-                                                                troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
+                                                                troop.formationPosition.v = new Vector3(arenaUI.center.localPosition.x + x, arenaUI.center.localPosition.y, arenaUI.center.localPosition.z + z);
                                                             }
 
                                                             // new index
@@ -448,8 +448,12 @@ namespace BattleRushS.ArenaS
                                                         // find x, z
                                                         float x = (col - rowNumber / 2 + 0.5f) * DistanceBetweenTroop;//  Random.Range(-10, 10);
                                                         float z = -((-HeroFormationZ + DistanceBetweenTroop) + row * DistanceBetweenTroop);
-                                                        troop.formationPosition.v = new Vector3(arenaUI.center.position.x + x, arenaUI.center.position.y, arenaUI.center.position.z + z);
-                                                        troop.startPosition.v = new Vector3(troop.formationPosition.v.x, troop.formationPosition.v.y, troop.formationPosition.v.z + 3 * DistanceBetweenTroop);
+                                                        troop.formationPosition.v = new Vector3(arenaUI.center.localPosition.x + x, arenaUI.center.localPosition.y, arenaUI.center.localPosition.z + z);
+                                                        // start position: need convert to world space
+                                                        {
+                                                            Vector3 localPos = new Vector3(troop.formationPosition.v.x, troop.formationPosition.v.y, troop.formationPosition.v.z + 3 * DistanceBetweenTroop);
+                                                            troop.startPosition.v = arenaUI.transform.TransformPoint(localPos);
+                                                        }                                                        
                                                     }
 
                                                     // new index

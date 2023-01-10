@@ -419,7 +419,7 @@ MonoBehaviour:
   itemMaps:
   - {fileID: 11400000, guid: e2cdcf68e48a8bb4a9e05c35848a5b41, type: 2}
   levelGenerator: {fileID: 0}
-  level_0: {fileID: 11400000, guid: 06bb9069586036f4eb9ec8fe80fb287a, type: 2}
+  level_0: {fileID: 11400000, guid: 1da76331f6c86084e9af0f8e751061f3, type: 2}
   worldCanvas: {fileID: 4315714329130928029}
   arenaCanvas: {fileID: 0}
   cameraUI: {fileID: 143108111}

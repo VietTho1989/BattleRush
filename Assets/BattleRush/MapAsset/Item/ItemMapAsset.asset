@@ -55,17 +55,49 @@ MonoBehaviour:
     distanceBetweenCol: 0.25
   - type: 0
     position:
-      x: 0.75
+      x: 0.85
       z: 1.1
-    row: 8
+    row: 7
     col: 2
     distanceBetweenRow: 0.075
     distanceBetweenCol: 0.25
   - type: 4
     position:
       x: 0.5
-      z: 1.98
-    row: 1
-    col: 1
+      z: 1.9
+    row: 3
+    col: 2
     distanceBetweenRow: 0
     distanceBetweenCol: 0
+  - type: 3
+    position:
+      x: 0.5
+      z: 2.05
+    row: 3
+    col: 2
+    distanceBetweenRow: 0.06
+    distanceBetweenCol: 0.36
+  - type: 3
+    position:
+      x: 0.5
+      z: 2.23
+    row: 3
+    col: 3
+    distanceBetweenRow: 0.06
+    distanceBetweenCol: 0.36
+  - type: 3
+    position:
+      x: 0.5
+      z: 2.41
+    row: 3
+    col: 2
+    distanceBetweenRow: 0.06
+    distanceBetweenCol: 0.36
+  - type: 3
+    position:
+      x: 0.5
+      z: 2.5
+    row: 1
+    col: 2
+    distanceBetweenRow: 0.06
+    distanceBetweenCol: 0.36

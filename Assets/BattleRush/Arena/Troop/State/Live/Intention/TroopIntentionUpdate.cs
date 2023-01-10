@@ -67,7 +67,29 @@ namespace BattleRushS.ArenaS.TroopS
                                                         Troop troop = this.data.findDataInParent<Troop>();
                                                         if (troop != null)
                                                         {
-                                                            moveToDest.dest.v = troop.formationPosition.v;
+                                                            // find arena center
+                                                            Transform arenaCenter = null;
+                                                            {
+                                                                ArenaUI arenaUI = arena.findCallBack<ArenaUI>();
+                                                                if (arenaUI != null)
+                                                                {
+                                                                    arenaCenter = arenaUI.transform;
+                                                                }
+                                                                else
+                                                                {
+                                                                    Logger.LogError("arenaUI null");
+                                                                }
+                                                            }
+                                                            // process
+                                                            if (arenaCenter != null)
+                                                            {
+                                                                moveToDest.dest.v = arenaCenter.TransformPoint(troop.formationPosition.v);
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("arenaCenter null");
+                                                                dirty = true;
+                                                            }                                                            
                                                         }
                                                         else
                                                         {

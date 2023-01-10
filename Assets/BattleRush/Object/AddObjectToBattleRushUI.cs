@@ -15,6 +15,11 @@ namespace BattleRushS
 
         private void Start()
         {
+            // TODO fix position: chua hieu tai sao phai can them vao
+            {
+                this.transform.localPosition = new Vector3(this.transform.localPosition.x, 1, this.transform.localPosition.z);
+            }
+            // UI
             BattleRushUI.UIData.ObjectInPathUIInterface uiInterface = this.GetComponent<BattleRushUI.UIData.ObjectInPathUIInterface>();
             //Logger.Log("uiInterface: " + uiInterface);
             if (uiInterface != null)
