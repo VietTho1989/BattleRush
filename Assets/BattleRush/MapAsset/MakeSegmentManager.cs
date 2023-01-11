@@ -12,57 +12,57 @@ namespace BattleRushS
 
         public VO<MapAsset> mapAsset;
 
-        public class AssetIndex : Data
+        public VO<int> index;
+
+        public VO<int> repeat;
+
+        public VO<bool> alreadyMakePath;
+
+        public VO<bool> alreadyMakePrefab;
+
+        public SegmentAsset nextMakePath()
         {
-
-            public VO<int> index;
-
-            public VO<int> repeat;
-
-            public VO<bool> alreadyMakePath;
-
-            public VO<bool> alreadyMakePrefab;
-
-            #region Constructor
-
-            public enum Property
-            {
-                index,
-                repeat,
-                alreadyMakePath,
-                alreadyMakePrefab
-            }
-
-            #endregion
-
+            this.alreadyMakePath.v = true;
+            return next();
         }
 
-        public VO<int> assetIndex;
-
-        public VO<int> repeatIndex;
-
-        public VO<float> currentLength;
-
-        public void next()
+        public SegmentAsset nextMakePrefab()
         {
-            this.repeatIndex.v++;
-            if (this.assetIndex.v >= 0 && this.assetIndex.v < this.mapAsset.v.segments.Count)
+            this.alreadyMakePrefab.v = true;
+            return next();
+        }
+
+        private SegmentAsset next()
+        {
+            SegmentAsset ret = null;
             {
-                SegmentAsset mapAsset = this.mapAsset.v.segments[this.assetIndex.v];
-                if (this.repeatIndex.v >= Math.Max(mapAsset.repeat, 1))
+                if (this.alreadyMakePath.v && this.alreadyMakePrefab.v)
                 {
-                    this.assetIndex.v++;
-                    this.repeatIndex.v = 0;
-                }
-                else
-                {
-                    // still in repeat
+                    this.repeat.v++;
+                    if (this.index.v >= 0 && this.index.v < this.mapAsset.v.segments.Count)
+                    {
+                        SegmentAsset mapAsset = this.mapAsset.v.segments[this.index.v];
+                        ret = mapAsset;
+                        if (this.repeat.v >= Math.Max(mapAsset.repeat, 1) - 1)
+                        {
+                            this.index.v++;
+                            this.repeat.v = -1;
+                            this.alreadyMakePath.v = false;
+                            this.alreadyMakePrefab.v = false;
+                        }
+                        else
+                        {
+                            // still in repeat
+                        }
+                    }
                 }
             }
-            Logger.Log("makeSegmentManager: " + this.assetIndex.v);
+            return ret;
         }
 
         #endregion
+
+        public VO<float> currentLength;
 
 
         #region Constructor
@@ -70,16 +70,25 @@ namespace BattleRushS
         public enum Property
         {
             mapAsset,
-            assetIndex,
-            repeatIndex,
+
+            index,
+            repeat,
+            alreadyMakePath,
+            alreadyMakePrefab,
+
             currentLength
         }
 
         public MakeSegmentManager() : base()
         {
             this.mapAsset = new VO<MapAsset>(this, (byte)Property.mapAsset, null);
-            this.assetIndex = new VO<int>(this, (byte)Property.assetIndex, 0);
-            this.repeatIndex = new VO<int>(this, (byte)Property.repeatIndex, -1);
+            // asset index
+            {
+                this.index = new VO<int>(this, (byte)Property.index, 0);
+                this.repeat = new VO<int>(this, (byte)Property.repeat, -1);
+                this.alreadyMakePath = new VO<bool>(this, (byte)Property.alreadyMakePath, false);
+                this.alreadyMakePrefab = new VO<bool>(this, (byte)Property.alreadyMakePrefab, false);
+            }
             this.currentLength = new VO<float>(this, (byte)Property.currentLength, 0);
         }
 
@@ -88,8 +97,13 @@ namespace BattleRushS
         public void reset()
         {
             this.mapAsset.v = null;
-            this.assetIndex.v = 0;
-            this.repeatIndex.v = -1;
+            // asset index
+            {
+                this.index.v = 0;
+                this.repeat.v = -1;
+                this.alreadyMakePath.v = false;
+                this.alreadyMakePrefab.v = false;
+            }            
             this.currentLength.v = 0;
         }
 

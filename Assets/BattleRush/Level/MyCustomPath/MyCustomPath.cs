@@ -40,20 +40,29 @@ namespace BattleRushS
                 // get from battle rush
                 if (battleRush != null && battleRush.makeSegmentManager.v.mapAsset.v!=null)
                 {
-                    // increase index
-                    if (pointIndex == 1)
+                    // increase index: 4 is last index
+                    if (pointIndex == 4)
                     {
-                        battleRush.makeSegmentManager.v.next();
-                        Logger.Log("myCustomPath next: " + battleRush.makeSegmentManager.v.assetIndex.v);
+                        SegmentAsset segmentAsset = battleRush.makeSegmentManager.v.nextMakePath();
+                        if (segmentAsset != null)
+                        {
+                            segmentPathInfo = segmentAsset.pathInfo;
+                        }
+                        else
+                        {
+                            Logger.LogError("segmentAsset null");
+                        }
+                        Logger.Log("myCustomPath next: " + battleRush.makeSegmentManager.v.index.v);
                     }
+                    else
                     // make segment path info
                     {
                         // find segment asset
                         SegmentAsset segmentAsset = null;
                         {
-                            if (battleRush.makeSegmentManager.v.assetIndex.v >= 0 && battleRush.makeSegmentManager.v.assetIndex.v < battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                            if (battleRush.makeSegmentManager.v.index.v >= 0 && battleRush.makeSegmentManager.v.index.v < battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
                             {
-                                segmentAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.assetIndex.v];
+                                segmentAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.index.v];
                             }
                             else
                             {

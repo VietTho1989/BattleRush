@@ -46,22 +46,12 @@ namespace BattleRushS
                     {
                         if (battleRush.makeSegmentManager.v.mapAsset.v != null)
                         {
-                            // check asset index
                             if (!isArena)
                             {
-                                if (battleRush.makeSegmentManager.v.assetIndex.v >= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                                if (battleRush.makeSegmentManager.v.index.v >= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
                                 {
-                                    Logger.Log("mySequence is arena: " + battleRush.makeSegmentManager.v.assetIndex.v + ", " + battleRush.makeSegmentManager.v.mapAsset.v.segments.Count);
+                                    Logger.Log("mySequence is arena: " + battleRush.makeSegmentManager.v.index.v + ", " + battleRush.makeSegmentManager.v.mapAsset.v.segments.Count);
                                     isArena = true;
-                                }
-                            }
-                            // last
-                            if (!isArena)
-                            {
-                                if (battleRush.makeSegmentManager.v.assetIndex.v == battleRush.makeSegmentManager.v.mapAsset.v.segments.Count-1)
-                                {
-                                    SegmentAsset last = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.assetIndex.v];
-                                    
                                 }
                             }
                         }
@@ -84,11 +74,13 @@ namespace BattleRushS
                         {
                             // get by index
                             {
-                                if (battleRush.makeSegmentManager.v.assetIndex.v >= 0 && battleRush.makeSegmentManager.v.assetIndex.v < battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                                if (battleRush.makeSegmentManager.v.index.v >= 0 && battleRush.makeSegmentManager.v.index.v < battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
                                 {
-                                    SegmentAsset mapAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.assetIndex.v];
+                                    SegmentAsset mapAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.index.v];
                                     segmentPrefab = mapAsset.segment;
                                 }
+                                // next
+                                battleRush.makeSegmentManager.v.nextMakePrefab();
                             }
                             // prevent null
                             if (segmentPrefab == null)

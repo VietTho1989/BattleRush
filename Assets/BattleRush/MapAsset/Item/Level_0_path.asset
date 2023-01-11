@@ -25,7 +25,7 @@ MonoBehaviour:
       turnRate: 30
       turnAxis: {x: 0, y: 1, z: 0}
     repeat: 1
-    segment: {fileID: 0}
+    segment: {fileID: 8252006357529286974, guid: 48299c8ff4959b8429d365ba82b0baa9, type: 3}
   - pathInfo:
       angle: 0
       turnRate: 0
