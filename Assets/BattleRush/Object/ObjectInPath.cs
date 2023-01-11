@@ -44,8 +44,6 @@ public struct Position
 
     public static Position Zero = new Position(0, 0);
 
-    public const float DefaultSegmentWidth = 8.0f;// -4 -> 4
-
     public Position(float x, float z)
     {
         this.x = x;
@@ -58,7 +56,7 @@ public struct Position
     public float x;
 
     /**
-     * vi tri chieu doc, phan du 1 la % thuoc chieu doc segment
+     * vi tri chieu doc, (-4, 4)
      * */
     public float z;
 }

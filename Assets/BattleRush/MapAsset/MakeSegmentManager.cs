@@ -38,11 +38,6 @@ namespace BattleRushS
 
         #endregion
 
-        #region index
-
-        public VO<int> currentNextSegmentIndex;
-
-        #endregion
 
         #region Constructor
 
@@ -51,19 +46,15 @@ namespace BattleRushS
             mapAsset,
             assetIndex,
             repeatIndex,
-
-            currentNextSegmentIndex,
             currentLength
         }
 
         public MakeSegmentManager() : base()
         {
-            this.mapAsset = new VO<MapAsset>(this, (byte)Property.currentNextSegmentIndex, null);
+            this.mapAsset = new VO<MapAsset>(this, (byte)Property.mapAsset, null);
             this.assetIndex = new VO<int>(this, (byte)Property.assetIndex, 0);
             this.repeatIndex = new VO<int>(this, (byte)Property.repeatIndex, -1);
-
-            this.currentNextSegmentIndex = new VO<int>(this, (byte)Property.currentNextSegmentIndex, 0);
-            this.currentLength = new VO<float>(this, (byte)Property.currentLength, -1);
+            this.currentLength = new VO<float>(this, (byte)Property.currentLength, 0);
         }
 
         #endregion
@@ -73,8 +64,7 @@ namespace BattleRushS
             this.mapAsset.v = null;
             this.assetIndex.v = 0;
             this.repeatIndex.v = -1;
-
-            this.currentNextSegmentIndex.v = 0;
+            this.currentLength.v = 0;
         }
 
     }

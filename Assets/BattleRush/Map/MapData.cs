@@ -12,8 +12,6 @@ namespace BattleRushS
 
         public LD<ObjectData> objectDatas;
 
-        public VO<int> lastAddIndex;
-
         #endregion
 
         #region Constructor
@@ -21,24 +19,16 @@ namespace BattleRushS
         public enum Property
         {
             objectDatas,
-            lastAddIndex,
-
-            arenaDatas
         }
 
         public MapData() : base()
         {
-            // objectDatas
-            {
-                this.objectDatas = new LD<ObjectData>(this, (byte)Property.objectDatas);
-                this.lastAddIndex = new VO<int>(this, (byte)Property.lastAddIndex, -1);
-            }
+            this.objectDatas = new LD<ObjectData>(this, (byte)Property.objectDatas);
         }
 
         public void reset()
         {
             this.objectDatas.clear();
-            this.lastAddIndex.v = -1;
         }
 
         #endregion

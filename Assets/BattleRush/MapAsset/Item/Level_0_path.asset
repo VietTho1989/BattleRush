@@ -12,29 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0707d172cf8fe3409268347de1d3867, type: 3}
   m_Name: Level_0_path
   m_EditorClassIdentifier: 
+  defaultSegment: {fileID: 8252006357529286974, guid: ec5e221a40a8c1643aa6e6d723df8fab, type: 3}
   segments:
   - pathInfo:
       angle: 90
       turnRate: 30
       turnAxis: {x: 0, y: 1, z: 0}
     repeat: 2
+    segment: {fileID: 0}
   - pathInfo:
       angle: 0
       turnRate: 0
       turnAxis: {x: 0, y: 1, z: 0}
     repeat: 2
+    segment: {fileID: 0}
   - pathInfo:
       angle: 0
       turnRate: 30
       turnAxis: {x: 0, y: 1, z: 0}
     repeat: 2
+    segment: {fileID: 0}
   - pathInfo:
       angle: 0
       turnRate: 0
       turnAxis: {x: 0, y: 1, z: 0}
     repeat: 3
+    segment: {fileID: 0}
   - pathInfo:
       angle: 90
       turnRate: 30
       turnAxis: {x: 0, y: 1, z: 0}
     repeat: 2
+    segment: {fileID: 0}

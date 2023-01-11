@@ -79,6 +79,7 @@ namespace BattleRushS
                 // prevent null
                 if (segmentPathInfo == null)
                 {
+                    Logger.LogError("myCustomPath: why segmentPathInfo null");
                     segmentPathInfo = new SegmentPathInfo();
                     /*{
                         segmentPathInfo.angle = 45f;

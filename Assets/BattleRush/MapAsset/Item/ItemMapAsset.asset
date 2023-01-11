@@ -15,89 +15,89 @@ MonoBehaviour:
   items:
   - type: 0
     position:
-      x: 0.5
-      z: 0.075
+      x: 0
+      z: 3.6
     row: 6
     col: 3
-    distanceBetweenRow: 0.05
-    distanceBetweenCol: 0.33
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.64
   - type: 4
     position:
-      x: 0.5
-      z: 0.7
+      x: 0
+      z: 33.6
     row: 1
     col: 1
     distanceBetweenRow: 0
     distanceBetweenCol: 0
   - type: 3
     position:
-      x: 0.5
-      z: 0.82
+      x: 0
+      z: 39.36
     row: 1
     col: 3
     distanceBetweenRow: 0
-    distanceBetweenCol: 0.25
+    distanceBetweenCol: 2
   - type: 3
     position:
-      x: 0.5
-      z: 0.86
+      x: 0
+      z: 41.28
     row: 1
     col: 5
     distanceBetweenRow: 0
-    distanceBetweenCol: 0.25
+    distanceBetweenCol: 2
   - type: 3
     position:
-      x: 0.5
-      z: 0.9
+      x: 0
+      z: 43.2
     row: 1
     col: 3
     distanceBetweenRow: 0
-    distanceBetweenCol: 0.25
+    distanceBetweenCol: 2
   - type: 0
     position:
-      x: 0.85
-      z: 1.1
+      x: 2.8
+      z: 52.8
     row: 7
     col: 2
-    distanceBetweenRow: 0.075
-    distanceBetweenCol: 0.25
+    distanceBetweenRow: 3.6
+    distanceBetweenCol: 2
   - type: 4
     position:
-      x: 0.5
-      z: 1.9
+      x: 0
+      z: 91.2
     row: 1
     col: 1
     distanceBetweenRow: 0
     distanceBetweenCol: 0
   - type: 3
     position:
-      x: 0.5
-      z: 2.05
+      x: 0
+      z: 98.4
     row: 3
     col: 2
-    distanceBetweenRow: 0.06
-    distanceBetweenCol: 0.36
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
   - type: 3
     position:
-      x: 0.5
-      z: 2.23
+      x: 0
+      z: 107.04
     row: 3
     col: 3
-    distanceBetweenRow: 0.06
-    distanceBetweenCol: 0.36
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
   - type: 3
     position:
-      x: 0.5
-      z: 2.41
+      x: 0
+      z: 115.68
     row: 3
     col: 2
-    distanceBetweenRow: 0.06
-    distanceBetweenCol: 0.36
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
   - type: 3
     position:
-      x: 0.5
-      z: 2.5
+      x: 0
+      z: 120
     row: 1
     col: 2
-    distanceBetweenRow: 0.06
-    distanceBetweenCol: 0.36
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
