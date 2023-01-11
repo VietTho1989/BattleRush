@@ -46,9 +46,23 @@ namespace BattleRushS
                     {
                         if (battleRush.makeSegmentManager.v.mapAsset.v != null)
                         {
-                            if(battleRush.makeSegmentManager.v.assetIndex.v >= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                            // check asset index
+                            if (!isArena)
                             {
-                                isArena = true;
+                                if (battleRush.makeSegmentManager.v.assetIndex.v >= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                                {
+                                    Logger.Log("mySequence is arena: " + battleRush.makeSegmentManager.v.assetIndex.v + ", " + battleRush.makeSegmentManager.v.mapAsset.v.segments.Count);
+                                    isArena = true;
+                                }
+                            }
+                            // last
+                            if (!isArena)
+                            {
+                                if (battleRush.makeSegmentManager.v.assetIndex.v == battleRush.makeSegmentManager.v.mapAsset.v.segments.Count-1)
+                                {
+                                    SegmentAsset last = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.assetIndex.v];
+                                    
+                                }
                             }
                         }
                         else

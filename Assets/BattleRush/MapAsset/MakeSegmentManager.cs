@@ -12,6 +12,31 @@ namespace BattleRushS
 
         public VO<MapAsset> mapAsset;
 
+        public class AssetIndex : Data
+        {
+
+            public VO<int> index;
+
+            public VO<int> repeat;
+
+            public VO<bool> alreadyMakePath;
+
+            public VO<bool> alreadyMakePrefab;
+
+            #region Constructor
+
+            public enum Property
+            {
+                index,
+                repeat,
+                alreadyMakePath,
+                alreadyMakePrefab
+            }
+
+            #endregion
+
+        }
+
         public VO<int> assetIndex;
 
         public VO<int> repeatIndex;
@@ -21,10 +46,10 @@ namespace BattleRushS
         public void next()
         {
             this.repeatIndex.v++;
-            if(this.assetIndex.v>=0 && this.assetIndex.v < this.mapAsset.v.segments.Count)
+            if (this.assetIndex.v >= 0 && this.assetIndex.v < this.mapAsset.v.segments.Count)
             {
                 SegmentAsset mapAsset = this.mapAsset.v.segments[this.assetIndex.v];
-                if(this.repeatIndex.v >= Math.Max(mapAsset.repeat, 1) )
+                if (this.repeatIndex.v >= Math.Max(mapAsset.repeat, 1))
                 {
                     this.assetIndex.v++;
                     this.repeatIndex.v = 0;
@@ -34,6 +59,7 @@ namespace BattleRushS
                     // still in repeat
                 }
             }
+            Logger.Log("makeSegmentManager: " + this.assetIndex.v);
         }
 
         #endregion
