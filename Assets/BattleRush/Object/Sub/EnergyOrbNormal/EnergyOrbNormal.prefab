@@ -38543,7 +38543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
-  orb: {fileID: 0}
+  orb: {fileID: 2801409365946724573}
   pickUpEffect: {fileID: 2449660570263124172}
 --- !u!135 &1693825587393017756
 SphereCollider:

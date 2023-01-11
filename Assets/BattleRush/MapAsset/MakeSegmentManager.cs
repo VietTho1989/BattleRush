@@ -16,6 +16,8 @@ namespace BattleRushS
 
         public VO<int> repeatIndex;
 
+        public VO<float> currentLength;
+
         public void next()
         {
             this.repeatIndex.v++;
@@ -50,7 +52,8 @@ namespace BattleRushS
             assetIndex,
             repeatIndex,
 
-            currentNextSegmentIndex
+            currentNextSegmentIndex,
+            currentLength
         }
 
         public MakeSegmentManager() : base()
@@ -60,6 +63,7 @@ namespace BattleRushS
             this.repeatIndex = new VO<int>(this, (byte)Property.repeatIndex, -1);
 
             this.currentNextSegmentIndex = new VO<int>(this, (byte)Property.currentNextSegmentIndex, 0);
+            this.currentLength = new VO<float>(this, (byte)Property.currentLength, -1);
         }
 
         #endregion

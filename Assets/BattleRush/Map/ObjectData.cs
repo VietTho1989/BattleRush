@@ -207,7 +207,7 @@ namespace BattleRushS
                         }
                     }
                 }
-                this.position.v = new Position(UnityEngine.Random.Range(0.0f, 1.0f), P.z / Position.DefaultSegmentHeight);
+                this.position.v = new Position(UnityEngine.Random.Range(0.0f, 1.0f), P.z);
             }            
             // Logger.Log("ObjectData : " + this.I.v + ", " + this.P.v + ", " + this.R.v);
 

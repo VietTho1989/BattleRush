@@ -19,6 +19,8 @@ public class Segment : MonoBehaviour
 
     #endregion
 
+    public float length = 48;
+
     void Start()
     {
         if (segment != null)

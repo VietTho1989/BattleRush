@@ -52,7 +52,7 @@ namespace BattleRushS
                     {
                         if (battleRush.makeSegmentManager.v.mapAsset.v != null)
                         {
-                            if(battleRush.makeSegmentManager.v.assetIndex.v>= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
+                            if(battleRush.makeSegmentManager.v.assetIndex.v >= battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
                             {
                                 isArena = true;
                             }
@@ -480,7 +480,7 @@ namespace BattleRushS
                                                 if (objectUI != null)
                                                 {
                                                     float x = objectData.position.v.x * Position.DefaultSegmentWidth - Position.DefaultSegmentWidth / 2;
-                                                    float z = (objectData.position.v.z % 1) * Position.DefaultSegmentHeight - Position.DefaultSegmentHeight / 2;
+                                                    float z = (objectData.position.v.z % 1) * 1 - 1 / 2;// TODO co the se can nhan voi chieu dai segment
                                                     Logger.Log("z local: " + z);
                                                     // set
                                                     objectUI.localPosition = new Vector3(x, 1, z);

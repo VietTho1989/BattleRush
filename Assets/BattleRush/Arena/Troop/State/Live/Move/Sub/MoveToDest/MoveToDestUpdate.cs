@@ -44,6 +44,7 @@ namespace BattleRushS.ArenaS.TroopS.TroopMoveS
                         agent.enabled = true;
                         agent.isStopped = false;
                         agent.destination = this.data.dest.v;
+                        // TODO: khi den vi tri xong, can xoay agent ve phia quan dich: agent.transform.LookAt(this.data.dest.v);
                     }
                     else
                     {

@@ -65,8 +65,8 @@ MonoBehaviour:
     position:
       x: 0.5
       z: 1.9
-    row: 3
-    col: 2
+    row: 1
+    col: 1
     distanceBetweenRow: 0
     distanceBetweenCol: 0
   - type: 3

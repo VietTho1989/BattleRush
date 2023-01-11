@@ -15,10 +15,12 @@ public class SegmentAsset
 {
     public SegmentPathInfo pathInfo = new SegmentPathInfo();
     public uint repeat = 1;
+    public Segment segment;
 }
 
 [CreateAssetMenu(fileName = "MapAsset", menuName = "BattleRush/SpawnMapAsset", order = 1)]
 public class MapAsset : ScriptableObject
 {
+    public Segment defaultSegment;
     public List<SegmentAsset> segments = new List<SegmentAsset>();
 }
