@@ -65,16 +65,13 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ToolsWindow.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3AutoSaveMgrEditor.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\AddES3Prefab.cs" />
-    <Compile Include="Assets\OmniShade\Scripts\Editor\OmniShadeGUI.cs" />
     <Compile Include="Assets\CommonLibrary\RecyclerKit\Editor\TrashManEditor.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3Postprocessor.cs" />
-    <Compile Include="Assets\OmniShade\Scripts\Editor\OmniShadeMenu.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3Window.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3InspectorInfoEditor.cs" />
     <Compile Include="Assets\CommonLibrary\BuildSetting\Editor\MyIOSBuild.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3AutoSaveEditor.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3EditorUtility.cs" />
-    <Compile Include="Assets\OmniShade\Scripts\Editor\OmniShadePreprocess.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\AutoSaveWindow.cs" />
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\Troops\Editor\TroopInformationEditor.cs" />
     <Compile Include="Assets\BattleRush\Hero\UI\Prefab\Editor\HeroInformationEditor.cs" />
