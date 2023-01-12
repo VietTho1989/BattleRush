@@ -31,5 +31,11 @@ namespace BattleRushS.ObjectS
         {
             return Type.Pike;
         }
+
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

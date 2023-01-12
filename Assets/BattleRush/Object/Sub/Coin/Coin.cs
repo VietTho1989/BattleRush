@@ -42,5 +42,11 @@ namespace BattleRushS.ObjectS
         {
             return Type.OkgCoin;
         }
+
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

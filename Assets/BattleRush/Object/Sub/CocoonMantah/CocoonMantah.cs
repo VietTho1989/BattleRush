@@ -28,5 +28,10 @@ namespace BattleRushS.ObjectS
             return Type.CocoonMantah;
         }
 
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

@@ -27,5 +27,11 @@ namespace BattleRushS.ObjectS
         {
             return Type.UpgradeGateFree;
         }
+
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

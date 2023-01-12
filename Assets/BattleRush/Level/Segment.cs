@@ -27,4 +27,6 @@ public class Segment : MonoBehaviour
             this.name = "Segment " + segment.index + "; " + segment.EvaluatePosition(0) + "; " + segment.EvaluatePosition(100) + ", " + segment.GetBounds().size;
     }
 
+    public float segmentPos = 0;
+
 }

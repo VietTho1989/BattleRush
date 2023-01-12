@@ -82,6 +82,12 @@ namespace BattleRushS
                                     UpdateUtils.makeUpdate<EndUpdate, End>(end, this.transform);
                                 }
                                 break;
+                            case BattleRush.State.Type.Edit:
+                                {
+                                    Edit edit = state as Edit;
+                                    UpdateUtils.makeUpdate<EditUpdate, Edit>(edit, this.transform);
+                                }
+                                break;
                             default:
                                 Logger.LogError("unknown type: " + state.getType());
                                 break;
@@ -262,6 +268,12 @@ namespace BattleRushS
                                 {
                                     End end = state as End;
                                     end.removeCallBackAndDestroy(typeof(EndUpdate));
+                                }
+                                break;
+                            case BattleRush.State.Type.Edit:
+                                {
+                                    Edit edit = state as Edit;
+                                    edit.removeCallBackAndDestroy(typeof(EditUpdate));
                                 }
                                 break;
                             default:

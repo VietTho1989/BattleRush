@@ -8,6 +8,8 @@ namespace BattleRushS
     public class MapData : Data
     {
 
+        public VO<ItemMap> itemMap;
+
         #region objectDatas
 
         public LD<ObjectData> objectDatas;
@@ -19,16 +21,19 @@ namespace BattleRushS
         public enum Property
         {
             objectDatas,
+            itemMap
         }
 
         public MapData() : base()
         {
             this.objectDatas = new LD<ObjectData>(this, (byte)Property.objectDatas);
+            this.itemMap = new VO<ItemMap>(this, (byte)Property.itemMap, null);
         }
 
         public void reset()
         {
             this.objectDatas.clear();
+            this.itemMap = null;
         }
 
         #endregion

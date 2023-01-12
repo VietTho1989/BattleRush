@@ -60,5 +60,11 @@ namespace BattleRushS.ObjectS
         {
             return Type.TroopCage;
         }
+
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

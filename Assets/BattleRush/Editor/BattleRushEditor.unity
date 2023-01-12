@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
+  isEditorMode: 1
   heroInformations:
   - {fileID: -5107194361853833032, guid: 55a016cee02fbbf4bacc12fbaae28a81, type: 3}
   - {fileID: 3985238328426227106, guid: e09ecaa75a6ee624f9e044a46cf27b08, type: 3}
@@ -429,6 +430,7 @@ MonoBehaviour:
   startPrefab: {fileID: 7758536178300871748, guid: a86634731b7e53644aaec3cb4d315b09, type: 3}
   playPrefab: {fileID: 7860760791605819769, guid: 47f39d9108d8f374b98a28046b633798, type: 3}
   endPrefab: {fileID: 5686208654201968349, guid: 901d47df4b12f144aa2b0f48d4c002cf, type: 3}
+  editPrefab: {fileID: -1795651676766334432, guid: 654f26c7e6ccacc4889d638d00e843c6, type: 3}
   playerInputPrefab: {fileID: 6359371570559892101, guid: eba0eb58a1cf24309b11c5ca61811f75, type: 3}
   playerInputContainer: {fileID: 606016190}
   coinPrefab: {fileID: -4734011491159582539, guid: fd4b19fc6fed7ef4e8cc833dda5018bc, type: 3}

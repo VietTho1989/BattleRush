@@ -103,6 +103,7 @@ namespace BattleRushS
                                     if (segment != null)
                                     {
                                         segmentPosDes = battleRush.makeSegmentManager.v.currentLength.v + segment.length;
+                                        segment.segmentPos = segmentPosFrom;
                                     }
                                     else
                                     {

@@ -36,6 +36,8 @@ public abstract class ObjectInPath : Data
     }
 
     public abstract Type getType();
+
+    public abstract Position getPosition();
 }
 
 [System.Serializable]

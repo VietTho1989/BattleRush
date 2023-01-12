@@ -12,6 +12,7 @@ namespace BattleRushS
     public class BattleRushUI : UIBehavior<BattleRushUI.UIData>
     {
 
+        public bool isEditorMode = false;
         public List<HeroInformation> heroInformations;
         public List<TroopInformation> troopInformations;
 
@@ -107,7 +108,11 @@ namespace BattleRushS
                 {
                     UIData uiData = new UIData();
                     {
-                        uiData.battleRush.v = new ReferenceData<BattleRush>(new BattleRush());
+                        BattleRush battleRush = new BattleRush();
+                        {
+                            battleRush.isInEditMode.v = this.isEditorMode;
+                        }
+                        uiData.battleRush.v = new ReferenceData<BattleRush>(battleRush);
                     }
                     this.setData(uiData);
                 }
@@ -221,6 +226,20 @@ namespace BattleRushS
                                         }
                                         this.data.stateUI.v = endUIData;
                                     }
+                                    break;
+                                case BattleRush.State.Type.Edit:
+                                    {
+                                        Edit edit = battleRush.state.v as Edit;
+                                        // make UI
+                                        EditUI.UIData editUIData = this.data.stateUI.newOrOld<EditUI.UIData>();
+                                        {
+                                            editUIData.edit.v = new ReferenceData<Edit>(edit);
+                                        }
+                                        this.data.stateUI.v = editUIData;
+                                    }
+                                    break;
+                                default:
+                                    Logger.LogError("unknown state: " + battleRush.state.v);
                                     break;
                             }
                         }
@@ -580,6 +599,7 @@ namespace BattleRushS
         public StartUI startPrefab;
         public PlayUI playPrefab;
         public EndUI endPrefab;
+        public EditUI editPrefab;
 
         public PlayerInputUI playerInputPrefab;
         public Transform playerInputContainer;
@@ -674,6 +694,12 @@ namespace BattleRushS
                                 {
                                     EndUI.UIData endUIData = stateUI as EndUI.UIData;
                                     UIUtils.Instantiate(endUIData, endPrefab, stateContainer);
+                                }
+                                break;
+                            case BattleRush.State.Type.Edit:
+                                {
+                                    EditUI.UIData editUIData = stateUI as EditUI.UIData;
+                                    UIUtils.Instantiate(editUIData, editPrefab, stateContainer);
                                 }
                                 break;
                             default:
@@ -880,6 +906,12 @@ namespace BattleRushS
                                 {
                                     EndUI.UIData endUIData = stateUI as EndUI.UIData;
                                     endUIData.removeCallBackAndDestroy(typeof(EndUI));
+                                }
+                                break;
+                            case BattleRush.State.Type.Edit:
+                                {
+                                    EditUI.UIData editUIData = stateUI as EditUI.UIData;
+                                    editUIData.removeCallBackAndDestroy(typeof(EditUI));
                                 }
                                 break;
                             default:

@@ -158,6 +158,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Load\LoadLevelByFileExcelUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\Cache\State\Get\Get.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\UpgradeGateCharge\UpgradeGateChargeUpdate.cs" />
+    <Compile Include="Assets\BattleRush\State\Edit\EditUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\RecyclerKit\TrashManRecycleBin.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceManagerUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ScriptableObjectType.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_BoxCollider.cs" />
     <Compile Include="Assets\BattleRush\BattleRushSegmentIndexUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\ToastDataUpdate.cs" />
+    <Compile Include="Assets\BattleRush\State\Edit\EditUI.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroMoveRunUpdate.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalUpdate.cs" />
@@ -313,6 +315,7 @@
     <Compile Include="Assets\BattleRush\State\2_Play\Play.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3ArrayType.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LimitVelocityOverLifetimeModule.cs" />
+    <Compile Include="Assets\BattleRush\State\Edit\Edit.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Change\ChangeDictSet.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_NoiseModule.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_ParticleSystem.cs" />
@@ -565,7 +568,6 @@
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\ExternalResources\Packer2DBox\About.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\OmniShade\Shaders\OmniShadeCore.cginc" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Extra\PluginSupport\TMPro\TMPro instructions.txt" />
-    <None Include="Assets\OmniShade\Shaders\OmniShade.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Extra\PluginSupport\Playmaker\README.txt" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicTableAdapter.txt" />
@@ -589,7 +591,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\OmniShade\Shaders\OmniShade Triplanar URP.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicListAdapter.txt" />
@@ -609,7 +610,6 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\Realistic Effects Pack 1\Shaders\ParticleAdd.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\OmniShade\Shaders\OmniShade Triplanar.shader" />
     <None Include="Assets\CommonLibrary\AdvancedCoroutines\Plugins\AdvancedCoroutineCore.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>

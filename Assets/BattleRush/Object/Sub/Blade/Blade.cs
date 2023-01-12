@@ -32,5 +32,10 @@ namespace BattleRushS.ObjectS
             return Type.Blade;
         }
 
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

@@ -268,8 +268,15 @@ public abstract class Data : AddCallBackInterface
                 {
                     Component component = callBack as Component;
                     if (component != null)
-                    {
-                        GameObject.Destroy(component.gameObject);
+                    {                        
+                        if (Application.isPlaying)
+                        {
+                            GameObject.Destroy(component.gameObject);
+                        }
+                        else
+                        {
+                            GameObject.DestroyImmediate(component.gameObject);
+                        }
                     }
                     else
                     {

@@ -42,5 +42,11 @@ namespace BattleRushS.ObjectS
         {
             return Type.EnergyOrbPower;
         }
+
+        public override Position getPosition()
+        {
+            return this.position.v;
+        }
+
     }
 }

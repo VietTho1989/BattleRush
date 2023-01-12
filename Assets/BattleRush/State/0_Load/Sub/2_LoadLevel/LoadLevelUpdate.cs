@@ -158,19 +158,46 @@ namespace BattleRushS.StateS.LoadS
                             break;
                         case LoadLevel.State.Ready:
                             {
-                                BattleRush battleRush = this.data.findDataInParent<BattleRush>();
-                                if (battleRush != null)
+                                // find
+                                bool isInEditorMode = false;
                                 {
-                                    Start start = battleRush.state.newOrOld<Start>();
+                                    BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                                    if (battleRush != null)
                                     {
-
+                                        isInEditorMode = battleRush.isInEditMode.v;
                                     }
-                                    battleRush.state.v = start;
+                                    else
+                                    {
+                                        Logger.LogError("battleRush null");
+                                    }
                                 }
-                                else
+                                // process
                                 {
-                                    Logger.LogError("battleRush null");
-                                }
+                                    BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                                    if (battleRush != null)
+                                    {
+                                        if (!isInEditorMode)
+                                        {
+                                            Start start = battleRush.state.newOrOld<Start>();
+                                            {
+
+                                            }
+                                            battleRush.state.v = start;
+                                        }
+                                        else
+                                        {
+                                            Edit edit = battleRush.state.newOrOld<Edit>();
+                                            {
+
+                                            }
+                                            battleRush.state.v = edit;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("battleRush null");
+                                    }
+                                }                                                         
                             }
                             break;
                         default:
@@ -194,15 +221,27 @@ namespace BattleRushS.StateS.LoadS
 
         #region implement callBacks
 
+        private BattleRush battleRush = null;
+
         public override void onAddCallBack<T>(T data)
         {
             if (data is LoadLevel)
             {
                 LoadLevel loadLevel = data as LoadLevel;
+                // Parent
+                {
+                    DataUtils.addParentCallBack(loadLevel, this, ref this.battleRush);
+                }
                 // Child
                 {
                     loadLevel.sub.allAddCallBack(this);
                 }
+                dirty = true;
+                return;
+            }
+            // Parent
+            if(data is BattleRush)
+            {
                 dirty = true;
                 return;
             }
@@ -286,11 +325,20 @@ namespace BattleRushS.StateS.LoadS
             if (data is LoadLevel)
             {
                 LoadLevel loadLevel = data as LoadLevel;
+                // Parent
+                {
+                    DataUtils.removeParentCallBack(loadLevel, this, ref this.battleRush);
+                }
                 // Child
                 {
                     loadLevel.sub.allRemoveCallBack(this);
                 }
                 this.setDataNull(loadLevel);
+                return;
+            }
+            // Parent
+            if (data is BattleRush)
+            {
                 return;
             }
             // Child
@@ -389,6 +437,19 @@ namespace BattleRushS.StateS.LoadS
                         break;
                     default:
                         Logger.LogError("Don't process: " + wrapProperty + "; " + this);
+                        break;
+                }
+                return;
+            }
+            // Parent
+            if (wrapProperty.p is BattleRush)
+            {
+                switch ((BattleRush.Property)wrapProperty.n)
+                {
+                    case BattleRush.Property.isInEditMode:
+                        dirty = true;
+                        break;
+                    default:
                         break;
                 }
                 return;

@@ -53,6 +53,7 @@ namespace BattleRushS.StateS.LoadS
                                 // make map data
                                 MapData mapData = new MapData();
                                 {
+                                    mapData.itemMap.v = itemMap;
                                     // make
                                     List<ObjectData> objectDatas = new List<ObjectData>();
                                     {
