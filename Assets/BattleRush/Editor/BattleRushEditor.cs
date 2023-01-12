@@ -150,6 +150,7 @@ namespace BattleRushS
                                                     }
                                                     itemMap.items.Add(itemAsset);
                                                 }
+                                                EditorUtility.SetDirty(itemMap);
                                             }
                                             else
                                             {
