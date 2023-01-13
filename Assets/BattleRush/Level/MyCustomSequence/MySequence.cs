@@ -186,7 +186,7 @@ namespace BattleRushS
             base.stopped = true;
         }
 
-        public static void MakeObjectInPathDataAndUIFromObjectData(ObjectData objectData, BattleRush battleRush, LevelSegment levelSegment, out Transform objectUI, out ObjectInPath objectInPath)
+        public static void MakeObjectInPathDataAndUIFromObjectData(ObjectData objectData, BattleRush battleRush, LevelSegment levelSegment, out Transform objectUI, out ObjectInPath objectInPath, bool needSetUIData = false)
         {
             // init
             objectInPath = null;
@@ -215,7 +215,15 @@ namespace BattleRushS
                                         objectUIData.coin.v = new ReferenceData<Coin>(coin);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.coinPrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.coinPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.coinPrefab, levelSegment.transform).transform;
+                                    }                                    
                                 }
                             }
                             break;
@@ -236,7 +244,15 @@ namespace BattleRushS
                                         objectUIData.cocoonMantah.v = new ReferenceData<CocoonMantah>(cocoonMantah);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.cocoonMantahPrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.cocoonMantahPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.cocoonMantahPrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -256,7 +272,15 @@ namespace BattleRushS
                                         objectUIData.energyOrbNormal.v = new ReferenceData<EnergyOrbNormal>(energyOrbNormal);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.energyOrbNormalPrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.energyOrbNormalPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.energyOrbNormalPrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -304,7 +328,15 @@ namespace BattleRushS
                                         objectUIData.troopCage.v = new ReferenceData<TroopCage>(troopCage);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.troopCagePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.troopCagePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.troopCagePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -324,7 +356,15 @@ namespace BattleRushS
                                         objectUIData.sawBlade.v = new ReferenceData<SawBlade>(sawBlade);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.sawBladePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.sawBladePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.sawBladePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -344,7 +384,15 @@ namespace BattleRushS
                                         objectUIData.blade.v = new ReferenceData<Blade>(blade);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.bladePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.bladePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.bladePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -364,7 +412,15 @@ namespace BattleRushS
                                         objectUIData.fireNozzle.v = new ReferenceData<FireNozzle>(fireNozzle);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.fireNozzlePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.fireNozzlePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.fireNozzlePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -384,7 +440,15 @@ namespace BattleRushS
                                         objectUIData.pike.v = new ReferenceData<Pike>(pike);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.pikePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.pikePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.pikePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -404,7 +468,15 @@ namespace BattleRushS
                                         objectUIData.energyOrbUpgrade.v = new ReferenceData<EnergyOrbUpgrade>(energyOrbUpgrade);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.energyOrbUpgradePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.energyOrbUpgradePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.energyOrbUpgradePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -424,7 +496,15 @@ namespace BattleRushS
                                         objectUIData.upgradeGateFree.v = new ReferenceData<UpgradeGateFree>(upgradeGateFree);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.upgradeGateFreePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.upgradeGateFreePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.upgradeGateFreePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -444,7 +524,15 @@ namespace BattleRushS
                                         objectUIData.upgradeGateCharge.v = new ReferenceData<UpgradeGateCharge>(upgradeGateCharge);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.upgradeGateChargePrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.upgradeGateChargePrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.upgradeGateChargePrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -464,7 +552,15 @@ namespace BattleRushS
                                         objectUIData.hammer.v = new ReferenceData<Hammer>(hammer);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.hammerPrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.hammerPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.hammerPrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -484,7 +580,15 @@ namespace BattleRushS
                                         objectUIData.grinder.v = new ReferenceData<Grinder>(grinder);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.grinderPrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.grinderPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.grinderPrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;
@@ -504,7 +608,15 @@ namespace BattleRushS
                                         objectUIData.energyOrbPower.v = new ReferenceData<EnergyOrbPower>(energyOrbPower);
                                     }
                                     battleRushUI.data.objectInPaths.add(objectUIData);
-                                    objectUI = Instantiate(battleRushUI.energyOrbPowerPrefab, levelSegment.transform).transform;
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.energyOrbPowerPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.energyOrbPowerPrefab, levelSegment.transform).transform;
+                                    }
                                 }
                             }
                             break;

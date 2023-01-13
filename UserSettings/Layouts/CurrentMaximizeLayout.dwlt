@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 45
+  controlID: 1726
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 46
+  controlID: 1727
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 47
+  controlID: 1728
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,23 +224,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e0790000
-      m_LastClickedID: 31200
-      m_ExpandedIDs: b6d5edffc0d5edffd0f0eeff80fdeeff8afdeeffbabfefffde17f7ffe617f7fff219f7fffc19f7ff9a2af9ff224af9ff2c4af9ff8465faff6666faff7266faff8666faff506afaff5c6afaff5871faff6271faff6672faffcebbfaff16fbffffd2790000e0790000427a0000
+      m_SelectedIDs: 64180000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4e52feff3e65feff6897feff22bfffff16fbffffee780000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: spine.003
-        m_OriginalName: spine.003
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 121752
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -537,9 +537,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 240.57065, y: 3.2074456, z: 339.45764}
+    m_Target: {x: 0, y: 0, z: 36}
     speed: 2
-    m_Value: {x: 240.57065, y: 3.2074456, z: 339.45764}
+    m_Value: {x: 0, y: 0, z: 36}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,11 +588,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.06677966, y: -0.892295, z: 0.4237856, w: 0.1406093}
     speed: 2
-    m_Value: {x: 0.06677916, y: -0.8922883, z: 0.4237824, w: 0.14060824}
+    m_Value: {x: -0.06677916, y: 0.8922883, z: -0.4237824, w: -0.14060824}
   m_Size:
-    m_Target: 1.8718549
+    m_Target: 26.520103
     speed: 2
-    m_Value: 1.8718549
+    m_Value: 26.520103
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1255,9 +1255,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: b957ce8b2abe47f40926b5d04463ca60, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 5305b9de05b7be64f82ea24db1024109, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -3141125521365706038, guid: b957ce8b2abe47f40926b5d04463ca60, type: 2}
+  - m_Target: {fileID: -7627379949293411162, guid: 5305b9de05b7be64f82ea24db1024109, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1289,8 +1289,8 @@ MonoBehaviour:
     y: 568
     width: 1351
     height: 379
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
@@ -1326,7 +1326,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: MySequ
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -1338,22 +1338,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/BattleRush/Arena/Troop/UI
+    - Assets/BattleRush/MapAsset/Item
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: MySequ
   m_ViewMode: 1
   m_StartGridSize: 55
   m_LastFolders:
-  - Assets/BattleRush/Arena/Troop/UI
+  - Assets/BattleRush/MapAsset/Item
   m_LastFoldersGridSize: 55
   m_LastProjectPath: D:\BattleRush
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 495}
-    m_SelectedIDs: e2880100
-    m_LastClickedID: 100578
-    m_ExpandedIDs: 0000000000750100027501000475010006750100087501000a7501000c7501000e75010010750100127501001475010016750100187501001a7501001c7501001e75010020750100227501002475010026750100287501002a7501002c7501002e75010030750100327501003475010036750100387501003a7501003c7501003e75010040750100427501004475010046750100487501004a7501004c7501004e75010050750100527501005475010056750100587501005a7501005c7501005e75010060750100627501006475010066750100687501006a7501006c7501006e75010070750100727501007475010076750100787501007a7501007e75010080750100827501008475010086750100887501008a7501008c7501008e7501009075010092750100707701009e770100a4770100a67701001278010066790100e288010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ec780100
+    m_LastClickedID: 96492
+    m_ExpandedIDs: 0000000036750100387501003a7501003c7501003e75010040750100427501004475010046750100487501004a7501004c7501004e75010050750100527501005475010056750100587501005a7501005c7501005e75010060750100627501006475010066750100687501006a7501006c7501006e75010070750100727501007475010076750100787501007a7501007c7501007e75010080750100827501008475010086750100887501008a7501008c7501008e75010090750100927501009475010096750100987501009a7501009c7501009e750100a0750100a2750100a4750100a6750100a8750100aa750100ac750100ae750100b0750100b2750100b4750100b6750100b8750100ba750100bc750100be750100c0750100c2750100c4750100c675010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1381,7 +1381,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000000750100027501000475010006750100087501000a7501000c7501000e75010010750100127501001475010016750100187501001a7501001c7501001e75010020750100227501002475010026750100287501002a7501002c7501002e75010030750100327501003475010036750100387501003a7501003c7501003e75010040750100427501004475010046750100487501004a7501004c7501004e75010050750100527501005475010056750100587501005a7501005c7501005e75010060750100627501006475010066750100687501006a7501006c7501006e75010070750100727501007475010076750100787501007a7501007c7501007e75010080750100827501008475010086750100887501008a7501008c7501008e7501009075010092750100
+    m_ExpandedIDs: 0000000036750100387501003a7501003c7501003e75010040750100427501004475010046750100487501004a7501004c7501004e75010050750100527501005475010056750100587501005a7501005c7501005e75010060750100627501006475010066750100687501006a7501006c7501006e75010070750100727501007475010076750100787501007a7501007c7501007e75010080750100827501008475010086750100887501008a7501008c7501008e75010090750100927501009475010096750100987501009a7501009c7501009e750100a0750100a2750100a4750100a6750100a8750100aa750100ac750100ae750100b0750100b2750100b4750100b6750100b8750100ba750100bc750100be750100c0750100c2750100c4750100c675010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1406,8 +1406,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e6400100
-    m_LastClickedInstanceID: 82150
+    m_SelectedInstanceIDs: 64180000
+    m_LastClickedInstanceID: 6244
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e46e000018700000bc750000b4b10000e66e000096550200c09e000000000000
     m_RenameOverlay:
@@ -1527,7 +1527,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 356
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

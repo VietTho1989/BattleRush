@@ -330,6 +330,7 @@ namespace BattleRushS
                             // We have a prefab selected and we are clicking in the scene view with the left button
                             if (controller.paletteIndex.v >= 0 && controller.paletteIndex.v < controller.palette.vs.Count)
                             {
+                                ObjectInPathUIInterface objectInPathUIInterface = controller.palette.vs[controller.paletteIndex.v];
                                 if (Event.current.type == EventType.MouseDown && Event.current.button == 0)
                                 {
                                     Logger.Log("MyMapEditor: cell center position: " + cellCenter);
@@ -361,13 +362,68 @@ namespace BattleRushS
                                             {
                                                 case Segment.SegmentType.Run:
                                                     {
-                                                        // Create the prefab instance while keeping the prefab link
-                                                        GameObject prefab = controller.palette.vs[controller.paletteIndex.v].getMyGameObject();
-                                                        GameObject gameObject = PrefabUtility.InstantiatePrefab(prefab, levelSegment.transform) as GameObject;
-                                                        gameObject.transform.position = cellCenter;
+                                                        BattleRushUI battleRushUI = GameObject.FindObjectOfType<BattleRushUI>();
+                                                        if (battleRushUI != null)
+                                                        {
+                                                            BattleRushUI.UIData battleRushUIData = battleRushUI.data;
+                                                            if (battleRushUIData != null)
+                                                            {
+                                                                BattleRush battleRush = battleRushUIData.battleRush.v.data;
+                                                                if (battleRush != null)
+                                                                {
+                                                                    // make objectData
+                                                                    ObjectData objectData = new ObjectData();
+                                                                    {
+                                                                        objectData.I.v = objectInPathUIInterface.getType();
+                                                                        // position
+                                                                        {
+                                                                            // TODO can hoan thien
+                                                                        }
+                                                                    }
+                                                                    // make object
+                                                                    Transform objectUI;
+                                                                    ObjectInPath objectInPath;
+                                                                    MySequence.MakeObjectInPathDataAndUIFromObjectData(objectData, battleRush, levelSegment, out objectUI, out objectInPath, true);
+                                                                    // process after add
+                                                                    if (objectUI != null && objectInPath != null)
+                                                                    {
+                                                                        Logger.Log("MyMapEditor: make object success: " + objectInPath.uid);
+                                                                        objectUI.transform.position = cellCenter;
+                                                                        // Allow the use of Undo (Ctrl+Z, Ctrl+Y).
+                                                                        // Undo.RegisterCreatedObjectUndo(objectUI, "");
+                                                                        levelSegment.UpdateReferences();
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        Logger.LogError("objectUI null");
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    Logger.LogError("battleRush null");
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("battleRushUIData null");
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            Logger.LogError("battleRushUI null");
+                                                        }
+                                                        
 
-                                                        // Allow the use of Undo (Ctrl+Z, Ctrl+Y).
-                                                        Undo.RegisterCreatedObjectUndo(gameObject, "");
+                                                        // old
+                                                        /*{
+                                                            // Create the prefab instance while keeping the prefab link
+                                                            GameObject prefab = controller.palette.vs[controller.paletteIndex.v].getMyGameObject();
+                                                            GameObject gameObject = PrefabUtility.InstantiatePrefab(prefab, levelSegment.transform) as GameObject;
+                                                            gameObject.transform.position = cellCenter;
+
+                                                            // Allow the use of Undo (Ctrl+Z, Ctrl+Y).
+                                                            Undo.RegisterCreatedObjectUndo(gameObject, "");
+                                                        }*/                                                       
                                                     }
                                                     break;
                                                 case Segment.SegmentType.Arena:
