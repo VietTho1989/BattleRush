@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Dreamteck.Forever;
+using Dreamteck.Splines;
 using UnityEditor;
 using UnityEngine;
 using static BattleRushS.BattleRushUI.UIData;
@@ -178,6 +180,68 @@ namespace BattleRushS
 
             // paint or not
             {
+                // state
+                {
+                    // find
+                    bool canEdit = false;
+                    {
+                        BattleRushUI battleRushUI = GameObject.FindObjectOfType<BattleRushUI>();
+                        if (battleRushUI != null)
+                        {
+                            BattleRushUI.UIData battleRushUIData = battleRushUI.data;
+                            if (battleRushUIData != null)
+                            {
+                                BattleRush battleRush = battleRushUIData.battleRush.v.data;
+                                if (battleRush != null)
+                                {
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:                                        
+                                        case BattleRush.State.Type.Start:
+                                        case BattleRush.State.Type.Play:
+                                        case BattleRush.State.Type.End:
+                                            break;
+                                        case BattleRush.State.Type.Edit:
+                                            canEdit = true;
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("battleRush null");
+                                }
+                            }
+                            else
+                            {
+                                Logger.LogError("battleRushUIData null");
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("battleRushUI null");
+                        }
+                    }
+                    // process
+                    if (canEdit)
+                    {
+                        Controller.State.Paint paint = controller.state.newOrOld<Controller.State.Paint>();
+                        {
+
+                        }
+                        controller.state.v = paint;
+                    }
+                    else
+                    {
+                        Controller.State.None none = controller.state.newOrOld<Controller.State.None>();
+                        {
+
+                        }
+                        controller.state.v = none;
+                    }
+                }
                 // get txt
                 string txt = "";
                 {
@@ -185,12 +249,12 @@ namespace BattleRushS
                     {
                         case Controller.State.Type.None:
                             {
-                                txt = "Start Painting";
+                                txt = "Not in edit mode, cannot paint";
                             }
                             break;
                         case Controller.State.Type.Paint:
                             {
-                                txt = "Stop Painting";
+                                txt = "Paint";
                             }
                             break;
                         default:
@@ -199,23 +263,7 @@ namespace BattleRushS
                     }
                 }
                 // button
-                bool isPaint = GUILayout.Toggle(controller.state.v.getType() == Controller.State.Type.Paint, txt, "Button", GUILayout.Height(60f));
-                if (isPaint)
-                {
-                    Controller.State.Paint paint = controller.state.newOrOld<Controller.State.Paint>();
-                    {
-
-                    }
-                    controller.state.v = paint;
-                }
-                else
-                {
-                    Controller.State.None none = controller.state.newOrOld<Controller.State.None>();
-                    {
-
-                    }
-                    controller.state.v = none;
-                }
+                GUILayout.Toggle(controller.state.v.getType() == Controller.State.Type.Paint, txt, "Button", GUILayout.Height(60f));               
             }
 
             // Get a list of previews, one for each of our prefabs
@@ -243,8 +291,7 @@ namespace BattleRushS
             Vector3 mousePosition = guiRay.origin - guiRay.direction * (guiRay.origin.y / guiRay.direction.y);
 
             // Get the corresponding cell on our virtual grid
-            Vector3Int cell = new Vector3Int(Mathf.RoundToInt(mousePosition.x / cellSize.x), 1, Mathf.RoundToInt(mousePosition.z / cellSize.z));
-            return Vector3.Scale(cell, cellSize);
+            return new Vector3(mousePosition.x, 1, mousePosition.z);
         }
 
         // Does the rendering of the map editor in the scene view.
@@ -286,13 +333,59 @@ namespace BattleRushS
                                 if (Event.current.type == EventType.MouseDown && Event.current.button == 0)
                                 {
                                     Logger.Log("MyMapEditor: cell center position: " + cellCenter);
-                                    // Create the prefab instance while keeping the prefab link
-                                    GameObject prefab = controller.palette.vs[controller.paletteIndex.v].getMyGameObject();
-                                    GameObject gameObject = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
-                                    gameObject.transform.position = cellCenter;
+                                    // find level segment contain
+                                    LevelSegment levelSegment = null;
+                                    {
+                                        SplineSample evalResult = new SplineSample();
+                                        LevelGenerator.instance.Project(cellCenter, evalResult);
+                                        int segmentIndex;
 
-                                    // Allow the use of Undo (Ctrl+Z, Ctrl+Y).
-                                    Undo.RegisterCreatedObjectUndo(gameObject, "");
+                                        LevelGenerator.instance.GlobalToLocalPercent(evalResult.percent, out segmentIndex);
+                                        if (segmentIndex >= 0 && segmentIndex < LevelGenerator.instance.segments.Count)
+                                        {
+                                            Logger.Log("MyMapEditor: paint in segment: " + LevelGenerator.instance.segments[segmentIndex].name);
+                                            levelSegment = LevelGenerator.instance.segments[segmentIndex];
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("segmentIndex error: " + segmentIndex + ", " + LevelGenerator.instance.segments.Count);
+                                        }
+                                    }
+                                    // make game object
+                                    if (levelSegment != null)
+                                    {
+                                        Segment segment = levelSegment.GetComponent<Segment>();
+                                        if (segment != null)
+                                        {
+                                            switch (segment.segmentType)
+                                            {
+                                                case Segment.SegmentType.Run:
+                                                    {
+                                                        // Create the prefab instance while keeping the prefab link
+                                                        GameObject prefab = controller.palette.vs[controller.paletteIndex.v].getMyGameObject();
+                                                        GameObject gameObject = PrefabUtility.InstantiatePrefab(prefab, levelSegment.transform) as GameObject;
+                                                        gameObject.transform.position = cellCenter;
+
+                                                        // Allow the use of Undo (Ctrl+Z, Ctrl+Y).
+                                                        Undo.RegisterCreatedObjectUndo(gameObject, "");
+                                                    }
+                                                    break;
+                                                case Segment.SegmentType.Arena:
+                                                    break;
+                                                default:
+                                                    Logger.LogError("unknown type: "+segment.segmentType);
+                                                    break;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("segment null");
+                                        }                                        
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("levelSegment null");
+                                    }                                   
                                 }
                             }
                         }
