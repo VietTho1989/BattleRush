@@ -58,15 +58,33 @@ namespace BattleRushS
         [SerializeField]
         private List<GameObject> palette = new List<GameObject>();
 
-        private string path = "Assets/BattleRush/Editor/Palette";
 
         private void RefreshPalette()
         {
             palette.Clear();
 
-            string[] prefabFiles = System.IO.Directory.GetFiles(path, "*.prefab");
-            foreach (string prefabFile in prefabFiles)
-                palette.Add(AssetDatabase.LoadAssetAtPath(prefabFile, typeof(GameObject)) as GameObject);
+            BattleRushUI battleRushUI = GameObject.FindObjectOfType<BattleRushUI>();
+            if (battleRushUI != null)
+            {
+                palette.Add(battleRushUI.coinPrefab.gameObject);
+                palette.Add(battleRushUI.energyOrbNormalPrefab.gameObject);
+                palette.Add(battleRushUI.troopCagePrefab.gameObject);
+                palette.Add(battleRushUI.sawBladePrefab.gameObject);
+                palette.Add(battleRushUI.bladePrefab.gameObject);
+                palette.Add(battleRushUI.fireNozzlePrefab.gameObject);
+                palette.Add(battleRushUI.pikePrefab.gameObject);
+                palette.Add(battleRushUI.energyOrbUpgradePrefab.gameObject);
+                palette.Add(battleRushUI.upgradeGateFreePrefab.gameObject);
+                palette.Add(battleRushUI.upgradeGateChargePrefab.gameObject);
+                palette.Add(battleRushUI.hammerPrefab.gameObject);
+                palette.Add(battleRushUI.grinderPrefab.gameObject);
+                palette.Add(battleRushUI.energyOrbPowerPrefab.gameObject);
+                palette.Add(battleRushUI.cocoonMantahPrefab.gameObject);
+            }
+            else
+            {
+                Logger.LogError("battleRushUI null");
+            }
         }
 
         [SerializeField]

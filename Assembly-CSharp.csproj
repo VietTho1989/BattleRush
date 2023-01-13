@@ -203,7 +203,6 @@
     <Compile Include="Assets\CommonLibrary\Toast\ToastDataUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\Edit\EditUI.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroMoveRunUpdate.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadScriptableObject\LoadLevelByScriptableObjectUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Grinder\GrinderUI.cs" />
@@ -345,7 +344,6 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\DO.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Streams\ES3Stream.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroUpdate.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\SceneDynamicAddDelete\MB_DynamicAddDeleteExample.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Texture.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ulong.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_byte.cs" />
@@ -359,7 +357,6 @@
     <Compile Include="Assets\BattleRush\Object\Sub\CocoonMantah\CocoonMantahUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Attack\1_Animation\AnimUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Material.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeStringUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3QueueType.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\Set\ImageSetUpdate.cs" />
@@ -401,7 +398,6 @@
     <Compile Include="Assets\BattleRush\State\2_Play\CheckGameEndUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Sprite.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_AnimationCurve.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\UpgradeGateFree\UpgradeGateFreeUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedUnityObjectType.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoader.cs" />
@@ -416,7 +412,6 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_short.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceData\State\Success.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Live.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
     <Compile Include="Assets\OmniShade\Scripts\OmniShadeAnimateTexture.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedScriptableObjectType.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\0_Move\Move.cs" />
@@ -474,7 +469,6 @@
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Die\Die.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\TakeDamage\Damage.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Blade\BladeUpdate.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceData\State\State.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\ToastMessage.cs" />
     <Compile Include="Assets\BattleRush\Level\Empty\TestSegmentObject.cs" />
@@ -494,7 +488,6 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_PolygonCollider2D.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\DataRecordTask.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\CocoonMantah\CocoonMantahUI.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Data.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\1_ChooseLevel\ChooseLevelUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\CheckIpAddress\Already\AlreadyUpdate.cs" />
@@ -521,7 +514,6 @@
     <Compile Include="Assets\BattleRush\BattleRushUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Writers\ES3JSONWriter.cs" />
     <Compile Include="Assets\OmniShade\Scripts\OmniShade.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\CocoonMantah\CocoonMantah.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\CheckIpAddress\Not\Retry\RetryUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\Remove.cs" />
@@ -534,7 +526,6 @@
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\HaveTransformData.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\SawBlade\SawBladeUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Light.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
     <Compile Include="Assets\CommonLibrary\PluginShare.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\MoveToDest\MoveToDestUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3Spreadsheet.cs" />
@@ -549,7 +540,6 @@
     <Compile Include="Assets\CommonLibrary\UrlImage\UI\UrlSprite.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\CheckIpAddress\Not\Not.cs" />
     <Compile Include="Assets\CommonLibrary\Common\EmptyGameObject.cs" />
-    <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\0_Reset\Reset.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\MyOSA\MyOSAUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3ReferenceMgrBase.cs" />
@@ -572,16 +562,13 @@
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Extra\PluginSupport\Playmaker\README.txt" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicTableAdapter.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\OmniShade\Shaders\OmniShade URP.shader" />
-    <None Include="Assets\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
     <None Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\link.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\MeshBaker\Release Notes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Litjson.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Dzung Assets\Plugins Assets\VFX_HUNG\LIB 1\Hovl Studio\Toon Projectiles 2\Shaders\Blend_CenterGlow.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\ScriptsChunks\HeaderComment.txt" />
-    <None Include="Assets\MeshBaker\Examples\Shaders\UnlitTextureArrays.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\OmniShade\Shaders\OmniShadeURP.cginc" />
@@ -592,18 +579,14 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicListAdapter.txt" />
     <None Include="Assets\OmniShade\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\MeshBaker\MeshBakerWorkingFolder\DONT_DELETE.txt" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicGridAdapter.txt" />
     <None Include="Assets\OmniShade\Samples\MatCap Textures\How to create MatCaps.txt" />
-    <None Include="Assets\MeshBaker\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\ExternalResources\Packer2DBox\Packer2DBoxLICENSE.txt" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Docs\Manual link.txt" />
-    <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\VFX_HUNG\LIB 1\Hovl Studio\Toon Projectiles 2\Shaders\Add_CenterGlow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -1439,14 +1422,6 @@
     <ProjectReference Include="Dreamteck.Forever.Editor.csproj">
       <Project>{D45E7455-0C8E-44D6-808C-EF5BCFB4A178}</Project>
       <Name>Dreamteck.Forever.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{14E836F2-7FBE-3FAE-CCFC-241F75738C45}</Project>
-      <Name>MeshBakerEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{B24F9821-6F60-C4A9-FBB4-B118E6D354F4}</Project>
-      <Name>MeshBakerCore</Name>
     </ProjectReference>
     <ProjectReference Include="AdvancedInputField.csproj">
       <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>

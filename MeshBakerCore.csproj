@@ -114,7 +114,6 @@
     <Compile Include="Assets\MeshBaker\scripts\TextureBlenders\TextureBlenderMaterialPropertyCacheHelper.cs" />
     <Compile Include="Assets\MeshBaker\scripts\core\MB3_AgglomerativeClustering.cs" />
     <Compile Include="Assets\MeshBaker\scripts\MB3_BoneWeightCopier.cs" />
-    <Compile Include="Assets\MeshBaker\scripts\core\TextureCombiner\MB3_TextureCombinerPackerMeshBaker.cs" />
     <Compile Include="Assets\MeshBaker\scripts\core\MB_DefaultMeshAssignCustomizer.cs" />
   </ItemGroup>
   <ItemGroup>
