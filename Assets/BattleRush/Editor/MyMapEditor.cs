@@ -58,20 +58,18 @@ namespace BattleRushS
                 #region Paint
 
                 public class Paint : State
-                {
-
-                    public VO<int> prefabIndex;
+                {                    
 
                     #region Constructor
 
                     public enum Property
                     {
-                        prefabIndex
+                        
                     }
 
                     public Paint() : base()
                     {
-                        this.prefabIndex = new VO<int>(this, (byte)Property.prefabIndex, 0);
+                        
                     }
 
                     #endregion
@@ -93,18 +91,22 @@ namespace BattleRushS
 
             public LO<ObjectInPathUIInterface> palette;
 
+            public VO<int> paletteIndex;
+
             #region Constructor
 
             public enum Property
             {
                 state,
-                palette
+                palette,
+                paletteIndex
             }
 
             public Controller() : base()
             {
                 this.state = new VD<State>(this, (byte)Property.state, new State.None());
                 this.palette = new LO<ObjectInPathUIInterface>(this, (byte)Property.palette);
+                this.paletteIndex = new VO<int>(this, (byte)Property.paletteIndex, 0);
             }
 
             #endregion
@@ -127,8 +129,6 @@ namespace BattleRushS
         {
             SceneView.duringSceneGui -= this.OnSceneGUI;
         }
-
-        private bool paintMode = false;
 
         private Vector2 cellSize = new Vector2(2f, 2f);
 
@@ -191,13 +191,54 @@ namespace BattleRushS
             }
         }
 
-        [SerializeField]
-        private int paletteIndex;
+        Vector2 scrollPosition;
 
         // Called to draw the MapEditor windows.
         private void OnGUI()
         {
-            paintMode = GUILayout.Toggle(paintMode, "Start painting", "Button", GUILayout.Height(60f));
+            scrollPosition = GUILayout.BeginScrollView(scrollPosition);
+
+            // paint or not
+            {
+                // get txt
+                string txt = "";
+                {
+                    switch(controller.state.v.getType())
+                    {
+                        case Controller.State.Type.None:
+                            {
+                                txt = "Start Painting";
+                            }
+                            break;
+                        case Controller.State.Type.Paint:
+                            {
+                                txt = "Stop Painting";
+                            }
+                            break;
+                        default:
+                            Logger.LogError("unknown type: " + controller.state.v.getType());
+                            break;
+                    }
+                }
+                // button
+                bool isPaint = GUILayout.Toggle(controller.state.v.getType() == Controller.State.Type.Paint, txt, "Button", GUILayout.Height(60f));
+                if (isPaint)
+                {
+                    Controller.State.Paint paint = controller.state.newOrOld<Controller.State.Paint>();
+                    {
+
+                    }
+                    controller.state.v = paint;
+                }
+                else
+                {
+                    Controller.State.None none = controller.state.newOrOld<Controller.State.None>();
+                    {
+
+                    }
+                    controller.state.v = none;
+                }
+            }
 
             // Get a list of previews, one for each of our prefabs
             {
@@ -209,8 +250,12 @@ namespace BattleRushS
                     paletteIcons.Add(new GUIContent(prefab.getType().ToString(), texture));
                 }
                 // Display the grid
-                paletteIndex = GUILayout.SelectionGrid(paletteIndex, paletteIcons.ToArray(), 6);
-            }          
+                {
+                    controller.paletteIndex.v = GUILayout.SelectionGrid(controller.paletteIndex.v, paletteIcons.ToArray(), 2);
+                }                
+            }
+
+            GUILayout.EndScrollView();
         }
 
         private Vector2 GetSelectedCell()
@@ -227,16 +272,24 @@ namespace BattleRushS
         // Does the rendering of the map editor in the scene view.
         private void OnSceneGUI(SceneView sceneView)
         {
-            if (paintMode)
+            switch (controller.state.v.getType())
             {
-                Vector2 cellCenter = GetSelectedCell(); // Refactoring, I moved some code in this function
+                case Controller.State.Type.None:
+                    break;
+                case Controller.State.Type.Paint:
+                    {
+                        Vector2 cellCenter = GetSelectedCell(); // Refactoring, I moved some code in this function
 
+                        DisplayVisualHelp(cellCenter);
+                        HandleSceneViewInputs(cellCenter);
 
-                DisplayVisualHelp(cellCenter);
-                HandleSceneViewInputs(cellCenter);
-
-                // Refresh the view
-                sceneView.Repaint();
+                        // Refresh the view
+                        sceneView.Repaint();
+                    }
+                    break;
+                default:
+                    Logger.LogError("unknown type: " + controller.state.v.getType());
+                    break;
             }
         }
 
