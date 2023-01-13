@@ -254,7 +254,7 @@ namespace BattleRushS
                             break;
                         case Controller.State.Type.Paint:
                             {
-                                txt = "Paint";
+                                txt = "Paint, Save";
                             }
                             break;
                         default:
@@ -263,7 +263,76 @@ namespace BattleRushS
                     }
                 }
                 // button
-                GUILayout.Toggle(controller.state.v.getType() == Controller.State.Type.Paint, txt, "Button", GUILayout.Height(60f));               
+                if(GUILayout.Button(txt, GUILayout.Height(60f)))
+                {
+                    Logger.Log("MyMapEditor: Save BattleRush");
+                    BattleRushUI battleRushUI = GameObject.FindObjectOfType<BattleRushUI>();
+                    if (battleRushUI != null)
+                    {
+                        Logger.Log("battleRushUI: " + battleRushUI.data);
+                        BattleRushUI.UIData battleRushUIData = battleRushUI.data;
+                        if (battleRushUIData != null)
+                        {
+                            BattleRush battleRush = battleRushUIData.battleRush.v.data;
+                            if (battleRush != null)
+                            {
+                                switch (battleRush.state.v.getType())
+                                {
+                                    case BattleRush.State.Type.Load:
+                                        break;
+                                    case BattleRush.State.Type.Edit:
+                                        {
+                                            ItemMap itemMap = battleRush.mapData.v.itemMap.v;
+                                            if (itemMap != null)
+                                            {
+                                                itemMap.items.Clear();
+                                                foreach (ObjectInPath objectInPath in battleRush.laneObjects.vs)
+                                                {
+                                                    ItemAsset itemAsset = new ItemAsset();
+                                                    {
+                                                        itemAsset.type = objectInPath.getType();
+                                                        itemAsset.position = objectInPath.getPosition();
+                                                        //public uint row = 1;
+                                                        //public uint col = 1;
+                                                        //public float distanceBetweenRow = 0.1f;
+                                                        //public float distanceBetweenCol = 0.1f;
+                                                    }
+                                                    itemMap.items.Add(itemAsset);
+                                                }
+                                                EditorUtility.SetDirty(itemMap);
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("itemMap null");
+                                            }
+                                        }
+                                        break;
+                                    case BattleRush.State.Type.Start:
+                                        break;
+                                    case BattleRush.State.Type.Play:
+                                        break;
+                                    case BattleRush.State.Type.End:
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                Logger.LogError("battleRush null");
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("battleRush null");
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogError("battleRushUI null");
+                    }
+                }               
             }
 
             // Get a list of previews, one for each of our prefabs
@@ -336,8 +405,8 @@ namespace BattleRushS
                                     Logger.Log("MyMapEditor: cell center position: " + cellCenter);
                                     // find level segment contain
                                     LevelSegment levelSegment = null;
-                                    {
-                                        SplineSample evalResult = new SplineSample();
+                                    SplineSample evalResult = new SplineSample();
+                                    {                                       
                                         LevelGenerator.instance.Project(cellCenter, evalResult);
                                         int segmentIndex;
 
@@ -345,6 +414,7 @@ namespace BattleRushS
                                         if (segmentIndex >= 0 && segmentIndex < LevelGenerator.instance.segments.Count)
                                         {
                                             Logger.Log("MyMapEditor: paint in segment: " + LevelGenerator.instance.segments[segmentIndex].name);
+                                            Logger.Log("MyMapEditor: paint: evalResult: " + evalResult.percent + ", " + evalResult.position);
                                             levelSegment = LevelGenerator.instance.segments[segmentIndex];
                                         }
                                         else
@@ -377,7 +447,20 @@ namespace BattleRushS
                                                                         objectData.I.v = objectInPathUIInterface.getType();
                                                                         // position
                                                                         {
-                                                                            // TODO can hoan thien
+                                                                            Position position = new Position();
+                                                                            {
+                                                                                // x
+                                                                                {
+                                                                                    // TODO can hoan thien
+                                                                                    position.x = levelSegment.transform.InverseTransformPoint(cellCenter).x;
+                                                                                }
+                                                                                // z
+                                                                                {
+                                                                                    position.z = evalResult.position.z;// segment.segmentPos + segment.length * (float)evalResult.percent;
+                                                                                }
+                                                                                Logger.Log("MyMapEditor: objectData position: " + position.x + ", " + position.z);
+                                                                            }
+                                                                            objectData.position.v = position;
                                                                         }
                                                                     }
                                                                     // make object
@@ -411,19 +494,7 @@ namespace BattleRushS
                                                         else
                                                         {
                                                             Logger.LogError("battleRushUI null");
-                                                        }
-                                                        
-
-                                                        // old
-                                                        /*{
-                                                            // Create the prefab instance while keeping the prefab link
-                                                            GameObject prefab = controller.palette.vs[controller.paletteIndex.v].getMyGameObject();
-                                                            GameObject gameObject = PrefabUtility.InstantiatePrefab(prefab, levelSegment.transform) as GameObject;
-                                                            gameObject.transform.position = cellCenter;
-
-                                                            // Allow the use of Undo (Ctrl+Z, Ctrl+Y).
-                                                            Undo.RegisterCreatedObjectUndo(gameObject, "");
-                                                        }*/                                                       
+                                                        }                                                  
                                                     }
                                                     break;
                                                 case Segment.SegmentType.Arena:

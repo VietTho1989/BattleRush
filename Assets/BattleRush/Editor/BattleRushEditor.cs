@@ -11,7 +11,7 @@ namespace BattleRushS
     public class BattleRushEditor : Editor
     {
 
-        public override void OnInspectorGUI()
+        /*public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
             // add object
@@ -185,6 +185,6 @@ namespace BattleRushS
                     }
                 }
             }
-        }
+        }*/
     }
 }
