@@ -54,6 +54,10 @@ namespace BattleRushS
             public interface ObjectInPathUIInterface
             {
                 public void setObjectInPathUIData(Data data);
+
+                public GameObject getMyGameObject();
+
+                public ObjectInPath.Type getType();
             }
 
             public LD<ObjectInPathUI> objectInPaths;

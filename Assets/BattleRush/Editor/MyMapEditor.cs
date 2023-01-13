@@ -2,11 +2,119 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using static BattleRushS.BattleRushUI.UIData;
 
 namespace BattleRushS
 {
     public class MyMapEditor : EditorWindow
     {
+
+        #region controller
+
+        public class Controller : Data
+        {
+
+            #region state
+
+            public abstract class State : Data
+            {
+
+                public enum Type
+                {
+                    None,
+                    Paint
+                }
+
+                public abstract Type getType();
+
+                #region None
+
+                public class None : State
+                {
+
+                    #region Constructor
+
+                    public enum Property
+                    {
+
+                    }
+
+                    public None() : base()
+                    {
+
+                    }
+
+                    #endregion
+
+                    public override Type getType()
+                    {
+                        return Type.None;
+                    }
+
+                }
+
+                #endregion
+
+                #region Paint
+
+                public class Paint : State
+                {
+
+                    public VO<int> prefabIndex;
+
+                    #region Constructor
+
+                    public enum Property
+                    {
+                        prefabIndex
+                    }
+
+                    public Paint() : base()
+                    {
+                        this.prefabIndex = new VO<int>(this, (byte)Property.prefabIndex, 0);
+                    }
+
+                    #endregion
+
+                    public override Type getType()
+                    {
+                        return Type.Paint;
+                    }
+
+                }
+
+                #endregion
+
+            }
+
+            public VD<State> state;
+
+            #endregion
+
+            public LO<ObjectInPathUIInterface> palette;
+
+            #region Constructor
+
+            public enum Property
+            {
+                state,
+                palette
+            }
+
+            public Controller() : base()
+            {
+                this.state = new VD<State>(this, (byte)Property.state, new State.None());
+                this.palette = new LO<ObjectInPathUIInterface>(this, (byte)Property.palette);
+            }
+
+            #endregion
+
+
+        }
+
+        private Controller controller = new Controller();
+
+        #endregion
 
         // The window is selected if it already exists, else it's created.
         [MenuItem("Window/My Map Editor")]
@@ -54,32 +162,28 @@ namespace BattleRushS
             RefreshPalette(); // Refresh the palette (can be called uselessly, but there is no overhead.)
         }
 
-        // A list containing the available prefabs.
-        [SerializeField]
-        private List<GameObject> palette = new List<GameObject>();
-
 
         private void RefreshPalette()
         {
-            palette.Clear();
+            controller.palette.clear();
 
             BattleRushUI battleRushUI = GameObject.FindObjectOfType<BattleRushUI>();
             if (battleRushUI != null)
             {
-                palette.Add(battleRushUI.coinPrefab.gameObject);
-                palette.Add(battleRushUI.energyOrbNormalPrefab.gameObject);
-                palette.Add(battleRushUI.troopCagePrefab.gameObject);
-                palette.Add(battleRushUI.sawBladePrefab.gameObject);
-                palette.Add(battleRushUI.bladePrefab.gameObject);
-                palette.Add(battleRushUI.fireNozzlePrefab.gameObject);
-                palette.Add(battleRushUI.pikePrefab.gameObject);
-                palette.Add(battleRushUI.energyOrbUpgradePrefab.gameObject);
-                palette.Add(battleRushUI.upgradeGateFreePrefab.gameObject);
-                palette.Add(battleRushUI.upgradeGateChargePrefab.gameObject);
-                palette.Add(battleRushUI.hammerPrefab.gameObject);
-                palette.Add(battleRushUI.grinderPrefab.gameObject);
-                palette.Add(battleRushUI.energyOrbPowerPrefab.gameObject);
-                palette.Add(battleRushUI.cocoonMantahPrefab.gameObject);
+                controller.palette.add(battleRushUI.coinPrefab);
+                controller.palette.add(battleRushUI.energyOrbNormalPrefab);
+                controller.palette.add(battleRushUI.troopCagePrefab);
+                controller.palette.add(battleRushUI.sawBladePrefab);
+                controller.palette.add(battleRushUI.bladePrefab);
+                controller.palette.add(battleRushUI.fireNozzlePrefab);
+                controller.palette.add(battleRushUI.pikePrefab);
+                controller.palette.add(battleRushUI.energyOrbUpgradePrefab);
+                controller.palette.add(battleRushUI.upgradeGateFreePrefab);
+                controller.palette.add(battleRushUI.upgradeGateChargePrefab);
+                controller.palette.add(battleRushUI.hammerPrefab);
+                controller.palette.add(battleRushUI.grinderPrefab);
+                controller.palette.add(battleRushUI.energyOrbPowerPrefab);
+                controller.palette.add(battleRushUI.cocoonMantahPrefab);
             }
             else
             {
@@ -96,16 +200,17 @@ namespace BattleRushS
             paintMode = GUILayout.Toggle(paintMode, "Start painting", "Button", GUILayout.Height(60f));
 
             // Get a list of previews, one for each of our prefabs
-            List<GUIContent> paletteIcons = new List<GUIContent>();
-            foreach (GameObject prefab in palette)
             {
-                // Get a preview for the prefab
-                Texture2D texture = AssetPreview.GetAssetPreview(prefab);
-                paletteIcons.Add(new GUIContent(texture));
-            }
-
-            // Display the grid
-            paletteIndex = GUILayout.SelectionGrid(paletteIndex, paletteIcons.ToArray(), 6);
+                List<GUIContent> paletteIcons = new List<GUIContent>();
+                foreach (ObjectInPathUIInterface prefab in controller.palette.vs)
+                {
+                    // Get a preview for the prefab
+                    Texture2D texture = AssetPreview.GetAssetPreview(prefab.getMyGameObject());
+                    paletteIcons.Add(new GUIContent(prefab.getType().ToString(), texture));
+                }
+                // Display the grid
+                paletteIndex = GUILayout.SelectionGrid(paletteIndex, paletteIcons.ToArray(), 6);
+            }          
         }
 
         private Vector2 GetSelectedCell()
@@ -145,4 +250,5 @@ namespace BattleRushS
         }
 
     }
+
 }

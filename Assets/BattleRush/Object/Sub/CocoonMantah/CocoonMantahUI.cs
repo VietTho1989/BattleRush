@@ -16,6 +16,16 @@ namespace BattleRushS.ObjectS
             }
         }
 
+        public GameObject getMyGameObject()
+        {
+            return this.gameObject;
+        }
+
+        public ObjectInPath.Type getType()
+        {
+            return ObjectInPath.Type.CocoonMantah;
+        }
+
         #region UIData
 
         public class UIData : BattleRushUI.UIData.ObjectInPathUI
