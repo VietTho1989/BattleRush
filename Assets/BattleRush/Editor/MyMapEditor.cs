@@ -406,15 +406,16 @@ namespace BattleRushS
                                     // find level segment contain
                                     LevelSegment levelSegment = null;
                                     SplineSample evalResult = new SplineSample();
+                                    double localPercent = 0;
                                     {                                       
                                         LevelGenerator.instance.Project(cellCenter, evalResult);
                                         int segmentIndex;
 
-                                        LevelGenerator.instance.GlobalToLocalPercent(evalResult.percent, out segmentIndex);
+                                        localPercent = LevelGenerator.instance.GlobalToLocalPercent(evalResult.percent, out segmentIndex);
                                         if (segmentIndex >= 0 && segmentIndex < LevelGenerator.instance.segments.Count)
                                         {
                                             Logger.Log("MyMapEditor: paint in segment: " + LevelGenerator.instance.segments[segmentIndex].name);
-                                            Logger.Log("MyMapEditor: paint: evalResult: " + evalResult.percent + ", " + evalResult.position);
+                                            Logger.Log("MyMapEditor: paint: evalResult: " + evalResult.percent + ", " + evalResult.position + ", " + cellCenter + ", " + localPercent);
                                             levelSegment = LevelGenerator.instance.segments[segmentIndex];
                                         }
                                         else
@@ -451,12 +452,11 @@ namespace BattleRushS
                                                                             {
                                                                                 // x
                                                                                 {
-                                                                                    // TODO can hoan thien
                                                                                     position.x = levelSegment.transform.InverseTransformPoint(cellCenter).x;
                                                                                 }
                                                                                 // z
                                                                                 {
-                                                                                    position.z = evalResult.position.z;// segment.segmentPos + segment.length * (float)evalResult.percent;
+                                                                                    position.z = segment.segmentPos + segment.length * (float)localPercent;
                                                                                 }
                                                                                 Logger.Log("MyMapEditor: objectData position: " + position.x + ", " + position.z);
                                                                             }
