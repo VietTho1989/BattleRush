@@ -54,6 +54,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Android.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AdvancedInputField\Scripts\InputField\TextSelectionHandler\TouchCursor.cs" />
@@ -477,6 +483,18 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

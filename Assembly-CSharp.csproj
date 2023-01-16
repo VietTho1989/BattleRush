@@ -54,6 +54,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Android.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
+    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceManager.cs" />
@@ -551,24 +557,83 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\Vungle.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\Vungle\VungleClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleInterstitialMediationExtras.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleRewardedVideoMediationExtras.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\Vungle\IVungleClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\Vungle\VungleClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\VungleClientFactory.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\MediationExtras.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleMediationExtras.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\Vungle\Externs.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\Vungle\DummyClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\UnityAdsClientFactory.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\Externs.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\UnityAds\IUnityAdsClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\UnityAds\DummyClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\UnityAds\UnityAdsClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\UnityAds\UnityAds.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\UnityAdsClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\IronSource\DummyClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\IronSource\IronSourceClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\IronSource\IIronSourceClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\IronSource\IronSource.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\IronSource\Externs.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\IronSourceClientFactory.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\IronSource\IronSourceClient.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\RewardedVideo\RewardedVideoAdScene.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\ExtraHints.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Banner\AdViewScene.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AudienceNetworkAds.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Settings\SettingsScene.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\BaseScene.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\SdkVersion.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\InterstitialAd.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdView.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdUtility.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdSettings.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Interstitial\InterstitialAdScene.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\RewardedVideoAd.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdHandler.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\AppLovin\IAppLovinClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\AppLovinClientFactory.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\AppLovin\AppLovinClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\AppLovin\AppLovin.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\AppLovin\AppLovinClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\AppLovin\DummyClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\AppLovin\Externs.cs" />
+    <Compile Include="Assets\Ads\AdsManager.cs" />
+    <Compile Include="Assets\InitScene\InitScene.cs" />
+    <Compile Include="Assets\InitScene\GlobalGameObject.cs" />
+    <Compile Include="Assets\Ads\VungleInitializer.cs" />
+    <Compile Include="Assets\Ads\IronSourceAdvertisement.cs" />
+    <Compile Include="Assets\Ads\UnityAdsInitializer.cs" />
+    <Compile Include="Assets\Ads\ApplovinInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\ExternalResources\Packer2DBox\About.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\OmniShade\Shaders\OmniShadeCore.cginc" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Extra\PluginSupport\TMPro\TMPro instructions.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Extra\PluginSupport\Playmaker\README.txt" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicTableAdapter.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\OmniShade\Shaders\OmniShade URP.shader" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
     <None Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\link.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Litjson.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll" />
     <None Include="Assets\Dzung Assets\Plugins Assets\VFX_HUNG\LIB 1\Hovl Studio\Toon Projectiles 2\Shaders\Blend_CenterGlow.shader" />
+    <None Include="Assets\Ads\GoogleMobileAds\link.xml" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\ScriptsChunks\HeaderComment.txt" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds_version-7.3.1_manifest.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Dzung Assets\Plugins Assets\OmniShade\Shaders\OmniShadeURP.cginc" />
@@ -577,16 +642,19 @@
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Extra\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Ads\Plugins\Android\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicListAdapter.txt" />
     <None Include="Assets\OmniShade\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Resources\Com.TheFallenGames\OSA\Templates\Scripts\BasicGridAdapter.txt" />
     <None Include="Assets\OmniShade\Samples\MatCap Textures\How to create MatCaps.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\ExternalResources\Packer2DBox\Packer2DBoxLICENSE.txt" />
     <None Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\OSA\Docs\Manual link.txt" />
+    <None Include="Assets\Ads\GoogleMobileAds\GoogleMobileAds.Android.dll" />
     <None Include="Assets\Dzung Assets\Plugins Assets\VFX_HUNG\LIB 1\Hovl Studio\Toon Projectiles 2\Shaders\Add_CenterGlow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -595,6 +663,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\CommonLibrary\AdvancedCoroutines\Plugins\AdvancedCoroutineCore.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Ads\Plugins\Android\GoogleMobileAdsAppLovinMediation\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -875,6 +944,18 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1462,6 +1543,10 @@
     <ProjectReference Include="AdvancedInputFieldEditor.csproj">
       <Project>{4CDB82AB-7F2C-23BE-283C-3AA6ACBE4AA9}</Project>
       <Name>AdvancedInputFieldEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{F7DE734B-3E96-9984-483A-4A6B585D1DB8}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

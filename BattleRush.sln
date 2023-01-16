@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSA-Editor", "OSA-Editor.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponentsEditor", "NavMeshComponentsEditor.csproj", "{827C3093-2A86-E239-296E-CBE5263E014E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMobileAds.Editor", "GoogleMobileAds.Editor.csproj", "{F7DE734B-3E96-9984-483A-4A6B585D1DB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{827C3093-2A86-E239-296E-CBE5263E014E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{827C3093-2A86-E239-296E-CBE5263E014E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{827C3093-2A86-E239-296E-CBE5263E014E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7DE734B-3E96-9984-483A-4A6B585D1DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DE734B-3E96-9984-483A-4A6B585D1DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DE734B-3E96-9984-483A-4A6B585D1DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DE734B-3E96-9984-483A-4A6B585D1DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
