@@ -25,9 +25,22 @@ namespace BattleRushS.StateS
             }
         }
 
+        public override void Update()
+        {
+            base.Update();
+            if (this.data != null)
+            {
+                this.data.time.v += Time.deltaTime;
+            }
+            else
+            {
+                Logger.LogError("data null");
+            }
+        }
+
         public override bool isShouldDisableUpdate()
         {
-            return true;
+            return false;
         }
 
         #endregion
@@ -66,7 +79,7 @@ namespace BattleRushS.StateS
                 switch ((End.Property)wrapProperty.n)
                 {
                     default:
-                        Logger.LogError("Don't process: " + wrapProperty + "; " + this);
+                        // Logger.LogError("Don't process: " + wrapProperty + "; " + this);
                         break;
                 }
                 return;

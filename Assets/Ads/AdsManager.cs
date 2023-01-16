@@ -326,19 +326,25 @@ namespace BattleRushS
         public void RequestInterstitial()
         {
             _showing = false;
-#if UNITY_ANDROID
-            string adUnitId = interstitialIdAndroid;
-#elif UNITY_IPHONE
-            string adUnitId = interstitialIdIOS;
-#else
-            string adUnitId = "unexpected_platform";
-#endif
-
+            // find
+            string adUnitId = interstitialIdTest;
+            {
 #if EnviromentTest
-            interstitial = new InterstitialAd(interstitialIdTest);
+                adUnitId = interstitialIdTest;
+#elif UNITY_ANDROID
+                adUnitId = interstitialIdAndroid;
+#elif UNITY_IPHONE
+            adUnitId = interstitialIdIOS;
 #else
-            interstitial = new InterstitialAd(adUnitId);
+            adUnitId = "";// "unexpected_platform";
 #endif
+                if (string.IsNullOrEmpty(adUnitId))
+                {
+                    adUnitId = interstitialIdTest;
+                }
+            }
+            interstitial = new InterstitialAd(adUnitId);
+
             // Called when an ad request has successfully loaded.
             interstitial.OnAdLoaded += OnInterstitialLoaded;
             // Called when an ad request failed to load.
@@ -414,9 +420,9 @@ namespace BattleRushS
             string currentScene = SceneManager.GetActiveScene().name;
             //FirebaseManager.Instance.LogEventScreen(currentScene, currentScene);
         }
-        #endregion
+#endregion
 
-        #region Google App Open Ad
+#region Google App Open Ad
 
 
         public void LoadAdOpenApp()
@@ -551,7 +557,7 @@ namespace BattleRushS
                 ShowOpenAdIfAvailable();
             }
         }
-        #endregion
+#endregion
 
 
         public bool IsLoaded(ADSTYPE type = ADSTYPE.Rewarded)

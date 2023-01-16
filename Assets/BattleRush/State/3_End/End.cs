@@ -10,16 +10,20 @@ namespace BattleRushS.StateS
 
         public VO<bool> isWin;
 
+        public VO<float> time;
+
         #region Constructor
 
         public enum Property
         {
-            isWin
+            isWin,
+            time
         }
 
         public End() : base()
         {
             this.isWin = new VO<bool>(this, (byte)Property.isWin, false);
+            this.time = new VO<float>(this, (byte)Property.time, 0);
         }
 
         #endregion

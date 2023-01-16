@@ -740,7 +740,7 @@ namespace BattleRushS.HeroS
                                         }
                                         break;
                                     default:
-                                        Logger.LogError("unknown type: " + state.getType());
+                                        //Logger.LogError("unknown type: " + state.getType());
                                         break;
                                 }
                                 return;
