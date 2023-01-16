@@ -214,6 +214,16 @@ namespace BattleRushS
 #else
             string adUnitId = "unexpected_platform";
 #endif
+            // prevent null
+            {
+                Logger.Log("AdsManager request ads: " + adUnitId);
+                if (string.IsNullOrEmpty(adUnitId))
+                {
+                    Logger.LogError("bannerId null: " + bannerIdTest);
+                    adUnitId = bannerIdTest;
+                }
+            }
+
             bool removeBanner = PlayerPrefs.GetInt(REMOVE_AD, 0) == 1;
             if (bannerView != null)
             {

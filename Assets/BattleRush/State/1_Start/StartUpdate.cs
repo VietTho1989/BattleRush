@@ -25,7 +25,7 @@ namespace BattleRushS.StateS
                     }
                     // process: change to state play
                     if (isFinishStart)
-                    {
+                    {                       
                         BattleRush battleRush = this.data.findDataInParent<BattleRush>();
                         if (battleRush != null)
                         {

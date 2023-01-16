@@ -197,7 +197,7 @@ namespace BattleRushS.StateS.LoadS
                                     {
                                         Logger.LogError("battleRush null");
                                     }
-                                }                                                         
+                                }
                             }
                             break;
                         default:

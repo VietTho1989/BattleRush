@@ -350,7 +350,94 @@ namespace BattleRushS
                 }                
             }
 
-            GUILayout.EndScrollView();
+            // btnClear
+            if (GUILayout.Button("Clear", GUILayout.Height(60f)))
+            {
+                Logger.Log("MyMapEditor: Clear BattleRush");
+                BattleRushUI battleRushUI = GameObject.FindObjectOfType<BattleRushUI>();
+                if (battleRushUI != null)
+                {
+                    Logger.Log("battleRushUI: " + battleRushUI.data);
+                    BattleRushUI.UIData battleRushUIData = battleRushUI.data;
+                    if (battleRushUIData != null)
+                    {
+                        BattleRush battleRush = battleRushUIData.battleRush.v.data;
+                        if (battleRush != null)
+                        {
+                            switch (battleRush.state.v.getType())
+                            {
+                                case BattleRush.State.Type.Load:
+                                    break;
+                                case BattleRush.State.Type.Edit:
+                                    {
+                                        // itemMap
+                                        {
+                                            ItemMap itemMap = battleRush.mapData.v.itemMap.v;
+                                            if (itemMap != null)
+                                            {
+                                                itemMap.items.Clear();
+                                                EditorUtility.SetDirty(itemMap);
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("itemMap null");
+                                            }
+                                        }
+                                        // battleRush
+                                        {
+                                            battleRush.laneObjects.clear();
+                                            foreach(ObjectInPathUI objectInPathUI in battleRushUIData.objectInPaths.vs)
+                                            {
+                                                ObjectInPathUIInterface objectInPathUIInterface = objectInPathUI.findCallBack<ObjectInPathUIInterface>();
+                                                if (objectInPathUIInterface != null)
+                                                {
+                                                    GameObject gameObject = objectInPathUIInterface.getMyGameObject();
+                                                    if (gameObject != null)
+                                                    {
+                                                        Destroy(gameObject);
+                                                    }
+                                                    else
+                                                    {
+                                                        Logger.LogError("gameObject null");
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    Logger.LogError("objectInPathUIInterface null");
+                                                }
+                                            }
+                                            battleRushUIData.objectInPaths.clear();
+                                        }
+                                    }
+                                    break;
+                                case BattleRush.State.Type.Start:
+                                    break;
+                                case BattleRush.State.Type.Play:
+                                    break;
+                                case BattleRush.State.Type.End:
+                                    break;
+                                default:
+                                    Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("battleRush null");
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogError("battleRush null");
+                    }
+                }
+                else
+                {
+                    Logger.LogError("battleRushUI null");
+                }
+            }
+
+             GUILayout.EndScrollView();
         }
 
         private Vector3 GetSelectedCell()

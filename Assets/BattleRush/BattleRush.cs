@@ -11,6 +11,12 @@ namespace BattleRushS
 
         public VO<bool> isInEditMode;
 
+        #region ads
+
+        public VD<AdsBannerController> adsBanner;
+
+        #endregion
+
         #region state
 
         public abstract class State : Data
@@ -51,6 +57,7 @@ namespace BattleRushS
         public enum Property
         {
             isInEditMode,
+            adsBanner,
             state,
             mapData,
             makeSegmentManager,
@@ -63,6 +70,7 @@ namespace BattleRushS
         public BattleRush() : base()
         {
             this.isInEditMode = new VO<bool>(this, (byte)Property.isInEditMode, false);
+            this.adsBanner = new VD<AdsBannerController>(this, (byte)Property.adsBanner, new AdsBannerController());
             this.state = new VD<State>(this, (byte)Property.state, new Load());
             this.mapData = new VD<MapData>(this, (byte)Property.mapData, new MapData());
             this.makeSegmentManager = new VD<MakeSegmentManager>(this, (byte)Property.makeSegmentManager, new MakeSegmentManager());

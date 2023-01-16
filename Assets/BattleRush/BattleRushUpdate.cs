@@ -40,6 +40,7 @@ namespace BattleRushS
                 BattleRush battleRush = data as BattleRush;
                 // Child
                 {
+                    battleRush.adsBanner.allAddCallBack(this);
                     battleRush.state.allAddCallBack(this);
                     battleRush.hero.allAddCallBack(this);
                     battleRush.mapData.allAddCallBack(this);
@@ -51,6 +52,16 @@ namespace BattleRushS
             }
             // Child
             {
+                if(data is AdsBannerController)
+                {
+                    AdsBannerController adsBannerController = data as AdsBannerController;
+                    // Update
+                    {
+                        UpdateUtils.makeUpdate<AdsBannerControllerUpdate, AdsBannerController>(adsBannerController, this.transform);
+                    }
+                    dirty = true;
+                    return;
+                }
                 if (data is BattleRush.State)
                 {
                     BattleRush.State state = data as BattleRush.State;
@@ -228,6 +239,7 @@ namespace BattleRushS
                 BattleRush battleRush = data as BattleRush;
                 // Child
                 {
+                    battleRush.adsBanner.allRemoveCallBack(this);
                     battleRush.state.allRemoveCallBack(this);
                     battleRush.hero.allRemoveCallBack(this);
                     battleRush.mapData.allRemoveCallBack(this);
@@ -239,6 +251,15 @@ namespace BattleRushS
             }
             // Child
             {
+                if (data is AdsBannerController)
+                {
+                    AdsBannerController adsBannerController = data as AdsBannerController;
+                    // Update
+                    {
+                        adsBannerController.removeCallBackAndDestroy(typeof(AdsBannerControllerUpdate));
+                    }
+                    return;
+                }
                 if (data is BattleRush.State)
                 {
                     BattleRush.State state = data as BattleRush.State;
@@ -414,6 +435,12 @@ namespace BattleRushS
             {
                 switch ((BattleRush.Property)wrapProperty.n)
                 {
+                    case BattleRush.Property.adsBanner:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     case BattleRush.Property.state:
                         {
                             ValueChangeUtils.replaceCallBack(this, syncs);
@@ -452,6 +479,10 @@ namespace BattleRushS
             }
             // Child
             {
+                if(wrapProperty.p is AdsBannerController)
+                {
+                    return;
+                }
                 if (wrapProperty.p is BattleRush.State)
                 {
                     return;
