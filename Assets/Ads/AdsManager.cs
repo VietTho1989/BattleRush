@@ -18,10 +18,7 @@ namespace BattleRushS
     }
 
     public class AdsManager : MonoBehaviour
-    {
-
-        public const string REMOVE_AD = "REMOVE_AD";
-
+    {        
 
         private static AdsManager _instance;
         public static AdsManager Instance => _instance;
@@ -205,7 +202,7 @@ namespace BattleRushS
         }
 
         #region Banner
-        public void RequestBanner()
+        public void RequestBanner(bool removeAds)
         {
 #if UNITY_ANDROID
             string adUnitId = bannerIdAndroid;
@@ -224,7 +221,7 @@ namespace BattleRushS
                 }
             }
 
-            bool removeBanner = PlayerPrefs.GetInt(REMOVE_AD, 0) == 1;
+            bool removeBanner = removeAds;// PlayerPrefs.GetInt(REMOVE_AD, 0) == 1;
             if (bannerView != null)
             {
                 bannerView.Destroy();
@@ -569,7 +566,7 @@ namespace BattleRushS
             return this.rewardedAd.IsLoaded();
         }
 
-        public void ShowAds(UnityAction callback, ADSTYPE adType = ADSTYPE.Rewarded)
+        public void ShowAds(UnityAction callback, bool removeAds, ADSTYPE adType = ADSTYPE.Rewarded)
         {
             _showing = true;
 
@@ -588,7 +585,7 @@ namespace BattleRushS
                 else
                 {
                     //day la quang cao xem ke, kiem tra xem da mua xoa quang cao chua
-                    bool removeAds = PlayerPrefs.GetInt(REMOVE_AD, 0) == 1;
+                    // bool removeAds = PlayerPrefs.GetInt(REMOVE_AD, 0) == 1;
                     if (removeAds)
                     {
                         if (callback != null) callback();

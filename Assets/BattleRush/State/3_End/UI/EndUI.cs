@@ -225,11 +225,25 @@ namespace BattleRushS.StateS
                 End end = this.data.end.v.data;
                 if (end != null)
                 {
+                    // find
+                    bool removeAds = false;
+                    {
+                        BattleRush battleRush = end.findDataInParent<BattleRush>();
+                        if (battleRush != null)
+                        {
+                            removeAds = battleRush.adsBanner.v.removeAds.v;
+                        }
+                        else
+                        {
+                            Logger.LogError("battleRush null");
+                        }
+                    }
+                    // show
                     AdsManager.Instance.ShowAds(() =>
                     {
                         Logger.Log("EndUI show ads finish");
                         revive();
-                    });
+                    }, removeAds);
                 }
                 else
                 {

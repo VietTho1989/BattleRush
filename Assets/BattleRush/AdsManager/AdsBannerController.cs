@@ -8,6 +8,10 @@ namespace BattleRushS
     public class AdsBannerController : Data
     {
 
+        public const string REMOVE_AD = "REMOVE_AD";
+
+        public VO<bool> removeAds;
+
         #region state
 
         public abstract class State : Data
@@ -89,11 +93,27 @@ namespace BattleRushS
 
         public enum Property
         {
+            removeAds,
             state
         }
 
         public AdsBannerController() : base()
         {
+            // removeAds
+            {
+                bool removeAds = false;
+                {
+                    try
+                    {
+                        removeAds = PlayerPrefs.GetInt(AdsBannerController.REMOVE_AD, 0) != 0;
+                    }
+                    catch(System.Exception e)
+                    {
+                        Logger.LogError(e);
+                    }
+                }
+                this.removeAds = new VO<bool>(this, (byte)Property.removeAds, removeAds);
+            }            
             this.state = new VD<State>(this, (byte)Property.state, new State.NotShow());
         }
 

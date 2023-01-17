@@ -27,6 +27,8 @@ namespace BattleRushS
 
             public VD<CameraUI.UIData> camera;
 
+            public VD<MainCanvasUI.UIData> mainCanvas;
+
             #region stateUI 
 
             public abstract class StateUI : Data
@@ -72,6 +74,7 @@ namespace BattleRushS
             {
                 battleRush,
                 camera,
+                mainCanvas,
                 stateUI,
                 hero,
                 playerInput,
@@ -83,6 +86,7 @@ namespace BattleRushS
             {
                 this.battleRush = new VO<ReferenceData<BattleRush>>(this, (byte)Property.battleRush, new ReferenceData<BattleRush>(null));
                 this.camera = new VD<CameraUI.UIData>(this, (byte)Property.camera, new CameraUI.UIData());
+                this.mainCanvas = new VD<MainCanvasUI.UIData>(this, (byte)Property.mainCanvas, new MainCanvasUI.UIData());
                 this.stateUI = new VD<StateUI>(this, (byte)Property.stateUI, null);
                 this.hero = new VD<HeroUI.UIData>(this, (byte)Property.hero, new HeroUI.UIData());
                 this.playerInput = new VD<PlayerInputUI.UIData>(this, (byte)Property.playerInput, new PlayerInputUI.UIData());
@@ -170,6 +174,11 @@ namespace BattleRushS
                             {
                                 Logger.LogError("cameraUIData null");
                             }
+                        }
+                        // index in MainUICanvas
+                        {
+                            UIRectTransform.SetSiblingIndex(this.data.playerInput.v, 0);
+                            UIRectTransform.SetSiblingIndex(this.data.mainCanvas.v, 1);
                         }
                         // hero
                         {
@@ -596,6 +605,9 @@ namespace BattleRushS
 
         public CameraUI cameraUI;
 
+        public MainCanvasUI mainCanvasPrefab;
+        public Transform mainCanvasContainer;
+
         public HeroUI heroUI;
 
         public Transform stateContainer;
@@ -632,6 +644,7 @@ namespace BattleRushS
                 {
                     uiData.battleRush.allAddCallBack(this);
                     uiData.camera.allAddCallBack(this);
+                    uiData.mainCanvas.allAddCallBack(this);
                     uiData.stateUI.allAddCallBack(this);
                     uiData.hero.allAddCallBack(this);
                     uiData.playerInput.allAddCallBack(this);
@@ -665,6 +678,16 @@ namespace BattleRushS
                         {
                             Logger.LogError("cameraUI null");
                         }
+                    }
+                    dirty = true;
+                    return;
+                }
+                if(data is MainCanvasUI.UIData)
+                {
+                    MainCanvasUI.UIData mainCanvasUIData = data as MainCanvasUI.UIData;
+                    // UI
+                    {
+                        UIUtils.Instantiate(mainCanvasUIData, mainCanvasPrefab, mainCanvasContainer);
                     }
                     dirty = true;
                     return;
@@ -846,6 +869,7 @@ namespace BattleRushS
                 {
                     uiData.battleRush.allRemoveCallBack(this);
                     uiData.camera.allRemoveCallBack(this);
+                    uiData.mainCanvas.allRemoveCallBack(this);
                     uiData.stateUI.allRemoveCallBack(this);
                     uiData.hero.allRemoveCallBack(this);
                     uiData.playerInput.allRemoveCallBack(this);
@@ -878,6 +902,15 @@ namespace BattleRushS
                         {
                             Logger.LogError("cameraUI null");
                         }
+                    }
+                    return;
+                }
+                if (data is MainCanvasUI.UIData)
+                {
+                    MainCanvasUI.UIData mainCanvasUIData = data as MainCanvasUI.UIData;
+                    // UI
+                    {
+                        mainCanvasUIData.removeCallBackAndDestroy(typeof(MainCanvasUI));
                     }
                     return;
                 }
@@ -1067,6 +1100,12 @@ namespace BattleRushS
                             dirty = true;
                         }
                         break;
+                    case UIData.Property.mainCanvas:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     case UIData.Property.hero:
                         {
                             ValueChangeUtils.replaceCallBack(this, syncs);
@@ -1121,6 +1160,10 @@ namespace BattleRushS
                     return;
                 }
                 if (wrapProperty.p is CameraUI.UIData)
+                {
+                    return;
+                }
+                if (wrapProperty.p is MainCanvasUI.UIData)
                 {
                     return;
                 }

@@ -9,6 +9,8 @@ namespace BattleRushS
 
         #region Update
 
+        private bool needSavePref = false;
+
         public override void update()
         {
             if (dirty)
@@ -16,38 +18,51 @@ namespace BattleRushS
                 dirty = false;
                 if (this.data != null)
                 {
+                    // save remove ads to preference
+                    if (needSavePref)
+                    {
+                        PlayerPrefs.SetInt(AdsBannerController.REMOVE_AD, this.data.removeAds.v ? 1 : 0);
+                        PlayerPrefs.Save();
+                    }
                     // show or not
                     {
                         // find
                         bool isShow = false;
                         {
-                            BattleRush battleRush = this.data.findDataInParent<BattleRush>();
-                            if (battleRush != null)
+                            if (this.data.removeAds.v)
                             {
-                                switch (battleRush.state.v.getType())
-                                {
-                                    case BattleRush.State.Type.Load:
-                                        break;
-                                    case BattleRush.State.Type.Edit:
-                                        break;
-                                    case BattleRush.State.Type.Start:
-                                        isShow = true;
-                                        break;
-                                    case BattleRush.State.Type.Play:
-                                        isShow = true;
-                                        break;
-                                    case BattleRush.State.Type.End:
-                                        isShow = true;
-                                        break;
-                                    default:
-                                        Logger.LogError("unknown type: " + battleRush.state.v.getType());
-                                        break;
-                                }
+                                isShow = false;
                             }
                             else
                             {
-                                Logger.LogError("battleRush null");
-                            }
+                                BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                                if (battleRush != null)
+                                {
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:
+                                            break;
+                                        case BattleRush.State.Type.Edit:
+                                            break;
+                                        case BattleRush.State.Type.Start:
+                                            isShow = true;
+                                            break;
+                                        case BattleRush.State.Type.Play:
+                                            isShow = true;
+                                            break;
+                                        case BattleRush.State.Type.End:
+                                            isShow = true;
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("battleRush null");
+                                }
+                            }                            
                         }
                         // process
                         if (isShow)
@@ -82,7 +97,7 @@ namespace BattleRushS
                                     if (!show.alreadyRequest.v)
                                     {
                                         show.alreadyRequest.v = true;
-                                        AdsManager.Instance.RequestBanner();
+                                        AdsManager.Instance.RequestBanner(this.data.removeAds.v);
                                     }
                                 }
                                 break;
@@ -180,6 +195,10 @@ namespace BattleRushS
             {
                 switch ((AdsBannerController.Property)wrapProperty.n)
                 {
+                    case AdsBannerController.Property.removeAds:
+                        needSavePref = true;
+                        dirty = true;
+                        break;
                     case AdsBannerController.Property.state:
                         {
                             ValueChangeUtils.replaceCallBack(this, syncs);

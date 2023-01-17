@@ -424,6 +424,8 @@ MonoBehaviour:
   worldCanvas: {fileID: 4315714329130928029}
   arenaCanvas: {fileID: 0}
   cameraUI: {fileID: 143108111}
+  mainCanvasPrefab: {fileID: -1138461329377585630, guid: 4a825486960e1894baef4261789941e9, type: 3}
+  mainCanvasContainer: {fileID: 606016190}
   heroUI: {fileID: 190351504}
   stateContainer: {fileID: 5048280716531266715}
   loadPrefab: {fileID: 1335406712466417162, guid: 5099e59c4d866cb46a4853399413c52d, type: 3}
@@ -945,7 +947,7 @@ GameObject:
   - component: {fileID: 606016192}
   - component: {fileID: 606016191}
   m_Layer: 5
-  m_Name: PlayerInputContainer
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
