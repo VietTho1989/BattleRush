@@ -54,12 +54,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Android.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Editor\ES3PlayMakerEditor.cs" />
@@ -365,8 +359,35 @@
     <Reference Include="AdvancedCoroutineCore">
       <HintPath>Assets\CommonLibrary\AdvancedCoroutines\Plugins\AdvancedCoroutineCore.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Litjson">
+      <HintPath>Assets\CommonLibrary\Plugins\Litjson.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
@@ -383,11 +404,8 @@
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
@@ -398,32 +416,8 @@
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Litjson">
-      <HintPath>Assets\CommonLibrary\Plugins\Litjson.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
@@ -989,6 +983,10 @@
       <Project>{74149B12-48A5-10EA-A7B0-7FE07434FF88}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TrueShadow.Editor.csproj">
+      <Project>{275C59D6-A3A6-7E70-FCEC-070B15A03EF8}</Project>
+      <Name>LeTai.TrueShadow.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Forever.csproj">
       <Project>{87307993-CF44-7568-377D-775A5ED676F5}</Project>
       <Name>Dreamteck.Forever</Name>
@@ -996,6 +994,10 @@
     <ProjectReference Include="Dreamteck.Forever.Editor.csproj">
       <Project>{D45E7455-0C8E-44D6-808C-EF5BCFB4A178}</Project>
       <Name>Dreamteck.Forever.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Demo.csproj">
+      <Project>{EE0CEC34-0984-19AE-21FF-62ED48CAC56E}</Project>
+      <Name>LeTai.TranslucentImage.Demo</Name>
     </ProjectReference>
     <ProjectReference Include="AdvancedInputField.csproj">
       <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>
@@ -1009,9 +1011,25 @@
       <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
       <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Scripts.csproj">
+      <Project>{72A003B8-3BA5-BC19-861C-2080AFBFF725}</Project>
+      <Name>LeTai.TranslucentImage.Scripts</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Splines.csproj">
       <Project>{889C9618-7878-DBB6-0FC0-9D284D24FAAE}</Project>
       <Name>Dreamteck.Splines</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TrueShadow.Demo.csproj">
+      <Project>{FE6548F2-ECC8-B9DA-BD84-EB787CF33989}</Project>
+      <Name>LeTai.TrueShadow.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TrueShadow.csproj">
+      <Project>{DA45E0F8-1C7A-2CFA-28DD-2583F56A069F}</Project>
+      <Name>LeTai.TrueShadow</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
+      <Project>{1335CA80-6DE1-A25F-9A66-F41D3A2B616D}</Project>
+      <Name>LeTai.TranslucentImage.UniversalRP</Name>
     </ProjectReference>
     <ProjectReference Include="OSA.csproj">
       <Project>{D2750D3A-43DD-1660-5BAB-50EDA63CDA09}</Project>
@@ -1029,6 +1047,10 @@
       <Project>{F1A45E47-7BA6-0E3E-0C16-9208526E4420}</Project>
       <Name>Dreamteck.Splines.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
+      <Project>{05121FDF-175A-08FC-E82F-7D7EAAA4CBE5}</Project>
+      <Name>LeTai.TranslucentImage.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Utilities.Editor.csproj">
       <Project>{19C32B74-8543-0A7D-1490-09BC3F702055}</Project>
       <Name>Dreamteck.Utilities.Editor</Name>
@@ -1040,34 +1062,6 @@
     <ProjectReference Include="GoogleMobileAds.Editor.csproj">
       <Project>{F7DE734B-3E96-9984-483A-4A6B585D1DB8}</Project>
       <Name>GoogleMobileAds.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.csproj">
-      <Project>{DA45E0F8-1C7A-2CFA-28DD-2583F56A069F}</Project>
-      <Name>LeTai.TrueShadow</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.Demo.csproj">
-      <Project>{FE6548F2-ECC8-B9DA-BD84-EB787CF33989}</Project>
-      <Name>LeTai.TrueShadow.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.Editor.csproj">
-      <Project>{275C59D6-A3A6-7E70-FCEC-070B15A03EF8}</Project>
-      <Name>LeTai.TrueShadow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Demo.csproj">
-      <Project>{EE0CEC34-0984-19AE-21FF-62ED48CAC56E}</Project>
-      <Name>LeTai.TranslucentImage.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
-      <Project>{1335CA80-6DE1-A25F-9A66-F41D3A2B616D}</Project>
-      <Name>LeTai.TranslucentImage.UniversalRP</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
-      <Project>{05121FDF-175A-08FC-E82F-7D7EAAA4CBE5}</Project>
-      <Name>LeTai.TranslucentImage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Scripts.csproj">
-      <Project>{72A003B8-3BA5-BC19-861C-2080AFBFF725}</Project>
-      <Name>LeTai.TranslucentImage.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.Editor.csproj">
       <Project>{3CA03131-D6F2-23E3-772D-F43C70A41224}</Project>

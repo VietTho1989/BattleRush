@@ -15,7 +15,7 @@ C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50065
+51963
 Successfully changed project path to: C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
 C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 291.18 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 171.23 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.14f1 (eee1884e7226)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
@@ -63,195 +63,97 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012110 seconds.
+Registered in 0.010919 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 192.68 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 178.98 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.011 seconds
+- Completed reload, in  0.886 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1012ms)
-		BeginReloadAssembly (104ms)
+	ReloadAssembly (887ms)
+		BeginReloadAssembly (92ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (757ms)
-			LoadAssemblies (104ms)
+		EndReloadAssembly (666ms)
+			LoadAssemblies (91ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (205ms)
+			SetupTypeCache (140ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (445ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (419ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (82ms)
+				InitializePlatformSupportModulesInManaged (83ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (193ms)
+				RefreshPlugins (179ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (115ms)
-				ProcessInitializeOnLoadMethodAttributes (54ms)
+				ProcessInitializeOnLoadAttributes (107ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012642 seconds.
+Registered in 0.013852 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 175.64 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 158.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.044 seconds
+- Completed reload, in  1.815 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2045ms)
-		BeginReloadAssembly (245ms)
+	ReloadAssembly (1816ms)
+		BeginReloadAssembly (246ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (134ms)
-		EndReloadAssembly (1655ms)
-			LoadAssemblies (118ms)
+			CreateAndSetChildDomain (144ms)
+		EndReloadAssembly (1438ms)
+			LoadAssemblies (115ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (432ms)
+			SetupTypeCache (370ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (110ms)
-			SetupLoadedEditorAssemblies (930ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (811ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (29ms)
+				InitializePlatformSupportModulesInManaged (24ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (176ms)
-				BeforeProcessingInitializeOnLoad (168ms)
-				ProcessInitializeOnLoadAttributes (426ms)
-				ProcessInitializeOnLoadMethodAttributes (118ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.97 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6883 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 62 unused Assets / (0.8 MB). Loaded Objects now: 7321.
-Memory consumption went from 261.6 MB to 260.8 MB.
-Total: 4.045700 ms (FindLiveObjects: 0.520500 ms CreateObjectMapping: 0.493500 ms MarkObjects: 2.729000 ms  DeleteObjects: 0.301700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 2942.876483 seconds.
-  path: Assets/UniversalRenderPipelineGlobalSettings.asset
-  artifactKey: Guid(b72105e373f5e5b42b2f34783b70d556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(b72105e373f5e5b42b2f34783b70d556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '814709eec9d9ab36af9c0fdfe66d0b4b') in 0.052920 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014111 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.73 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.588 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1594ms)
-		BeginReloadAssembly (244ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (110ms)
-		EndReloadAssembly (1220ms)
-			LoadAssemblies (112ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (388ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (594ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (32ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (116ms)
-				ProcessInitializeOnLoadAttributes (338ms)
-				ProcessInitializeOnLoadMethodAttributes (96ms)
+				RefreshPlugins (159ms)
+				BeforeProcessingInitializeOnLoad (154ms)
+				ProcessInitializeOnLoadAttributes (377ms)
+				ProcessInitializeOnLoadMethodAttributes (87ms)
 				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.57 ms, found 4 plugins.
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 2.34 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 41 unused Assets / (0.8 MB). Loaded Objects now: 7337.
-Memory consumption went from 253.9 MB to 253.1 MB.
-Total: 6.379300 ms (FindLiveObjects: 0.471300 ms CreateObjectMapping: 0.435100 ms MarkObjects: 4.967100 ms  DeleteObjects: 0.504100 ms)
+Unloading 7079 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (0.8 MB). Loaded Objects now: 7509.
+Memory consumption went from 269.1 MB to 268.3 MB.
+Total: 4.082200 ms (FindLiveObjects: 0.546300 ms CreateObjectMapping: 0.512000 ms MarkObjects: 2.702500 ms  DeleteObjects: 0.320500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -265,197 +167,537 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.979388 seconds.
-  path: Assets/BattleRush/Object/Sub/Hammer/HammerUI.prefab
-  artifactKey: Guid(a71a109cbc87dbc45b711c9c27b0e9b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/Hammer/HammerUI.prefab using Guid(a71a109cbc87dbc45b711c9c27b0e9b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f89d5ab5672757854e179926e2d5cd1') in 0.774207 seconds 
+  Time since last request: 57875.820243 seconds.
+  path: Assets/BattleRush/Object/Sub/Coin/vfx_okg_coin_pickup.prefab
+  artifactKey: Guid(80f1b0358e5d5014a8930b77425f28d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/Coin/vfx_okg_coin_pickup.prefab using Guid(80f1b0358e5d5014a8930b77425f28d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7eb3ce3f4a3dc07629d10f7ae42404b') in 0.805792 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000032 seconds.
-  path: Assets/BattleRush/Object/Sub/SawBlade/SawBladeUI.prefab
-  artifactKey: Guid(7c331a6c61598cd4f84ab325c3c88198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/SawBlade/SawBladeUI.prefab using Guid(7c331a6c61598cd4f84ab325c3c88198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e426a51cb81637f66117068ba9e5ba7e') in 0.777357 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/BattleRush/Object/Sub/UpgradeGateFree/UpgradeGateFreeUI.prefab
-  artifactKey: Guid(3a1f3364b92f6f24ba9afcef2a5dc157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/UpgradeGateFree/UpgradeGateFreeUI.prefab using Guid(3a1f3364b92f6f24ba9afcef2a5dc157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6966d812c81f04fc0310d1ab8e4281c2') in 1.433787 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000361 seconds.
-  path: Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab
-  artifactKey: Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab using Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afcc533cd2d1bcee1953c45b0ea645e5') in 5.906403 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/BattleRush/Object/Sub/UpgradeGateCharge/UpgradeGateChargeUI.prefab
-  artifactKey: Guid(3ad7a08c45fc054419339a9e376bd3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/UpgradeGateCharge/UpgradeGateChargeUI.prefab using Guid(3ad7a08c45fc054419339a9e376bd3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2bb723a6a47b434a4a53b7b7517a11') in 0.065463 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
   path: Assets/BattleRush/Object/Sub/Coin/CoinUI.prefab
   artifactKey: Guid(fd4b19fc6fed7ef4e8cc833dda5018bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/Coin/CoinUI.prefab using Guid(fd4b19fc6fed7ef4e8cc833dda5018bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26dc0249df85fedebbb0050ae135fd68') in 0.470170 seconds 
+Start importing Assets/BattleRush/Object/Sub/Coin/CoinUI.prefab using Guid(fd4b19fc6fed7ef4e8cc833dda5018bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0dae8a19c992e1b99178638acdf6c0') in 0.065552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.226006 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal.prefab
+  artifactKey: Guid(28350a3edfe64164da218256136f1399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal.prefab using Guid(28350a3edfe64164da218256136f1399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af463576f908ab3e647fb6370384a5c') in 0.098280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade_Holder.prefab
+  artifactKey: Guid(594b27ad5baa69a4f8d716b88ad40f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade_Holder.prefab using Guid(594b27ad5baa69a4f8d716b88ad40f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0b33648833c9f30c8b221202a02eab') in 0.056839 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
-  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6f07e850720d760db13c93fdaa2f6c7') in 0.054162 seconds 
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/energy_orb_normal.prefab
+  artifactKey: Guid(590b582b9c0ce2c40a7c1ce76458f0ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/energy_orb_normal.prefab using Guid(590b582b9c0ce2c40a7c1ce76458f0ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89504aeb39115a4391d1ac5914dbc7fa') in 0.069225 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000040 seconds.
-  path: Assets/BattleRush/Object/Sub/Grinder/GrinderUI.prefab
-  artifactKey: Guid(8ba010185e56d764ea5f2340073f0023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/Grinder/GrinderUI.prefab using Guid(8ba010185e56d764ea5f2340073f0023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec07fdb733ae4d28c7b94402ec6afc0b') in 0.024088 seconds 
+  path: Assets/BattleRush/Editor/Palette/EnergyOrbNormal.prefab
+  artifactKey: Guid(1193c6f516f79264bb9755c7df69fa0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Editor/Palette/EnergyOrbNormal.prefab using Guid(1193c6f516f79264bb9755c7df69fa0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '917c23c11cab78153611851a27b396cc') in 0.077098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade_Hit FX.prefab
+  artifactKey: Guid(6d8db103d5935af4994ede87b94e17c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade_Hit FX.prefab using Guid(6d8db103d5935af4994ede87b94e17c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ee8cfe10a36aec4891028092d3c3f60') in 0.151960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power_Hit FX.prefab
+  artifactKey: Guid(4058dec76f43fea47be29f45d5a7aeb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power_Hit FX.prefab using Guid(4058dec76f43fea47be29f45d5a7aeb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b8d15ce3298b313f211e851cb3a082') in 0.043469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_power_holder.prefab
+  artifactKey: Guid(43ff5c7c18abd4c4cae48a5ba5a936d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_power_holder.prefab using Guid(43ff5c7c18abd4c4cae48a5ba5a936d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ae4209abb89206830388736a601a17c') in 0.073301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_upgrade.prefab
+  artifactKey: Guid(00bf5111bedd10f4796e8eb7466360c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_upgrade.prefab using Guid(00bf5111bedd10f4796e8eb7466360c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd72dacaa40f6dee0229b6ed9d9d6c5a9') in 0.056094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal_Holder.prefab
+  artifactKey: Guid(bdf664e94266d7f4e825534899c2a973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal_Holder.prefab using Guid(bdf664e94266d7f4e825534899c2a973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a82bde2f299284659fb808a94d2c19b7') in 0.050833 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_normal_pickup.prefab
+  artifactKey: Guid(49a99aa58834c9c4aac88cce7d2b8f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_normal_pickup.prefab using Guid(49a99aa58834c9c4aac88cce7d2b8f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c05e1452f7a7e8f8cf8a3603f33d8b3f') in 0.044541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_upgrade_holder.prefab
+  artifactKey: Guid(fd97d013d895e72429dd08b63aa6755b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_upgrade_holder.prefab using Guid(fd97d013d895e72429dd08b63aa6755b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '186902cca6f5ea81bb8bd9f6d460794e') in 0.048819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_upgrade_projectile.prefab
+  artifactKey: Guid(59ca627f8abd87b458531d16bc9b750b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_upgrade_projectile.prefab using Guid(59ca627f8abd87b458531d16bc9b750b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bee2b4bcf431997642f593ff9a21524b') in 0.135826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/vfx_energy_orb_normal_pickup.prefab
+  artifactKey: Guid(50ffd6c0d6ab793488687ca0cc5da23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/vfx_energy_orb_normal_pickup.prefab using Guid(50ffd6c0d6ab793488687ca0cc5da23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28c880ed457a986813e360c98b60e1d4') in 0.038238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_upgrade_hit.prefab
+  artifactKey: Guid(d9faa800842da924da2c5a369af8eb33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_upgrade_hit.prefab using Guid(d9faa800842da924da2c5a369af8eb33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43fd4f1879b0d0ca9afad8a48c3a88ca') in 0.059541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal_Pickup FX.prefab
+  artifactKey: Guid(9b92f999a8c83b94982e779356db5892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal_Pickup FX.prefab using Guid(9b92f999a8c83b94982e779356db5892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbf8cca86d1ffcaa8cd25c04e152c0e') in 0.037763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power_Holder.prefab
+  artifactKey: Guid(d573267d79742504f949983706b8a139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power_Holder.prefab using Guid(d573267d79742504f949983706b8a139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfac8d4c9b1a7acd66ed4e05b605079a') in 0.049190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power.prefab
+  artifactKey: Guid(c2e6f768a7cf86d41b359250f26b7b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power.prefab using Guid(c2e6f768a7cf86d41b359250f26b7b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3099f10755e3da7a39875c42355c5864') in 0.171373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power_Pickup FX.prefab
+  artifactKey: Guid(73899f4d895a4e84c94014971a9936e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Power_Pickup FX.prefab using Guid(73899f4d895a4e84c94014971a9936e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489492056b51159b3671f0f675b9956f') in 0.039620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c7fd0956a4fdf92923053a99b74eeac') in 0.046418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal_holder.prefab
+  artifactKey: Guid(80c689f9cc64519419a6a4d8d4a22855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal_holder.prefab using Guid(80c689f9cc64519419a6a4d8d4a22855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a28a4241ef4491b6ad811058823cff0') in 0.052646 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
   path: Assets/BattleRush/Object/Sub/EnergyOrbUpgrade/EnergyOrbUpgradeUI.prefab
   artifactKey: Guid(d047705ef9dacf1469dee5391ee28d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/EnergyOrbUpgrade/EnergyOrbUpgradeUI.prefab using Guid(d047705ef9dacf1469dee5391ee28d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c77e0797693be539a9cb34bb087ae785') in 0.053200 seconds 
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbUpgrade/EnergyOrbUpgradeUI.prefab using Guid(d047705ef9dacf1469dee5391ee28d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f4ff2b2ce923ae4da9484ec6f2939a') in 0.061300 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/BattleRush/Object/Sub/EnergyOrbPower/EnergyOrbPowerUI.prefab
-  artifactKey: Guid(44369f113eff4dd43b86be4d3d779c3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/EnergyOrbPower/EnergyOrbPowerUI.prefab using Guid(44369f113eff4dd43b86be4d3d779c3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df2aa6a13836dc3ede656af2412e1dd') in 0.067871 seconds 
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade_Pickup FX.prefab
+  artifactKey: Guid(d92cb307331d9aa4a93947adfdb4d004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade_Pickup FX.prefab using Guid(d92cb307331d9aa4a93947adfdb4d004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb3aa52d7c380ae5bdc76a97b1b9c77e') in 0.049693 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/BattleRush/Object/Sub/CocoonMantah/CocoonMantahUI.prefab
-  artifactKey: Guid(35d24106568784e489470648459a9da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/CocoonMantah/CocoonMantahUI.prefab using Guid(35d24106568784e489470648459a9da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa10913e59388ea751a8996d3f89200d') in 0.074148 seconds 
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_power_pickup.prefab
+  artifactKey: Guid(89491900d96942a459f66a7b5d7e003c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_power_pickup.prefab using Guid(89491900d96942a459f66a7b5d7e003c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c7239990adb74d334c3584650b7fe1') in 0.035699 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/BattleRush/Object/Sub/FireNozzle/FireNozzleUI.prefab
-  artifactKey: Guid(1c0ac1b379740ba4cbe7b5f24657b3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/FireNozzle/FireNozzleUI.prefab using Guid(1c0ac1b379740ba4cbe7b5f24657b3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29a3b3b09bcb23b069f5ea45d54e480') in 0.030553 seconds 
+  Time since last request: 0.000036 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal_projectile.prefab
+  artifactKey: Guid(dd4a6a67bea1bf5499db6ddae3fd3a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal_projectile.prefab using Guid(dd4a6a67bea1bf5499db6ddae3fd3a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d0b6e8b4c2a356ba6d5813058a50447') in 0.054760 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/BattleRush/Object/Sub/Pike/PikeUI.prefab
-  artifactKey: Guid(7986dd7cd6e82194fb93c158e0a4f5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/Pike/PikeUI.prefab using Guid(7986dd7cd6e82194fb93c158e0a4f5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f51d49659002f0c2c735d37ddd5e3d5') in 0.048989 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade.prefab
+  artifactKey: Guid(41bb791ef1873b64797a4ea7e4d66958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Upgrade.prefab using Guid(41bb791ef1873b64797a4ea7e4d66958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa9d8bbea57317e998a8b007d5bd903e') in 0.050421 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/BattleRush/Object/Sub/Blade/BladeUI.prefab
-  artifactKey: Guid(3b0c456bccc690442af88438fc3e0533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleRush/Object/Sub/Blade/BladeUI.prefab using Guid(3b0c456bccc690442af88438fc3e0533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d8fe1df58054a44bd53e742fb475a4f') in 0.574074 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009436 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.317 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1318ms)
-		BeginReloadAssembly (161ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (52ms)
-		EndReloadAssembly (1059ms)
-			LoadAssemblies (100ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (328ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (502ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (103ms)
-				ProcessInitializeOnLoadAttributes (283ms)
-				ProcessInitializeOnLoadMethodAttributes (76ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (17ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.24 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6809 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 48 unused Assets / (0.8 MB). Loaded Objects now: 7418.
-Memory consumption went from 262.0 MB to 261.3 MB.
-Total: 4.243100 ms (FindLiveObjects: 0.480000 ms CreateObjectMapping: 0.445700 ms MarkObjects: 2.986300 ms  DeleteObjects: 0.330200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_power.prefab
+  artifactKey: Guid(5987056a0bf377e42bf35af1fa17156e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_power.prefab using Guid(5987056a0bf377e42bf35af1fa17156e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425b8bd0fc29d551d5e6e997a728b6e2') in 0.054012 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1899.551021 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.013313 seconds 
+  Time since last request: 0.000025 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbPower/EnergyOrbPowerUI.prefab
+  artifactKey: Guid(44369f113eff4dd43b86be4d3d779c3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbPower/EnergyOrbPowerUI.prefab using Guid(44369f113eff4dd43b86be4d3d779c3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8b63a4d1decead377ab3c891a65d60') in 0.055816 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.560920 seconds.
-  path: Assets/Ads
-  artifactKey: Guid(9dd3aaccc675bd74180222ece649fe52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ads using Guid(9dd3aaccc675bd74180222ece649fe52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a94d4bb2cef06aee9153bb5d568fa7') in 0.006142 seconds 
+  Time since last request: 0.000031 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Misc/Lightning/lightning2_energyOrb.mat
+  artifactKey: Guid(32633d24b88984347b8b23b01351ff13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Misc/Lightning/lightning2_energyOrb.mat using Guid(32633d24b88984347b8b23b01351ff13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d9b324d31890a132b46b9ff66345a4') in 0.054948 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.202741 seconds.
-  path: Assets/Dzung Assets/Portraits/Portraits Hero/portrait_glob.jpg
-  artifactKey: Guid(9d5f4556f7dbd8943b3954acdae11eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dzung Assets/Portraits/Portraits Hero/portrait_glob.jpg using Guid(9d5f4556f7dbd8943b3954acdae11eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27316011dcdea2e6cf4b9c8dcf141c64') in 0.172758 seconds 
+  Time since last request: 0.000036 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_normal_hit.prefab
+  artifactKey: Guid(db1b097402b6df54d8efc4bd023c8a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_normal_hit.prefab using Guid(db1b097402b6df54d8efc4bd023c8a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce231f641033b11c88d3a58a0f90b3c2') in 0.040068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_power_hit.prefab
+  artifactKey: Guid(c6d24c5eb12b4f44eb937541d1dbedde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_power_hit.prefab using Guid(c6d24c5eb12b4f44eb937541d1dbedde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04bbafacd697f64da45444f33024950c') in 0.039742 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal_Hit FX.prefab
+  artifactKey: Guid(a20166c8cd7792848a18c28864a8ec84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Energy Orb Normal_Hit FX.prefab using Guid(a20166c8cd7792848a18c28864a8ec84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb508259f6eb964b5e36990cdcaa90bb') in 0.038802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_upgrade_pickup.prefab
+  artifactKey: Guid(b05230e1638413d4c925bacc7491e33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_energy_orb_upgrade_pickup.prefab using Guid(b05230e1638413d4c925bacc7491e33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bff5207262f091efd3631d53d3cd8185') in 0.034453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_power_projectile.prefab
+  artifactKey: Guid(9e971da9df1a6d14bba4b23442e75f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_power_projectile.prefab using Guid(9e971da9df1a6d14bba4b23442e75f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec19a383e770da9700b224c6a5b75ba') in 0.046812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal.prefab
+  artifactKey: Guid(36a8518b115472742a5205428fb1c849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal.prefab using Guid(36a8518b115472742a5205428fb1c849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '915dcbd70dd5c0dad7f43ce782be5bb3') in 0.038910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.572570 seconds.
+  path: Assets/BattleRush/Editor/Palette/CoinUI.prefab
+  artifactKey: Guid(99828936d63ceb24c978100ddcd8eda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Editor/Palette/CoinUI.prefab using Guid(99828936d63ceb24c978100ddcd8eda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9632f07f0aa8708e660bc935c6cb9f8a') in 0.061834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.465521 seconds.
+  path: Assets/BattleRush/Editor/Palette
+  artifactKey: Guid(02b50752b5b1ba4468de796a4c55dd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Editor/Palette using Guid(02b50752b5b1ba4468de796a4c55dd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '789c76389fe7f35095601bafef6a51a1') in 0.013408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.110394 seconds.
+  path: Assets/BattleRush/Level/MyCustomPath/CustomPathGenerator.asset
+  artifactKey: Guid(cb60dff50a9d3b7408d5d76230e5fd47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/MyCustomPath/CustomPathGenerator.asset using Guid(cb60dff50a9d3b7408d5d76230e5fd47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94ab69514cef58956b70b2724e6b10f') in 0.042010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/BattleRush/Level/RandomPathGenerator.asset
+  artifactKey: Guid(1f468c743eab4a84aafeacb073b8ea8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/RandomPathGenerator.asset using Guid(1f468c743eab4a84aafeacb073b8ea8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '567bb61a557ede0982506278ccc57602') in 0.029199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/CommonLibrary/Plugins/Com.TheFallenGames/OSA/Fonts/sui generis bold.TTF
+  artifactKey: Guid(fd3460ead367f42aa89c8782c739cc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CommonLibrary/Plugins/Com.TheFallenGames/OSA/Fonts/sui generis bold.TTF using Guid(fd3460ead367f42aa89c8782c739cc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04299eac1b0a5cc06210a4c79ef875a1') in 0.065024 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/CommonLibrary/Plugins/Com.TheFallenGames/OSA/Fonts/sui-generis-rg_dynamic.ttf
+  artifactKey: Guid(fabac87f6f1174f148ed25d800f62c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CommonLibrary/Plugins/Com.TheFallenGames/OSA/Fonts/sui-generis-rg_dynamic.ttf using Guid(fabac87f6f1174f148ed25d800f62c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be3c66fd3616d4a5b33a9b72c2a3762a') in 0.047879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/BattleRush/Level/PathGenerator.asset
+  artifactKey: Guid(67bf744f33047ec469ffedd06d5307fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Level/PathGenerator.asset using Guid(67bf744f33047ec469ffedd06d5307fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0421f9b9713e3906f68e1390b16844b') in 0.020451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dreamteck/Forever/Level Generator/Path Generation/Icons/SpiralPathGenerator.png
+  artifactKey: Guid(f39019b9071b5df478b2287fd97de7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Level Generator/Path Generation/Icons/SpiralPathGenerator.png using Guid(f39019b9071b5df478b2287fd97de7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad938445b6e9c2e5cf32269331ca3ce') in 0.056610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/CommonLibrary/Plugins/Com.TheFallenGames/OSA/Fonts/sui generis rg.ttf
+  artifactKey: Guid(6771e3a5c4fc54a7e94620cab5b8eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CommonLibrary/Plugins/Com.TheFallenGames/OSA/Fonts/sui generis rg.ttf using Guid(6771e3a5c4fc54a7e94620cab5b8eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c8a78ab624d70433da913b48c7b445') in 0.037403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Dreamteck/Forever/Examples/Retro Wave/RandomPathGenerator.asset
+  artifactKey: Guid(3529cc9903db546449d530fea2dc69de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Examples/Retro Wave/RandomPathGenerator.asset using Guid(3529cc9903db546449d530fea2dc69de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a46e2c5c883d04645a69c026355b4bb3') in 0.018467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dreamteck/Forever/Level Generator/Path Generation/Icons/RandomPathGenerator.png
+  artifactKey: Guid(c082dbb500684c5439a49b30332c0099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Level Generator/Path Generation/Icons/RandomPathGenerator.png using Guid(c082dbb500684c5439a49b30332c0099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea78a2cfc195cb7b36691b1d735421fd') in 0.020192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Dreamteck/Forever/Level Generator/Path Generation/Icons/CustomPathGenerator.png
+  artifactKey: Guid(59ffae5e978c24d44a6b8d8769ffd33e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dreamteck/Forever/Level Generator/Path Generation/Icons/CustomPathGenerator.png using Guid(59ffae5e978c24d44a6b8d8769ffd33e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149a0f7169eded2052e6be00e12792ab') in 0.024475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.236005 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Antuk.prefab
+  artifactKey: Guid(0bae08744f3bd5647ad854b500af9500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Antuk.prefab using Guid(0bae08744f3bd5647ad854b500af9500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be7e1e7f55ce5d0e368e298da317f1f1') in 0.109401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_mantah.prefab
+  artifactKey: Guid(219b3b014f26be843875b6b4cf1c265e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_mantah.prefab using Guid(219b3b014f26be843875b6b4cf1c265e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f13f0d006def38b3b02ec74f969844e6') in 0.083325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Montak.prefab
+  artifactKey: Guid(661c5cbc6353a0349acbb24f21294e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Montak.prefab using Guid(661c5cbc6353a0349acbb24f21294e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff5e9b4dfe50b2d65d52ae25c1ac334') in 0.066146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/okg_coin_holder.prefab
+  artifactKey: Guid(244b32c82aeee464bb7a41900047c454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/okg_coin_holder.prefab using Guid(244b32c82aeee464bb7a41900047c454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '638abd5d82676608c74e9717325933a8') in 0.039565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon_Pickup FX.prefab
+  artifactKey: Guid(571d8c5169077e14a93b1efab2021517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon_Pickup FX.prefab using Guid(571d8c5169077e14a93b1efab2021517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37f7bc48f6a9d0b3d57d4d74d13f212') in 0.050596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock_Hit FX.prefab
+  artifactKey: Guid(79748361e9c238d469f6949264277725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock_Hit FX.prefab using Guid(79748361e9c238d469f6949264277725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ddf656651d9fb2ce86bf22d71e65d78') in 0.048074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock_Holder.prefab
+  artifactKey: Guid(085ef2a38916e164b968011b370a1dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock_Holder.prefab using Guid(085ef2a38916e164b968011b370a1dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6dca3dce82945d97c700015f7cd6883') in 0.323868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_okg_coin_pickup.prefab
+  artifactKey: Guid(d553a8b77b4d33c43a00931298af4bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_okg_coin_pickup.prefab using Guid(d553a8b77b4d33c43a00931298af4bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62801c43e15558b38505b1749785efa4') in 0.036343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock.prefab
+  artifactKey: Guid(ca2669db31ca5cc4faf633c587c43c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock.prefab using Guid(ca2669db31ca5cc4faf633c587c43c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4caea225a3965933f71069397e6af77e') in 0.032843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Mantah.prefab
+  artifactKey: Guid(7a2e015b8611c324d9d107cadd0ed658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Mantah.prefab using Guid(7a2e015b8611c324d9d107cadd0ed658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4be9bac0266cb722d81b997d95baa411') in 0.047009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock_Pickup FX.prefab
+  artifactKey: Guid(d8ac1365d2a95e347bb3af92a9f60919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Key Unlock_Pickup FX.prefab using Guid(d8ac1365d2a95e347bb3af92a9f60919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0875bfba559d5fe0574021034a263f') in 0.036851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Krakee.prefab
+  artifactKey: Guid(7388bd03e2ff3e444b640e0661d03743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Krakee.prefab using Guid(7388bd03e2ff3e444b640e0661d03743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d831b9cc456477a24ed9acdb2b85ead') in 0.071323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/key_unlock.prefab
+  artifactKey: Guid(b81ae8ceee568e046b3c5cf7e9b02c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/key_unlock.prefab using Guid(b81ae8ceee568e046b3c5cf7e9b02c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e82b3004dcfc06aa77b8cdd8a480dd36') in 0.038392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/key_unlock_holder.prefab
+  artifactKey: Guid(0f959776cdab33d47b28a367c5558197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/key_unlock_holder.prefab using Guid(0f959776cdab33d47b28a367c5558197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cd0119f40024baa87d907ffc5522ae') in 0.026860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/OKG coin_Holder.prefab
+  artifactKey: Guid(63e375952a170074ab8b9d9f33ccba06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/OKG coin_Holder.prefab using Guid(63e375952a170074ab8b9d9f33ccba06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f42d36637e4fca337ceb6f75c93839a') in 0.031270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/OKG coin_Pickup FX.prefab
+  artifactKey: Guid(f1322cf92eb749d40ab8671fe11bc8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/OKG coin_Pickup FX.prefab using Guid(f1322cf92eb749d40ab8671fe11bc8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '497bf08498f3b8d513989cc3419cbd91') in 0.037335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_krakee.prefab
+  artifactKey: Guid(a31a601b11a3f4b45a597aa810926232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_krakee.prefab using Guid(a31a601b11a3f4b45a597aa810926232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44fbcd7d066bb2489efa64a8182e13d6') in 0.045480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/okg_coin.prefab
+  artifactKey: Guid(cf66f21a196db2940b1acd8ab8252de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/okg_coin.prefab using Guid(cf66f21a196db2940b1acd8ab8252de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d88b1f07f5bb494878c32fd59a6df5b') in 0.037694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_key_unlock_pickup.prefab
+  artifactKey: Guid(60cc78284256ee04a83b4860bdb7df74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_key_unlock_pickup.prefab using Guid(60cc78284256ee04a83b4860bdb7df74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b0b3d78e9707c9628f347996912f775') in 0.033985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_cocoon_pickup.prefab
+  artifactKey: Guid(798d7d02cccb8b940abbd6ad54d3af42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_cocoon_pickup.prefab using Guid(798d7d02cccb8b940abbd6ad54d3af42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5be27e4279f4b50b70e42d5aa5f6a4d') in 0.040389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_antuk.prefab
+  artifactKey: Guid(7c881a89c3186084cbad4a46b5ff5752) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_antuk.prefab using Guid(7c881a89c3186084cbad4a46b5ff5752) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83e7cb5468747e009d9c519cb162ce40') in 0.046667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_muu.prefab
+  artifactKey: Guid(9fe07da3af02abc4a88b1800b9178cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_muu.prefab using Guid(9fe07da3af02abc4a88b1800b9178cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1524b1a2d56bea1d6a71652f62dde86') in 0.065687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Muu.prefab
+  artifactKey: Guid(d54fce7d5c4b5f640bcf63afafd00fad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/Cocoon Muu.prefab using Guid(d54fce7d5c4b5f640bcf63afafd00fad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0281ca6a9c9572148716f7636f460f94') in 0.046786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_montak.prefab
+  artifactKey: Guid(44595a3ce4aab09489aa90520c35d00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/cocoon_montak.prefab using Guid(44595a3ce4aab09489aa90520c35d00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb7840cb6b8bd6bf7afeb97bd1b6b90f') in 0.046268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/key_unlock_projectile.prefab
+  artifactKey: Guid(ea5ad414050899a40ad68fc733124e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/key_unlock_projectile.prefab using Guid(ea5ad414050899a40ad68fc733124e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b23b4bfcb999808a97ce288508ab3d') in 0.027030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_key_unlock_hit.prefab
+  artifactKey: Guid(18256a6abbef93a43b4de14b68f8c438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/vfx_key_unlock_hit.prefab using Guid(18256a6abbef93a43b4de14b68f8c438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7dc9c80b714bd2836fc8747e61df34f') in 0.031331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.348059 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Misc/Portals/portal_stripes_yellow_ADD.mat
+  artifactKey: Guid(40638a949c8dbee459e4c1587e0de6ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Misc/Portals/portal_stripes_yellow_ADD.mat using Guid(40638a949c8dbee459e4c1587e0de6ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5161fa2eef4de5a36608a682ee6d603') in 0.051378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.911042 seconds.
+  path: Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal_holder.prefab
+  artifactKey: Guid(80c689f9cc64519419a6a4d8d4a22855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/_ASSET PREFABS/Items/energy_orb_normal_holder.prefab using Guid(80c689f9cc64519419a6a4d8d4a22855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c78924c77573ccb8dc0b2acbbd0d2be5') in 0.051875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.230477 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Basics/circle_ADD.mat
+  artifactKey: Guid(4bf10d94145fd6c4187c18de0af92e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Basics/circle_ADD.mat using Guid(4bf10d94145fd6c4187c18de0af92e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb7097c2fa19982f25f1d04444c9bb6') in 0.055091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.365003 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '659c5699410bac85c77574af359ca789') in 0.067784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.320740 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d1947bc099e60ce2296d327a4cf656') in 0.054540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.564043 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339e2d3ecca5fa5cacea1cd6cb27f795') in 0.095664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.859554 seconds.
+  path: Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Basics/glow2_ADD.mat
+  artifactKey: Guid(b29e688b444288148ad46d4aae66cffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dzung Assets/Plugins Assets/VFX_HUNG/LIB 1/Epic Toon FX/Materials/Basics/glow2_ADD.mat using Guid(b29e688b444288148ad46d4aae66cffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8c4298a1e3b384009b801d36fa15651') in 0.040081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.162656 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormalUpdate.cs
+  artifactKey: Guid(e2df0bd6451963e408e3bd13059b9f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormalUpdate.cs using Guid(e2df0bd6451963e408e3bd13059b9f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ce37f73c7014b4c357272cc85ac93c5') in 0.024302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.856716 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormalUI.cs
+  artifactKey: Guid(af79fb1d707e58349973916ca0701133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormalUI.cs using Guid(af79fb1d707e58349973916ca0701133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aedf5506c9b229120af047e0f08a6218') in 0.016778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.099287 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a42ace129c2b4a72a4ae89695ff7973') in 0.054800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.078179 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '730d636b70fc4426a349ef49771fe09a') in 0.063709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.835270 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36a6d529b46e8fb292a3cb51b26afae1') in 0.056827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.966292 seconds.
+  path: Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab
+  artifactKey: Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/EnergyOrbNormal/EnergyOrbNormal.prefab using Guid(1b02f2389aa213947a85c4e47032daad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a11dfb5b71e82eb1aface737e4fe2be3') in 0.061437 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.031489 seconds.
+Registered in 0.011739 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.InvalidOperationException: Sequence contains no matching element
   at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
@@ -480,686 +722,40 @@ UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/
 (Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.337 seconds
+- Completed reload, in  1.950 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1338ms)
-		BeginReloadAssembly (145ms)
+	ReloadAssembly (1950ms)
+		BeginReloadAssembly (230ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (1092ms)
-			LoadAssemblies (107ms)
+			CreateAndSetChildDomain (90ms)
+		EndReloadAssembly (1574ms)
+			LoadAssemblies (150ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (336ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (519ms)
+			SetupTypeCache (447ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (775ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (31ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (111ms)
-				ProcessInitializeOnLoadAttributes (285ms)
-				ProcessInitializeOnLoadMethodAttributes (81ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.07 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6818 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 46 unused Assets / (0.8 MB). Loaded Objects now: 7444.
-Memory consumption went from 262.3 MB to 261.5 MB.
-Total: 4.256700 ms (FindLiveObjects: 0.505600 ms CreateObjectMapping: 0.472700 ms MarkObjects: 2.966000 ms  DeleteObjects: 0.311800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010807 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.339 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1340ms)
-		BeginReloadAssembly (145ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (1089ms)
-			LoadAssemblies (102ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (336ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (519ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (31ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (108ms)
-				ProcessInitializeOnLoadAttributes (291ms)
-				ProcessInitializeOnLoadMethodAttributes (78ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.24 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6826 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (0.8 MB). Loaded Objects now: 7466.
-Memory consumption went from 262.5 MB to 261.7 MB.
-Total: 4.542900 ms (FindLiveObjects: 0.490500 ms CreateObjectMapping: 0.437300 ms MarkObjects: 3.298700 ms  DeleteObjects: 0.315400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008929 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.61 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.309 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1310ms)
-		BeginReloadAssembly (140ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (1065ms)
-			LoadAssemblies (101ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (322ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (513ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
+				InitializePlatformSupportModulesInManaged (44ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (108ms)
-				ProcessInitializeOnLoadAttributes (288ms)
-				ProcessInitializeOnLoadMethodAttributes (77ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.39 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6840 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (0.8 MB). Loaded Objects now: 7495.
-Memory consumption went from 262.9 MB to 262.2 MB.
-Total: 4.119700 ms (FindLiveObjects: 0.488500 ms CreateObjectMapping: 0.462900 ms MarkObjects: 2.852500 ms  DeleteObjects: 0.314800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018927 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.70 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.306 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1307ms)
-		BeginReloadAssembly (139ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1068ms)
-			LoadAssemblies (100ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (334ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (504ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (104ms)
-				ProcessInitializeOnLoadAttributes (282ms)
-				ProcessInitializeOnLoadMethodAttributes (77ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.72 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6849 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 48 unused Assets / (0.8 MB). Loaded Objects now: 7518.
-Memory consumption went from 263.2 MB to 262.4 MB.
-Total: 3.903500 ms (FindLiveObjects: 0.488600 ms CreateObjectMapping: 0.465500 ms MarkObjects: 2.596000 ms  DeleteObjects: 0.352400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009114 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.304 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1305ms)
-		BeginReloadAssembly (135ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1072ms)
-			LoadAssemblies (98ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (328ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (501ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (108ms)
-				ProcessInitializeOnLoadAttributes (278ms)
-				ProcessInitializeOnLoadMethodAttributes (75ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.12 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6849 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 48 unused Assets / (0.8 MB). Loaded Objects now: 7533.
-Memory consumption went from 263.2 MB to 262.4 MB.
-Total: 5.060600 ms (FindLiveObjects: 0.499500 ms CreateObjectMapping: 0.652600 ms MarkObjects: 3.558000 ms  DeleteObjects: 0.349500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011350 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.368 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1369ms)
-		BeginReloadAssembly (136ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (1128ms)
-			LoadAssemblies (99ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (330ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (565ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (29ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (103ms)
-				ProcessInitializeOnLoadAttributes (281ms)
-				ProcessInitializeOnLoadMethodAttributes (141ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.23 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6849 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 48 unused Assets / (0.8 MB). Loaded Objects now: 7548.
-Memory consumption went from 263.1 MB to 262.3 MB.
-Total: 4.482200 ms (FindLiveObjects: 0.497600 ms CreateObjectMapping: 0.441700 ms MarkObjects: 3.186600 ms  DeleteObjects: 0.355200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013459 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.48 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.326 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1326ms)
-		BeginReloadAssembly (150ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (1072ms)
-			LoadAssemblies (103ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (329ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (506ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (105ms)
-				ProcessInitializeOnLoadAttributes (283ms)
-				ProcessInitializeOnLoadMethodAttributes (78ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.75 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6864 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (0.8 MB). Loaded Objects now: 7573.
-Memory consumption went from 263.7 MB to 263.0 MB.
-Total: 4.309500 ms (FindLiveObjects: 0.505900 ms CreateObjectMapping: 0.425400 ms MarkObjects: 3.041800 ms  DeleteObjects: 0.335700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012183 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.291 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1291ms)
-		BeginReloadAssembly (135ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (39ms)
-		EndReloadAssembly (1058ms)
-			LoadAssemblies (97ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (322ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (498ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (104ms)
-				ProcessInitializeOnLoadAttributes (279ms)
-				ProcessInitializeOnLoadMethodAttributes (76ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.63 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6864 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (0.8 MB). Loaded Objects now: 7588.
-Memory consumption went from 263.7 MB to 263.0 MB.
-Total: 4.299100 ms (FindLiveObjects: 0.490900 ms CreateObjectMapping: 0.442900 ms MarkObjects: 3.031500 ms  DeleteObjects: 0.333000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 367.885396 seconds.
-  path: Assets/Ads/AdsManager.cs
-  artifactKey: Guid(99a4b713c5a2b3e4ea95e73f4f7965c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ads/AdsManager.cs using Guid(99a4b713c5a2b3e4ea95e73f4f7965c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6cfa44f6776228b864bf9666a1ed45') in 0.022928 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012124 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.64 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.349 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1350ms)
-		BeginReloadAssembly (141ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1108ms)
-			LoadAssemblies (105ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (320ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (545ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (31ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (127ms)
-				ProcessInitializeOnLoadAttributes (291ms)
-				ProcessInitializeOnLoadMethodAttributes (83ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				BeforeProcessingInitializeOnLoad (143ms)
+				ProcessInitializeOnLoadAttributes (461ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
+				AfterProcessingInitializeOnLoad (12ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (22ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.75 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 6.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6867 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (0.8 MB). Loaded Objects now: 7606.
-Memory consumption went from 263.9 MB to 263.1 MB.
-Total: 4.126100 ms (FindLiveObjects: 0.500000 ms CreateObjectMapping: 0.458000 ms MarkObjects: 2.760100 ms  DeleteObjects: 0.407200 ms)
+Unloading 6972 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 59 unused Assets / (0.8 MB). Loaded Objects now: 7614.
+Memory consumption went from 267.3 MB to 266.5 MB.
+Total: 5.081200 ms (FindLiveObjects: 0.703600 ms CreateObjectMapping: 0.552400 ms MarkObjects: 3.413100 ms  DeleteObjects: 0.382700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -1172,82 +768,20 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016240 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.InvalidOperationException: Sequence contains no matching element
-  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
-  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
-  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
-This could be due to missing scripts or compile error.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
-UnityEngine.Debug:LogError (object,UnityEngine.Object)
-UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
-UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
-UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
-
-(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.652 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1653ms)
-		BeginReloadAssembly (140ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (41ms)
-		EndReloadAssembly (1410ms)
-			LoadAssemblies (105ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (660ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (520ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (33ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (108ms)
-				ProcessInitializeOnLoadAttributes (291ms)
-				ProcessInitializeOnLoadMethodAttributes (78ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.69 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6871 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (0.8 MB). Loaded Objects now: 7625.
-Memory consumption went from 264.0 MB to 263.2 MB.
-Total: 4.824100 ms (FindLiveObjects: 0.641100 ms CreateObjectMapping: 0.795900 ms MarkObjects: 3.038500 ms  DeleteObjects: 0.347600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 51.357309 seconds.
+  path: Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab
+  artifactKey: Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/TroopCage/TroopCageUI.prefab using Guid(8480fe34fb45d7b41930b2045a4a4f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da07b1622842e78a2b29db02b459109e') in 4.925611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/BattleRush/Object/Sub/Hammer/HammerUI.prefab
+  artifactKey: Guid(a71a109cbc87dbc45b711c9c27b0e9b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/Hammer/HammerUI.prefab using Guid(a71a109cbc87dbc45b711c9c27b0e9b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cccb1212d81f99c4f74c456da6451467') in 0.200520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/BattleRush/Object/Sub/CocoonMantah/CocoonMantahUI.prefab
+  artifactKey: Guid(35d24106568784e489470648459a9da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/Object/Sub/CocoonMantah/CocoonMantahUI.prefab using Guid(35d24106568784e489470648459a9da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abc1390b9b6084d0e2be48094c783b94') in 0.086953 seconds 

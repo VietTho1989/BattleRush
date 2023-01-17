@@ -54,16 +54,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Android.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
-    <Analyzer Include="C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceManager.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UITransform\PrintRectTransform.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\UnityAds\IUnityAdsClient.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_CollisionModule.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeBoolUI.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\MyGrid\MyGridUI.cs" />
@@ -71,6 +66,7 @@
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\Idle\Idle.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SkinnedMeshRenderer.cs" />
     <Compile Include="Assets\BattleRush\Level\MyCustomPath\MyCustomPath.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\UnityAds\DummyClient.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Change\ChangeDictAdd.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalSizeCheckChange.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeIntUI.cs" />
@@ -82,6 +78,8 @@
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\TroopCage.cs" />
     <Compile Include="Assets\CommonLibrary\Interpolator.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\EnergyOrbPower\EnergyOrbPowerUI.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\RewardedVideo\RewardedVideoAdScene.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\MediationExtras.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\View\Controller\State\Play\ViewRecordControllerStatePlayUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3StackType.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\Cache\State\Fail\Fail.cs" />
@@ -96,10 +94,12 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3IO.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Hide\Hide.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\UI\UrlImage.cs" />
+    <Compile Include="Assets\Ads\AdsManager.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\Toast.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\EnergyOrbNormal\EnergyOrbNormal.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\View\ViewRecordUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Sync\Sync.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\Vungle.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Show\ShowUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3Crypto.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Show\Show.cs" />
@@ -151,6 +151,7 @@
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\2_Destroy\DestroyedUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\ToastTestUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Update\ChangeRemove.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\AppLovin\AppLovinClient.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Attack\TroopAttack.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Color.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector2.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GradientAlphaKey.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\Sub\MoveToDest\MoveToDest.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\0_Reset\ResetUpdate.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\AppLovin\IAppLovinClient.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TrailModule.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector4.cs" />
     <Compile Include="Assets\BattleRush\BattleRush.cs" />
@@ -182,21 +184,29 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\PlayMaker\ES3PlayMaker.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_byteArray.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Transform.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\AppLovin\DummyClient.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\TroopMove.cs" />
     <Compile Include="Assets\BattleRush\State\3_End\EndUpdate.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\AppLovin\Externs.cs" />
     <Compile Include="Assets\BattleRush\UI\CameraUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Web\ES3WebClass.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\HeroMove.cs" />
+    <Compile Include="Assets\BattleRush\AdsManager\AdsBannerControllerUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_UIntPtr.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ExternalForcesModule.cs" />
+    <Compile Include="Assets\Ads\UnityAdsInitializer.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Mesh.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Sync\SyncDictSet.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\IronSource\IronSource.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\UI\UrlUI.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\IronSource\IronSourceClient.cs" />
     <Compile Include="Assets\CommonLibrary\CommonUI\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\BattleRush\MapAsset\MapAsset.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\AddCallBackInterface.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RotationBySpeedModule.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\AutoFightUpdate.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\AppLovinClientFactory.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\RewardedVideoAd.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\FireNozzle\FireNozzleUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\EnergyOrbPower\EnergyOrbPowerUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\3_End\End.cs" />
@@ -211,6 +221,8 @@
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroMoveRunUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadScriptableObject\LoadLevelByScriptableObjectUpdate.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\SdkVersion.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Banner\AdViewScene.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Grinder\GrinderUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Readers\ES3Reader.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3File.cs" />
@@ -219,6 +231,7 @@
     <Compile Include="Assets\CommonLibrary\Common\Record\Change.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_enum.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\CheckFightEndUpdate.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\UnityAdsClientFactory.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\1_MoveTroopToFormation\MoveTroopToFormationUpdate.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Arena\HeroMoveArenaUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\EnergyOrbUpgrade\EnergyOrbUpgrade.cs" />
@@ -226,21 +239,25 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_int.cs" />
     <Compile Include="Assets\BattleRush\State\1_Start\MoveHand.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\MakeImageCacheUpdate.cs" />
+    <Compile Include="Assets\Ads\IronSourceAdvertisement.cs" />
     <Compile Include="Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutinesMonoContoller.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Attack\TroopAttackUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\1_DealDamage\DealDamage.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\UI\DataRecordTaskUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\UpgradeGateFree\UpgradeGateFree.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Sync\SyncSet.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AudienceNetworkAds.cs" />
     <Compile Include="Assets\BattleRush\Level\MyCustomSequence\MySequence.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Settings\ES3Settings.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SpriteRenderer.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\CheckIpAddress\Not\Retry\Retry.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\IronSource\Externs.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\MoveToDest\MoveToDestUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\DD.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Coin\Coin.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RotationOverLifetimeModule.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Update\ChangeSet.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\Vungle\IVungleClient.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Sync\SyncRemove.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_float.cs" />
     <Compile Include="Assets\BattleRush\Object\ObjectInPath.cs" />
@@ -268,6 +285,8 @@
     <Compile Include="Assets\CommonLibrary\UrlImage\Cache\State\Success\Success.cs" />
     <Compile Include="Assets\BattleRush\Map\ObjectData.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Move\TroopMoveUpdate.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\AppLovin\AppLovinClient.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\Vungle\Externs.cs" />
     <Compile Include="Assets\BattleRush\Object\Obstruction\ObstructionUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector3Int.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\VP\VD.cs" />
@@ -278,6 +297,7 @@
     <Compile Include="Assets\CommonLibrary\Common\OpenFileInBrowser.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\3_FightEnd\FightEndUpdate.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Arena\HeroMoveArena.cs" />
+    <Compile Include="Assets\Ads\ApplovinInitializer.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3ReferenceMgr.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Sync\SyncDictRemove.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\AutoFight.cs" />
@@ -297,12 +317,15 @@
     <Compile Include="Assets\BattleRush\Hero\UI\HeroUI.cs" />
     <Compile Include="Assets\BattleRush\State\2_Play\PlayUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_string.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\UnityAds\UnityAdsClient.cs" />
     <Compile Include="Assets\CommonLibrary\FPSDisplay.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\0_Live\Live.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\TakeDamage\TakeDamage.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Pike\Pike.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Settings\SettingsScene.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Blade\BladeUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\0_PreBattle\PreBattleUpdate.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\IronSource\DummyClient.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_MinMaxCurve.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\Rest\Rest.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_TriggerModule.cs" />
@@ -315,16 +338,22 @@
     <Compile Include="Assets\BattleRush\Arena\Stage\ArenaCanvasUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\DataRecordTaskUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\EditData\EditData.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleInterstitialMediationExtras.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\IronSource\IIronSourceClient.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\HaveTransformInterface.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\IronSource\IronSourceClient.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedValueType.cs" />
     <Compile Include="Assets\BattleRush\State\2_Play\Play.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3ArrayType.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LimitVelocityOverLifetimeModule.cs" />
     <Compile Include="Assets\BattleRush\State\Edit\Edit.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\Change\ChangeDictSet.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdHandler.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_NoiseModule.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_ParticleSystem.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Interstitial\InterstitialAdScene.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Font.cs" />
+    <Compile Include="Assets\InitScene\GlobalGameObject.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ColorOverLifetimeModule.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Streams\ES3PlayerPrefsStream.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Load.cs" />
@@ -337,11 +366,13 @@
     <Compile Include="Assets\BattleRush\Object\Sub\EnergyOrbUpgrade\EnergyOrbUpgradeUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\0_Move\MoveUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceData\State\Load\LoadUpdate.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\BaseScene.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadLevelUI.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\ToastMessageUI.cs" />
     <Compile Include="Assets\CommonLibrary\Preload.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\LP\LO.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\DP\GetKeyInterface.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\UnityAdsClient.cs" />
     <Compile Include="Assets\BattleRush\Arena\UI\ArenaUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\LoadUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3CollectionType.cs" />
@@ -353,13 +384,18 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Texture.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ulong.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_byte.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\InterstitialAd.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\UI\HealthBar\HealthBarUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\2_Destroy\Destroyed.cs" />
+    <Compile Include="Assets\BattleRush\State\3_End\UI\NonDrawingGraphic.cs" />
     <Compile Include="Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutinesCameraMonoController.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\ExtraHints.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadLevel.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\VungleClientFactory.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\1_ReleaseTroop\ReleaseTroop.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceData\State\Fail.cs" />
     <Compile Include="Assets\BattleRush\Level\Segment.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdView.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\CocoonMantah\CocoonMantahUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Attack\1_Animation\AnimUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Material.cs" />
@@ -379,6 +415,7 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\LP\LD.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UIBehavior.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LightsModule.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\AppLovin\AppLovin.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\TransformData.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\Generic.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Settings\ES3DefaultSettings.cs" />
@@ -396,6 +433,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector3.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\3_FightEnd\FightEnd.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\0_Live\ShootProjectile\TroopCageShootProjectile.cs" />
+    <Compile Include="Assets\InitScene\InitScene.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\LoadUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_uint.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UITransform\UIRectTransform.cs" />
@@ -409,6 +447,7 @@
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoader.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_BoxCollider2D.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Task\UI\Save\ConfirmSaveRecordUI.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\Externs.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\View\Controller\State\Play\ViewRecordControllerStatePlay.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshFilter.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\DataRecord.cs" />
@@ -418,6 +457,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_short.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceData\State\Success.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Live.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleMediationExtras.cs" />
     <Compile Include="Assets\OmniShade\Scripts\OmniShadeAnimateTexture.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedScriptableObjectType.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\State\0_Move\Move.cs" />
@@ -426,18 +466,22 @@
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\TroopFollow.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\UpgradeGateFree\UpgradeGateFreeUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UpdateUtils.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleRewardedVideoMediationExtras.cs" />
     <Compile Include="Assets\BattleRush\State\1_Start\Start.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeFloatUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\UIUtils.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\Change\HistoryChange.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\Vungle\DummyClient.cs" />
     <Compile Include="Assets\BattleRush\Hero\Hero.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\Attack\Attack.cs" />
     <Compile Include="Assets\CommonLibrary\Common\WrapProperty.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\Vungle\VungleClient.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\TroopCageUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_SphereCollider.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\ReferenceData.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\0_Live\LiveUpdate.cs" />
     <Compile Include="Assets\BattleRush\Hero\UI\HeroAnimation.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\Vungle\VungleClient.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Language\Locale.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshRenderer.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\Collide\WayUI.cs" />
@@ -448,6 +492,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RectTransform.cs" />
     <Compile Include="Assets\BattleRush\Map\MapData.cs" />
     <Compile Include="Assets\BattleRush\MapAsset\Item\ItemMap.cs" />
+    <Compile Include="Assets\Ads\VungleInitializer.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils.cs" />
     <Compile Include="Assets\BattleRush\Hero\UI\HeroSkinUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Intention\TroopIntentionUpdate.cs" />
@@ -463,16 +508,19 @@
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\UI\TroopFollowUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\Sort\SortDataUI.cs" />
     <Compile Include="Assets\CommonLibrary\AdvancedCoroutines\Extentions\AdvancedCoroutinesExtention.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\IronSourceClientFactory.cs" />
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroMoveRun.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\UpgradeGateCharge\UpgradeGateCharge.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SizeBySpeedModule.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Grinder\GrinderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Web\ES3Cloud.cs" />
+    <Compile Include="Assets\BattleRush\AdsManager\AdsBannerController.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeLongUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Load\Local\LoadLocalUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\Cache\State\Success\SuccessUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Load\Internet\LoadInternetUpdate.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Die\Die.cs" />
+    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\UnityAds\UnityAds.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\TakeDamage\Damage.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Blade\BladeUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\AssetBundle\AssetReferenceData\State\State.cs" />
@@ -540,6 +588,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_EventSystem.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Attack\1_Animation\Anim.cs" />
     <Compile Include="Assets\BattleRush\Arena\Projectile\Projectile.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdSettings.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_intptr.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Setting\Settings.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeCallBack.cs" />
@@ -554,65 +603,10 @@
     <Compile Include="Assets\BattleRush\Arena\Projectile\ProjectileUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Hide\HideUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\SawBlade\SawBladeUpdate.cs" />
+    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdUtility.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\Vungle.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\Vungle\VungleClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleInterstitialMediationExtras.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleRewardedVideoMediationExtras.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\Vungle\IVungleClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\Vungle\VungleClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\VungleClientFactory.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\MediationExtras.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleMediationExtras.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\Vungle\Externs.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\Vungle\DummyClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\UnityAdsClientFactory.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\Externs.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\UnityAds\IUnityAdsClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\UnityAds\DummyClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\UnityAds\UnityAdsClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\UnityAds\UnityAds.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\UnityAdsClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\IronSource\DummyClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\IronSource\IronSourceClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\IronSource\IIronSourceClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\IronSource\IronSource.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\IronSource\Externs.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\IronSourceClientFactory.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\IronSource\IronSourceClient.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\RewardedVideo\RewardedVideoAdScene.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\ExtraHints.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Banner\AdViewScene.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\AudienceNetworkAds.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Settings\SettingsScene.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\BaseScene.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\SdkVersion.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\InterstitialAd.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdView.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdUtility.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdSettings.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Interstitial\InterstitialAdScene.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\RewardedVideoAd.cs" />
-    <Compile Include="Assets\Ads\AudienceNetwork\Library\AdHandler.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\AppLovin\IAppLovinClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Mediation\AppLovinClientFactory.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\Android\Mediation\AppLovin\AppLovinClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\AppLovin\AppLovin.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\AppLovin\AppLovinClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Common\Mediation\AppLovin\DummyClient.cs" />
-    <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\AppLovin\Externs.cs" />
-    <Compile Include="Assets\Ads\AdsManager.cs" />
-    <Compile Include="Assets\InitScene\InitScene.cs" />
-    <Compile Include="Assets\InitScene\GlobalGameObject.cs" />
-    <Compile Include="Assets\Ads\VungleInitializer.cs" />
-    <Compile Include="Assets\Ads\IronSourceAdvertisement.cs" />
-    <Compile Include="Assets\Ads\UnityAdsInitializer.cs" />
-    <Compile Include="Assets\Ads\ApplovinInitializer.cs" />
-    <Compile Include="Assets\BattleRush\AdsManager\AdsBannerController.cs" />
-    <Compile Include="Assets\BattleRush\AdsManager\AdsBannerControllerUpdate.cs" />
-    <Compile Include="Assets\BattleRush\State\3_End\UI\NonDrawingGraphic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BattleRush\State\3_End\UI\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
@@ -922,14 +916,32 @@
     <Reference Include="AdvancedCoroutineCore">
       <HintPath>Assets\CommonLibrary\AdvancedCoroutines\Plugins\AdvancedCoroutineCore.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Litjson">
+      <HintPath>Assets\CommonLibrary\Plugins\Litjson.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
@@ -942,24 +954,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Litjson">
-      <HintPath>Assets\CommonLibrary\Plugins\Litjson.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>Assets\Ads\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
@@ -1503,6 +1497,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="LeTai.TrueShadow.Editor.csproj">
+      <Project>{275C59D6-A3A6-7E70-FCEC-070B15A03EF8}</Project>
+      <Name>LeTai.TrueShadow.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Forever.csproj">
       <Project>{87307993-CF44-7568-377D-775A5ED676F5}</Project>
       <Name>Dreamteck.Forever</Name>
@@ -1510,6 +1508,10 @@
     <ProjectReference Include="Dreamteck.Forever.Editor.csproj">
       <Project>{D45E7455-0C8E-44D6-808C-EF5BCFB4A178}</Project>
       <Name>Dreamteck.Forever.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Demo.csproj">
+      <Project>{EE0CEC34-0984-19AE-21FF-62ED48CAC56E}</Project>
+      <Name>LeTai.TranslucentImage.Demo</Name>
     </ProjectReference>
     <ProjectReference Include="AdvancedInputField.csproj">
       <Project>{91F3F1BA-6C98-130E-8933-B92D244C1522}</Project>
@@ -1523,9 +1525,25 @@
       <Project>{827C3093-2A86-E239-296E-CBE5263E014E}</Project>
       <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Scripts.csproj">
+      <Project>{72A003B8-3BA5-BC19-861C-2080AFBFF725}</Project>
+      <Name>LeTai.TranslucentImage.Scripts</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Splines.csproj">
       <Project>{889C9618-7878-DBB6-0FC0-9D284D24FAAE}</Project>
       <Name>Dreamteck.Splines</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TrueShadow.Demo.csproj">
+      <Project>{FE6548F2-ECC8-B9DA-BD84-EB787CF33989}</Project>
+      <Name>LeTai.TrueShadow.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TrueShadow.csproj">
+      <Project>{DA45E0F8-1C7A-2CFA-28DD-2583F56A069F}</Project>
+      <Name>LeTai.TrueShadow</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
+      <Project>{1335CA80-6DE1-A25F-9A66-F41D3A2B616D}</Project>
+      <Name>LeTai.TranslucentImage.UniversalRP</Name>
     </ProjectReference>
     <ProjectReference Include="OSA.csproj">
       <Project>{D2750D3A-43DD-1660-5BAB-50EDA63CDA09}</Project>
@@ -1543,6 +1561,10 @@
       <Project>{F1A45E47-7BA6-0E3E-0C16-9208526E4420}</Project>
       <Name>Dreamteck.Splines.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
+      <Project>{05121FDF-175A-08FC-E82F-7D7EAAA4CBE5}</Project>
+      <Name>LeTai.TranslucentImage.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Dreamteck.Utilities.Editor.csproj">
       <Project>{19C32B74-8543-0A7D-1490-09BC3F702055}</Project>
       <Name>Dreamteck.Utilities.Editor</Name>
@@ -1554,34 +1576,6 @@
     <ProjectReference Include="GoogleMobileAds.Editor.csproj">
       <Project>{F7DE734B-3E96-9984-483A-4A6B585D1DB8}</Project>
       <Name>GoogleMobileAds.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.csproj">
-      <Project>{DA45E0F8-1C7A-2CFA-28DD-2583F56A069F}</Project>
-      <Name>LeTai.TrueShadow</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.Demo.csproj">
-      <Project>{FE6548F2-ECC8-B9DA-BD84-EB787CF33989}</Project>
-      <Name>LeTai.TrueShadow.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.Editor.csproj">
-      <Project>{275C59D6-A3A6-7E70-FCEC-070B15A03EF8}</Project>
-      <Name>LeTai.TrueShadow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Demo.csproj">
-      <Project>{EE0CEC34-0984-19AE-21FF-62ED48CAC56E}</Project>
-      <Name>LeTai.TranslucentImage.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
-      <Project>{1335CA80-6DE1-A25F-9A66-F41D3A2B616D}</Project>
-      <Name>LeTai.TranslucentImage.UniversalRP</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
-      <Project>{05121FDF-175A-08FC-E82F-7D7EAAA4CBE5}</Project>
-      <Name>LeTai.TranslucentImage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Scripts.csproj">
-      <Project>{72A003B8-3BA5-BC19-861C-2080AFBFF725}</Project>
-      <Name>LeTai.TranslucentImage.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.Editor.csproj">
       <Project>{3CA03131-D6F2-23E3-772D-F43C70A41224}</Project>
