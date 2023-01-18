@@ -13,363 +13,91 @@ MonoBehaviour:
   m_Name: ItemMapAsset
   m_EditorClassIdentifier: 
   items:
-  - type: 6
+  - type: 0
     position:
-      x: -3.5165215
-      z: 8.250548
+      x: 0
+      z: 3.6
+    row: 6
+    col: 3
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.64
+  - type: 4
+    position:
+      x: 0
+      z: 33.6
     row: 1
     col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 6
-    position:
-      x: 3.4571724
-      z: 8.5084915
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 6
-    position:
-      x: -0.015628815
-      z: 8.634246
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+    distanceBetweenRow: 0
+    distanceBetweenCol: 0
   - type: 3
     position:
-      x: -4.636471
-      z: 21.424545
+      x: 0
+      z: 39.36
     row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+    col: 3
+    distanceBetweenRow: 0
+    distanceBetweenCol: 2
   - type: 3
     position:
-      x: -2.7010841
-      z: 22.98288
+      x: 0
+      z: 41.28
     row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+    col: 5
+    distanceBetweenRow: 0
+    distanceBetweenCol: 2
   - type: 3
     position:
-      x: 1.495964
-      z: 25.009815
+      x: 0
+      z: 43.2
+    row: 1
+    col: 3
+    distanceBetweenRow: 0
+    distanceBetweenCol: 2
+  - type: 0
+    position:
+      x: 2.8
+      z: 52.8
+    row: 7
+    col: 2
+    distanceBetweenRow: 3.6
+    distanceBetweenCol: 2
+  - type: 4
+    position:
+      x: 0
+      z: 91.2
     row: 1
     col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+    distanceBetweenRow: 0
+    distanceBetweenCol: 0
   - type: 3
     position:
-      x: 6.0376587
-      z: 28.376621
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+      x: 0
+      z: 98.4
+    row: 3
+    col: 2
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
   - type: 3
     position:
-      x: 5.503437
-      z: 30.100304
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+      x: 0
+      z: 107.04
+    row: 3
+    col: 3
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
   - type: 3
     position:
-      x: -4.561859
-      z: 31.409859
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+      x: 0
+      z: 115.68
+    row: 3
+    col: 2
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88
   - type: 3
     position:
-      x: 2.240345
-      z: 34.171234
+      x: 0
+      z: 120
     row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: -3.8256264
-      z: 36.131645
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: 6.4731483
-      z: 39.87915
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: -3.3285217
-      z: 40.642334
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: -0.48545837
-      z: 42.128082
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: 7.0382233
-      z: 43.970997
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 8
-    position:
-      x: -2.400661
-      z: 55.654785
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 8
-    position:
-      x: 2.0193262
-      z: 56.33289
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: -4.9117107
-      z: 58.575455
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: -4.66493
-      z: 59.4
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: 2.86677
-      z: 59.523808
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 3
-    position:
-      x: -1.7875805
-      z: 61.445408
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 6
-    position:
-      x: -3.1921449
-      z: 76.6559
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 6
-    position:
-      x: -4.592665
-      z: 77.3266
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 6
-    position:
-      x: 0.47022444
-      z: 78.11099
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 6
-    position:
-      x: -3.3175359
-      z: 95.98314
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: -3.0239697
-      z: 14.216385
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 0.7784519
-      z: 14.8497925
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 2.1588974
-      z: 14.403663
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 2.5185719
-      z: 15.74169
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 1.878067
-      z: 18.766624
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: -0.8707733
-      z: 17.552689
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: -1.0666771
-      z: 16.900375
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 3.8841534
-      z: 19.48381
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 4.049614
-      z: 19.430344
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 1.2680092
-      z: 25.83271
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: -1.3679028
-      z: 33.436405
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: -1.5179424
-      z: 33.484894
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 1.045927
-      z: 33.20936
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 1.4968662
-      z: 29.374092
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 1.7540722
-      z: 26.292944
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 2.9395638
-      z: 26.21621
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 6.1164646
-      z: 27.881111
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 3.9618711
-      z: 26.796083
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 2.7821865
-      z: 26.267067
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
-  - type: 0
-    position:
-      x: 2.7821865
-      z: 26.267067
-    row: 1
-    col: 1
-    distanceBetweenRow: 0.1
-    distanceBetweenCol: 0.1
+    col: 2
+    distanceBetweenRow: 2.88
+    distanceBetweenCol: 2.88

@@ -80,7 +80,8 @@ namespace BattleRushS.ObjectS
                 {
                     EnergyOrbUpgrade energyOrbUpgrade = this.data.energyOrbUpgrade.v.data;
                     if (energyOrbUpgrade != null)
-                    {                       
+                    {
+                        EnergyOrbUpgrade.State beforeState = energyOrbUpgrade.state.v;
                         // collider enter
                         {
                             switch (energyOrbUpgrade.state.v)
@@ -261,6 +262,34 @@ namespace BattleRushS.ObjectS
                             else
                             {
                                 Logger.LogError("pickUpEffect null");
+                            }
+                        }
+                        // add to battleRush orb normal
+                        {
+                            if (beforeState == EnergyOrbUpgrade.State.Normal)
+                            {
+                                switch (energyOrbUpgrade.state.v)
+                                {
+                                    case EnergyOrbUpgrade.State.Normal:
+                                        break;
+                                    case EnergyOrbUpgrade.State.PickUp:
+                                    case EnergyOrbUpgrade.State.PickedUpFinish:
+                                        {
+                                            BattleRush battleRush = energyOrbUpgrade.findDataInParent<BattleRush>();
+                                            if (battleRush != null)
+                                            {
+                                                battleRush.levelEnergyOrb.v++;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("battleRush null");
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown state: " + energyOrbUpgrade.state.v);
+                                        break;
+                                }
                             }
                         }
                     }

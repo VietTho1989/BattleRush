@@ -17,6 +17,19 @@ namespace BattleRushS.StateS.LoadS
                 dirty = false;
                 if (this.data != null)
                 {
+                    // battleRush level
+                    {
+                        BattleRush battleRush = this.data.findDataInParent<BattleRush>();
+                        if (battleRush != null)
+                        {
+                            battleRush.level.v = this.data.level.v;
+                        }
+                        else
+                        {
+                            Logger.LogError("battleRush null");
+                        }
+                    }
+                    // state
                     switch (this.data.state.v)
                     {
                         case LoadLevel.State.Start:

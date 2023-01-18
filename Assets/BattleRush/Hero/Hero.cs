@@ -9,6 +9,8 @@ namespace BattleRushS
     public class Hero : Data
     {
 
+        public VO<int> level;
+
         #region hit point
 
         /**
@@ -32,6 +34,7 @@ namespace BattleRushS
 
         public enum Property
         {
+            level,
             hitPoint,
             heroInformation,
             heroMove,
@@ -40,6 +43,7 @@ namespace BattleRushS
 
         public Hero() : base()
         {
+            this.level = new VO<int>(this, (byte)Property.level, 1);
             this.hitPoint = new VO<float>(this, (byte)Property.hitPoint, 1);
             this.heroInformation = new VO<HeroInformation>(this, (byte)Property.heroInformation, null);
             this.heroMove = new VD<HeroMove>(this, (byte)Property.heroMove, new HeroMove());

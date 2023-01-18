@@ -83,6 +83,7 @@ namespace BattleRushS.ObjectS
                     EnergyOrbNormal energyOrbNormal = this.data.energyOrbNormal.v.data;
                     if (energyOrbNormal != null)
                     {
+                        EnergyOrbNormal.State beforeState = energyOrbNormal.state.v;
                         // collider enter
                         {
                             switch (energyOrbNormal.state.v)
@@ -264,6 +265,34 @@ namespace BattleRushS.ObjectS
                             else
                             {
                                 Logger.LogError("coinPickUpEffect null");
+                            }
+                        }
+                        // add to battleRush orb normal
+                        {
+                            if (beforeState == EnergyOrbNormal.State.Normal)
+                            {
+                                switch (energyOrbNormal.state.v)
+                                {
+                                    case EnergyOrbNormal.State.Normal:
+                                        break;
+                                    case EnergyOrbNormal.State.PickUp:
+                                    case EnergyOrbNormal.State.PickedUpFinish:
+                                        {
+                                            BattleRush battleRush = energyOrbNormal.findDataInParent<BattleRush>();
+                                            if (battleRush != null)
+                                            {
+                                                battleRush.levelNormalOrb.v++;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("battleRush null");
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown state: " + energyOrbNormal.state.v);
+                                        break;
+                                }
                             }
                         }
                     }

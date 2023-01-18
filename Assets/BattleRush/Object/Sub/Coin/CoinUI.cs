@@ -82,6 +82,7 @@ namespace BattleRushS.ObjectS
                     if (coin != null)
                     {
                         this.name = "Coin " + coin.position.v;
+                        Coin.State beforeState = coin.state.v;
                         // collider enter
                         {
                             switch (coin.state.v)
@@ -264,6 +265,34 @@ namespace BattleRushS.ObjectS
                             else
                             {
                                 Logger.LogError("coinPickUpEffect null");
+                            }
+                        }
+                        // add to level coin
+                        {
+                            if (beforeState == Coin.State.Normal)
+                            {
+                                switch (coin.state.v)
+                                {
+                                    case Coin.State.Normal:
+                                        break;
+                                    case Coin.State.PickUp:
+                                    case Coin.State.PickedUpFinish:
+                                        {
+                                            BattleRush battleRush = coin.findDataInParent<BattleRush>();
+                                            if (battleRush != null)
+                                            {
+                                                battleRush.levelCoin.v++;
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("battleRush null");
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown state: " + coin.state.v);
+                                        break;
+                                }
                             }
                         }
                     }

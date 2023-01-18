@@ -17,6 +17,20 @@ namespace BattleRushS
 
         #endregion
 
+        #region information
+
+        public VO<int> level;
+
+        public VO<int> levelCoin;
+
+        public VO<int> levelNormalOrb;
+
+        public VO<int> levelEnergyOrb;
+
+        public VO<int> totalCoin;
+
+        #endregion
+
         #region state
 
         public abstract class State : Data
@@ -58,6 +72,13 @@ namespace BattleRushS
         {
             isInEditMode,
             adsBanner,
+
+            level,
+            levelCoin,
+            levelNormalOrb,
+            levelEnergyOrb,
+            totalCoin,
+
             state,
             mapData,
             makeSegmentManager,
@@ -71,6 +92,14 @@ namespace BattleRushS
         {
             this.isInEditMode = new VO<bool>(this, (byte)Property.isInEditMode, false);
             this.adsBanner = new VD<AdsBannerController>(this, (byte)Property.adsBanner, new AdsBannerController());
+            // information
+            {
+                this.level = new VO<int>(this, (byte)Property.level, 1);
+                this.levelCoin = new VO<int>(this, (byte)Property.levelCoin, 0);
+                this.levelNormalOrb = new VO<int>(this, (byte)Property.levelNormalOrb, 0);
+                this.levelEnergyOrb = new VO<int>(this, (byte)Property.levelEnergyOrb, 0);
+                this.totalCoin = new VO<int>(this, (byte)Property.totalCoin, 18000);
+            }
             this.state = new VD<State>(this, (byte)Property.state, new Load());
             this.mapData = new VD<MapData>(this, (byte)Property.mapData, new MapData());
             this.makeSegmentManager = new VD<MakeSegmentManager>(this, (byte)Property.makeSegmentManager, new MakeSegmentManager());

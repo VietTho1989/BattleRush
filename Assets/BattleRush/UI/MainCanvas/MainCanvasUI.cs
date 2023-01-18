@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS;
 using UnityEngine;
 
 namespace BattleRushS
@@ -32,8 +33,24 @@ namespace BattleRushS
 
         #region Refresh
 
-        public GameObject informationContent;
         public GameObject btnRemoveAds;
+
+        // start: bottom left
+        public GameObject btnHeroes;
+        public GameObject btnEvolution;
+        public GameObject btnTroops;
+        // start: bottom right
+        public GameObject btnMission;
+        public GameObject btnUpgrade;
+
+        // play information
+        public TMPro.TextMeshProUGUI tvCoin;
+        public TMPro.TextMeshProUGUI tvNormalOrb;
+        public TMPro.TextMeshProUGUI tvEnergyOrb;
+        public TMPro.TextMeshProUGUI tvTroop;
+
+        public TMPro.TextMeshProUGUI tvLevel;
+        public TMPro.TextMeshProUGUI tvTotalCoin;
 
         public override void refresh()
         {
@@ -48,20 +65,102 @@ namespace BattleRushS
                         BattleRush battleRush = battleRushUIData.battleRush.v.data;
                         if (battleRush != null)
                         {
-                            // informationContent
+                            // btnRemoveAds
                             {
-                                if (informationContent != null)
+                                if (btnRemoveAds != null)
+                                {
+                                    btnRemoveAds.SetActive(!battleRush.adsBanner.v.removeAds.v && battleRush.state.v.getType() == BattleRush.State.Type.Start);
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnRemoveAds null");
+                                }
+                            }
+                            // tvLevel
+                            {
+                                if (tvLevel != null)
+                                {
+                                    tvLevel.text = "" + battleRush.level.v;
+                                }
+                                else
+                                {
+                                    Logger.LogError("tvLevel null");
+                                }
+                            }
+                            // tvTotalCoin
+                            {
+                                if (tvTotalCoin != null)
+                                {
+                                    tvTotalCoin.text = "" + battleRush.totalCoin.v;
+                                }
+                                else
+                                {
+                                    Logger.LogError("tvTotalCoin null");
+                                }
+                            }
+
+                            // start main left
+                            {
+                                if (btnHeroes != null)
+                                {
+                                    btnHeroes.SetActive(battleRush.state.v.getType() == BattleRush.State.Type.Start);
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnHeroes null");
+                                }
+                                if (btnEvolution != null)
+                                {
+                                    btnEvolution.SetActive(battleRush.state.v.getType() == BattleRush.State.Type.Start);
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnEvolution null");
+                                }
+                                if (btnTroops != null)
+                                {
+                                    btnTroops.SetActive(battleRush.state.v.getType() == BattleRush.State.Type.Start);
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnTroops null");
+                                }
+                                if (btnMission != null)
+                                {
+                                    btnMission.SetActive(battleRush.state.v.getType() == BattleRush.State.Type.Start);
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnMission null");
+                                }
+                                if (btnUpgrade != null)
+                                {
+                                    btnUpgrade.SetActive(battleRush.state.v.getType() == BattleRush.State.Type.Start);
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnUpgrade null");
+                                }
+                            }
+                            // play information
+                            {
+                                if (tvCoin != null)
                                 {
                                     switch (battleRush.state.v.getType())
                                     {
                                         case BattleRush.State.Type.Load:
                                         case BattleRush.State.Type.Edit:
-                                            informationContent.SetActive(false);
+                                        case BattleRush.State.Type.Start:
+                                            {
+                                                tvCoin.transform.parent.gameObject.SetActive(false);
+                                            }
                                             break;
-                                        case BattleRush.State.Type.Start:                                           
                                         case BattleRush.State.Type.Play:
                                         case BattleRush.State.Type.End:
-                                            informationContent.SetActive(true);
+                                            {
+                                                tvCoin.transform.parent.gameObject.SetActive(true);
+                                                tvCoin.text = "" + battleRush.levelCoin.v;
+                                            }
                                             break;
                                         default:
                                             Logger.LogError("unknown type: " + battleRush.state.v.getType());
@@ -70,18 +169,157 @@ namespace BattleRushS
                                 }
                                 else
                                 {
-                                    Logger.LogError("informationContent null");
+                                    Logger.LogError("tvCoin null");
                                 }
-                            }
-                            // btnRemoveAds
-                            {
-                                if (btnRemoveAds != null)
+                                if (tvNormalOrb != null)
                                 {
-                                    btnRemoveAds.SetActive(!battleRush.adsBanner.v.removeAds.v);
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:
+                                        case BattleRush.State.Type.Edit:
+                                        case BattleRush.State.Type.Start:
+                                            {
+                                                tvNormalOrb.transform.parent.gameObject.SetActive(false);
+                                            }
+                                            break;
+                                        case BattleRush.State.Type.Play:
+                                        case BattleRush.State.Type.End:
+                                            {
+                                                tvNormalOrb.transform.parent.gameObject.SetActive(true);
+                                                tvNormalOrb.text = "" + battleRush.levelNormalOrb.v;
+                                            }
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
                                 }
                                 else
                                 {
-                                    Logger.LogError("btnRemoveAds null");
+                                    Logger.LogError("tvNormalOrb null");
+                                }
+                                if (tvEnergyOrb != null)
+                                {
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:
+                                        case BattleRush.State.Type.Edit:
+                                        case BattleRush.State.Type.Start:
+                                            {
+                                                tvEnergyOrb.transform.parent.gameObject.SetActive(false);
+                                            }
+                                            break;
+                                        case BattleRush.State.Type.Play:
+                                        case BattleRush.State.Type.End:
+                                            {
+                                                tvEnergyOrb.transform.parent.gameObject.SetActive(true);
+                                                tvEnergyOrb.text = "" + battleRush.levelEnergyOrb.v;
+                                            }
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("tvEnergyOrb null");
+                                }
+                                if (tvTroop != null)
+                                {
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:
+                                        case BattleRush.State.Type.Edit:
+                                        case BattleRush.State.Type.Start:
+                                            {
+                                                tvTroop.transform.parent.gameObject.SetActive(false);
+                                            }
+                                            break;
+                                        case BattleRush.State.Type.Play:
+                                        case BattleRush.State.Type.End:
+                                            {
+                                                tvTroop.transform.parent.gameObject.SetActive(true);
+                                                // find count
+                                                int count = 0;
+                                                {
+                                                    switch (battleRush.hero.v.heroMove.v.sub.v.getType())
+                                                    {
+                                                        case HeroS.HeroMove.Sub.Type.Run:
+                                                            {
+                                                                count = battleRush.hero.v.troopFollows.vs.Count;
+                                                            }
+                                                            break;
+                                                        case HeroS.HeroMove.Sub.Type.Arena:
+                                                            {
+                                                                // find
+                                                                Arena arenaFightCurrentOn = null;
+                                                                {
+                                                                    foreach (Arena check in battleRush.arenas.vs)
+                                                                    {
+                                                                        ArenaUI arenaUI = check.findCallBack<ArenaUI>();
+                                                                        if (arenaUI != null)
+                                                                        {
+                                                                            Segment segment = arenaUI.GetComponentInParent<Segment>();
+                                                                            if (segment != null)
+                                                                            {
+                                                                                if (segment == battleRush.hero.v.heroMove.v.currentSegment.v)
+                                                                                {
+                                                                                    arenaFightCurrentOn = check;
+                                                                                    break;
+                                                                                }
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                Logger.LogError("levelSegment null");
+                                                                            }
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            Logger.LogError("arenaUI null");
+                                                                        }
+                                                                    }
+                                                                }
+                                                                // process
+                                                                if (arenaFightCurrentOn != null)
+                                                                {
+                                                                    // find
+                                                                    int troopCount = 0;
+                                                                    {
+                                                                        foreach(Troop troop in arenaFightCurrentOn.troops.vs)
+                                                                        {
+                                                                            if(troop.teamId.v==0 && troop.troopType.v.getType()== TroopType.Type.Normal && troop.state.v.getType()== Troop.State.Type.Live)
+                                                                            {
+                                                                                troopCount++;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    // set
+                                                                    count = troopCount;
+                                                                }
+                                                                else
+                                                                {
+                                                                    Logger.LogError("arenaFightCurrentOn null");
+                                                                    count = battleRush.hero.v.troopFollows.vs.Count;
+                                                                }
+                                                            }
+                                                            break;
+                                                        default:
+                                                            break;
+                                                    }
+                                                }
+                                                // process
+                                                tvTroop.text = "" + count;
+                                            }
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("tvTroop null");
                                 }
                             }
                         }
@@ -145,15 +383,43 @@ namespace BattleRushS
                         // Child
                         {
                             battleRush.adsBanner.allAddCallBack(this);
+                            battleRush.hero.allAddCallBack(this);
+                            battleRush.arenas.allAddCallBack(this);
                         }
                         dirty = true;
                         return;
                     }
                     // Child
-                    if(data is AdsBannerController)
                     {
-                        dirty = true;
-                        return;
+                        if (data is AdsBannerController)
+                        {
+                            dirty = true;
+                            return;
+                        }
+                        if(data is Hero)
+                        {
+                            dirty = true;
+                            return;
+                        }
+                        // arena
+                        {
+                            if(data is Arena)
+                            {
+                                Arena arena = data as Arena;
+                                // Child
+                                {
+                                    arena.troops.allAddCallBack(this);
+                                }
+                                dirty = true;
+                                return;
+                            }
+                            // Child
+                            if(data is Troop)
+                            {
+                                dirty = true;
+                                return;
+                            }
+                        }
                     }
                 }               
             }
@@ -191,13 +457,38 @@ namespace BattleRushS
                         // Child
                         {
                             battleRush.adsBanner.allRemoveCallBack(this);
+                            battleRush.hero.allRemoveCallBack(this);
+                            battleRush.arenas.allRemoveCallBack(this);
                         }
                         return;
                     }
                     // Child
-                    if (data is AdsBannerController)
                     {
-                        return;
+                        if (data is AdsBannerController)
+                        {
+                            return;
+                        }
+                        if(data is Hero)
+                        {
+                            return;
+                        }
+                        // arena
+                        {
+                            if (data is Arena)
+                            {
+                                Arena arena = data as Arena;
+                                // Child
+                                {
+                                    arena.troops.allRemoveCallBack(this);
+                                }
+                                return;
+                            }
+                            // Child
+                            if (data is Troop)
+                            {
+                                return;
+                            }
+                        }
                     }
                 }                
             }
@@ -246,24 +537,102 @@ namespace BattleRushS
                                     dirty = true;
                                 }
                                 break;
+                            case BattleRush.Property.level:
+                                dirty = true;
+                                break;
+                            case BattleRush.Property.levelCoin:
+                                dirty = true;
+                                break;
+                            case BattleRush.Property.levelNormalOrb:
+                                dirty = true;
+                                break;
+                            case BattleRush.Property.levelEnergyOrb:
+                                dirty = true;
+                                break;
+                            case BattleRush.Property.totalCoin:
+                                dirty = true;
+                                break;
+                            case BattleRush.Property.hero:
+                                {
+                                    ValueChangeUtils.replaceCallBack(this, syncs);
+                                    dirty = true;
+                                }
+                                break;
+                            case BattleRush.Property.arenas:
+                                {
+                                    ValueChangeUtils.replaceCallBack(this, syncs);
+                                    dirty = true;
+                                }
+                                break;
                             default:
                                 break;
                         }
                         return;
                     }
                     // Child
-                    if(wrapProperty.p is AdsBannerController)
                     {
-                        switch ((AdsBannerController.Property)wrapProperty.n)
+                        if (wrapProperty.p is AdsBannerController)
                         {
-                            case AdsBannerController.Property.removeAds:
-                                dirty = true;
-                                break;
-                            default:
-                                break;
+                            switch ((AdsBannerController.Property)wrapProperty.n)
+                            {
+                                case AdsBannerController.Property.removeAds:
+                                    dirty = true;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            return;
                         }
-                        return;
-                    }
+                        if(wrapProperty.p is Hero)
+                        {
+                            switch ((Hero.Property)wrapProperty.n)
+                            {
+                                case Hero.Property.troopFollows:
+                                    dirty = true;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            return;
+                        }
+                        // arena
+                        {
+                            if (wrapProperty.p is Arena)
+                            {
+                                switch ((Arena.Property)wrapProperty.n)
+                                {
+                                    case Arena.Property.troops:
+                                        {
+                                            ValueChangeUtils.replaceCallBack(this, syncs);
+                                            dirty = true;
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
+                            }
+                            // Child
+                            if (wrapProperty.p is Troop)
+                            {
+                                switch ((Troop.Property)wrapProperty.n)
+                                {
+                                    case Troop.Property.teamId:
+                                        dirty = true;
+                                        break;
+                                    case Troop.Property.troopType:
+                                        dirty = true;
+                                        break;
+                                    case Troop.Property.state:
+                                        dirty = true;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return;
+                            }
+                        }
+                    }                    
                 }               
             }
             Logger.LogError("Don't process: " + wrapProperty + "; " + syncs + "; " + this);
