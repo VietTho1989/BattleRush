@@ -19,6 +19,8 @@ namespace BattleRushS
 
             public VD<HeroSkinUI.UIData> heroSkin;
 
+            public VD<HeroVfxUpgradeUI.UIData> heroUpgrade;
+
             public LD<TroopFollowUI.UIData> troops;
 
             #region Constructor
@@ -28,6 +30,7 @@ namespace BattleRushS
                 hero,
                 heroAnimation,
                 heroSkin,
+                heroUpgrade,
                 troops
             }
 
@@ -36,6 +39,7 @@ namespace BattleRushS
                 this.hero = new VO<ReferenceData<Hero>>(this, (byte)Property.hero, new ReferenceData<Hero>(null));
                 this.heroAnimation = new VD<HeroAnimation.UIData>(this, (byte)Property.heroAnimation, new HeroAnimation.UIData());
                 this.heroSkin = new VD<HeroSkinUI.UIData>(this, (byte)Property.heroSkin, new HeroSkinUI.UIData());
+                this.heroUpgrade = new VD<HeroVfxUpgradeUI.UIData>(this, (byte)Property.heroUpgrade, new HeroVfxUpgradeUI.UIData());
                 this.troops = new LD<TroopFollowUI.UIData>(this, (byte)Property.troops);
             }
 
@@ -172,6 +176,7 @@ namespace BattleRushS
 
         public HeroAnimation heroAnimation;
         public HeroSkinUI heroSkin;
+        public HeroVfxUpgradeUI heroUpgrade;
         public TroopFollowUI troopFollowPrefab;
 
         public override void onAddCallBack<T>(T data)
@@ -184,6 +189,7 @@ namespace BattleRushS
                     uiData.hero.allAddCallBack(this);
                     uiData.heroAnimation.allAddCallBack(this);
                     uiData.heroSkin.allAddCallBack(this);
+                    uiData.heroUpgrade.allAddCallBack(this);
                     uiData.troops.allAddCallBack(this);
                 }
                 dirty = true;
@@ -230,6 +236,23 @@ namespace BattleRushS
                     dirty = true;
                     return;
                 }
+                if(data is HeroVfxUpgradeUI.UIData)
+                {
+                    HeroVfxUpgradeUI.UIData heroVfxUpgradeUIData = data as HeroVfxUpgradeUI.UIData;
+                    // UI
+                    {
+                        if (heroUpgrade != null)
+                        {
+                            heroUpgrade.setData(heroVfxUpgradeUIData);
+                        }
+                        else
+                        {
+                            Logger.LogError("heroUpgrade null");
+                        }
+                    }
+                    dirty = true;
+                    return;
+                }
                 if (data is TroopFollowUI.UIData)
                 {
                     TroopFollowUI.UIData troopFollowUIData = data as TroopFollowUI.UIData;
@@ -254,6 +277,7 @@ namespace BattleRushS
                     uiData.hero.allRemoveCallBack(this);
                     uiData.heroAnimation.allRemoveCallBack(this);
                     uiData.heroSkin.allRemoveCallBack(this);
+                    uiData.heroUpgrade.allRemoveCallBack(this);
                     uiData.troops.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
@@ -293,6 +317,22 @@ namespace BattleRushS
                         else
                         {
                             Logger.LogError("heroSkinUIData null");
+                        }
+                    }
+                    return;
+                }
+                if (data is HeroVfxUpgradeUI.UIData)
+                {
+                    HeroVfxUpgradeUI.UIData heroVfxUpgradeUIData = data as HeroVfxUpgradeUI.UIData;
+                    // UI
+                    {
+                        if (heroUpgrade != null)
+                        {
+                            heroUpgrade.setDataNull(heroVfxUpgradeUIData);
+                        }
+                        else
+                        {
+                            Logger.LogError("heroUpgrade null");
                         }
                     }
                     return;
@@ -338,6 +378,12 @@ namespace BattleRushS
                             dirty = true;
                         }
                         break;
+                    case UIData.Property.heroUpgrade:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     case UIData.Property.troops:
                         {
                             ValueChangeUtils.replaceCallBack(this, syncs);
@@ -369,6 +415,10 @@ namespace BattleRushS
                     return;
                 }
                 if (wrapProperty.p is HeroSkinUI.UIData)
+                {
+                    return;
+                }
+                if (wrapProperty.p is HeroVfxUpgradeUI.UIData)
                 {
                     return;
                 }

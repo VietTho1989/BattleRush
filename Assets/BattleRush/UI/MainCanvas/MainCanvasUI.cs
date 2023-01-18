@@ -718,5 +718,52 @@ namespace BattleRushS
             }
         }
 
+        public void onClickBtnUpgrade()
+        {
+            if (this.data != null)
+            {
+                BattleRushUI.UIData battleRushUIData = this.data.findDataInParent<BattleRushUI.UIData>();
+                if (battleRushUIData != null)
+                {
+                    BattleRush battleRush = battleRushUIData.battleRush.v.data;
+                    if (battleRush != null)
+                    {
+                        switch (battleRush.state.v.getType())
+                        {
+                            case BattleRush.State.Type.Start:
+                                {
+                                    // find cost
+                                    int cost = 500;
+                                    {
+                                        // TODO can hoan thien
+                                    }
+                                    // process
+                                    if (battleRush.totalCoin.v >= cost)
+                                    {
+                                        battleRush.hero.v.level.v++;
+                                        battleRush.totalCoin.v -= cost;
+                                    }
+                                }
+                                break;
+                            default:
+                                Logger.LogError("error state: " + battleRush.state.v.getType());
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogError("battleRush null");
+                    }
+                }
+                else
+                {
+                    Logger.LogError("battleRushUIData null");
+                }
+            }
+            else
+            {
+                Logger.LogError("data null");
+            }
+        }
     }
 }

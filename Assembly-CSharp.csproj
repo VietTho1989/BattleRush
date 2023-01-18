@@ -611,6 +611,7 @@
     <Compile Include="Assets\BattleRush\Arena\Stage\1_MoveTroopToFormation\UI\MoveTroopToFormationUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\UI\AutoFightUI.cs" />
     <Compile Include="Assets\BattleRush\Arena\Stage\3_FightEnd\UI\FightEndUI.cs" />
+    <Compile Include="Assets\BattleRush\Hero\UI\vfx\HeroVfxUpgradeUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BattleRush\State\3_End\UI\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
