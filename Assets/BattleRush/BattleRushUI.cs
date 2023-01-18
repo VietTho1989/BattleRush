@@ -178,7 +178,15 @@ namespace BattleRushS
                         // index in MainUICanvas
                         {
                             UIRectTransform.SetSiblingIndex(this.data.playerInput.v, 0);
-                            UIRectTransform.SetSiblingIndex(this.data.mainCanvas.v, 1);
+                            if (arenaCanvas != null)
+                            {
+                                arenaCanvas.transform.SetSiblingIndex(1);
+                            }
+                            else
+                            {
+                                Logger.LogError("arenaCanvas null");
+                            }
+                            UIRectTransform.SetSiblingIndex(this.data.mainCanvas.v, 2);
                         }
                         // hero
                         {

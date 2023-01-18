@@ -14,16 +14,31 @@ namespace BattleRushS.ObjectS.TroopCageS
 
             public VO<ReferenceData<TroopCageShootProjectile>> projectile;
 
+            #region type
+
+            public enum Type
+            {
+                Normal,
+                Power,
+                Upgrade
+            }
+
+            public VO<Type> type;
+
+            #endregion
+
             #region Constructor
 
             public enum Property
             {
-                projectile
+                projectile,
+                type
             }
 
             public UIData() : base()
             {
                 this.projectile = new VO<ReferenceData<TroopCageShootProjectile>>(this, (byte)Property.projectile, new ReferenceData<TroopCageShootProjectile>(null));
+                this.type = new VO<Type>(this, (byte)Property.type, Type.Normal);
             }
 
             #endregion
@@ -33,6 +48,10 @@ namespace BattleRushS.ObjectS.TroopCageS
         #endregion
 
         #region Refresh
+
+        public GameObject normal;
+        public GameObject power;
+        public GameObject upgrade;
 
         public override void refresh()
         {
@@ -67,7 +86,44 @@ namespace BattleRushS.ObjectS.TroopCageS
                                 }
                             }
                             this.transform.position = Vector3.Lerp(troopCageShootProjectile.startPosition.v, this.transform.parent.position, t);
-                        }                        
+                        }
+                        // type
+                        {
+                            if(normal!=null && power!=null && upgrade != null)
+                            {
+                                switch (this.data.type.v)
+                                {
+                                    case UIData.Type.Normal:
+                                        {
+                                            normal.SetActive(true);
+                                            power.SetActive(false);
+                                            upgrade.SetActive(false);
+                                        }
+                                        break;
+                                    case UIData.Type.Power:
+                                        {
+                                            normal.SetActive(false);
+                                            power.SetActive(true);
+                                            upgrade.SetActive(false);
+                                        }
+                                        break;
+                                    case UIData.Type.Upgrade:
+                                        {
+                                            normal.SetActive(false);
+                                            power.SetActive(false);
+                                            upgrade.SetActive(true);
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown type: " + this.data.type.v);
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                Logger.LogError("type null");
+                            }
+                        }
                     }
                     else
                     {
@@ -171,6 +227,9 @@ namespace BattleRushS.ObjectS.TroopCageS
                             ValueChangeUtils.replaceCallBack(this, syncs);
                             dirty = true;
                         }
+                        break;
+                    case UIData.Property.type:
+                        dirty = true;
                         break;
                     default:
                         break;

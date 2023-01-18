@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using BattleRushS.ArenaS.StateS;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,13 +21,28 @@ namespace BattleRushS.ArenaS
 
             public LD<ProjectileUI.UIData> projectiles;
 
+            #region stageUI
+
+            public abstract class StageUI : Data
+            {
+
+                public abstract Arena.Stage.Type getType();
+
+
+            }
+
+            public VD<StageUI> stage;
+
+            #endregion
+
             #region Constructor
 
             public enum Property
             {
                 arena,
                 troops,
-                projectiles
+                projectiles,
+                stage
             }
 
             public UIData() : base()
@@ -34,6 +50,7 @@ namespace BattleRushS.ArenaS
                 this.arena = new VO<ReferenceData<Arena>>(this, (byte)Property.arena, new ReferenceData<Arena>(null));
                 this.troops = new LD<TroopUI.UIData>(this, (byte)Property.troops);
                 this.projectiles = new LD<ProjectileUI.UIData>(this, (byte)Property.projectiles);
+                this.stage = new VD<StageUI>(this, (byte)Property.stage, null);
             }
 
             #endregion
@@ -230,6 +247,172 @@ namespace BattleRushS.ArenaS
                                 this.data.projectiles.remove(old);
                             }
                         }
+                        // stage
+                        {
+                            // UI
+                            {
+                                switch (arena.stage.v.getType())
+                                {
+                                    case Arena.Stage.Type.PreBattle:
+                                        {
+                                            PreBattle preBattle = arena.stage.v as PreBattle;
+                                            // UI
+                                            {
+                                                PreBattleUI.UIData preBattleUIData = this.data.stage.newOrOld<PreBattleUI.UIData>();
+                                                {
+                                                    preBattleUIData.preBattle.v = new ReferenceData<PreBattle>(preBattle);
+                                                }
+                                                this.data.stage.v = preBattleUIData;
+                                            }
+                                        }
+                                        break;
+                                    case Arena.Stage.Type.MoveTroopToFormation:
+                                        {
+                                            MoveTroopToFormation moveTroopToFormation = arena.stage.v as MoveTroopToFormation;
+                                            // UI
+                                            {
+                                                MoveTroopToFormationUI.UIData moveTroopToFormationUIData = this.data.stage.newOrOld<MoveTroopToFormationUI.UIData>();
+                                                {
+                                                    moveTroopToFormationUIData.moveTroopToFormation.v = new ReferenceData<MoveTroopToFormation>(moveTroopToFormation);
+                                                }
+                                                this.data.stage.v = moveTroopToFormationUIData;
+                                            }
+                                        }
+                                        break;
+                                    case Arena.Stage.Type.AutoFight:
+                                        {
+                                            AutoFight autoFight = arena.stage.v as AutoFight;
+                                            // UI
+                                            {
+                                                AutoFightUI.UIData autoFightUIData = this.data.stage.newOrOld<AutoFightUI.UIData>();
+                                                {
+                                                    autoFightUIData.autoFight.v = new ReferenceData<AutoFight>(autoFight);
+                                                }
+                                                this.data.stage.v = autoFightUIData;
+                                            }
+                                        }
+                                        break;
+                                    case Arena.Stage.Type.FightEnd:
+                                        {
+                                            FightEnd fightEnd = arena.stage.v as FightEnd;
+                                            // UI
+                                            {
+                                                FightEndUI.UIData fightEndUIData = this.data.stage.newOrOld<FightEndUI.UIData>();
+                                                {
+                                                    fightEndUIData.fightEnd.v = new ReferenceData<FightEnd>(fightEnd);
+                                                }
+                                                this.data.stage.v = fightEndUIData;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Logger.LogError("unknown type: " + arena.stage.v.getType());
+                                        break;
+                                }
+                            }
+                            // set parent transform
+                            if (this.data.stage.v != null)
+                            {
+                                BattleRushUI.UIData battleRushUIData = this.data.findDataInParent<BattleRushUI.UIData>();
+                                if (battleRushUIData != null)
+                                {
+                                    BattleRushUI battleRushUI = battleRushUIData.findCallBack<BattleRushUI>();
+                                    if (battleRushUI != null)
+                                    {
+                                        if (battleRushUI.arenaCanvas != null)
+                                        {
+                                            // find
+                                            Transform stageTransform = null;
+                                            {
+                                                switch (this.data.stage.v.getType())
+                                                {
+                                                    case Arena.Stage.Type.PreBattle:
+                                                        {
+                                                            PreBattleUI preBattleUI = this.data.stage.v.findCallBack<PreBattleUI>();
+                                                            if (preBattleUI != null)
+                                                            {
+                                                                stageTransform = preBattleUI.transform;
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("preBattleUI null");
+                                                            }
+                                                        }
+                                                        break;
+                                                    case Arena.Stage.Type.MoveTroopToFormation:
+                                                        {
+                                                           MoveTroopToFormationUI moveTroopToFormationUI = this.data.stage.v.findCallBack<MoveTroopToFormationUI>();
+                                                            if (moveTroopToFormationUI != null)
+                                                            {
+                                                                stageTransform = moveTroopToFormationUI.transform;
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("moveTroopToFormationUI null");
+                                                            }
+                                                        }
+                                                        break;
+                                                    case Arena.Stage.Type.AutoFight:
+                                                        {
+                                                            AutoFightUI autoFightUI = this.data.stage.v.findCallBack<AutoFightUI>();
+                                                            if (autoFightUI != null)
+                                                            {
+                                                                stageTransform = autoFightUI.transform;
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("autoFightUI null");
+                                                            }
+                                                        }
+                                                        break;
+                                                    case Arena.Stage.Type.FightEnd:
+                                                        {
+                                                            FightEndUI fightEndUI = this.data.stage.v.findCallBack<FightEndUI>();
+                                                            if (fightEndUI != null)
+                                                            {
+                                                                stageTransform = fightEndUI.transform;
+                                                            }
+                                                            else
+                                                            {
+                                                                Logger.LogError("fightEndUI null");
+                                                            }
+                                                        }
+                                                        break;
+                                                    default:
+                                                        Logger.LogError("unknown type: " + this.data.stage.v.getType());
+                                                        break;
+                                                }
+                                            }
+                                            // set
+                                            if (stageTransform != null)
+                                            {
+                                                stageTransform.SetParent(battleRushUI.arenaCanvas, false);
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("stageTransform null");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("worldCanvas null");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("battleRushUI null");
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("battleRushUIData null");
+                                }
+                            }
+                            else
+                            {
+                                Logger.LogError("stage null");
+                            }
+                        }
                     }
                     else
                     {
@@ -298,6 +481,11 @@ namespace BattleRushS.ArenaS
         public TroopUI troopPrefab;
         public ProjectileUI projectilePrefab;
 
+        public PreBattleUI preBattlePrefab;
+        public MoveTroopToFormationUI moveTroopToFormationPrefab;
+        public AutoFightUI autoFightPrefab;
+        public FightEndUI fightEndPrefab;
+
         public override void onAddCallBack<T>(T data)
         {
             if(data is UIData)
@@ -308,6 +496,7 @@ namespace BattleRushS.ArenaS
                     uiData.arena.allAddCallBack(this);
                     uiData.troops.allAddCallBack(this);
                     uiData.projectiles.allAddCallBack(this);
+                    uiData.stage.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -339,6 +528,45 @@ namespace BattleRushS.ArenaS
                     dirty = true;
                     return;
                 }
+                if(data is UIData.StageUI)
+                {
+                    UIData.StageUI stageUI = data as UIData.StageUI;
+                    // UI
+                    {
+                        switch (stageUI.getType())
+                        {
+                            case Arena.Stage.Type.PreBattle:
+                                {
+                                    PreBattleUI.UIData preBattleUIData = stageUI as PreBattleUI.UIData;
+                                    UIUtils.Instantiate(preBattleUIData, preBattlePrefab, this.transform);
+                                }
+                                break;
+                            case Arena.Stage.Type.MoveTroopToFormation:
+                                {
+                                    MoveTroopToFormationUI.UIData moveTroopToFormationUIData = stageUI as MoveTroopToFormationUI.UIData;
+                                    UIUtils.Instantiate(moveTroopToFormationUIData, moveTroopToFormationPrefab, this.transform);
+                                }
+                                break;
+                            case Arena.Stage.Type.AutoFight:
+                                {
+                                    AutoFightUI.UIData autoFightUIData = stageUI as AutoFightUI.UIData;
+                                    UIUtils.Instantiate(autoFightUIData, autoFightPrefab, this.transform);
+                                }
+                                break;
+                            case Arena.Stage.Type.FightEnd:
+                                {
+                                    FightEndUI.UIData fightEndUIData = stageUI as FightEndUI.UIData;
+                                    UIUtils.Instantiate(fightEndUIData, fightEndPrefab, this.transform);
+                                }
+                                break;
+                            default:
+                                Logger.LogError("unknown type: " + stageUI.getType());
+                                break;
+                        }
+                    }
+                    dirty = true;
+                    return;
+                }
             }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
@@ -353,6 +581,7 @@ namespace BattleRushS.ArenaS
                     uiData.arena.allRemoveCallBack(this);
                     uiData.troops.allRemoveCallBack(this);
                     uiData.projectiles.allRemoveCallBack(this);
+                    uiData.stage.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
@@ -378,6 +607,44 @@ namespace BattleRushS.ArenaS
                     // UI
                     {
                         projectileUIData.removeCallBackAndDestroy(typeof(ProjectileUI));
+                    }
+                    return;
+                }
+                if (data is UIData.StageUI)
+                {
+                    UIData.StageUI stageUI = data as UIData.StageUI;
+                    // UI
+                    {
+                        switch (stageUI.getType())
+                        {
+                            case Arena.Stage.Type.PreBattle:
+                                {
+                                    PreBattleUI.UIData preBattleUIData = stageUI as PreBattleUI.UIData;
+                                    preBattleUIData.removeCallBackAndDestroy(typeof(PreBattleUI));
+                                }
+                                break;
+                            case Arena.Stage.Type.MoveTroopToFormation:
+                                {
+                                    MoveTroopToFormationUI.UIData moveTroopToFormationUIData = stageUI as MoveTroopToFormationUI.UIData;
+                                    moveTroopToFormationUIData.removeCallBackAndDestroy(typeof(MoveTroopToFormationUI));
+                                }
+                                break;
+                            case Arena.Stage.Type.AutoFight:
+                                {
+                                    AutoFightUI.UIData autoFightUIData = stageUI as AutoFightUI.UIData;
+                                    autoFightUIData.removeCallBackAndDestroy(typeof(AutoFightUI));
+                                }
+                                break;
+                            case Arena.Stage.Type.FightEnd:
+                                {
+                                    FightEndUI.UIData fightEndUIData = stageUI as FightEndUI.UIData;
+                                    fightEndUIData.removeCallBackAndDestroy(typeof(FightEndUI));
+                                }
+                                break;
+                            default:
+                                Logger.LogError("unknown type: " + stageUI.getType());
+                                break;
+                        }
                     }
                     return;
                 }
@@ -413,6 +680,12 @@ namespace BattleRushS.ArenaS
                             dirty = true;
                         }
                         break;
+                    case UIData.Property.stage:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -430,6 +703,9 @@ namespace BattleRushS.ArenaS
                         case Arena.Property.projectiles:
                             dirty = true;
                             break;
+                        case Arena.Property.stage:
+                            dirty = true;
+                            break;
                         default:
                             break;
                     }
@@ -440,6 +716,10 @@ namespace BattleRushS.ArenaS
                     return;
                 }
                 if(wrapProperty.p is ProjectileUI.UIData)
+                {
+                    return;
+                }
+                if(wrapProperty.p is UIData.StageUI)
                 {
                     return;
                 }

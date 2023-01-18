@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
+  btnSetting: {fileID: 2697759436330971949}
   btnRemoveAds: {fileID: 28435039854425395}
   btnHeroes: {fileID: 5734363827139543401}
   btnEvolution: {fileID: 4432499122632541569}

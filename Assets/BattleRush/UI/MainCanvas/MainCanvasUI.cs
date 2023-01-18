@@ -33,6 +33,8 @@ namespace BattleRushS
 
         #region Refresh
 
+        public GameObject btnSetting;
+
         public GameObject btnRemoveAds;
 
         // start: bottom left
@@ -65,6 +67,35 @@ namespace BattleRushS
                         BattleRush battleRush = battleRushUIData.battleRush.v.data;
                         if (battleRush != null)
                         {
+                            // btnSetting
+                            {
+                                if (btnSetting != null)
+                                {
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:
+                                        case BattleRush.State.Type.Edit:
+                                            {
+                                                btnSetting.transform.parent.gameObject.SetActive(false);
+                                            }
+                                            break;
+                                        case BattleRush.State.Type.Start:
+                                        case BattleRush.State.Type.Play:
+                                        case BattleRush.State.Type.End:
+                                            {
+                                                btnSetting.transform.parent.gameObject.SetActive(true);
+                                            }
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("btnSetting null");
+                                }
+                            }
                             // btnRemoveAds
                             {
                                 if (btnRemoveAds != null)
@@ -91,7 +122,26 @@ namespace BattleRushS
                             {
                                 if (tvTotalCoin != null)
                                 {
-                                    tvTotalCoin.text = "" + battleRush.totalCoin.v;
+                                    switch (battleRush.state.v.getType())
+                                    {
+                                        case BattleRush.State.Type.Load:
+                                        case BattleRush.State.Type.Edit:
+                                            {
+                                                tvTotalCoin.transform.parent.gameObject.SetActive(false);
+                                            }
+                                            break;
+                                        case BattleRush.State.Type.Start:                                            
+                                        case BattleRush.State.Type.Play:
+                                        case BattleRush.State.Type.End:
+                                            {
+                                                tvTotalCoin.transform.parent.gameObject.SetActive(true);
+                                                tvTotalCoin.text = "" + battleRush.totalCoin.v;
+                                            }
+                                            break;
+                                        default:
+                                            Logger.LogError("unknown type: " + battleRush.state.v.getType());
+                                            break;
+                                    }
                                 }
                                 else
                                 {

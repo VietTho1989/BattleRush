@@ -38,7 +38,8 @@ namespace BattleRushS.ArenaS
                             break;
                         case MoveTroopToFormation.State.Ready:
                             {
-                                if (this.data.time.v >= this.data.duration.v + 2.5f)
+                                // TODO cho an button fight to start fight
+                                /**if (this.data.time.v >= this.data.duration.v + 2.5f)
                                 {
                                     // change to auto fight
                                     Arena arena = this.data.findDataInParent<Arena>();
@@ -54,7 +55,7 @@ namespace BattleRushS.ArenaS
                                     {
                                         Logger.LogError("arena null");
                                     }
-                                }
+                                }*/
                             }
                             break;
                         default:

@@ -884,6 +884,10 @@ MonoBehaviour:
   center: {fileID: 8861778744270994065}
   troopPrefab: {fileID: 582736463879002837, guid: 456a72382558f44479164b9d57d53fd3, type: 3}
   projectilePrefab: {fileID: 4966688968892559668, guid: 425904786b6856e4e870805ecdbebab1, type: 3}
+  preBattlePrefab: {fileID: 4073248961123644438, guid: 4f8d361c888db0d4ab2c68d0f4d4cefa, type: 3}
+  moveTroopToFormationPrefab: {fileID: 4459919303044208847, guid: 5cca9dd38fe21294fb0664881b4b0e1b, type: 3}
+  autoFightPrefab: {fileID: -5746809485602655465, guid: 5e05b95d391ad3f4c88918e5a0bda7b4, type: 3}
+  fightEndPrefab: {fileID: -3987954786480626168, guid: 6365c659f2b1d6b4789875d2ed005209, type: 3}
 --- !u!114 &8176793829515166261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62257,3 +62261,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segment: {fileID: 7785843639031599074}
   segmentType: 1
+  length: 48
+  segmentPos: 0
