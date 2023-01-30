@@ -29,6 +29,11 @@ public class Segment : MonoBehaviour
 
     public float segmentPos = 0;
 
-    public SegmentPathInfo segmentPathInfo = new SegmentPathInfo();
+    #region for editor
+
+    public SegmentAsset segmentAsset = new SegmentAsset();
+    public bool isDeleted = false;
+
+    #endregion
 
 }

@@ -109,7 +109,8 @@ namespace BattleRushS
                                         {
                                             if (mapAsset != null)
                                             {
-                                                segment.segmentPathInfo.copy(mapAsset.pathInfo);
+                                                segment.segmentAsset.copy(mapAsset);
+                                                segment.segmentAsset.repeat = 1;
                                             }
                                             else
                                             {

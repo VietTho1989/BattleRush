@@ -198,28 +198,60 @@ namespace BattleRushS
 #if UNITY_EDITOR
         public void save()
         {
-            ItemMap itemMap = this.mapData.v.itemMap.v;
-            if (itemMap != null)
+            // item
             {
-                itemMap.items.Clear();
-                foreach (ObjectInPath objectInPath in this.laneObjects.vs)
+                ItemMap itemMap = this.mapData.v.itemMap.v;
+                if (itemMap != null)
                 {
-                    ItemAsset itemAsset = new ItemAsset();
+                    itemMap.items.Clear();
+                    foreach (ObjectInPath objectInPath in this.laneObjects.vs)
                     {
-                        itemAsset.type = objectInPath.getType();
-                        itemAsset.position = objectInPath.getPosition();
-                        //public uint row = 1;
-                        //public uint col = 1;
-                        //public float distanceBetweenRow = 0.1f;
-                        //public float distanceBetweenCol = 0.1f;
+                        ItemAsset itemAsset = new ItemAsset();
+                        {
+                            itemAsset.type = objectInPath.getType();
+                            itemAsset.position = objectInPath.getPosition();
+                            //public uint row = 1;
+                            //public uint col = 1;
+                            //public float distanceBetweenRow = 0.1f;
+                            //public float distanceBetweenCol = 0.1f;
+                        }
+                        itemMap.items.Add(itemAsset);
                     }
-                    itemMap.items.Add(itemAsset);
+                    EditorUtility.SetDirty(itemMap);
                 }
-                EditorUtility.SetDirty(itemMap);
+                else
+                {
+                    Logger.LogError("itemMap null");
+                }
             }
-            else
+            // map
             {
-                Logger.LogError("itemMap null");
+                MapAsset mapAsset = this.makeSegmentManager.v.mapAsset.v;
+                if (mapAsset != null)
+                {
+                    BattleRushUI battleRushUI = this.findCallBack<BattleRushUI>();
+                    if (battleRushUI != null)
+                    {
+                        Segment[] segments = battleRushUI.GetComponentsInChildren<Segment>();
+                        mapAsset.segments.Clear();
+                        foreach (Segment segment in segments)
+                        {
+                            if (segment.segmentType == Segment.SegmentType.Run && !segment.isDeleted)
+                            {
+                                mapAsset.segments.Add(segment.segmentAsset);
+                            }                                
+                        }
+                        EditorUtility.SetDirty(mapAsset);
+                    }
+                    else
+                    {
+                        Logger.LogError("battleRushUI null");
+                    }
+                }
+                else
+                {
+                    Logger.LogError("mapAsset null");
+                }
             }
         }
 #endif

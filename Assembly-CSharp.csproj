@@ -620,6 +620,7 @@
     <Compile Include="Assets\BattleRush\Object\Sub\KeyUnlock\KeyUnlockUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\SawBladeStatic\SawBladeStaticUpdate.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\SawBladeStatic\SawBladeStaticUI.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\KeyUnlock\KeyUnlockCollide.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BattleRush\State\3_End\UI\TranslucentImage\Resources\UniversalRP\lib.hlsl" />

@@ -11,80 +11,124 @@ namespace BattleRushS
     [CustomEditor(typeof(Segment))]
     public class SegmentEditor : Editor
     {
+
+        private void reload(BattleRush battleRush)
+        {
+            int level = battleRush.level.v;
+            battleRush.save();
+            battleRush.reset();
+            // load
+            {
+                Load load = battleRush.state.newOrOld<Load>();
+                {
+                    // sub
+                    {
+                        LoadLevel loadLevel = load.sub.newOrOld<LoadLevel>();
+                        {
+                            loadLevel.level.v = level;
+                        }
+                        load.sub.v = loadLevel;
+                    }
+                }
+                battleRush.state.v = load;
+            }
+        }
         
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
             // add object
             {
-                GUILayout.Space(100);
-                Rect lastRect = GUILayoutUtility.GetLastRect();
-                Rect buttonRect = new Rect(lastRect.x, lastRect.y + 2 * EditorGUIUtility.singleLineHeight, 160, 60);
-                if (GUI.Button(buttonRect, "Reload"))
+                Segment segment = this.target as Segment;
+                BattleRushUI battleRushUI = segment.GetComponentInParent<BattleRushUI>();
+                // process
+                if (battleRushUI != null)
                 {
-                    Segment segment = this.target as Segment;
-                    BattleRushUI battleRushUI = segment.GetComponentInParent<BattleRushUI>();
-                    // process
-                    if (battleRushUI != null)
+                    BattleRushUI.UIData battleRushUIData = battleRushUI.data;
+                    if (battleRushUIData != null)
                     {
-                        BattleRushUI.UIData battleRushUIData = battleRushUI.data;
-                        if (battleRushUIData != null)
+                        BattleRush battleRush = battleRushUIData.battleRush.v.data;
+                        if (battleRush != null)
                         {
-                            BattleRush battleRush = battleRushUIData.battleRush.v.data;
-                            if (battleRush != null)
+                            switch (battleRush.state.v.getType())
                             {
-                                switch (battleRush.state.v.getType())
-                                {
-                                    case BattleRush.State.Type.Edit:
+                                case BattleRush.State.Type.Edit:
+                                    {
+                                        switch (segment.segmentType)
                                         {
-                                            Logger.Log("reload: " + segment);
-                                            LevelSegment levelSegment = segment.GetComponent<LevelSegment>();
-                                            if (levelSegment != null)
-                                            {
-                                                int level = battleRush.level.v;
-                                                battleRush.save();
-                                                battleRush.reset();
-                                                // load
+                                            case Segment.SegmentType.Run:
                                                 {
-                                                    Load load = battleRush.state.newOrOld<Load>();
+                                                    Logger.Log("reload: " + segment);
+                                                    LevelSegment levelSegment = segment.GetComponent<LevelSegment>();
+                                                    if (levelSegment != null)
                                                     {
-                                                        // sub
+                                                        // btnReload
                                                         {
-                                                            LoadLevel loadLevel = load.sub.newOrOld<LoadLevel>();
+                                                            GUILayout.Space(100);
+                                                            Rect lastRect = GUILayoutUtility.GetLastRect();
+                                                            Rect buttonRect = new Rect(lastRect.x, lastRect.y + 2 * EditorGUIUtility.singleLineHeight, 160, 60);
+                                                            if (GUI.Button(buttonRect, "Reload"))
                                                             {
-                                                                loadLevel.level.v = level;
+                                                                reload(battleRush);
                                                             }
-                                                            load.sub.v = loadLevel;
+                                                        }
+                                                        // btnDelete
+                                                        {
+                                                            GUILayout.Space(100);
+                                                            Rect lastRect = GUILayoutUtility.GetLastRect();
+                                                            Rect buttonRect = new Rect(lastRect.x, lastRect.y + 2 * EditorGUIUtility.singleLineHeight, 160, 60);
+                                                            if (GUI.Button(buttonRect, "Delete"))
+                                                            {
+                                                                segment.isDeleted = true;
+                                                                reload(battleRush);
+                                                            }
+                                                        }
+                                                        // btnCopy
+                                                        {
+                                                            GUILayout.Space(100);
+                                                            Rect lastRect = GUILayoutUtility.GetLastRect();
+                                                            Rect buttonRect = new Rect(lastRect.x, lastRect.y + 2 * EditorGUIUtility.singleLineHeight, 160, 60);
+                                                            if (GUI.Button(buttonRect, "Copy"))
+                                                            {
+                                                                Instantiate(segment, segment.transform);
+                                                                reload(battleRush);
+                                                            }
                                                         }
                                                     }
-                                                    battleRush.state.v = load;
+                                                    else
+                                                    {
+                                                        Logger.LogError("levelSegment null");
+                                                    }
                                                 }
-                                            }
-                                            else
-                                            {
-                                                Logger.LogError("levelSegment null");
-                                            }
-                                        }
-                                        break;
-                                    default:
-                                        break;
-                                }
-                            }
-                            else
-                            {
-                                Logger.LogError("battleRush null");
+                                                break;
+                                            case Segment.SegmentType.Arena:
+                                                {
+                                                    Logger.LogError("arena null");
+                                                }
+                                                break;
+                                            default:
+                                                break;
+                                        }                                        
+                                    }
+                                    break;
+                                default:
+                                    break;
                             }
                         }
                         else
                         {
-                            Logger.LogError("battleRushUIData null");
+                            Logger.LogError("battleRush null");
                         }
                     }
                     else
                     {
-                        Logger.LogError("battleRushUI null");
+                        Logger.LogError("battleRushUIData null");
                     }
                 }
+                else
+                {
+                    Logger.LogError("battleRushUI null");
+                }               
             }
         }
 

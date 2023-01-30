@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 2126203310811779468}
   - component: {fileID: 1526813116149572214}
   - component: {fileID: 92190070501300660}
+  - component: {fileID: 6266192143176313852}
   m_Layer: 8
   m_Name: key_unlock_projectile
   m_TagString: Untagged
@@ -212,6 +213,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6447668, y: 9.957283, z: 4.415528}
   m_Center: {x: 0.009003945, y: 0.5020978, z: 0.027268415}
+--- !u!114 &6266192143176313852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616330685394404234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f916cf38a6af5de41a2b59316603ad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7837862478088429865
 GameObject:
   m_ObjectHideFlags: 0

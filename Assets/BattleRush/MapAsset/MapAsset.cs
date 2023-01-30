@@ -23,6 +23,14 @@ public class SegmentAsset
     public SegmentPathInfo pathInfo = new SegmentPathInfo();
     public uint repeat = 1;
     public Segment segment;
+
+    public void copy(SegmentAsset old)
+    {
+        this.pathInfo.copy(old.pathInfo);
+        this.repeat = old.repeat;
+        this.segment = old.segment;
+    }
+
 }
 
 [CreateAssetMenu(fileName = "MapAsset", menuName = "BattleRush/SpawnMapAsset", order = 1)]
