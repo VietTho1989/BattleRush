@@ -417,9 +417,39 @@ namespace BattleRushS.HeroS
                                 {
                                     if (lastHitpoint != 0 && troopFollow.hitPoint.v == 0)
                                     {
-                                        GameObject vfxDead = Instantiate(vfxDeadPrefab, this.transform.position, this.transform.rotation);
-                                        // vfxDead.transform.localPosition = Vector3.zero;
-                                        vfxDeads.Add(vfxDead);
+                                        // find
+                                        Transform vfxContainer = null;
+                                        {
+                                            BattleRushUI.UIData battleRushUIData = this.data.findDataInParent<BattleRushUI.UIData>();
+                                            if (battleRushUIData != null)
+                                            {
+                                                BattleRushUI battleRushUI = battleRushUIData.findCallBack<BattleRushUI>();
+                                                if (battleRushUI != null)
+                                                {
+                                                    vfxContainer = battleRushUI.vfxContainer;
+                                                }
+                                                else
+                                                {
+                                                    Logger.LogError("battleRushUI null");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("battleRushUIData null");
+                                            }
+                                        }
+                                        // process
+                                        if (vfxContainer != null)
+                                        {
+                                            GameObject vfxDead = Instantiate(vfxDeadPrefab, vfxContainer);
+                                            vfxDead.transform.position = this.transform.position;
+                                            vfxDead.transform.rotation = this.transform.rotation;
+                                            vfxDeads.Add(vfxDead);
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("vfxContainer null");
+                                        }                                        
                                     }
                                 }
                                 else

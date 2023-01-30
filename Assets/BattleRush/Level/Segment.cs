@@ -9,6 +9,7 @@ public class Segment : MonoBehaviour
     public LevelSegment segment;
 
     #region type
+
     public enum SegmentType
     {
         Run,

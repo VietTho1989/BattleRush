@@ -152,6 +152,7 @@ namespace BattleRushS
         #region Refresh
 
         public Transform worldCanvas;
+        public Transform vfxContainer;
 
         public override void refresh()
         {

@@ -193,6 +193,25 @@ namespace BattleRushS
                     Logger.LogError("hero null");
                 }
             }
+            // vfx
+            {
+                BattleRushUI battleRushUI = this.findCallBack<BattleRushUI>();
+                if (battleRushUI != null)
+                {
+                    if (battleRushUI.vfxContainer != null)
+                    {
+                        for(int i=0; i< battleRushUI.vfxContainer.childCount; i++)
+                        {
+                            GameObject vfx = battleRushUI.vfxContainer.GetChild(i).gameObject;
+                            GameObject.Destroy(vfx);
+                        }
+                    }
+                }
+                else
+                {
+                    Logger.LogError("battleRushUI null");
+                }
+            }
         }
 
 #if UNITY_EDITOR

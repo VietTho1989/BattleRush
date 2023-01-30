@@ -202,6 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 260069477}
   - {fileID: 1785050180}
   - {fileID: 4315714329130928029}
   - {fileID: 253392771}
@@ -308,6 +309,7 @@ MonoBehaviour:
   levelGenerator: {fileID: 0}
   level_0: {fileID: 11400000, guid: 1da76331f6c86084e9af0f8e751061f3, type: 2}
   worldCanvas: {fileID: 4315714329130928029}
+  vfxContainer: {fileID: 260069477}
   arenaCanvas: {fileID: 1620028656}
   cameraUI: {fileID: 143108111}
   mainCanvasPrefab: {fileID: -1138461329377585630, guid: 4a825486960e1894baef4261789941e9, type: 3}
@@ -408,7 +410,7 @@ Transform:
   - {fileID: 1843770248}
   - {fileID: 208435937}
   m_Father: {fileID: 143108108}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &190351497
 MonoBehaviour:
@@ -697,13 +699,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215113183}
-  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 21, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 143108108}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &253392772
 MonoBehaviour:
@@ -838,6 +840,37 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!1 &260069476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260069477}
+  m_Layer: 0
+  m_Name: vfxContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260069477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260069476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 143108108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606016189
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +904,7 @@ RectTransform:
   m_Children:
   - {fileID: 1620028656}
   m_Father: {fileID: 143108108}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1086,7 +1119,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 143108108}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1280079423
 MonoBehaviour:
@@ -1235,7 +1268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 143108108}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843770247
 GameObject:
@@ -1309,7 +1342,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2770611436488937649}
-  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 20, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1585,7 +1618,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 143108108}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1605,7 +1638,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 143108108}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
