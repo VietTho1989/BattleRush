@@ -38,6 +38,8 @@ namespace BattleRushS.StateS
 
         #region Refresh
 
+        public GameObject[] contents;
+
         public override void refresh()
         {
             if (dirty)
@@ -48,7 +50,50 @@ namespace BattleRushS.StateS
                     Start start = this.data.start.v.data;
                     if (start != null)
                     {
-
+                        // content show or not
+                        if(contents!=null)
+                        {
+                            // find
+                            bool show = true;
+                            {
+                                //show troops
+                                if(show)
+                                {
+                                    BattleRushUI.UIData battleRushUIData = this.data.findDataInParent<BattleRushUI.UIData>();
+                                    if (battleRushUIData != null)
+                                    {
+                                        MainCanvasUI.UIData mainCanvasUIData = battleRushUIData.mainCanvas.v;
+                                        if (mainCanvasUIData != null)
+                                        {
+                                            if (mainCanvasUIData.troopGrid.v != null)
+                                            {
+                                                show = false;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("mainCanvasUIData null");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Logger.LogError("battleRushUIData null");
+                                    }
+                                }
+                            }
+                            // process
+                            foreach(GameObject content in contents)
+                            {
+                                if (content)
+                                {
+                                    content.SetActive(show);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Logger.LogError("contents null");
+                        }
                     }
                     else
                     {
@@ -71,17 +116,41 @@ namespace BattleRushS.StateS
 
         #region implement callBacks
 
+        private BattleRushUI.UIData battleRushUIData = null;
         public override void onAddCallBack<T>(T data)
         {
             if (data is UIData)
             {
                 UIData uiData = data as UIData;
+                // Parent
+                {
+                    DataUtils.addParentCallBack(uiData, this, ref this.battleRushUIData);
+                }
                 // Child
                 {
                     uiData.start.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
+            }
+            // Parent
+            {
+                if(data is BattleRushUI.UIData)
+                {
+                    BattleRushUI.UIData battleRushUIData = data as BattleRushUI.UIData;
+                    // Child
+                    {
+                        battleRushUIData.mainCanvas.allAddCallBack(this);
+                    }
+                    dirty = true;
+                    return;
+                }
+                // Child
+                if(data is MainCanvasUI.UIData)
+                {
+                    dirty = true;
+                    return;
+                }
             }
             // Child
             if (data is Start)
@@ -97,12 +166,33 @@ namespace BattleRushS.StateS
             if (data is UIData)
             {
                 UIData uiData = data as UIData;
+                // Parent
+                {
+                    DataUtils.removeParentCallBack(uiData, this, ref this.battleRushUIData);
+                }
                 // Child
                 {
                     uiData.start.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
+            }
+            // Parent
+            {
+                if (data is BattleRushUI.UIData)
+                {
+                    BattleRushUI.UIData battleRushUIData = data as BattleRushUI.UIData;
+                    // Child
+                    {
+                        battleRushUIData.mainCanvas.allRemoveCallBack(this);
+                    }
+                    return;
+                }
+                // Child
+                if (data is MainCanvasUI.UIData)
+                {
+                    return;
+                }
             }
             // Child
             if (data is Start)
@@ -133,6 +223,37 @@ namespace BattleRushS.StateS
                         break;
                 }
                 return;
+            }
+            // Parent
+            {
+                if (wrapProperty.p is BattleRushUI.UIData)
+                {
+                    switch ((BattleRushUI.UIData.Property)wrapProperty.n)
+                    {
+                        case BattleRushUI.UIData.Property.mainCanvas:
+                            {
+                                ValueChangeUtils.replaceCallBack(this, syncs);
+                                dirty = true;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    return;
+                }
+                // Child
+                if (wrapProperty.p is MainCanvasUI.UIData)
+                {
+                    switch ((MainCanvasUI.UIData.Property)wrapProperty.n)
+                    {
+                        case MainCanvasUI.UIData.Property.troopGrid:
+                            dirty = true;
+                            break;
+                        default:
+                            break;
+                    }
+                    return;
+                }
             }
             // Child
             if (wrapProperty.p is Start)

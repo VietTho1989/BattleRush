@@ -89,6 +89,7 @@
     <Compile Include="Assets\CommonLibrary\Toast\UI\State\Disappear\Disappear.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Update\Change.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_GameObject.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\UI\AutoFightUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\AutoRotate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Property\VP\VO.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\ES3IO.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="Assets\BattleRush\Hero\HeroMove\Run\HeroMoveRunUpdate.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Global\GlobalUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadScriptableObject\LoadLevelByScriptableObjectUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Hero\UI\vfx\HeroVfxUpgradeUI.cs" />
     <Compile Include="Assets\Ads\AudienceNetwork\Library\SdkVersion.cs" />
     <Compile Include="Assets\Ads\AudienceNetwork\Scenes\Banner\AdViewScene.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\Grinder\GrinderUI.cs" />
@@ -279,6 +281,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshCollider.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Sync\SyncAdd.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Load\Local\LoadLocal.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Stage\3_FightEnd\UI\FightEndUI.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\TroopCage\State\1_ReleaseTroop\ReleaseTroopUpdate.cs" />
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\TroopFollowUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadLevelUpdate.cs" />
@@ -375,6 +378,7 @@
     <Compile Include="Assets\Ads\GoogleMobileAds\Platforms\iOS\Mediation\UnityAds\UnityAdsClient.cs" />
     <Compile Include="Assets\BattleRush\Arena\UI\ArenaUI.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\LoadUpdate.cs" />
+    <Compile Include="Assets\BattleRush\UI\MainCanvas\TroopGrid\Holder\TroopHolder.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3CollectionType.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Text.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ComponentType.cs" />
@@ -466,6 +470,7 @@
     <Compile Include="Assets\BattleRush\Hero\TroopFollow\TroopFollow.cs" />
     <Compile Include="Assets\BattleRush\Object\Sub\UpgradeGateFree\UpgradeGateFreeUI.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UpdateUtils.cs" />
+    <Compile Include="Assets\BattleRush\Arena\Stage\1_MoveTroopToFormation\UI\MoveTroopToFormationUI.cs" />
     <Compile Include="Assets\Ads\GoogleMobileAds\Api\Mediation\Vungle\VungleRewardedVideoMediationExtras.cs" />
     <Compile Include="Assets\BattleRush\State\1_Start\Start.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\RequestChange\RequestChangeFloatUI.cs" />
@@ -557,6 +562,7 @@
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3Type.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Utils\Behavior\UpdateBehavior.cs" />
     <Compile Include="Assets\BattleRush\Arena\Troop\State\Live\Attack\0_Normal\Normal.cs" />
+    <Compile Include="Assets\BattleRush\UI\MainCanvas\TroopGrid\TroopGrid.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Basic\Update\ChangeAdd.cs" />
     <Compile Include="Assets\CommonLibrary\Common\Record\View\Controller\State\Play\ViewRecordControllerStatePlayUI.cs" />
     <Compile Include="Assets\CommonLibrary\Plugins\Com.TheFallenGames\MyOSA\MyOSA.cs" />
@@ -608,10 +614,12 @@
     <Compile Include="Assets\CommonLibrary\Common\Basic\ValueChangeUtils.cs" />
     <Compile Include="Assets\CommonLibrary\UrlImage\ImageLoaderUpdate.cs" />
     <Compile Include="Assets\BattleRush\State\0_Load\Sub\2_LoadLevel\LoadFileExcel\Plugins\Easy Save 3\Scripts\Types\ES3ObjectType.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Stage\1_MoveTroopToFormation\UI\MoveTroopToFormationUI.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Stage\2_AutoFight\UI\AutoFightUI.cs" />
-    <Compile Include="Assets\BattleRush\Arena\Stage\3_FightEnd\UI\FightEndUI.cs" />
-    <Compile Include="Assets\BattleRush\Hero\UI\vfx\HeroVfxUpgradeUI.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\SawBladeStatic\SawBladeStatic.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\KeyUnlock\KeyUnlock.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\KeyUnlock\KeyUnlockUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\KeyUnlock\KeyUnlockUI.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\SawBladeStatic\SawBladeStaticUpdate.cs" />
+    <Compile Include="Assets\BattleRush\Object\Sub\SawBladeStatic\SawBladeStaticUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BattleRush\State\3_End\UI\TranslucentImage\Resources\UniversalRP\lib.hlsl" />

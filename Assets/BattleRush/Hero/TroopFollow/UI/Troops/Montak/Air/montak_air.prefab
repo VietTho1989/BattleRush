@@ -1400,6 +1400,7 @@ MonoBehaviour:
   weapon: troop_montak_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_hastee
+  portraitSprite: {fileID: 21300000, guid: 022b7ef47a4a9644ab1bd55db6f2c383, type: 3}
   levels:
   - level: 1
     hp: 20

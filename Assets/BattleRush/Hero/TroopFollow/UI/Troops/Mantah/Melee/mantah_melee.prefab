@@ -479,6 +479,7 @@ MonoBehaviour:
   weapon: troop_mantah_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_tornadator
+  portraitSprite: {fileID: 21300000, guid: 4ab844dd880983b4096bbe067f685d46, type: 3}
   levels:
   - level: 1
     hp: 30

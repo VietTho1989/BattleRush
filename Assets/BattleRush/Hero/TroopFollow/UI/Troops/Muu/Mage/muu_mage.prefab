@@ -261,6 +261,7 @@ MonoBehaviour:
   weapon: troop_muu_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_wize
+  portraitSprite: {fileID: 21300000, guid: 95c0ea7c1a95ae44f89274252110b10a, type: 3}
   levels:
   - level: 1
     hp: 20

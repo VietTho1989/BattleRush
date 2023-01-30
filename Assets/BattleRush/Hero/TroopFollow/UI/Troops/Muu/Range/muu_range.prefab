@@ -644,6 +644,7 @@ MonoBehaviour:
   weapon: troop_muu_bow
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_cokoum
+  portraitSprite: {fileID: 21300000, guid: 3f7fd32a78ab668418490c7d190ddc75, type: 3}
   levels:
   - level: 1
     hp: 20

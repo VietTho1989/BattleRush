@@ -1,0 +1,478 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.14f1 (eee1884e7226) revision 15655304'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 16328 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+60205
+Successfully changed project path to: C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
+C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 163.91 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.14f1 (eee1884e7226)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/ADMIN/Desktop/CrosBattleRush/BattleRush/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GT 1030 (ID=0x1d01)
+    Vendor:   NVIDIA
+    VRAM:     1982 MB
+    Driver:   31.0.15.1694
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56564
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009572 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 252.30 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Domain Reload Profiling:
+	ReloadAssembly (898ms)
+		BeginReloadAssembly (83ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (693ms)
+			LoadAssemblies (81ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (116ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (492ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (71ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (252ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.017598 seconds.
+Android Extension - Scanning For ADB Devices 5710 ms
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 158.19 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.728 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1728ms)
+		BeginReloadAssembly (117ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1472ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (374ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (111ms)
+			SetupLoadedEditorAssemblies (825ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (158ms)
+				BeforeProcessingInitializeOnLoad (165ms)
+				ProcessInitializeOnLoadAttributes (384ms)
+				ProcessInitializeOnLoadMethodAttributes (85ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7085 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (0.8 MB). Loaded Objects now: 7515.
+Memory consumption went from 269.3 MB to 268.5 MB.
+Total: 4.277000 ms (FindLiveObjects: 0.531400 ms CreateObjectMapping: 0.487600 ms MarkObjects: 2.923000 ms  DeleteObjects: 0.334200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 927291.626643 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid
+  artifactKey: Guid(20c5f323ec30df74a8e2fff33be6be16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid using Guid(20c5f323ec30df74a8e2fff33be6be16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '752fc98f4bd3a7385988544f0d822013') in 0.014580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.cs
+  artifactKey: Guid(06e4cf2e9a8f1cd489b6542fbfa19fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.cs using Guid(06e4cf2e9a8f1cd489b6542fbfa19fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62c2df38ad889c43053e2583c3255e6d') in 0.024385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.183498 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder
+  artifactKey: Guid(aa3d4e57875ad944bb0c341dfc6b494c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder using Guid(aa3d4e57875ad944bb0c341dfc6b494c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e46b75c0be9cb4c04d40b96ec8a002') in 0.005281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.055753 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.cs
+  artifactKey: Guid(487ab61ed168eae40ab33b3784f03c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.cs using Guid(487ab61ed168eae40ab33b3784f03c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b94116679ba0cfa17ae32539bfc37d8') in 0.006292 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012667 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.408 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1409ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1155ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (367ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (567ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (322ms)
+				ProcessInitializeOnLoadMethodAttributes (84ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.09 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6972 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 59 unused Assets / (0.8 MB). Loaded Objects now: 7530.
+Memory consumption went from 259.9 MB to 259.1 MB.
+Total: 4.053900 ms (FindLiveObjects: 0.481100 ms CreateObjectMapping: 0.434100 ms MarkObjects: 2.816300 ms  DeleteObjects: 0.321500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 190.270557 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.cs
+  artifactKey: Guid(06e4cf2e9a8f1cd489b6542fbfa19fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.cs using Guid(06e4cf2e9a8f1cd489b6542fbfa19fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96addd78abf18d475ab22bae8b6c8a38') in 0.010622 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013425 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.Single[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00070] in <109e781b32ec464d8737a667de805742>:0 
+  at AdvancedCoroutineInitializer.ApplyExecutionOrderToScript (System.String sctiptName, System.Int32 exucutionIndex) [0x0000d] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:27 
+  at AdvancedCoroutineInitializer..cctor () [0x0001f] in C:\Users\ADMIN\Desktop\CrosBattleRush\BattleRush\Assets\CommonLibrary\AdvancedCoroutines\AdvancedCoroutineInitializer.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+UniversalRenderPipelineAsset_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.409 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1410ms)
+		BeginReloadAssembly (151ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1148ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (357ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (565ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (33ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (320ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.95 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6972 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (0.8 MB). Loaded Objects now: 7545.
+Memory consumption went from 259.9 MB to 259.1 MB.
+Total: 5.096000 ms (FindLiveObjects: 0.483400 ms CreateObjectMapping: 0.436500 ms MarkObjects: 3.768000 ms  DeleteObjects: 0.406800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1002.185427 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.cs
+  artifactKey: Guid(487ab61ed168eae40ab33b3784f03c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.cs using Guid(487ab61ed168eae40ab33b3784f03c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c30b92675613275fc2072956c7abdf') in 0.011528 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 102.457439 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/MoreGameGrid.prefab
+  artifactKey: Guid(fab19862d8f227b49871b86a456f91b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/MoreGameGrid.prefab using Guid(fab19862d8f227b49871b86a456f91b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24170dc5631fbe5eee61395b3fa47221') in 0.045757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.491199 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.prefab
+  artifactKey: Guid(fab19862d8f227b49871b86a456f91b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.prefab using Guid(fab19862d8f227b49871b86a456f91b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c0079e40059655dcc1bad9b7fd1abc9') in 0.005845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 133.137030 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/MoreGameHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/MoreGameHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3199267b4123816f0a1b363ea8915e8') in 0.018139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.676897 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546d86463b5cfa6af45b38883f8fc4ad') in 0.008701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 123.239593 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/BasicGridAdapterItem(Clone).prefab
+  artifactKey: Guid(adc1715b21b5ed44b8b356042c3b0fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/BasicGridAdapterItem(Clone).prefab using Guid(adc1715b21b5ed44b8b356042c3b0fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '559c9dce0b16523b783db556b5b04334') in 0.012731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.464810 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb955247373a181ccd6d8604dbd0d970') in 0.011498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.513092 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda5a6fd2c6a69366202b32cd369dab1') in 0.005716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.295262 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0db7382af48034f28ed776717de5888f') in 0.004026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.944346 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2094c268d5b8127b7a02bec41664e1a') in 0.006202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.107675 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448c905de92b3dc4e8372f59bd76413d') in 0.005950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.481950 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a782dfa419fa19162f374e90ed0c68d6') in 0.005921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 111.685248 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab
+  artifactKey: Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/TroopHolder.prefab using Guid(d2b6b258b7a45432dbffc05ecdd6ac4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29dd6685f944fff7d634c26a3bdf7d2b') in 0.040319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 101.645988 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/border_lock.png
+  artifactKey: Guid(7a9e0a65368f2964c92d93339278a551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/border_lock.png using Guid(7a9e0a65368f2964c92d93339278a551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa1a7ec2f544aa2ab701f5c6dd0f683c') in 0.094511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/border_unlock.png
+  artifactKey: Guid(a84de69b95dfe1341bbf71a0c00f5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/border_unlock.png using Guid(a84de69b95dfe1341bbf71a0c00f5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ca2d29c8a1d3ebd5d0623b67c23dc6') in 0.022600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/border_ready.png
+  artifactKey: Guid(57eae9583f8df584786fdba39b3a55e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/border_ready.png using Guid(57eae9583f8df584786fdba39b3a55e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9edff310c50779c6ce67a2dde04b5a2d') in 0.021076 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 99.100965 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/BasicGridAdapterItem(Clone).prefab
+  artifactKey: Guid(adc1715b21b5ed44b8b356042c3b0fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/BasicGridAdapterItem(Clone).prefab using Guid(adc1715b21b5ed44b8b356042c3b0fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20b43b4c6b9d7fef0451e72bced102bc') in 0.029706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 49.893844 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/Play Button.png
+  artifactKey: Guid(4372bce442c5e7749a54d25d93c99692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/Play Button.png using Guid(4372bce442c5e7749a54d25d93c99692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b2c9345b7b6a84e14ac91264a03f9c4') in 0.019205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.268730 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/btnPlay.png
+  artifactKey: Guid(4372bce442c5e7749a54d25d93c99692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/Holder/btnPlay.png using Guid(4372bce442c5e7749a54d25d93c99692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff2595a7ed03179557026829aa14fcee') in 0.020119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.847471 seconds.
+  path: Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.cs
+  artifactKey: Guid(06e4cf2e9a8f1cd489b6542fbfa19fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRush/UI/MainCanvas/TroopGrid/TroopGrid.cs using Guid(06e4cf2e9a8f1cd489b6542fbfa19fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f1ee59f45260751d94e8c8ea26af18') in 0.007074 seconds 

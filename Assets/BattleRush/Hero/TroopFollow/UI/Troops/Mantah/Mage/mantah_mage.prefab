@@ -1274,6 +1274,7 @@ MonoBehaviour:
   weapon: troop_mantah_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_orac
+  portraitSprite: {fileID: 21300000, guid: 54e0750ad5ffc9c409e5858d0889f9c4, type: 3}
   levels:
   - level: 1
     hp: 20

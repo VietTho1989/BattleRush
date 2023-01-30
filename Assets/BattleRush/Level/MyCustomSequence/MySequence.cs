@@ -151,7 +151,7 @@ namespace BattleRushS
                                             }
                                             else
                                             {
-                                                Logger.LogError("coinUI null");
+                                                Logger.LogError("objectUI null");
                                             }
                                         }
                                     }
@@ -198,6 +198,35 @@ namespace BattleRushS
                 {
                     switch (objectData.I.v)
                     {
+                        case ObjectInPath.Type.KeyUnlock:
+                            {
+                                // make data
+                                KeyUnlock keyUnlock = new KeyUnlock();
+                                {
+                                    keyUnlock.uid = battleRush.laneObjects.makeId();
+                                    keyUnlock.position.v = objectData.position.v;
+                                }
+                                objectInPath = keyUnlock;
+                                battleRush.laneObjects.add(keyUnlock);
+                                // make UI
+                                {
+                                    KeyUnlockUI.UIData objectUIData = new KeyUnlockUI.UIData();
+                                    {
+                                        objectUIData.keyUnlock.v = new ReferenceData<KeyUnlock>(keyUnlock);
+                                    }
+                                    battleRushUI.data.objectInPaths.add(objectUIData);
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.keyUnlockPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.keyUnlockPrefab, levelSegment.transform).transform;
+                                    }
+                                }
+                            }
+                            break;
                         case ObjectInPath.Type.OkgCoin:
                             {
                                 // make data
@@ -364,6 +393,34 @@ namespace BattleRushS
                                     else
                                     {
                                         objectUI = Instantiate(battleRushUI.sawBladePrefab, levelSegment.transform).transform;
+                                    }
+                                }
+                            }
+                            break;
+                        case ObjectInPath.Type.SawBladeStatic:
+                            {
+                                SawBladeStatic sawBladeStatic = new SawBladeStatic();
+                                {
+                                    sawBladeStatic.uid = battleRush.laneObjects.makeId();
+                                    sawBladeStatic.position.v = objectData.position.v;
+                                }
+                                objectInPath = sawBladeStatic;
+                                battleRush.laneObjects.add(sawBladeStatic);
+                                // make UI
+                                {
+                                    SawBladeStaticUI.UIData objectUIData = new SawBladeStaticUI.UIData();
+                                    {
+                                        objectUIData.sawBladeStatic.v = new ReferenceData<SawBladeStatic>(sawBladeStatic);
+                                    }
+                                    battleRushUI.data.objectInPaths.add(objectUIData);
+                                    // set UIData
+                                    if (needSetUIData)
+                                    {
+                                        objectUI = UIUtils.Instantiate(objectUIData, battleRushUI.sawBladeStaticPrefab, levelSegment.transform).transform;
+                                    }
+                                    else
+                                    {
+                                        objectUI = Instantiate(battleRushUI.sawBladeStaticPrefab, levelSegment.transform).transform;
                                     }
                                 }
                             }

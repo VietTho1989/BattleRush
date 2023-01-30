@@ -33,6 +33,9 @@ namespace BattleRushS.ArenaS.TroopS
 
         #region Refresh
 
+        public GameObject vfxDeadPrefab;
+        private Troop.State.Type lastState = Troop.State.Type.Live;
+
         public override void refresh()
         {
             if (dirty)
@@ -50,15 +53,16 @@ namespace BattleRushS.ArenaS.TroopS
                             TroopType troopType = troopUI.getCurrentTroopTypeModel();
                             if (troopType != null)
                             {
-
+                                Troop troop = troopUIData.troop.v.data;
+                                if (troop != null)
                                 {
-                                    Troop troop = troopUIData.troop.v.data;
-                                    if (troop != null)
+                                    // animation
                                     {
                                         switch (troop.state.v.getType())
                                         {
                                             case Troop.State.Type.Live:
                                                 {
+                                                    troopType.getGameObject().SetActive(true);
                                                     // Idle, Move, Attack
                                                     Live live = troop.state.v as Live;
                                                     // attack
@@ -107,6 +111,7 @@ namespace BattleRushS.ArenaS.TroopS
                                             case Troop.State.Type.Die:
                                                 {
                                                     troopType.playAnimation("Die");
+                                                    troopType.getGameObject().SetActive(false);
                                                 }
                                                 break;
                                             default:
@@ -114,11 +119,27 @@ namespace BattleRushS.ArenaS.TroopS
                                                 break;
                                         }
                                     }
-                                    else
+                                    // animation dead
                                     {
-                                        Logger.LogError("troop null");
+                                        if (vfxDeadPrefab != null)
+                                        {
+                                            if (lastState != Troop.State.Type.Die && troop.state.v.getType() == Troop.State.Type.Die)
+                                            {
+                                                GameObject vfxDead = Instantiate(vfxDeadPrefab, this.transform.position, this.transform.rotation);
+                                                // vfxDead.transform.localPosition = Vector3.zero;
+                                            }
+                                            lastState = troop.state.v.getType();
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("vfxDeadPrefab null");
+                                        }
                                     }
                                 }
+                                else
+                                {
+                                    Logger.LogError("troop null");
+                                }                               
                             }
                             else
                             {
@@ -182,6 +203,7 @@ namespace BattleRushS.ArenaS.TroopS
                     if(data is Troop)
                     {
                         Troop troop = data as Troop;
+                        lastState = troop.state.v.getType();
                         // Child
                         {
                             troop.state.allAddCallBack(this);

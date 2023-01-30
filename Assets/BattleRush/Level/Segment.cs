@@ -29,4 +29,6 @@ public class Segment : MonoBehaviour
 
     public float segmentPos = 0;
 
+    public SegmentPathInfo segmentPathInfo = new SegmentPathInfo();
+
 }

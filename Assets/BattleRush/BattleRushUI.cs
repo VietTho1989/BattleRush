@@ -629,9 +629,11 @@ namespace BattleRushS
         public Transform playerInputContainer;
 
         public CoinUI coinPrefab;
+        public KeyUnlockUI keyUnlockPrefab;
         public EnergyOrbNormalUI energyOrbNormalPrefab;
         public TroopCageUI troopCagePrefab;
         public SawBladeUI sawBladePrefab;
+        public SawBladeStaticUI sawBladeStaticPrefab;
         public BladeUI bladePrefab;
         public FireNozzleUI fireNozzlePrefab;
         public PikeUI pikePrefab;

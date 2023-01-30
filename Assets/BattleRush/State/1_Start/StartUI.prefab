@@ -382,6 +382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
+  contents:
+  - {fileID: 1213479288539561828}
 --- !u!1 &3724080811930710069
 GameObject:
   m_ObjectHideFlags: 0

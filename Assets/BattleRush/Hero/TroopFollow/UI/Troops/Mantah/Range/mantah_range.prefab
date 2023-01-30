@@ -944,6 +944,7 @@ MonoBehaviour:
   weapon: troop_mantah_bow
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_hymedae
+  portraitSprite: {fileID: 21300000, guid: d7fd3adace3ebbd469094bd2b49b7896, type: 3}
   levels:
   - level: 1
     hp: 20

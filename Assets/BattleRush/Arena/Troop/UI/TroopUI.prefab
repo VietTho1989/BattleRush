@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashInstanceId: 0
+  vfxDeadPrefab: {fileID: 1768114750931488987, guid: 2befb39e5492ab745990424d500d8b05, type: 3}
 --- !u!114 &-1261247640310357386
 MonoBehaviour:
   m_ObjectHideFlags: 0

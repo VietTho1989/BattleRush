@@ -44,7 +44,10 @@ namespace BattleRushS.HeroS
         public List<TroopInformation> troopPrefabs;
         public TroopInformation defaultTroopPrefab;
 
+        public GameObject vfxDeadPrefab;
+
         public Follow follow;
+        private float lastHitpoint = 1.0f;
 
         public override void refresh()
         {
@@ -388,6 +391,30 @@ namespace BattleRushS.HeroS
                             // set
                             this.transform.localScale = new Vector3(scale, scale, scale);
                         }
+
+                        // vfx dead
+                        {
+                            if (currentTroopTypeModel != null)
+                            {
+                                currentTroopTypeModel.gameObject.SetActive(troopFollow.hitPoint.v > 0);
+                            }
+                            // animation dead
+                            {
+                                if (vfxDeadPrefab != null)
+                                {
+                                    if (lastHitpoint != 0 && troopFollow.hitPoint.v == 0)
+                                    {
+                                        GameObject vfxDead = Instantiate(vfxDeadPrefab, this.transform.position, this.transform.rotation);
+                                        // vfxDead.transform.localPosition = Vector3.zero;
+                                    }
+                                }
+                                else
+                                {
+                                    Logger.LogError("vfxDeadPrefab null");
+                                }                                
+                            }                            
+                            lastHitpoint = troopFollow.hitPoint.v;
+                        }
                     }
                     else
                     {
@@ -437,6 +464,7 @@ namespace BattleRushS.HeroS
                     if (data is TroopFollow)
                     {
                         TroopFollow troopFollow = data as TroopFollow;
+                        lastHitpoint = troopFollow.hitPoint.v;
                         // Parent
                         {
                             DataUtils.addParentCallBack(troopFollow, this, ref this.hero);

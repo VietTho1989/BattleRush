@@ -8,6 +8,13 @@ public class SegmentPathInfo
     public float angle = 0;// 45f;
     public float turnRate = 0;// 0f;
     public Vector3 turnAxis = Vector3.up;
+
+    public void copy(SegmentPathInfo old)
+    {
+        this.angle = old.angle;
+        this.turnRate = old.turnRate;
+        this.turnAxis = old.turnAxis;
+    }
 }
 
 [System.Serializable]

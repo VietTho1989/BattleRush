@@ -719,6 +719,7 @@ MonoBehaviour:
   weapon: troop_krakee_bow
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_azzax
+  portraitSprite: {fileID: 21300000, guid: f73fd378c4e64ec4c8a97a97a5351fd2, type: 3}
   levels:
   - level: 1
     hp: 20

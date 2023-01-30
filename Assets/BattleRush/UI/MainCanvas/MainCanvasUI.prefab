@@ -214,6 +214,7 @@ MonoBehaviour:
   tvTroop: {fileID: 670030433864752001}
   tvLevel: {fileID: 7949654628521548618}
   tvTotalCoin: {fileID: 5371560475463568666}
+  troopGridPrefab: {fileID: 3832476055716332514, guid: fab19862d8f227b49871b86a456f91b9, type: 3}
 --- !u!1 &273597455032747647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,7 +4330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5100598678630348004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -1138461329377585630}
+        m_TargetAssemblyTypeName: BattleRushS.MainCanvasUI, Assembly-CSharp
+        m_MethodName: onClickBtnTroops
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9100059411517215552
 GameObject:
   m_ObjectHideFlags: 0

@@ -504,6 +504,7 @@ MonoBehaviour:
   weapon: troop_krakee_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_burrier
+  portraitSprite: {fileID: 21300000, guid: 97fde255d29be75488b145917af35bd0, type: 3}
   levels:
   - level: 1
     hp: 30

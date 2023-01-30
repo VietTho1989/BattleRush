@@ -322,9 +322,11 @@ MonoBehaviour:
   playerInputPrefab: {fileID: 6359371570559892101, guid: eba0eb58a1cf24309b11c5ca61811f75, type: 3}
   playerInputContainer: {fileID: 606016190}
   coinPrefab: {fileID: -4734011491159582539, guid: fd4b19fc6fed7ef4e8cc833dda5018bc, type: 3}
+  keyUnlockPrefab: {fileID: 1660891832198311908, guid: 3fe94a80b9acea2498598eee2d047d45, type: 3}
   energyOrbNormalPrefab: {fileID: 2377772834537481918, guid: 1b02f2389aa213947a85c4e47032daad, type: 3}
   troopCagePrefab: {fileID: -4236489894332188521, guid: 8480fe34fb45d7b41930b2045a4a4f76, type: 3}
   sawBladePrefab: {fileID: -3978459698236414528, guid: 7c331a6c61598cd4f84ab325c3c88198, type: 3}
+  sawBladeStaticPrefab: {fileID: 8964632769760980864, guid: 5ee8a9594e9476a4ba01eff6f2a15a73, type: 3}
   bladePrefab: {fileID: -898557669611771095, guid: 3b0c456bccc690442af88438fc3e0533, type: 3}
   fireNozzlePrefab: {fileID: -4676954618436978655, guid: 1c0ac1b379740ba4cbe7b5f24657b3f2, type: 3}
   pikePrefab: {fileID: -6295741187159588305, guid: 7986dd7cd6e82194fb93c158e0a4f5da, type: 3}
@@ -695,7 +697,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215113183}
-  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 21, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1307,7 +1309,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2770611436488937649}
-  m_LocalRotation: {x: 0.32167888, y: -0.0028110384, z: 0.0009550161, w: 0.9468442}
+  m_LocalRotation: {x: 0.32167885, y: -0.0028110382, z: 0.00095501606, w: 0.9468442}
   m_LocalPosition: {x: 0.0772995, y: 20, z: -13.01831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

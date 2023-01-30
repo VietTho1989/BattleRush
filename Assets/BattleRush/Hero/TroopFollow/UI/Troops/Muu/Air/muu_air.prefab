@@ -930,6 +930,7 @@ MonoBehaviour:
   weapon: troop_muu_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_tempa
+  portraitSprite: {fileID: 21300000, guid: e22fcf7c59730ea4399cb9b8d9e19882, type: 3}
   levels:
   - level: 1
     hp: 30

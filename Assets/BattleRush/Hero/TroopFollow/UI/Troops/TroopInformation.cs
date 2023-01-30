@@ -76,7 +76,9 @@ namespace BattleRushS.HeroS
 
         public string weapon;
         public string vfxDeadName;
+
         public string portraitName;
+        public Sprite portraitSprite;
 
         #region level
 

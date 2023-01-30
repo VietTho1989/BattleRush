@@ -12,10 +12,13 @@ public abstract class ObjectInPath : Data
         /**energy_orb_upgrade*/
         EnergyOrbUpgrade,
         OkgCoin,
+        KeyUnlock,
 
         TroopCage,
         /**saw_blade*/
         SawBlade,
+        /**saw_blade*/
+        SawBladeStatic,
         /**blade*/
         Blade,
         /**fire_nozzle*/

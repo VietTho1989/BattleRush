@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using BattleRushS.ArenaS;
+using BattleRushS.MainCanvasS;
 using UnityEngine;
 
 namespace BattleRushS
@@ -13,16 +14,18 @@ namespace BattleRushS
         public class UIData : Data
         {
 
+            public VD<TroopGrid.UIData> troopGrid;
+
             #region Constructor
 
             public enum Property
             {
-
+                troopGrid
             }
 
             public UIData() : base()
             {
-
+                this.troopGrid = new VD<TroopGrid.UIData>(this, (byte)Property.troopGrid, null);
             }
 
             #endregion
@@ -401,6 +404,8 @@ namespace BattleRushS
 
         private BattleRushUI.UIData battleRushUIData = null;
 
+        public TroopGrid troopGridPrefab;
+
         public override void onAddCallBack<T>(T data)
         {
             if(data is UIData)
@@ -409,6 +414,10 @@ namespace BattleRushS
                 // Parent
                 {
                     DataUtils.addParentCallBack(uiData, this, ref this.battleRushUIData);
+                }
+                // Child
+                {
+                    uiData.troopGrid.allAddCallBack(this);
                 }
                 dirty = true;
                 return;
@@ -473,6 +482,17 @@ namespace BattleRushS
                     }
                 }               
             }
+            // Child
+            if(data is TroopGrid.UIData)
+            {
+                TroopGrid.UIData troopGridUIData = data as TroopGrid.UIData;
+                // UI
+                {
+                    UIUtils.Instantiate(troopGridUIData, troopGridPrefab, this.transform);
+                }
+                dirty = true;
+                return;
+            }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
 
@@ -484,6 +504,10 @@ namespace BattleRushS
                 // Parent
                 {
                     DataUtils.removeParentCallBack(uiData, this, ref this.battleRushUIData);
+                }
+                // Child
+                {
+                    uiData.troopGrid.allRemoveCallBack(this);
                 }
                 this.setDataNull(uiData);
                 return;
@@ -542,6 +566,16 @@ namespace BattleRushS
                     }
                 }                
             }
+            // Child
+            if (data is TroopGrid.UIData)
+            {
+                TroopGrid.UIData troopGridUIData = data as TroopGrid.UIData;
+                // UI
+                {
+                    troopGridUIData.removeCallBackAndDestroy(typeof(TroopGrid));
+                }
+                return;
+            }
             Logger.LogError("Don't process: " + data + "; " + this);
         }
 
@@ -553,6 +587,17 @@ namespace BattleRushS
             }
             if(wrapProperty.p is UIData)
             {
+                switch ((UIData.Property)wrapProperty.n)
+                {
+                    case UIData.Property.troopGrid:
+                        {
+                            ValueChangeUtils.replaceCallBack(this, syncs);
+                            dirty = true;
+                        }
+                        break;
+                    default:
+                        break;
+                }
                 return;
             }
             // Parent
@@ -685,6 +730,11 @@ namespace BattleRushS
                     }                    
                 }               
             }
+            // Child
+            if(wrapProperty.p is TroopGrid.UIData)
+            {
+                return;
+            }
             Logger.LogError("Don't process: " + wrapProperty + "; " + syncs + "; " + this);
         }
 
@@ -759,6 +809,22 @@ namespace BattleRushS
                 {
                     Logger.LogError("battleRushUIData null");
                 }
+            }
+            else
+            {
+                Logger.LogError("data null");
+            }
+        }
+
+        public void onClickBtnTroops()
+        {
+            if (this.data != null)
+            {
+                TroopGrid.UIData troopGridUIData = this.data.troopGrid.newOrOld<TroopGrid.UIData>();
+                {
+
+                }
+                this.data.troopGrid.v = troopGridUIData;
             }
             else
             {

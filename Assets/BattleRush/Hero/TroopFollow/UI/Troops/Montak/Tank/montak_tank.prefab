@@ -76,6 +76,7 @@ MonoBehaviour:
   weapon: troop_montak_melee
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_taradae
+  portraitSprite: {fileID: 21300000, guid: 2f110220a53d25046b82f817e0d1cbf9, type: 3}
   levels:
   - level: 1
     hp: 30

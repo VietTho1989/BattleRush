@@ -151,9 +151,11 @@ namespace BattleRushS
             if (battleRushUI != null)
             {
                 controller.palette.add(battleRushUI.coinPrefab);
+                controller.palette.add(battleRushUI.keyUnlockPrefab);
                 controller.palette.add(battleRushUI.energyOrbNormalPrefab);
                 controller.palette.add(battleRushUI.troopCagePrefab);
                 controller.palette.add(battleRushUI.sawBladePrefab);
+                controller.palette.add(battleRushUI.sawBladeStaticPrefab);
                 controller.palette.add(battleRushUI.bladePrefab);
                 controller.palette.add(battleRushUI.fireNozzlePrefab);
                 controller.palette.add(battleRushUI.pikePrefab);

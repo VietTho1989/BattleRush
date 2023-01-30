@@ -1171,6 +1171,7 @@ MonoBehaviour:
   weapon: troop_antuk_magic
   vfxDeadName: vfx_troop_dead
   portraitName: portrait_mezaa
+  portraitSprite: {fileID: 21300000, guid: 1e7ccd58189f8fb469cae26735a3e00f, type: 3}
   levels:
   - level: 1
     hp: 20

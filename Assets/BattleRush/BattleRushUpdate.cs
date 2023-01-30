@@ -169,10 +169,22 @@ namespace BattleRushS
                                     UpdateUtils.makeUpdate<CoinUpdate, Coin>(coin, this.transform);
                                 }
                                 break;
+                            case ObjectInPath.Type.KeyUnlock:
+                                {
+                                    KeyUnlock keyUnlock = objectInPath as KeyUnlock;
+                                    UpdateUtils.makeUpdate<KeyUnlockUpdate, KeyUnlock>(keyUnlock, this.transform);
+                                }
+                                break;
                             case ObjectInPath.Type.SawBlade:
                                 {
                                     SawBlade sawBlade = objectInPath as SawBlade;
                                     UpdateUtils.makeUpdate<SawBladeUpdate, SawBlade>(sawBlade, this.transform);
+                                }
+                                break;
+                            case ObjectInPath.Type.SawBladeStatic:
+                                {
+                                    SawBladeStatic sawBladeStatic = objectInPath as SawBladeStatic;
+                                    UpdateUtils.makeUpdate<SawBladeStaticUpdate, SawBladeStatic>(sawBladeStatic, this.transform);
                                 }
                                 break;
                             case ObjectInPath.Type.Blade:
@@ -363,10 +375,22 @@ namespace BattleRushS
                                     coin.removeCallBackAndDestroy(typeof(CoinUpdate));
                                 }
                                 break;
+                            case ObjectInPath.Type.KeyUnlock:
+                                {
+                                    KeyUnlock keyUnlock = objectInPath as KeyUnlock;
+                                    keyUnlock.removeCallBackAndDestroy(typeof(KeyUnlockUpdate));
+                                }
+                                break;
                             case ObjectInPath.Type.SawBlade:
                                 {
                                     SawBlade sawBlade = objectInPath as SawBlade;
                                     sawBlade.removeCallBackAndDestroy(typeof(SawBladeUpdate));
+                                }
+                                break;
+                            case ObjectInPath.Type.SawBladeStatic:
+                                {
+                                    SawBladeStatic sawBladeStatic = objectInPath as SawBladeStatic;
+                                    sawBladeStatic.removeCallBackAndDestroy(typeof(SawBladeStaticUpdate));
                                 }
                                 break;
                             case ObjectInPath.Type.Blade:
