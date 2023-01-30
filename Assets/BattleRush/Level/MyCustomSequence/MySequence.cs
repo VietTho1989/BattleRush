@@ -71,12 +71,13 @@ namespace BattleRushS
                     {
                         // find segment prefab
                         Segment segmentPrefab = null;
+                        SegmentAsset mapAsset = null;
                         {
                             // get by index
                             {
                                 if (battleRush.makeSegmentManager.v.index.v >= 0 && battleRush.makeSegmentManager.v.index.v < battleRush.makeSegmentManager.v.mapAsset.v.segments.Count)
                                 {
-                                    SegmentAsset mapAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.index.v];
+                                    mapAsset = battleRush.makeSegmentManager.v.mapAsset.v.segments[battleRush.makeSegmentManager.v.index.v];
                                     segmentPrefab = mapAsset.segment;
                                 }
                                 // next
@@ -104,6 +105,17 @@ namespace BattleRushS
                                     {
                                         segmentPosDes = battleRush.makeSegmentManager.v.currentLength.v + segment.length;
                                         segment.segmentPos = segmentPosFrom;
+                                        // segmentPathInfo
+                                        {
+                                            if (mapAsset != null)
+                                            {
+                                                segment.segmentPathInfo.copy(mapAsset.pathInfo);
+                                            }
+                                            else
+                                            {
+                                                Logger.LogError("segmentPathInfo null");
+                                            }                                            
+                                        }
                                     }
                                     else
                                     {

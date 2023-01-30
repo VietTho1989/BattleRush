@@ -284,29 +284,7 @@ namespace BattleRushS
                                         break;
                                     case BattleRush.State.Type.Edit:
                                         {
-                                            ItemMap itemMap = battleRush.mapData.v.itemMap.v;
-                                            if (itemMap != null)
-                                            {
-                                                itemMap.items.Clear();
-                                                foreach (ObjectInPath objectInPath in battleRush.laneObjects.vs)
-                                                {
-                                                    ItemAsset itemAsset = new ItemAsset();
-                                                    {
-                                                        itemAsset.type = objectInPath.getType();
-                                                        itemAsset.position = objectInPath.getPosition();
-                                                        //public uint row = 1;
-                                                        //public uint col = 1;
-                                                        //public float distanceBetweenRow = 0.1f;
-                                                        //public float distanceBetweenCol = 0.1f;
-                                                    }
-                                                    itemMap.items.Add(itemAsset);
-                                                }
-                                                EditorUtility.SetDirty(itemMap);
-                                            }
-                                            else
-                                            {
-                                                Logger.LogError("itemMap null");
-                                            }
+                                            battleRush.save();
                                         }
                                         break;
                                     case BattleRush.State.Type.Start:

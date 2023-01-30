@@ -48,6 +48,19 @@ namespace BattleRushS.HeroS
 
         public Follow follow;
         private float lastHitpoint = 1.0f;
+        private List<GameObject> vfxDeads = new List<GameObject>();
+
+        private void destroyAllVfxDeads()
+        {
+            foreach (GameObject vfxDead in vfxDeads)
+            {
+                if (vfxDead)
+                {
+                    Destroy(vfxDead);
+                }
+            }
+            vfxDeads.Clear();
+        }
 
         public override void refresh()
         {
@@ -406,6 +419,7 @@ namespace BattleRushS.HeroS
                                     {
                                         GameObject vfxDead = Instantiate(vfxDeadPrefab, this.transform.position, this.transform.rotation);
                                         // vfxDead.transform.localPosition = Vector3.zero;
+                                        vfxDeads.Add(vfxDead);
                                     }
                                 }
                                 else
@@ -449,6 +463,7 @@ namespace BattleRushS.HeroS
             if(data is UIData)
             {
                 UIData uiData = data as UIData;
+                destroyAllVfxDeads();
                 // Child
                 {
                     uiData.troopFollow.allAddCallBack(this);
@@ -465,6 +480,7 @@ namespace BattleRushS.HeroS
                     {
                         TroopFollow troopFollow = data as TroopFollow;
                         lastHitpoint = troopFollow.hitPoint.v;
+                        destroyAllVfxDeads();
                         // Parent
                         {
                             DataUtils.addParentCallBack(troopFollow, this, ref this.hero);
@@ -547,6 +563,7 @@ namespace BattleRushS.HeroS
             if (data is UIData)
             {
                 UIData uiData = data as UIData;
+                destroyAllVfxDeads();
                 // Child
                 {
                     uiData.troopFollow.allRemoveCallBack(this);
@@ -562,6 +579,7 @@ namespace BattleRushS.HeroS
                     if (data is TroopFollow)
                     {
                         TroopFollow troopFollow = data as TroopFollow;
+                        destroyAllVfxDeads();
                         // Parent
                         {
                             DataUtils.removeParentCallBack(troopFollow, this, ref this.hero);

@@ -35,6 +35,26 @@ namespace BattleRushS.ArenaS.TroopS
 
         public GameObject vfxDeadPrefab;
         private Troop.State.Type lastState = Troop.State.Type.Live;
+        private List<GameObject> vfxDeads = new List<GameObject>();
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            destroyAllVfxDeads();
+        }
+
+        private void destroyAllVfxDeads()
+        {
+            Logger.Log("destroyAllVfxDeads: " + this.gameObject);
+            foreach(GameObject vfxDead in vfxDeads)
+            {
+                if (vfxDead)
+                {
+                    Destroy(vfxDead);
+                }
+            }
+            vfxDeads.Clear();
+        }
 
         public override void refresh()
         {
@@ -127,6 +147,7 @@ namespace BattleRushS.ArenaS.TroopS
                                             {
                                                 GameObject vfxDead = Instantiate(vfxDeadPrefab, this.transform.position, this.transform.rotation);
                                                 // vfxDead.transform.localPosition = Vector3.zero;
+                                                vfxDeads.Add(vfxDead);
                                             }
                                             lastState = troop.state.v.getType();
                                         }
@@ -179,6 +200,7 @@ namespace BattleRushS.ArenaS.TroopS
             if(data is UIData)
             {
                 UIData uiData = data as UIData;
+                destroyAllVfxDeads();
                 // Parent
                 {
                     DataUtils.addParentCallBack(uiData, this, ref this.troopUIData);
@@ -204,6 +226,7 @@ namespace BattleRushS.ArenaS.TroopS
                     {
                         Troop troop = data as Troop;
                         lastState = troop.state.v.getType();
+                        destroyAllVfxDeads();
                         // Child
                         {
                             troop.state.allAddCallBack(this);
@@ -261,6 +284,7 @@ namespace BattleRushS.ArenaS.TroopS
             if (data is UIData)
             {
                 UIData uiData = data as UIData;
+                destroyAllVfxDeads();
                 // Parent
                 {
                     DataUtils.removeParentCallBack(uiData, this, ref this.troopUIData);
@@ -284,6 +308,7 @@ namespace BattleRushS.ArenaS.TroopS
                     if (data is Troop)
                     {
                         Troop troop = data as Troop;
+                        destroyAllVfxDeads();
                         // Child
                         {
                             troop.state.allRemoveCallBack(this);

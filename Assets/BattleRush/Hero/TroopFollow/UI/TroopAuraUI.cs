@@ -55,15 +55,18 @@ namespace BattleRushS.HeroS
                                 TroopFollow troopFollow = troopFollowUIData.troopFollow.v.data;
                                 if (troopFollow != null)
                                 {
-                                    TroopInformation.Level level = troopFollow.troopType.v.levels.Find(check => check.level == troopFollow.level.v);
-                                    if (level != null)
+                                    if (troopFollow.hitPoint.v > 0)
                                     {
-                                        auraPrefab = level.auraPrefab;
-                                    }
-                                    else
-                                    {
-                                        Logger.LogError("level null");
-                                    }
+                                        TroopInformation.Level level = troopFollow.troopType.v.levels.Find(check => check.level == troopFollow.level.v);
+                                        if (level != null)
+                                        {
+                                            auraPrefab = level.auraPrefab;
+                                        }
+                                        else
+                                        {
+                                            Logger.LogError("level null");
+                                        }
+                                    }                                    
                                 }
                                 else
                                 {
@@ -334,6 +337,9 @@ namespace BattleRushS.HeroS
                                 dirty = true;
                                 break;
                             case TroopFollow.Property.troopType:
+                                dirty = true;
+                                break;
+                            case TroopFollow.Property.hitPoint:
                                 dirty = true;
                                 break;
                             default:

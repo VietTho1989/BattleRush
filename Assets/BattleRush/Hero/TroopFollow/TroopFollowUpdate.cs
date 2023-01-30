@@ -18,7 +18,7 @@ namespace BattleRushS.HeroS
                 {
                     // remove troop when hitpoint <= 0
                     {
-                        if (this.data.hitPoint.v <= 0)
+                        if (this.data.hitPoint.v <= 0 && this.data.timeDead.v >= 3.5f)
                         {
                             Hero hero = this.data.findDataInParent<Hero>();
                             if (hero != null)
@@ -39,9 +39,19 @@ namespace BattleRushS.HeroS
             }
         }
 
+        private void FixedUpdate()
+        {
+            base.Update();
+            if (this.data != null)
+            {
+                if (this.data.hitPoint.v == 0)
+                    this.data.timeDead.v += Time.deltaTime;
+            }
+        }
+
         public override bool isShouldDisableUpdate()
         {
-            return true;
+            return false;
         }
 
         #endregion
@@ -80,6 +90,9 @@ namespace BattleRushS.HeroS
                 switch ((TroopFollow.Property)wrapProperty.n)
                 {
                     case TroopFollow.Property.hitPoint:
+                        dirty = true;
+                        break;
+                    case TroopFollow.Property.timeDead:
                         dirty = true;
                         break;
                     default:

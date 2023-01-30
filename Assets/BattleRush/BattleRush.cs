@@ -4,6 +4,10 @@ using BattleRushS.StateS;
 using Dreamteck.Forever;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 namespace BattleRushS
 {
     public class BattleRush : Data
@@ -190,6 +194,35 @@ namespace BattleRushS
                 }
             }
         }
+
+#if UNITY_EDITOR
+        public void save()
+        {
+            ItemMap itemMap = this.mapData.v.itemMap.v;
+            if (itemMap != null)
+            {
+                itemMap.items.Clear();
+                foreach (ObjectInPath objectInPath in this.laneObjects.vs)
+                {
+                    ItemAsset itemAsset = new ItemAsset();
+                    {
+                        itemAsset.type = objectInPath.getType();
+                        itemAsset.position = objectInPath.getPosition();
+                        //public uint row = 1;
+                        //public uint col = 1;
+                        //public float distanceBetweenRow = 0.1f;
+                        //public float distanceBetweenCol = 0.1f;
+                    }
+                    itemMap.items.Add(itemAsset);
+                }
+                EditorUtility.SetDirty(itemMap);
+            }
+            else
+            {
+                Logger.LogError("itemMap null");
+            }
+        }
+#endif
 
     }
 }

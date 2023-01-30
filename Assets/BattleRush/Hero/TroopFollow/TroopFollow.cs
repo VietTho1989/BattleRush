@@ -18,6 +18,8 @@ namespace BattleRushS.HeroS
          * */
         public VO<float> hitPoint;
 
+        public VO<float> timeDead;
+
         public VO<int> level;
 
         #region Constructor
@@ -26,6 +28,7 @@ namespace BattleRushS.HeroS
         {
             troopType,
             hitPoint,
+            timeDead,
             level
         }
 
@@ -33,6 +36,7 @@ namespace BattleRushS.HeroS
         {
             this.troopType = new VO<TroopInformation>(this, (byte)Property.troopType, null);
             this.hitPoint = new VO<float>(this, (byte)Property.hitPoint, 1);
+            this.timeDead = new VO<float>(this, (byte)Property.timeDead, 0);
             // level
             {
                 this.level = new VO<int>(this, (byte)Property.level, 1);
